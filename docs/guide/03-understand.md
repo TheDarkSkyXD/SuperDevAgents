@@ -24,6 +24,14 @@ $why why was the retry limit set to five? does the original reason still hold?
 
 Use `$how` for mechanics. Use `$why` for motivation, history, regressions, and thresholds.
 
+## Learn both with `$teach`
+
+```text
+$teach help me understand how notification deduplication works and why it was designed this way.
+```
+
+[`$teach`](../../.agents/skills/teach/SKILL.md) combines `$how` and `$why` into one explanation. Use it when you want the current mechanism and its design history taught together at your level of detail.
+
 ## Rebuild your context with `$recall`
 
 ```text

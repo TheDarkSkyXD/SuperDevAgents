@@ -66,6 +66,7 @@ The mode includes 23 playbooks for investigations, bug fixes, features, refactor
 |---|---|
 | [`/how`](./.agents/skills/how/SKILL.md) | You want a code walkthrough, runtime trace, or ownership critique. |
 | [`/why`](./.agents/skills/why/SKILL.md) | You want the evidence behind a design, regression, or threshold. |
+| [`/teach`](./.agents/skills/teach/SKILL.md) | You want the mechanics and reasons woven into one plain explanation. |
 | [`/recall`](./.agents/skills/recall/SKILL.md) | You need your recent work on a topic reconstructed. |
 | [`/architect`](./.agents/skills/architect/SKILL.md) | You want types, caller usage, and module boundaries settled before code. |
 | [`/arena`](./.agents/skills/arena/SKILL.md) | You want several attempts at the same design or implementation, followed by one synthesized result. |
@@ -81,7 +82,7 @@ The mode includes 23 playbooks for investigations, bug fixes, features, refactor
 | [`/technical-writing`](./.agents/skills/technical-writing/SKILL.md) | You want docs, a README, an RFC, or a PR description tightened. |
 | [`/bro`](./.agents/skills/bro/SKILL.md) | You want the last response restated without jargon. |
 
-There are 61 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode.
+There are 62 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode.
 
 ## The principles are executable rules
 
