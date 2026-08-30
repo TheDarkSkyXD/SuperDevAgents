@@ -56,7 +56,7 @@ The [SuperDevAgents guide](./docs/guide/README.md) walks through setup, investig
 /superdev-mode I am stepping away. migrate every caller, delete the old API, and stop only when the old-call count is zero.
 ```
 
-The mode includes 23 playbooks for investigations, bug fixes, features, refactors, performance work, prototypes, reviews, shipping, autonomous runs, and project-scale orchestration. Read the [playbook directory](./.agents/skills/superdev-mode/playbooks/) for the exact workflows.
+The mode includes 24 playbooks for investigations, bug fixes, features, refactors, performance work, prototypes, reviews, shipping, autonomous runs, and project-scale orchestration. Read the [playbook directory](./.agents/skills/superdev-mode/playbooks/) for the exact workflows.
 
 ## Reach for a focused skill when you want control
 
@@ -71,6 +71,7 @@ The mode includes 23 playbooks for investigations, bug fixes, features, refactor
 | [`/architect`](./.agents/skills/architect/SKILL.md) | You want types, caller usage, and module boundaries settled before code. |
 | [`/arena`](./.agents/skills/arena/SKILL.md) | You want several attempts at the same design or implementation, followed by one synthesized result. |
 | [`/swarm`](./.agents/skills/swarm/SKILL.md) | You want independent slices checked in parallel and returned as one report. |
+| [`/adversarial-review`](./.agents/skills/adversarial-review/SKILL.md) | You want one rigorous review of a proposal, architecture, or implementation. |
 | [`/interrogate`](./.agents/skills/interrogate/SKILL.md) | You want several reviewers to challenge a design or diff. |
 | [`/blast-radius`](./.agents/skills/blast-radius/SKILL.md) | You want to find what a change could break beyond the diff. |
 | [`/tdd`](./.agents/skills/tdd/SKILL.md) | A bug has a cheap local regression-test path, or you explicitly want TDD. |
@@ -82,7 +83,7 @@ The mode includes 23 playbooks for investigations, bug fixes, features, refactor
 | [`/technical-writing`](./.agents/skills/technical-writing/SKILL.md) | You want docs, a README, an RFC, or a PR description tightened. |
 | [`/bro`](./.agents/skills/bro/SKILL.md) | You want the last response restated without jargon. |
 
-There are 62 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode.
+There are 63 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode.
 
 ## The principles are executable rules
 

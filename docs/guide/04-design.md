@@ -32,14 +32,22 @@ $swarm check every package against its check script. assign one package per work
 
 Use `$arena` when every worker attempts the same artifact. Use `$swarm` when workers own different slices.
 
-## Challenge the result with `$interrogate`
+## Challenge one result with `$adversarial-review`
+
+```text
+$adversarial-review challenge this architecture. trace real failure paths and report missing requirements. do not change files.
+```
+
+[`$adversarial-review`](../../.agents/skills/adversarial-review/SKILL.md) tests assumptions, partial failures, load, data integrity, security boundaries, deployment safety, and operating cost. Every finding must name a plausible scenario and supporting evidence.
+
+## Convene a review panel with `$interrogate`
 
 ```text
 $interrogate review this branch skeptically. report real correctness and regression risks, not style preferences.
 ```
 
-[`$interrogate`](../../.agents/skills/interrogate/SKILL.md) asks independent reviewers to find blind spots, then sorts their findings by actionability. It does not apply findings automatically.
+[`$interrogate`](../../.agents/skills/interrogate/SKILL.md) asks independent reviewers to apply the adversarial-review standard, then sorts their findings by actionability. It does not apply findings automatically.
 
-Small changes do not need all of this. Use `$interrogate` for a finished change you distrust, `$architect` for new boundaries, and `$arena` for decisions where alternatives are cheap to explore now and expensive to revisit later.
+Small changes do not need all of this. Use `$adversarial-review` for one skeptical pass, `$interrogate` for a contested or high-risk result, `$architect` for new boundaries, and `$arena` for decisions where alternatives are cheap to explore now and expensive to revisit later.
 
 Next: [Build and clean the change](./05-build-and-clean.md).

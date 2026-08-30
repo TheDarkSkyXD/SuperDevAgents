@@ -23,8 +23,10 @@ $swarm run each package's check script. assign one package per worker and return
 ## Review a branch skeptically
 
 ```text
-$interrogate review the whole branch. do not change files. report correctness and regression risks, not preferences.
+$adversarial-review review the whole branch. do not change files. report correctness and regression risks, not preferences.
 ```
+
+Use `$interrogate` instead when independent reviewers and an agreement map would change your decision.
 
 ## Fix a bug through a failing test
 
