@@ -8,11 +8,7 @@ Subtle regressions start when an agent edits the first plausible file without tr
 $how how do we deduplicate notifications? is there an N+1 lookup in the subscriber path?
 ```
 
-[`$how`](../../.agents/skills/how/SKILL.md) follows runtime flow, names the important types and modules, and explains ownership boundaries. Ask for a critique when the structure itself looks wrong:
-
-```text
-$how explain the sync service, then critique its ownership boundaries.
-```
+[`$how`](../../.agents/skills/how/SKILL.md) follows runtime flow, names the important types and modules, and explains ownership boundaries.
 
 ## Find the reason with `$why`
 

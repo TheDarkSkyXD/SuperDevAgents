@@ -1,6 +1,6 @@
 # Steer with principle names
 
-SuperDevAgents includes 21 principle skills. Each name points to a specific engineering rule, so a short correction can redirect a task without rewriting the whole prompt.
+SuperDevAgents includes 23 principle skills. Each name points to a specific engineering rule, so a short correction can redirect a task without rewriting the whole prompt.
 
 ## Use the name and demand the changed decision
 
@@ -30,6 +30,8 @@ The agent should name the decision that changed. A principle name with no concre
 - [Exhaust the Design Space](../../.agents/skills/principle-exhaust-the-design-space/SKILL.md) compares competing prototypes when no precedent exists.
 - [Build the Lever](../../.agents/skills/principle-build-the-lever/SKILL.md) creates a repeatable tool for non-trivial work or proof.
 
+- [Attack the Premise](../../.agents/skills/principle-attack-the-premise/SKILL.md) questions the assumption shared by repeated failed fixes after measuring which actors hold the imbalance.
+
 ## Architecture principles
 
 - [Model the Domain](../../.agents/skills/principle-model-the-domain/SKILL.md) encodes repeated rules in one structure.
@@ -47,6 +49,8 @@ The agent should name the decision that changed. A principle name with no concre
 - [Guard the Context Window](../../.agents/skills/principle-guard-the-context-window/SKILL.md) sends bulk work to bounded readers and keeps summaries in the main thread.
 - [Never Block on the Human](../../.agents/skills/principle-never-block-on-the-human/SKILL.md) proceeds on reversible work and asks only for decisions the agent cannot discover.
 - [Encode Lessons in Structure](../../.agents/skills/principle-encode-lessons-in-structure/SKILL.md) turns repeated advice into a check, type, lint, script, or skill.
+
+- [Test Behavior, Not Implementation](../../.agents/skills/principle-test-behavior-not-implementation/SKILL.md) tests through real callers and asserts literal expected results.
 
 You do not need to memorize the list. Return when a task drifts and pick the rule that names the correction.
 

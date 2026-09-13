@@ -16,11 +16,11 @@ If `.agents/superdev-models.md` exists, read it and treat its values as the curr
 
 Show every role with its current model. Mark a real identifier as invalid when it is not in the detected set. Ask the user whether to keep the map or change specific roles. Offer the detected models plus `inherit-parent` and `auto`.
 
-Panel roles use one subagent per list entry, so list length controls the panel size. This applies to `how critics`, `arena runners`, `architect runners`, and `interrogate reviewers`. `arena cross-judge pool` is also a list, but Arena chooses one model from a family different from the parent's when possible. `swarm workers` supplies the default worker model unless a race assigns a model to each arm.
+Panel roles use one subagent per list entry, so list length controls the panel size. This applies to `arena runners`, `architect runners`, and `interrogate reviewers`. `arena cross-judge pool` is also a list, but Arena chooses one model from a family different from the parent's when possible. `swarm workers` supplies the default worker model unless a race assigns a model to each arm.
 
 ## Validate and write
 
-Every real model slug must appear in the detected set. Stop and ask for a replacement if it does not. A bad slug breaks delegation for each skill that reads the role.
+Every real model slug must appear in the detected set. Stop and ask for a replacement if it does not.
 
 Overwrite `.agents/superdev-models.md` so reruns converge on one complete map. Use one line per role with these labels and defaults:
 
@@ -35,7 +35,6 @@ judgment and prose: claude-fable-5-thinking-max
 hardest tasks: claude-fable-5-thinking-max
 how explorer: grok-4.6-fast-xhigh
 how explainer: claude-fable-5-thinking-max
-how critics: claude-fable-5-thinking-max, gpt-5.6-sol-max, grok-4.6-fast-xhigh, claude-opus-5-thinking-xhigh
 why investigators: grok-4.6-fast-xhigh
 why synthesizer: claude-fable-5-thinking-max
 reflect tooling: gpt-5.6-sol-max

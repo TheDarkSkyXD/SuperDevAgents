@@ -64,7 +64,7 @@ The mode includes 24 playbooks for investigations, bug fixes, features, refactor
 
 | Skill | Use it when |
 |---|---|
-| [`/how`](./.agents/skills/how/SKILL.md) | You want a code walkthrough, runtime trace, or ownership critique. |
+| [`/how`](./.agents/skills/how/SKILL.md) | You want a code walkthrough or runtime trace. |
 | [`/why`](./.agents/skills/why/SKILL.md) | You want the evidence behind a design, regression, or threshold. |
 | [`/teach`](./.agents/skills/teach/SKILL.md) | You want the mechanics and reasons woven into one plain explanation. |
 | [`/recall`](./.agents/skills/recall/SKILL.md) | You need your recent work on a topic reconstructed. |
@@ -83,11 +83,11 @@ The mode includes 24 playbooks for investigations, bug fixes, features, refactor
 | [`/technical-writing`](./.agents/skills/technical-writing/SKILL.md) | You want docs, a README, an RFC, or a PR description tightened. |
 | [`/bro`](./.agents/skills/bro/SKILL.md) | You want the last response restated without jargon. |
 
-There are 63 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode.
+There are 65 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode.
 
 ## The principles are executable rules
 
-SuperDevAgents includes 21 short principle skills. They turn broad advice into a concrete choice the agent must make.
+SuperDevAgents includes 23 short principle skills. They turn broad advice into a concrete choice the agent must make.
 
 - [Fix root causes](./.agents/skills/principle-fix-root-causes/SKILL.md) reproduces a defect and traces it before changing code.
 - [Model the domain](./.agents/skills/principle-model-the-domain/SKILL.md) replaces repeated shape assumptions with one structure.
@@ -95,7 +95,7 @@ SuperDevAgents includes 21 short principle skills. They turn broad advice into a
 - [Separate before serializing shared state](./.agents/skills/principle-separate-before-serializing-shared-state/SKILL.md) isolates concurrent writers before adding locks.
 - [Prove it works](./.agents/skills/principle-prove-it-works/SKILL.md) checks the real command, UI flow, stored value, or profile.
 
-The [principles guide](./docs/guide/08-principles.md) covers all 21 and shows how to use their names to redirect a task.
+The [principles guide](./docs/guide/08-principles.md) covers all 23 and shows how to use their names to redirect a task.
 
 ## Make it yours
 
