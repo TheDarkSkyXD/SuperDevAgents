@@ -88,6 +88,8 @@ Read the leaf skill in full for any principle you apply. Each entry names when i
 
 **Defaults for every delegated task.** Run independent work in the background when the harness supports it, use file pointers instead of inlining large context, and select models by role from `.agents/superdev-models.md`. If the file or a role is absent, use the strongest available judgment model for difficult work, whether the intent is vague or the steps are precise. Use a fast model for mechanical edits. A value of `inherit-parent` or `auto` means to use the parent chat model.
 
+When a model-map entry includes `[reasoning_effort=...]`, pass that value through the harness's separate effort parameter and remove the annotation from the model identifier. If the current harness does not support that model or effort, report the mismatch and resolve it before spawning.
+
 You own every subagent's work. Review the diff and write your own summary, don't pass through what it said. Interrupt-chained resumes silently drop directives, so fire a fresh subagent with consolidated scope rather than trusting a "done" summary. A second opinion is the same prompt against a different model. Agreement is high-signal.
 
 ## Writing the reply

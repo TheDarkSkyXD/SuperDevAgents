@@ -30,7 +30,7 @@ Run the setup skill once in your project:
 /superdev-setup
 ```
 
-Setup records your issue tracker, domain-document layout, triage labels, and model choices. Then route a real task through the main mode:
+Setup records your issue tracker, domain-document layout, triage labels, reasoning budget, and model choices. Then route a real task through the main mode:
 
 ```text
 /superdev-mode this command writes duplicate rows after a retry. reproduce it first, then fix and verify.
