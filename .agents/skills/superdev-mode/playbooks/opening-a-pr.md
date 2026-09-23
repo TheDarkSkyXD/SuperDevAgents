@@ -28,4 +28,4 @@ After these sections, attach videos or screenshots when they prove a claim. Do n
 
 **Babysit.** Opening a PR does not start a babysit. Post the URL and keep building. Finish the phase or stack first. Run a separate Babysit playbook only when the user asks for one after the whole stack exists. A babysit for each new PR stalls the build and spends checks on commits that later waves restart. Push back when feedback drifts from intent.
 
-A delegated agent that opens a PR runs `interrogate`, the available code-cleanup pass, and `no-comments`. It returns the URL and does not babysit. Return to the parent.
+A delegated agent that opens a PR runs `interrogate`, the available code-cleanup pass, and `no-comments`. It returns the URL and does not babysit unless a more specific playbook, such as Autopilot-full, assigns it the full PR lifecycle. In that case, follow the specific playbook through its babysit and merge gates.

@@ -31,9 +31,9 @@ Launch three general-purpose reviewers together through the active harness's del
 
 | Lens | `model` | Prompt template |
 |---|---|---|
-| Judgment | your configured reflect-judgment model (default `claude-fable-5-thinking-max`) | `references/judgment-reviewer.md` |
+| Judgment | your configured reflect-judgment model (default `claude-opus-5-5-max`) | `references/judgment-reviewer.md` |
 | Tooling | your configured reflect-tooling model (default `gpt-5.6-sol-max`) | `references/tooling-reviewer.md` |
-| Divergent | your configured reflect-judgment model (default `claude-fable-5-thinking-max`) | `references/divergent-reviewer.md` |
+| Divergent | your configured reflect-judgment model (default `claude-opus-5-5-max`) | `references/divergent-reviewer.md` |
 
 Pass each template verbatim, substituting the transcript path or digest where marked. Reviewers return findings through the delegation response.
 

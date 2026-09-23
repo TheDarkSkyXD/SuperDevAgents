@@ -32,14 +32,13 @@ Write one clear paragraph. Reviewers challenge whether the work achieves the int
 
 ## Step 3, Spawn Reviewers
 
-Launch all reviewers together through the active harness's delegation interface. Use the `interrogate reviewers` list from `.agents/superdev-models.md` when present, one reviewer per entry, extending or shrinking the Reviewer A/B/C/D labels below to the configured entry count. Otherwise use the table defaults.
+Launch all reviewers together through the active harness's delegation interface. Use the `interrogate reviewers` list from `.agents/superdev-models.md` when present, one reviewer per entry, extending or shrinking the Reviewer A/B/C labels below to the configured entry count. Otherwise use the table defaults.
 
 | Subagent | Default model |
 |----------|---------------|
-| Reviewer A | `claude-fable-5-thinking-max` |
+| Reviewer A | `claude-opus-5-5-max` |
 | Reviewer B | `gpt-5.6-sol-max` |
 | Reviewer C | `grok-4.6-fast-xhigh` |
-| Reviewer D | `claude-opus-5-thinking-xhigh` |
 
 For each reviewer:
 - Worker: general-purpose subagent through the active harness's delegation interface
@@ -55,8 +54,6 @@ Read `references/reviewer-prompt.md` and fill in the template with:
 4. The code-quality lens from `references/code-quality-review.md` only when reviewing code
 
 The same filled template goes to all reviewers, so every model applies the same evidence standard and relevant review lenses.
-
-Each reviewer produces structured findings as described in the prompt template.
 
 ## Step 4, Synthesize
 

@@ -42,7 +42,7 @@ $superdev-setup
 - The location of domain context and architecture decision records.
 - The reasoning budget and model map used by delegated roles and review panels. Choose unlimited to keep default efforts, large for xhigh, medium for high, or small for medium reasoning, subject to model support.
 
-Setup writes repository guidance under `docs/agents/` and model choices to `.agents/superdev-models.md`. Rerun the skill when you change trackers, layouts, labels, or available models.
+Setup writes repository guidance under `docs/agents/` and model choices to `.agents/superdev-models.md`. Reruns preserve saved role choices. Older maps may pin Fable 5 or 5.1, Opus 5, or Grok 4.7. To replace an outdated choice, remove that role's line before rerunning setup, then choose from models the active harness reports. Remove the file to rebuild the whole map. Setup checks model identifiers against the active harness instead of assuming names from an older guide still work.
 
 ## Add a verification skill when the project needs one
 

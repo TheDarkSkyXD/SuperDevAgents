@@ -58,11 +58,11 @@ Tests alone are not sufficient verification. A PR is verified only when its unit
 - [ ] Run the repo's lint and typecheck once before the PR-facing push. Push with hooks on.
 - [ ] Run `/deslop` before each commit and `/no-comments` before review.
 - [ ] Triage every Bugbot and security-reviewer comment per `.agents/skills/superdev-mode/references/bugbot-triage.md`.
-- [ ] Rebase onto current trunk before babysit and again before the merge-ready report.
+- [ ] Follow the execution playbook's rebase rules. For Autopilot-full, rebase before code-ready and babysit, keep that merge base through fix rounds, and rebase during merge prep.
 
 ### Verdict and merge, for every PR
 
-- [ ] At the merge-ready head SHA, run the swarm per `.agents/skills/swarm/SKILL.md`. One gates lane. The ten live lanes from the PR's **Verify, live** block. The perf lane from its **Verify, perf** block. One audit lane that reads the diff and the receipts and distrusts the PR body.
+- [ ] Run the swarm per `.agents/skills/swarm/SKILL.md`. For Autopilot-full, start at code-ready and repeat after each patch-changing push. Each round has one gates lane, the ten live lanes from the PR's **Verify, live** block, the perf lane from its **Verify, perf** block, and audit lanes that read the diff and receipts and distrust the PR body.
 - [ ] Clean only when every lane is `PASS`. Findings go back to the owner. A new head gets a fresh swarm and a fresh verdict.
 - [ ] <The merge or append rule from the execution playbook, with the patch-id rule from `playbooks/shipping.md`.>
 
@@ -127,7 +127,7 @@ Each live lane runs in its own isolated environment or worktree at the exact PR 
 
 - [ ] Root's clean verdict at the exact head SHA.
 - [ ] Bugbot triage done.
-- [ ] Rebased onto current trunk after the verdict, patch-id unchanged.
+- [ ] Rebased onto current trunk during merge prep. CI passes on the resulting head SHA, and the shipping playbook's patch-id rule confirms which verdicts still apply.
 - [ ] <The owner squash-merges its own PR, or the root appends the PR to the Graphite stack and the operator lands it.>
 
 ## Close the program

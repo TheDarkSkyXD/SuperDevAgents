@@ -31,7 +31,7 @@ Each explorer gets the prompt in `references/explorer-prompt.md` with its angle 
 Spawn one general-purpose subagent through the active harness's delegation interface that explores and explains in one pass:
 
 - Worker: general-purpose subagent through the active harness's delegation interface
-- `model`: your configured how-explainer model (default `claude-fable-5-thinking-max`)
+- `model`: your configured how-explainer model (default `claude-opus-5-5-max`)
 - `readonly`: `true`
 
 Build its prompt from `references/explainer-prompt.md` without the explorer-findings section. Go to Step 4.
@@ -41,7 +41,7 @@ Build its prompt from `references/explainer-prompt.md` without the explorer-find
 Once all explorers have returned, spawn one general-purpose subagent through the active harness's delegation interface to synthesize their findings into one explanation:
 
 - Worker: general-purpose subagent through the active harness's delegation interface
-- `model`: your configured how-explainer model (default `claude-fable-5-thinking-max`)
+- `model`: your configured how-explainer model (default `claude-opus-5-5-max`)
 - `readonly`: `true`
 
 Build its prompt from `references/explainer-prompt.md` with every explorer's findings filled in.

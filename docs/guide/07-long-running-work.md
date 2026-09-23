@@ -28,7 +28,7 @@ In the morning, inspect rejected attempts and unresolved risks as well as accept
 ## Pick the right long-running playbook
 
 - Autonomous run drives one task until a finish predicate passes.
-- Autopilot-full owns a queue of independent pull requests through merge, with independent verification before each merge.
+- Autopilot-full owns a queue of independent pull requests through merge. It verifies the code-ready head and every later push that changes the patch, then checks CI again after merge prep.
 - Autopilot-stack builds and verifies a linear stack but leaves the final landing to you.
 - Orchestrate coordinates a project that spans many sessions, pull requests, and agents.
 - Figure-it-out designs a custom auditable workflow when no bundled playbook fits.

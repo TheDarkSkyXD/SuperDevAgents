@@ -30,7 +30,7 @@ Run the setup skill once in your project:
 /superdev-setup
 ```
 
-Setup records your issue tracker, domain-document layout, triage labels, reasoning budget, and model choices. Then route a real task through the main mode:
+Setup records your issue tracker, domain-document layout, triage labels, reasoning budget, and model choices. The defaults send code work to Grok 4.6, judgment and prose to Opus 5.5, and tooling reflection to GPT 5.6. Review panels use Opus 5.5, GPT 5.6, and Grok 4.6. Setup checks the active harness and preserves saved model choices on reruns. Older maps may pin Fable 5 or 5.1, Opus 5, or Grok 4.7. Remove an outdated role from `.agents/superdev-models.md` before setup, then choose from models the active harness reports. Remove the file to rebuild the full map. Then route a real task through the main mode:
 
 ```text
 /superdev-mode this command writes duplicate rows after a retry. reproduce it first, then fix and verify.
