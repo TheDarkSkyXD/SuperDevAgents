@@ -12,7 +12,7 @@ Never write an unconfirmed identifier. The aliases `inherit-parent` and `auto` a
 
 If `.agents/superdev-models.md` exists, read its budget line and role values as the current choices. Otherwise use the defaults shown below. During this step, drop and report any role line that is not in the current role list below; it belongs to a retired role.
 
-Setup preserves existing role choices. If a saved role points to a retired, unavailable, or no longer wanted model, remove that role's line before rerunning setup and choose from the models the active harness reports. Older maps may contain `claude-fable-5-thinking-max`, `claude-fable-5-1-thinking-max`, `claude-opus-5-thinking-xhigh`, or `grok-4.7-xhigh-fast`. Remove those role lines when adopting the current defaults. To rebuild the whole map, remove the model map before rerunning. Never copy model names from another harness or an older setup guide without checking them.
+Setup preserves existing role choices. If a saved role points to a retired, unavailable, or no longer wanted model, remove that role's line before rerunning setup and choose from the models the active harness reports. Older maps may contain `claude-fable-5-thinking-max`, `claude-fable-5-1-thinking-max`, `claude-opus-5-thinking-xhigh`, or `grok-4.6-fast-xhigh`. Remove those role lines when adopting the current defaults. To rebuild the whole map, remove the model map before rerunning. Never copy model names from another harness or an older setup guide without checking them.
 
 ## Choose and apply a reasoning budget
 
@@ -48,20 +48,20 @@ Overwrite `.agents/superdev-models.md` so reruns converge on one complete map. R
 # `inherit-parent` or `auto` uses the parent chat model. Alias entries in a panel list still count toward its fan-out.
 # budget: unlimited (default efforts)
 # An entry's [reasoning_effort=...] annotation is passed separately from its model identifier.
-feature, refactoring, bug-fix, perf-issue, hillclimb: grok-4.6-fast-xhigh
+feature, refactoring, bug-fix, perf-issue, hillclimb: grok-4.7-xhigh-fast
 judgment and prose: claude-opus-5-5-max
 hardest tasks: claude-opus-5-5-max
-how explorer: grok-4.6-fast-xhigh
+how explorer: grok-4.7-xhigh-fast
 how explainer: claude-opus-5-5-max
-why investigators: grok-4.6-fast-xhigh
+why investigators: grok-4.7-xhigh-fast
 why synthesizer: claude-opus-5-5-max
 reflect tooling: gpt-5.6-sol-max
 reflect judgment, divergent, synthesizer: claude-opus-5-5-max
-arena runners: claude-opus-5-5-max, gpt-5.6-sol-max, grok-4.6-fast-xhigh
-arena cross-judge pool: claude-opus-5-5-max, gpt-5.6-sol-max, grok-4.6-fast-xhigh
-swarm workers: grok-4.6-fast-xhigh
-architect runners: claude-opus-5-5-max, gpt-5.6-sol-max, grok-4.6-fast-xhigh
-interrogate reviewers: claude-opus-5-5-max, gpt-5.6-sol-max, grok-4.6-fast-xhigh
+arena runners: claude-opus-5-5-max, gpt-5.6-sol-max, grok-4.7-xhigh-fast
+arena cross-judge pool: claude-opus-5-5-max, gpt-5.6-sol-max, grok-4.7-xhigh-fast
+swarm workers: grok-4.7-xhigh-fast
+architect runners: claude-opus-5-5-max, gpt-5.6-sol-max, grok-4.7-xhigh-fast
+interrogate reviewers: claude-opus-5-5-max, gpt-5.6-sol-max, grok-4.7-xhigh-fast
 ```
 
 Tell the user the model map was written and that rerunning `$superdev-setup` can update it.

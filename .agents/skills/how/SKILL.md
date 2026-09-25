@@ -23,7 +23,7 @@ When in doubt, take the simple path.
 Decompose the question into 2 to 4 exploration angles, each a distinct slice of the subsystem. Spawn all explorers in a single message:
 
 - Worker: general-purpose subagent through the active harness's delegation interface
-- `model`: the `how explorer` line, default `grok-4.6-fast-xhigh`
+- `model`: the `how explorer` line, default `grok-4.7-xhigh-fast`
 - `readonly`: `true`
 
 Each explorer gets the prompt in `references/explorer-prompt.md` with its angle filled in. Then go to Step 3.

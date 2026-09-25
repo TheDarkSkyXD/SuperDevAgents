@@ -80,7 +80,7 @@ Launch all matching investigators in a single message so they run concurrently. 
 
 Subagent config (each):
 - Worker: general-purpose subagent through the active harness's delegation interface
-- `model`: the `why investigators` line, default `grok-4.6-fast-xhigh`
+- `model`: the `why investigators` line, default `grok-4.7-xhigh-fast`
 - `readonly`: `false` (agent mode). **Do not use readonly/Ask mode.** It strips MCP access, which disables MCP-backed investigators entirely. Investigators still shouldn't write anything.
 
 Each investigator gets:

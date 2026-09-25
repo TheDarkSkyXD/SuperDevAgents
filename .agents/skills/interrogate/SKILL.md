@@ -38,7 +38,7 @@ Launch all reviewers together through the active harness's delegation interface.
 |----------|---------------|
 | Reviewer A | `claude-opus-5-5-max` |
 | Reviewer B | `gpt-5.6-sol-max` |
-| Reviewer C | `grok-4.6-fast-xhigh` |
+| Reviewer C | `grok-4.7-xhigh-fast` |
 
 For each reviewer:
 - Worker: general-purpose subagent through the active harness's delegation interface
