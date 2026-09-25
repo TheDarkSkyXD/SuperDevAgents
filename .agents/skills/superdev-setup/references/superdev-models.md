@@ -10,7 +10,7 @@ Never write an unconfirmed identifier. The aliases `inherit-parent` and `auto` a
 
 ## Load current choices
 
-If `.agents/superdev-models.md` exists, read its budget line and role values as the current choices. Otherwise use the defaults shown below.
+If `.agents/superdev-models.md` exists, read its budget line and role values as the current choices. Otherwise use the defaults shown below. During this step, drop and report any role line that is not in the current role list below; it belongs to a retired role.
 
 Setup preserves existing role choices. If a saved role points to a retired, unavailable, or no longer wanted model, remove that role's line before rerunning setup and choose from the models the active harness reports. Older maps may contain `claude-fable-5-thinking-max`, `claude-fable-5-1-thinking-max`, `claude-opus-5-thinking-xhigh`, or `grok-4.7-xhigh-fast`. Remove those role lines when adopting the current defaults. To rebuild the whole map, remove the model map before rerunning. Never copy model names from another harness or an older setup guide without checking them.
 
@@ -33,7 +33,7 @@ If the harness takes effort separately, keep the detected model identifier and r
 
 ## Confirm the map
 
-Show the selected budget and every role with its resulting model and effort. Mark a real identifier as invalid when it is not in the detected set. Ask the user whether to keep the map or change specific roles. Offer the detected models plus `inherit-parent` and `auto`. Explicit per-role changes made here override the preset.
+Show the selected budget, every role with its resulting model and effort, and each retired role line dropped while loading current choices. Mark a real identifier as invalid when it is not in the detected set. Ask the user whether to keep the map or change specific roles. Offer the detected models plus `inherit-parent` and `auto`. Explicit per-role changes made here override the preset.
 
 Panel roles use one subagent per list entry, so list length controls the panel size. This applies to `arena runners`, `architect runners`, and `interrogate reviewers`. `arena cross-judge pool` is also a list, but Arena chooses one model from a family different from the parent's when possible. `swarm workers` supplies the default worker model unless a race assigns a model to each arm.
 

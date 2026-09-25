@@ -32,7 +32,7 @@ Write one clear paragraph. Reviewers challenge whether the work achieves the int
 
 ## Step 3, Spawn Reviewers
 
-Launch all reviewers together through the active harness's delegation interface. Use the `interrogate reviewers` list from `.agents/superdev-models.md` when present, one reviewer per entry, extending or shrinking the Reviewer A/B/C labels below to the configured entry count. Otherwise use the table defaults.
+Launch all reviewers together through the active harness's delegation interface. Use the `interrogate reviewers` line in `.agents/superdev-models.md`, one reviewer per entry, extending or shrinking the Reviewer A/B/C labels below to the configured entry count. If the map or that line is missing, use the table defaults.
 
 | Subagent | Default model |
 |----------|---------------|
@@ -42,10 +42,10 @@ Launch all reviewers together through the active harness's delegation interface.
 
 For each reviewer:
 - Worker: general-purpose subagent through the active harness's delegation interface
-- `model`: the configured `interrogate reviewers` entry, or the table default with no configured line
+- `model`: the configured `interrogate reviewers` entry, or the table default with no configured line. For an `auto` or `inherit-parent` entry, omit `model` so that reviewer runs on the parent model.
 - `readonly`: `true`
 
-If a model identifier is rejected, inspect the valid identifiers reported by the active harness, pick the closest equivalent (prefer the highest-reasoning tier of the same family), spawn with the valid identifier, and open a separate PR to update the configured value or default table. Do not block the review on the identifier issue. If the configured value is `inherit-parent` or `auto`, omit the model override; never treat those aliases as broken identifiers.
+If the delegation interface rejects a configured entry, run that reviewer on the table default of its family and say so. Families go by prefix: `claude-*`, `gpt-*`, and `grok-*`. With no family match, use Reviewer A's default. If it rejects a table default, check the valid slugs in the error message, pick the closest equivalent (prefer the highest-reasoning tier of the same family), and spawn with it. Report the rejected default so the model map or default table can be corrected. Do not block the review on the slug issue. Never treat an alias entry as a rejected slug or apply either fallback to it.
 
 Read `references/reviewer-prompt.md` and fill in the template with:
 1. The stated intent
