@@ -36,16 +36,16 @@ Launch all reviewers together through the active harness's delegation interface.
 
 | Subagent | Default model |
 |----------|---------------|
-| Reviewer A | `claude-opus-5-5-max` |
-| Reviewer B | `gpt-5.6-sol-max` |
-| Reviewer C | `grok-4.7-xhigh-fast` |
+| Reviewer A | `claude-opus-5-5-high` |
+| Reviewer B | `gpt-5.6-sol-high` |
+| Reviewer C | `grok-4.7-high` |
 
 For each reviewer:
 - Worker: general-purpose subagent through the active harness's delegation interface
 - `model`: the configured `interrogate reviewers` entry, or the table default with no configured line. For an `auto` or `inherit-parent` entry, omit `model` so that reviewer runs on the parent model.
 - `readonly`: `true`
 
-If the delegation interface rejects a configured entry, run that reviewer on the table default of its family and say so. Families go by prefix: `claude-*`, `gpt-*`, and `grok-*`. With no family match, use Reviewer A's default. If it rejects a table default, check the valid slugs in the error message, pick the closest equivalent (prefer the highest-reasoning tier of the same family), and spawn with it. Report the rejected default so the model map or default table can be corrected. Do not block the review on the slug issue. Never treat an alias entry as a rejected slug or apply either fallback to it.
+Use only high-reasoning, standard-speed variants. An `auto` or `inherit-parent` entry is usable only when the parent uses high reasoning at standard speed. If the delegation interface rejects a configured entry, run that reviewer on its family's high, standard-speed table default and say so. Families go by prefix: `claude-*`, `gpt-*`, and `grok-*`. With no family match, use Reviewer A's default. If a table default is rejected, use another detected high, standard-speed model; if none is available, report that the seat cannot run under the configured policy. Never treat an alias entry as a rejected slug or apply either fallback to it.
 
 Read `references/reviewer-prompt.md` and fill in the template with:
 1. The stated intent

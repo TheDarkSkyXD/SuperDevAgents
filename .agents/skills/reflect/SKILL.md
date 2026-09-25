@@ -29,19 +29,19 @@ For each candidate, read the first JSONL line and check that `message.content[0]
 
 Launch three general-purpose reviewers together through the active harness's delegation interface, with `model` set as below. Give them connector access for context lookups (tickets, chat threads, and observability traces referenced in the transcript) while the prompt forbids file writes. The parent applies edits.
 
-Each reviewer and the synthesizer uses a role line in `.agents/superdev-models.md` and a default. Set `model` to that line's value, or to the default if the map or line is missing. Leave `model` unset when the value is `auto` or `inherit-parent`. If the delegation interface rejects a configured slug, use the default and say so. If it rejects the default, use the closest valid slug of the same family from its error message.
+Each reviewer and the synthesizer uses a role line in `.agents/superdev-models.md` and a default. Use only high-reasoning, standard-speed model variants. Set `model` to that line's value, or to the default if the map or line is missing. Leave `model` unset for `auto` or `inherit-parent` only when the parent uses high reasoning at standard speed. If the delegation interface rejects a configured slug, use the default and say so. If it rejects the default, use a detected high-reasoning, standard-speed slug; if none is available, report that the role cannot run under the configured policy.
 
 | Lens | Role line | Default `model` | Prompt template |
 |---|---|---|---|
-| Judgment | `reflect judgment, divergent, synthesizer` | `claude-opus-5-5-max` | `references/judgment-reviewer.md` |
-| Tooling | `reflect tooling` | `gpt-5.6-sol-max` | `references/tooling-reviewer.md` |
-| Divergent | `reflect judgment, divergent, synthesizer` | `claude-opus-5-5-max` | `references/divergent-reviewer.md` |
+| Judgment | `reflect judgment, divergent, synthesizer` | `claude-opus-5-5-high` | `references/judgment-reviewer.md` |
+| Tooling | `reflect tooling` | `gpt-5.6-sol-high` | `references/tooling-reviewer.md` |
+| Divergent | `reflect judgment, divergent, synthesizer` | `claude-opus-5-5-high` | `references/divergent-reviewer.md` |
 
 Pass each template verbatim, substituting the transcript path or digest where marked. Reviewers return findings through the delegation response.
 
 ### 3. Synthesize
 
-Launch one general-purpose synthesizer through the active harness's delegation interface, with `model` from the `reflect judgment, divergent, synthesizer` line (default `claude-opus-5-5-max`). Give it connector access because its quality check may spot-verify citations. Use `references/synthesizer.md` verbatim, with each reviewer's full output inlined where marked. The synthesizer returns a structured Accepted / Rejected / Backlog list.
+Launch one general-purpose synthesizer through the active harness's delegation interface, with `model` from the `reflect judgment, divergent, synthesizer` line (default `claude-opus-5-5-high`). Give it connector access because its quality check may spot-verify citations. Use `references/synthesizer.md` verbatim, with each reviewer's full output inlined where marked. The synthesizer returns a structured Accepted / Rejected / Backlog list.
 
 ### 4. Structural enforcement check
 
