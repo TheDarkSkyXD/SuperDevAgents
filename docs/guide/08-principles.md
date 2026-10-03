@@ -1,6 +1,6 @@
 # Steer with principle names
 
-SuperDevAgents includes 23 principle skills. Each name points to a specific engineering rule, so a short correction can redirect a task without rewriting the whole prompt.
+SuperDevAgents includes 24 principle skills. Each name points to a specific engineering rule, so a short correction can redirect a task without rewriting the whole prompt.
 
 ## Use the name and demand the changed decision
 
@@ -46,6 +46,7 @@ The agent should name the decision that changed. A principle name with no concre
 - [Prove It Works](../../.agents/skills/principle-prove-it-works/SKILL.md) checks the real artifact.
 - [Fix Root Causes](../../.agents/skills/principle-fix-root-causes/SKILL.md) reproduces and traces a symptom before fixing it.
 - [Sequence Work into Verifiable Units](../../.agents/skills/principle-sequence-verifiable-units/SKILL.md) ends each small unit with a check.
+- [Explain the Number](../../.agents/skills/principle-explain-the-number/SKILL.md) finds what limits a measurement and rules out that it measured something else before anyone trusts or reports it.
 - [Guard the Context Window](../../.agents/skills/principle-guard-the-context-window/SKILL.md) sends bulk work to bounded readers and keeps summaries in the main thread.
 - [Never Block on the Human](../../.agents/skills/principle-never-block-on-the-human/SKILL.md) proceeds on reversible work and asks only for decisions the agent cannot discover.
 - [Encode Lessons in Structure](../../.agents/skills/principle-encode-lessons-in-structure/SKILL.md) turns repeated advice into a check, type, lint, script, or skill.

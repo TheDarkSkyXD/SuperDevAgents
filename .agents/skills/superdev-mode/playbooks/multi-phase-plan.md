@@ -7,7 +7,7 @@
 3. Explore with delegated SuperDev agents when the active harness supports delegation. Follow the Subagents section in `.agents/skills/superdev-mode/SKILL.md` and route through `.agents/agents/superdev-agent.md`. Use `.agents/superdev-models.md` when it exists. Otherwise use the active harness defaults. Each agent returns file pointers, conventions, test commands, and entry points. No inlined dumps.
 4. Copy the skeleton below into the plan file and fill every placeholder. Unless the operator names a path, write the file under the repository's `docs/`. Keep every heading and every sub-block in the order shown. One section per PR. One PR is one change with its own evidence (the **sequence-verifiable-units** principle skill). Name the execution playbook in **How to read this**. Pick between `playbooks/autopilot-full.md` and `playbooks/autopilot-stack.md` per the rule at the end of `playbooks/autopilot-stack.md`. A standing program takes `playbooks/orchestrate.md`.
 5. Write under `/technical-writing` in full, then `/unslop`. The body is one Diátaxis mode, how-to. Appendices hold explanation and reference. Each heading states the task or the finding. No long dashes. No mid-sentence colons.
-6. Validate the plan before handoff (the **encode-lessons-in-structure** principle skill). Confirm that every skeleton heading remains in order, every placeholder is filled or removed, every verification block opens with the verification rule, every checkbox names observable evidence, every path exists or is marked for creation, and the punctuation rules hold.
+6. Validate the plan before handoff (the **encode-lessons-in-structure** principle skill). Run `node .agents/skills/superdev-mode/scripts/check-plan.mjs <plan.md>` and fix every reported problem. Also confirm that every placeholder is filled or removed, every checkbox names observable evidence, and every path exists or is marked for creation.
 7. Hand back. Post the plan path and the validation notes, then stop. Execution starts on the operator's explicit go, under the execution playbook the plan names.
 
 **Verification.** Tests alone are not sufficient verification. A PR is verified only when its unit, live, and perf boxes are all checked (the **prove-it-works** principle skill). That sentence is the verification rule. Every verification block opens with it. The live block is mandatory. Ten independent lanes at the exact PR head drive the real surface through the matching control capability, per the **swarm** skill, on the `swarm workers` model from `.agents/superdev-models.md` (default `grok-4.7-high`). Each lane is one box with a concrete scenario, the screenshot it saves, and its pass predicate. The perf block names the metric, the probe, the trunk baseline measured first, and the rule with the number that fails. A PR that changes an interaction is review-gated. The operator reviews it in chat with screenshots and a video before merge. A PR that changes no interaction writes `**Review gate.** None. <PR id> is not review-gated.` and no boxes under it.
@@ -32,15 +32,14 @@ Tests alone are not sufficient verification. A PR is verified only when its unit
 ### Arm the program
 
 - [ ] State the protocol and this plan to the operator, then stop. Start execution only on the operator's explicit go.
-- [ ] On the operator's go, arm a `/goal` with this exact text. "<The plan path, the PR ids in order, the verification rule, who merges, and the done condition.>"
 - [ ] Read these from trunk at program start. Re-read them at every tick.
   - [ ] `git show origin/main:.agents/skills/superdev-mode/playbooks/<execution playbook>.md`
   - [ ] `git show origin/main:.agents/skills/swarm/SKILL.md`
   - [ ] `git show origin/main:<repo-backed control instructions path>` when the control instructions live in the repository. Otherwise record the active harness capability and its setup.
   - [ ] `git show origin/main:.agents/skills/superdev-mode/playbooks/opening-a-pr.md`
   - [ ] `git show origin/main:.agents/skills/<each other leaf skill>/SKILL.md`
-- [ ] Arm the 30-minute audit tick with the active harness's recurring monitor or wake mechanism. If none exists, keep a foreground terminal timer attached to the session. Never leave the cadence to memory.
-- [ ] Use this tick prompt, verbatim. "Re-read the execution playbook from trunk and the armed /goal. Audit the operation against both and fix drift in this tick. Probe every active lane and judge progress by side effects only. Stand down a stuck lane and dispatch its replacement now. Then post a status message to the operator in chat, whether or not anything changed, with the queue table of PR, owner, state, and head SHA, the verdicts since the last tick, what merged, open operator gates, and blockers."
+- [ ] On the operator's go, arm the hourly audit tick as `/loop 1h` with the tick prompt below when the harness supports it. Otherwise use its equivalent hourly recurring monitor or wake mechanism. Never leave the cadence to memory.
+- [ ] Use this tick prompt, verbatim. "Re-read the execution playbook from trunk. Audit the operation against it and fix drift in this tick. Probe every active lane and judge progress by side effects only. Stand down a stuck lane and dispatch its replacement now. Then post a short status message to the operator in chat only when the audit found a tracked change that no earlier status message reported, such as a PR opened, a code-ready head, a round launched or closed, a verdict, a merge, a stuck agent and the action taken, a blocker added or cleared, or a decision only the operator can make. Name every such change and nothing else. Do not repeat a table, the merged list, or an unchanged blocker. If the audit found none, end the turn with no reply text. Either way, log this tick's row in your decision trail. The row names the items reported, or none."
 - [ ] On the operator's hold or stand-down, send every owner a zero-writes order at once.
 
 ### Spawn owners
@@ -54,7 +53,7 @@ Tests alone are not sufficient verification. A PR is verified only when its unit
 
 ### PR mechanics, for every PR
 
-- [ ] Open the PR ready, never draft, with `gh pr create` and `draft: false`, or with Graphite `gt` for a stack.
+- [ ] Open the PR ready, never draft, per **Opening a PR**. Use the run's built-in PR tool when it covers creation, otherwise the repository host or resolved forge. A stack child targets its parent branch.
 - [ ] Run the repo's lint and typecheck once before the PR-facing push. Push with hooks on.
 - [ ] Run `/deslop` before each commit and `/no-comments` before review.
 - [ ] Triage every Bugbot and security-reviewer comment per `.agents/skills/superdev-mode/references/bugbot-triage.md`.

@@ -11,7 +11,7 @@ The guide has ten parts:
 5. [Build and clean the change](./05-build-and-clean.md).
 6. [Verify the result and ship it](./06-verify-and-ship.md).
 7. [Run long tasks without losing control](./07-long-running-work.md).
-8. [Steer with principle names](./08-principles.md).
+8. [Steer with principle names](./08-principles.md). The 24 names that redirect a task.
 9. [Make the system yours](./09-make-it-yours.md).
 10. [Copy recipes and avoid common mistakes](./10-recipes-and-pitfalls.md).
 

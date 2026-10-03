@@ -75,6 +75,7 @@ The mode includes 24 playbooks for investigations, bug fixes, features, refactor
 | [`/interrogate`](./.agents/skills/interrogate/SKILL.md) | You want several reviewers to challenge a design or diff. |
 | [`/blast-radius`](./.agents/skills/blast-radius/SKILL.md) | You want to find what a change could break beyond the diff. |
 | [`/tdd`](./.agents/skills/tdd/SKILL.md) | A bug has a cheap local regression-test path, or you explicitly want TDD. |
+| [`/benchmark-checklist`](./.agents/skills/benchmark-checklist/SKILL.md) | You ran a benchmark or measured a speedup or regression. Check the limiter, tuning, errors, repeat runs, and relevance before reporting or acting on it. |
 | [`/no-comments`](./.agents/skills/no-comments/SKILL.md) | You want a fresh reviewer to remove narrating comments and expose hidden design problems. |
 | [`/create-verification-skill`](./.agents/skills/create-verification-skill/SKILL.md) | Your project has no repeatable way for an agent to drive the real app. |
 | [`/show-me-your-work`](./.agents/skills/show-me-your-work/SKILL.md) | You want an auditable decision log for unattended work. |
@@ -83,19 +84,20 @@ The mode includes 24 playbooks for investigations, bug fixes, features, refactor
 | [`/technical-writing`](./.agents/skills/technical-writing/SKILL.md) | You want docs, a README, an RFC, or a PR description tightened. |
 | [`/bro`](./.agents/skills/bro/SKILL.md) | You want the last response restated without jargon. |
 
-There are 65 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode.
+There are 67 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode.
 
 ## The principles are executable rules
 
-SuperDevAgents includes 23 short principle skills. They turn broad advice into a concrete choice the agent must make.
+SuperDevAgents includes 24 short principle skills. They turn broad advice into a concrete choice the agent must make.
 
 - [Fix root causes](./.agents/skills/principle-fix-root-causes/SKILL.md) reproduces a defect and traces it before changing code.
 - [Model the domain](./.agents/skills/principle-model-the-domain/SKILL.md) replaces repeated shape assumptions with one structure.
 - [Subtract before you add](./.agents/skills/principle-subtract-before-you-add/SKILL.md) removes obsolete code before adding another layer.
 - [Separate before serializing shared state](./.agents/skills/principle-separate-before-serializing-shared-state/SKILL.md) isolates concurrent writers before adding locks.
 - [Prove it works](./.agents/skills/principle-prove-it-works/SKILL.md) checks the real command, UI flow, stored value, or profile.
+- [Explain the number](./.agents/skills/principle-explain-the-number/SKILL.md) finds what limits a measurement and rules out errors, skipped work, and noise before anyone trusts it.
 
-The [principles guide](./docs/guide/08-principles.md) covers all 23 and shows how to use their names to redirect a task.
+The [principles guide](./docs/guide/08-principles.md) covers all 24 and shows how to use their names to redirect a task.
 
 ## Make it yours
 
