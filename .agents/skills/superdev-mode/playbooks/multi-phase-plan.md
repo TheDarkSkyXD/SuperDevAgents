@@ -38,7 +38,7 @@ Tests alone are not sufficient verification. A PR is verified only when its unit
   - [ ] `git show origin/main:<repo-backed control instructions path>` when the control instructions live in the repository. Otherwise record the active harness capability and its setup.
   - [ ] `git show origin/main:.agents/skills/superdev-mode/playbooks/opening-a-pr.md`
   - [ ] `git show origin/main:.agents/skills/<each other leaf skill>/SKILL.md`
-- [ ] On the operator's go, arm the hourly audit tick as `/loop 1h` with the tick prompt below when the harness supports it. Otherwise use its equivalent hourly recurring monitor or wake mechanism. Never leave the cadence to memory.
+- [ ] On the operator's go, arm the audit tick as `/loop 1h` with the tick prompt below. Never leave the cadence to memory.
 - [ ] Use this tick prompt, verbatim. "Re-read the execution playbook from trunk. Audit the operation against it and fix drift in this tick. Probe every active lane and judge progress by side effects only. Stand down a stuck lane and dispatch its replacement now. Then post a short status message to the operator in chat only when the audit found a tracked change that no earlier status message reported, such as a PR opened, a code-ready head, a round launched or closed, a verdict, a merge, a stuck agent and the action taken, a blocker added or cleared, or a decision only the operator can make. Name every such change and nothing else. Do not repeat a table, the merged list, or an unchanged blocker. If the audit found none, end the turn with no reply text. Either way, log this tick's row in your decision trail. The row names the items reported, or none."
 - [ ] On the operator's hold or stand-down, send every owner a zero-writes order at once.
 
