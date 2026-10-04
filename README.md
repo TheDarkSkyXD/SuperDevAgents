@@ -68,6 +68,7 @@ The mode includes 24 playbooks for investigations, bug fixes, features, refactor
 | [`/why`](./.agents/skills/why/SKILL.md) | You want the evidence behind a design, regression, or threshold. |
 | [`/teach`](./.agents/skills/teach/SKILL.md) | You want the mechanics and reasons woven into one plain explanation. |
 | [`/recall`](./.agents/skills/recall/SKILL.md) | You need your recent work on a topic reconstructed. |
+| [`/correct`](./.agents/skills/correct/SKILL.md) | You keep correcting agents for the same mistakes. Mine history for mistake classes, fix each at the highest level that works (architecture, then types, lint, and CI, then tests, with docs last), and keep a table pairing each rule with what enforces it. |
 | [`/architect`](./.agents/skills/architect/SKILL.md) | You want types, caller usage, and module boundaries settled before code. |
 | [`/arena`](./.agents/skills/arena/SKILL.md) | You want several attempts at the same design or implementation, followed by one synthesized result. |
 | [`/swarm`](./.agents/skills/swarm/SKILL.md) | You want independent slices checked in parallel and returned as one report. |
@@ -84,7 +85,13 @@ The mode includes 24 playbooks for investigations, bug fixes, features, refactor
 | [`/technical-writing`](./.agents/skills/technical-writing/SKILL.md) | You want docs, a README, an RFC, or a PR description tightened. |
 | [`/bro`](./.agents/skills/bro/SKILL.md) | You want the last response restated without jargon. |
 
-There are 67 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode.
+For repeated agent mistakes, run:
+
+```text
+/correct
+```
+
+There are 68 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode. Count them in PowerShell with `@(rg --files --glob SKILL.md .agents/skills).Count`.
 
 ## The principles are executable rules
 
