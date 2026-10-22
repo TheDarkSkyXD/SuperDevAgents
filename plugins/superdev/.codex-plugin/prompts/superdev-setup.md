@@ -1,6 +1,6 @@
 ---
 name: superdev-setup
-description: configure superdev per-role model choices
+description: configure the issue tracker, triage labels, domain docs, and per-role models
 disable-model-invocation: true
 ---
 

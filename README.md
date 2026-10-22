@@ -62,7 +62,9 @@ Run the setup skill once in your project:
 /superdev-setup
 ```
 
-Setup records your issue tracker, domain-document layout, triage labels, and supported model choices. It discovers the active harness's model catalog and options. Project overrides live in `.agents/superdev-models.md`; runtime-specific user settings use `superdev-models.md` in the harness's configuration directory. Without a valid override, the portable contract inherits the session model. Native adapter examples are configuration hints, not a requirement to use a particular provider. Then route a real task through the main mode:
+General setup configures your issue tracker, triage labels, and domain-document layout before configuring models and routing. On GitHub, it reuses existing labels and creates missing mapped labels after you approve the draft. Repository conventions live under `docs/agents/`. Requests to change only labels or models update only that part.
+
+Model setup discovers the active harness's catalog and supported options. Native integrations use their documented model sheets and defaults. Hosts without a native mapping can use `.agents/superdev-models.md` and inherit the session model when a default cannot be resolved. Then route a real task through the main mode:
 
 ```text
 /superdev-mode this command writes duplicate rows after a retry. reproduce it first, then fix and verify.

@@ -129,7 +129,7 @@ Comments follow the same rule as the reply. Write them clean as you go. Keep a c
 
 ## Additional SuperDev workflows
 
-Extra SuperDev skills are available when explicitly requested. They do not replace the playbooks, routed skills, or review requirements above. **superdev-setup** also supports project tracker and domain setup when the user requests project onboarding.
+Extra SuperDev skills are available when explicitly requested. They do not replace the playbooks, routed skills, or review requirements above. **superdev-setup** configures repository conventions and models by default. Requests to change only the tracker, labels, domain docs, models, or routing update only that part.
 
 ## Playbooks
 

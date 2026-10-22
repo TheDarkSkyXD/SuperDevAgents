@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "superdev",
   "displayName": "SuperDev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
   "compat": {
     "source": "native",

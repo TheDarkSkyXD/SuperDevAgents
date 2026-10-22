@@ -33,7 +33,7 @@ Find each skill's instructions in the [skills tree](../plugins/superdev/skills/)
 | `/blast-radius` | find what a change could break beyond the diff and prove safety by running code |
 | `/recall` | catch up on recent working context from chat history, live state, and the shared record |
 | `/ketchup` | catch up on everything in this chat since your last message, with an executive summary for each action item |
-| `/superdev-setup` | configure superdev per-role model choices |
+| `/superdev-setup` | configure the issue tracker, triage labels, domain docs, and per-role models |
 | `/superdev-help` | answer a question about superdev with the prompt to send and the file the answer came from |
 | `/unslop` | clean up writing by removing AI tells |
 | `/no-comments` | strip comments before review, fix the accepted findings, encode claimed constraints |
@@ -126,7 +126,7 @@ The [CI installation check](../.github/workflows/ci.yml) uses the skills CLI to 
 
 ### Codex
 
-The [native plugin manifest](../plugins/superdev/.codex-plugin/plugin.json) points to the shared skills directory and the Codex [SessionStart hook](../plugins/superdev/hooks/codex-hooks.json). The [marketplace catalog](../.agents/plugins/marketplace.json) lists `superdev` in the `superdev-claude` marketplace. Review and trust the hook through `/hooks`; Codex asks again when its definition changes.
+The [native plugin manifest](../plugins/superdev/.codex-plugin/plugin.json) points to the shared skills directory and the Codex [SessionStart hook](../plugins/superdev/hooks/codex-hooks.json). The [marketplace catalog](../.agents/plugins/marketplace.json) lists `superdev` in the `superdev-agents` marketplace. Review and trust the hook through `/hooks`; Codex asks again when its definition changes.
 
 The [README installation](../README.md#codex) registers that catalog with `codex plugin marketplace add`, then installs the plugin with `codex plugin add`. These commands match the help output from `codex-cli 0.154.0-alpha.6.2`. A fresh native installation was not tested for this documentation change.
 

@@ -1,9 +1,9 @@
 ---
 name: superdev-setup
-description: Configure which models superdev uses per role. Detects available models and writes the current runtime's override sheet. Use for /superdev-setup, "configure superdev models", changing superdev's model choices, or turning the SessionStart hook on or off.
+description: Configure a repository for SuperDev with its issue tracker, GitHub triage labels, domain docs, per-role models, and routing. Use for /superdev-setup, first-time setup, or changes to repository conventions or model configuration.
 ---
 
-# Setup superdev
+# SuperDev setup
 
 On Codex, read the [platform mapping](../superdev-mode/references/codex-tools.md), including its per-skill notes, before following this skill.
 
@@ -17,7 +17,18 @@ On GitHub Copilot, follow [the Copilot setup](copilot.md) in place of steps 1, 3
 
 On another runtime, read [Other runtimes](#other-runtimes) below for where the sheet lives and how it loads; the steps are the same.
 
-Write the current runtime's per-role model override sheet, using the path in [Other runtimes](#other-runtimes). Each superdev skill names a default model inline; the override sheet adapts those defaults to the models you actually have access to.
+## Setup scope
+
+For a first-time setup or a general rerun, complete both parts in order:
+
+1. Read and follow [repository setup](references/repository-setup.md).
+2. Follow the model setup steps below.
+
+When the user asks to change only the issue tracker, GitHub labels, triage mappings, or domain docs, run only repository setup and finish without running model setup. Within repository setup, run only the sections needed for that change. When the user asks to change only models, reasoning effort, or routing, run only model setup. A workflow invoking this skill to repair a missing or invalid model sheet is also a model-only request.
+
+Inspect current files before editing. Preserve choices outside the requested change and update existing configuration instead of creating duplicates.
+
+For model setup, write the current runtime's per-role model override sheet, using the path in [Other runtimes](#other-runtimes). Each superdev skill names a default model inline; the override sheet adapts those defaults to the models you actually have access to.
 
 Claude Code has no auto-applied "rules" mechanism like Cursor's `.mdc`. The Claude Code config directory is `$CLAUDE_CONFIG_DIR` when that variable is set and `~/.claude` otherwise. This skill calls it `<config>`. Inclusion is explicit: the user adds a line to `<config>/CLAUDE.md` (or their project `CLAUDE.md`) such as:
 
@@ -29,11 +40,7 @@ with `<config>` written as the resolved path, so the file is loaded as context f
 
 The Codex home directory is `$CODEX_HOME` when that variable is set and `~/.codex` otherwise. This skill calls it `<codex-home>`.
 
-## Repository conventions
-
-When the user also requests project onboarding, follow [repository setup](references/repository-setup.md) to configure the issue tracker, domain docs, and triage labels. Preserve existing settings on reruns. Ordinary model and routing setup follows the steps below without adding project onboarding.
-
-## Steps
+## Model setup
 
 ### 1. Detect available models
 

@@ -8,6 +8,8 @@ Scaffold the per-repository configuration used by the engineering skills:
 
 This is a guided setup. Explore first, show what you found, confirm choices with the user, then write.
 
+For a targeted change, use only the relevant sections and preserve the other saved configuration. A labels-only request does not rewrite the issue tracker, domain docs, or model settings.
+
 ## Explore
 
 Inspect the current repository without assuming its state:
@@ -19,6 +21,7 @@ Inspect the current repository without assuming its state:
 - Check whether `docs/agents/` contains prior setup output.
 - Check for `.scratch/`, which may signal a local Markdown issue tracker.
 - Check whether the `triage` skill is installed. This decides whether triage-label setup runs.
+- Read existing tracker configuration and labels. On GitHub, resolve the target repository from its remote and use a connected GitHub tool or `gh label list --repo <owner/repo> --limit 1000 --json name,color,description`. Reuse existing label names where they already express a role.
 - Look for real monorepo signals: `pnpm-workspace.yaml`, a `workspaces` field in `package.json`, or populated `packages/*` directories with their own `src/` trees. Without these signals, use a single domain context.
 
 ## Present findings and ask
@@ -44,7 +47,7 @@ Skip this section if the `triage` skill is not installed.
 
 Ask one question: "Do you want to keep the default triage labels? Recommended: yes."
 
-The canonical roles and default tracker strings are `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix`. If the user declines, collect mappings to the repository's existing labels so the skills do not create duplicates.
+The five state roles and default tracker strings are `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix`. The two category roles are `bug` and `enhancement`. If the user declines the defaults, collect mappings to the repository's existing labels so the skills do not create duplicates. Preserve saved mappings on reruns unless the user asks to change them.
 
 ### Domain docs
 
@@ -60,6 +63,7 @@ Before writing, show the user:
 - The proposed `docs/agents/issue-tracker.md`
 - The proposed `docs/agents/domain.md`
 - The proposed `docs/agents/triage-labels.md` when the `triage` skill is installed
+- Any mapped labels missing from the selected tracker that setup will create
 
 Allow edits before writing.
 
@@ -101,6 +105,12 @@ Use these seed templates:
 
 For another tracker, write `docs/agents/issue-tracker.md` from the user's description.
 
+### Ensure tracker labels exist
+
+When triage labels are in scope, ensure the approved mapped labels exist in the selected tracker. On GitHub, create each missing label through a connected GitHub tool or `gh label create "<mapped-label>" --repo <owner/repo> --description "<role meaning>"`. Read the resulting labels to verify creation. Existing labels keep their names, colors, and descriptions. Do not use `--force`, delete labels, or relabel existing issues as part of setup.
+
+On a local Markdown tracker, the mapping file is the label vocabulary. For another tracker, use its documented label operations. If tracker access is unavailable, write the local configuration and report which labels remain to be created. Do not claim remote label setup succeeded.
+
 ## Finish
 
-Name the files written and the engineering skills that now consume them. The user may edit `docs/agents/*.md` directly later. They only need to rerun setup to switch trackers or replace the configuration.
+Name the files written, the tracker labels created or reused, and the engineering skills that now consume them. Report any pending tracker operations. The user may edit `docs/agents/*.md` directly later. They only need to rerun setup to switch trackers or replace the configuration.

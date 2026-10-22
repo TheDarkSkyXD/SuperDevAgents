@@ -1,5 +1,11 @@
 # SuperDev changes
 
+## 1.0.1 - Restore complete project setup
+
+- Restore repository setup before model configuration for first-time setup and general reruns.
+- Restore discovery of issue-tracker, triage-label, and domain-document setup through the skill description and Codex shortcut.
+- Reuse existing tracker labels, create missing approved labels, and preserve saved settings on targeted reruns.
+
 ## 1.0.0 - Portable engineering workflows
 
 - Provide 82 skills and native integrations for Claude Code, Codex, GitHub Copilot, Pi, and Muse.

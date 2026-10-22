@@ -1,7 +1,7 @@
 {
   "name": "superdev",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
   "author": {
     "name": "SuperDevAgents contributors",

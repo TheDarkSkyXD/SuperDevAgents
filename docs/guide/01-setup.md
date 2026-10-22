@@ -38,11 +38,11 @@ $superdev-setup
 [`$superdev-setup`](../../.agents/skills/superdev-setup/SKILL.md) inspects the repository before it writes anything. It configures:
 
 - The issue tracker used by `$to-spec`, `$to-tickets`, and `$triage`.
-- The triage-label vocabulary when the triage skill is installed.
+- The triage-label vocabulary when the triage skill is installed, reusing existing GitHub labels and creating missing mapped labels after draft approval.
 - The location of domain context and architecture decision records.
 - The models and supported reasoning options used by delegated roles and review panels.
 
-Setup writes repository guidance under `docs/agents/`. Project model overrides use `.agents/superdev-models.md`; runtime user settings use that harness's `superdev-models.md` sheet. Setup validates models and options against the active catalog. With no valid override, the portable contract uses the session model. Preserve valid saved choices on reruns.
+General setup completes repository configuration first, then model configuration. Setup writes repository guidance under `docs/agents/`. Native model settings use the sheet and loading rules documented for the active harness. Hosts without a native mapping can use `.agents/superdev-models.md`. Requests to change only labels, the tracker, domain docs, models, or routing update only that part and preserve other saved choices.
 
 ## Add a verification skill when the project needs one
 

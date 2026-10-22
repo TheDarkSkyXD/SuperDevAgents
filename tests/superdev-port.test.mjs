@@ -97,6 +97,37 @@ test("every skill starts with the portable contract and fixed Grok model IDs are
   }
 });
 
+test("general setup advertises and runs repository configuration before model setup", () => {
+  const setup = readFileSync(join(skills, "superdev-setup/SKILL.md"), "utf8");
+  const description = setup.split("\n").find((line) => line.startsWith("description:"));
+  expect(description).toMatch(/repository.*triage labels/);
+  const scope = setup.slice(setup.indexOf("## Setup scope"), setup.indexOf("## Model setup"));
+  expect(scope).toContain("For a first-time setup or a general rerun, complete both parts in order:");
+  expect(scope).toMatch(/1\. Read and follow \[repository setup\]\(references\/repository-setup\.md\)\.[\s\S]*2\. Follow the model setup steps below\./);
+  expect(scope).toContain("run only repository setup");
+  expect(scope).toContain("run only model setup");
+  const repositorySetup = readFileSync(join(skills, "superdev-setup/references/repository-setup.md"), "utf8");
+  for (const name of ["issue-tracker-github.md", "issue-tracker-gitlab.md", "issue-tracker-local.md", "triage-labels.md", "domain.md"]) {
+    expect(repositorySetup).toContain(`(./${name})`);
+    expect(existsSync(join(skills, "superdev-setup/references", name))).toBe(true);
+  }
+});
+
+test("repository setup maps every triage role and verifies missing-label creation", () => {
+  const triage = readFileSync(join(skills, "triage/SKILL.md"), "utf8");
+  const rolesSection = triage.slice(triage.indexOf("## Roles"), triage.indexOf("## Invocation"));
+  const roles = [...rolesSection.matchAll(/^- `([^`]+)`:/gm)].map((match) => match[1]);
+  const labels = readFileSync(join(skills, "superdev-setup/references/triage-labels.md"), "utf8");
+  expect(roles).toHaveLength(7);
+  for (const role of roles) expect(labels).toContain(`| \`${role}\``);
+  const repositorySetup = readFileSync(join(skills, "superdev-setup/references/repository-setup.md"), "utf8");
+  expect(repositorySetup).toContain("gh label list --repo <owner/repo>");
+  expect(repositorySetup).toContain('gh label create "<mapped-label>" --repo <owner/repo>');
+  expect(repositorySetup).toContain("Read the resulting labels to verify creation.");
+  expect(repositorySetup).toContain("Preserve saved mappings on reruns");
+  expect(repositorySetup).toContain("report which labels remain to be created");
+});
+
 test("model-region validation accepts Windows paths and still catches a stray model", () => {
   const models = loadModels();
   const file = "plugins\\superdev\\skills\\how\\SKILL.md";
