@@ -33,7 +33,7 @@ Find each skill's instructions in the [skills tree](../plugins/superdev/skills/)
 | `/blast-radius` | find what a change could break beyond the diff and prove safety by running code |
 | `/recall` | catch up on recent working context from chat history, live state, and the shared record |
 | `/ketchup` | catch up on everything in this chat since your last message, with an executive summary for each action item |
-| `/superdev-setup` | configure the issue tracker, triage labels, domain docs, and per-role models |
+| `/superdev-setup` | configure the tracker, triage and Wayfinder labels, domain docs, and models |
 | `/superdev-help` | answer a question about superdev with the prompt to send and the file the answer came from |
 | `/unslop` | clean up writing by removing AI tells |
 | `/no-comments` | strip comments before review, fix the accepted findings, encode claimed constraints |

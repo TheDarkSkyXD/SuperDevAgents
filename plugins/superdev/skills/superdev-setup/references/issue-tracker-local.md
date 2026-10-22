@@ -18,6 +18,12 @@ Create a new file under `.scratch/<feature-slug>/` (creating the directory if ne
 
 Read the file at the referenced path. The user will normally pass the path or the issue number directly.
 
+## Ticket relationships
+
+These conventions apply to `to-tickets` and Wayfinder. Record the configured parent spec or map path on each child. Implementation tickets keep their `ready-for-agent` status; Wayfinder's claimed and resolved statuses apply only to decision tickets.
+
+Record implementation blockers with the ticket numbers or paths under `Blocked by`. A blocker is complete when its ticket satisfies the project's completion rule. Read back each child's parent and blocker references and verify that their target files exist. Do not rewrite a parent unless the invoking skill permits it.
+
 ## Wayfinding operations
 
 Used by `/wayfinder`. The **map** is a file with one **child** file per ticket.

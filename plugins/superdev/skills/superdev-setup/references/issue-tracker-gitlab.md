@@ -34,13 +34,22 @@ Create a GitLab issue.
 
 Run `glab issue view <number> --comments`.
 
+## Ticket relationships
+
+These conventions apply to `to-tickets` and Wayfinder. Create issues before wiring their relationships. Keep parent-child grouping separate from blocking.
+
+- **Parent**: record `Part of #<parent>` in the child description unless this project's GitLab installation provides a configured native parent relationship. Follow the invoking skill's rules before editing a parent.
+- **Blocking**: use the native `/blocked_by #<blocker>` quick action on the child, posted with `glab issue note <child> --message "/blocked_by #<blocker>"`. Read back `glab api projects/:id/issues/<child>/links` and verify the blocking relationship. Where native blocking is unavailable, record `Blocked by: #<blocker>` in the child description and verify it by reading the issue again. A permissions failure remains an error to report.
+
 ## Wayfinding operations
 
 Used by `/wayfinder`. The **map** is a single issue with **child** issues as tickets.
 
+Setup creates the map and four ticket-type labels below even when `triage` is absent. Record custom mappings here and follow `Ticket relationships` for parent and blocking links.
+
 - **Map**: a single issue labelled `wayfinder:map`, holding the Notes / Decisions-so-far / Fog body. `glab issue create --label wayfinder:map`. (On GitLab tiers with native epics, an epic may hold the map instead; a labelled issue works everywhere.)
 - **Child ticket**: an issue carrying `Part of #<map>` at the top of its description and labels `wayfinder:<type>` (`research`/`prototype`/`grilling`/`task`). Once claimed, the ticket is assigned to the driving dev.
-- **Blocking**: GitLab's **native blocking link**, the canonical, UI-visible representation. Add it with the `/blocked_by #<n>` quick action, posted as a note (`glab issue note <child> --message "/blocked_by #<blocker>"`). Native blocking links are a Premium/Ultimate feature; on the free tier (or where unavailable) fall back to a `Blocked by: #<n>, #<n>` line at the top of the description. A ticket is unblocked when every blocker is closed.
+- **Blocking**: use `Ticket relationships` above. A ticket is unblocked when every blocker is closed.
 - **Frontier query**: `glab issue list -F json` scoped to the map's children, drop any with an open blocker: a native `blocked_by` link to an open issue (`glab api projects/:id/issues/:iid/links`), or an open issue in the `Blocked by` line, or an assignee; first in map order wins.
 - **Claim**: `glab issue update <n> --assignee @me`, the session's first write.
 - **Resolve**: `glab issue note <n> --message "<answer>"`, then `glab issue close <n>`, then append a context pointer (gist + link) to the map's Decisions-so-far.

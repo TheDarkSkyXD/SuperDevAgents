@@ -62,7 +62,7 @@ Run the setup skill once in your project:
 /superdev-setup
 ```
 
-General setup configures your issue tracker, triage labels, and domain-document layout before configuring models and routing. On GitHub, it reuses existing labels and creates missing mapped labels after you approve the draft. Repository conventions live under `docs/agents/`. Requests to change only labels or models update only that part.
+General setup configures your issue tracker, triage labels, Wayfinder labels and relationships, and domain-document layout before configuring models and routing. On GitHub, it reuses existing labels and creates missing mapped labels after you approve the draft. Repository conventions default to `docs/agents/`; saved document locations are preserved. Requests to change only labels or models update only that part. The full ten-step model setup remains intact, including reasoning effort, routing, and optional verification-skill setup.
 
 Model setup discovers the active harness's catalog and supported options. Native integrations use their documented model sheets and defaults. Hosts without a native mapping can use `.agents/superdev-models.md` and inherit the session model when a default cannot be resolved. Then route a real task through the main mode:
 

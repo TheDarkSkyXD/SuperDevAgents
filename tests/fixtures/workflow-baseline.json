@@ -8,12 +8,12 @@
     },
     ".claude-plugin/plugin.json": {
       "reference": "bd07ef8d84d59a9d43ed34f77b7be008b6a11911cab510c725ef6d54c99dd376",
-      "adaptation": "68b6cc7c535f2f69995d2936c70ccdc1e93031962baede679e578e86fc2999ae",
+      "adaptation": "42bebd08aa47e615c46ab13b39bf5c9a2110f100859451ea5ecee51441fd0141",
       "reason": "SuperDev package identity, version, description, and contributor metadata."
     },
     ".codex-plugin/plugin.json": {
       "reference": "acf9f55ee92199f5bfbd8b2c85e54baf36a80b8e5a67e2d2d299bb5fe2f097fa",
-      "adaptation": "b8782207dc3bd966dfa5c0cc97bc874bce4d41d07c47c18ad00fba66b700c6d2",
+      "adaptation": "dad6c6cf9a0e0269bcae0caa8a6f88c48f871e329d46674f9bc90d0abca6ac6d",
       "reason": "SuperDev package identity, version, contributor metadata, and interface branding."
     },
     ".codex-plugin/prompts/architect.md": {
@@ -99,7 +99,7 @@
     },
     ".codex-plugin/prompts/superdev-setup.md": {
       "reference": "8cee0667680207c2b014197936ab1cc7b30049dd1a726bcda875c3d15b3c9eb5",
-      "adaptation": "23cdd4efe191caa90ad6fad7e3b0bd6963e03ba3d9fd3bf31d9a0d698bdc3480",
+      "adaptation": "99cfb3b77d9e3c3ec8e5d396581faab340a40303b045d6b1cb239803398fbf59",
       "reason": "Advertise the restored repository, triage-label, domain-document, and model setup in the generated shortcut."
     },
     ".codex-plugin/prompts/sharpen.md": {
@@ -143,12 +143,12 @@
     },
     ".github/plugin/plugin.json": {
       "reference": "9503cfd5dac781839713adf464a450d034d37e3d040c116dedf690ea0a7d82c5",
-      "adaptation": "7902908d67eef3f9413db289820ed449f8dca985f48f355fcb6f3957669d4121",
+      "adaptation": "d4399268b32615e631d23009ac4a3fa7eecc46446d9bcf068951907b4e9a113c",
       "reason": "SuperDev package identity, version, metadata, and JSON formatting."
     },
     ".muse-plugin/plugin.json": {
       "reference": "73bcb2e507868ce1f6400dab8b59aca18ba354803066b6aecd697a64a004f62d",
-      "adaptation": "4177ffecb725e880bae58f57d90d43933b06b501ee733aef82a152c24d94b9b6",
+      "adaptation": "071b0ab6bf674c82652897709000c74309951dfadd1ea02c840eb2dfd4fbe02f",
       "reason": "SuperDev package identity and generated discovery entries for additional skills."
     },
     "README.md": {
@@ -723,7 +723,7 @@
     },
     "skills/superdev-setup/SKILL.md": {
       "reference": "afe4d3e6285440d886367387d8ba369b391493201440e06cce50cf1bc83d393f",
-      "adaptation": "f574cb4341738123a6924adb93f6a5118460ca867b9c65adc3b00bc8d25bc3c7",
+      "adaptation": "61a8695ce5554dd89cacbaab207df53183d022e8f33cf4838f498f26c14635ea",
       "reason": "Restore the original SuperDev default of repository setup followed by runtime-aware model setup; keep targeted requests limited to their part."
     },
     "skills/superdev-setup/copilot.md": {

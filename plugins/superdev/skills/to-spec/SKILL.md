@@ -9,6 +9,8 @@ This skill takes the current conversation context and codebase understanding and
 
 The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/superdev-setup`.
 
+Resolve their documents through the `### Issue tracker` and `### Triage labels` pointers in the project's active agent instructions. Use the saved label mappings and tracker operations instead of assuming default document paths or label strings.
+
 ## Process
 
 1. Explore the repo to understand the current state of the codebase, if you haven't already. Use the project's domain glossary vocabulary throughout the spec, and respect any ADRs in the area you're touching.

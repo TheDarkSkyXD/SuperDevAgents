@@ -11,6 +11,8 @@ Break a plan, spec, or conversation into a set of **tickets**: tracer-bullet ver
 
 The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/superdev-setup`.
 
+Resolve their documents through the `### Issue tracker` and `### Triage labels` pointers in the project's active agent instructions. Use the saved label mappings and `Ticket relationships` operations. Verify parent and blocking relationships separately after publishing, without modifying a parent that this skill tells you to leave unchanged.
+
 ## Process
 
 ### 1. Gather context

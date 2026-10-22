@@ -1,6 +1,6 @@
 ---
 name: superdev-setup
-description: Configure a repository for SuperDev with its issue tracker, GitHub triage labels, domain docs, per-role models, and routing. Use for /superdev-setup, first-time setup, or changes to repository conventions or model configuration.
+description: Configure a repository for SuperDev with its issue tracker, triage labels, Wayfinder setup, domain docs, per-role models, and routing. Use for /superdev-setup, first-time setup, or changes to repository conventions or model configuration.
 ---
 
 # SuperDev setup
@@ -18,6 +18,8 @@ On GitHub Copilot, follow [the Copilot setup](copilot.md) in place of steps 1, 3
 On another runtime, read [Other runtimes](#other-runtimes) below for where the sheet lives and how it loads; the steps are the same.
 
 ## Setup scope
+
+Repository setup adds the conventions consumed by the engineering skills. It does not replace the runtime-aware model setup below, including role models, reasoning effort, routing, and the verification-skill offers.
 
 For a first-time setup or a general rerun, complete both parts in order:
 

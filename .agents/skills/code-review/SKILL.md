@@ -12,7 +12,7 @@ Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
 
 Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings.
 
-The issue tracker should have been provided to you. If `docs/agents/issue-tracker.md` is missing, tell the user to run `/superdev-setup`.
+Resolve the tracker document through the `### Issue tracker` pointer in the project's active agent instructions. If no tracker is configured or its document cannot be read, tell the user to run `/superdev-setup`.
 
 ## Process
 

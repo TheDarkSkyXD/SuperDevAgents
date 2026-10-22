@@ -39,10 +39,11 @@ $superdev-setup
 
 - The issue tracker used by `$to-spec`, `$to-tickets`, and `$triage`.
 - The triage-label vocabulary when the triage skill is installed, reusing existing GitHub labels and creating missing mapped labels after draft approval.
+- The five Wayfinder labels, parent-child links, blocking relationships, and their verification operations. Specs and implementation tickets use the same tracker configuration.
 - The location of domain context and architecture decision records.
 - The models and supported reasoning options used by delegated roles and review panels.
 
-General setup completes repository configuration first, then model configuration. Setup writes repository guidance under `docs/agents/`. Native model settings use the sheet and loading rules documented for the active harness. Hosts without a native mapping can use `.agents/superdev-models.md`. Requests to change only labels, the tracker, domain docs, models, or routing update only that part and preserve other saved choices.
+General setup completes repository configuration first, then the complete model configuration flow. Setup defaults to `docs/agents/` for repository guidance and preserves custom document paths on reruns. Each consuming skill follows the tracker and label pointers in your active agent instructions. Native model settings use the sheet and loading rules documented for the active harness. Hosts without a native mapping can use `.agents/superdev-models.md`. Requests to change only labels, the tracker, domain docs, models, or routing update only that part and preserve other saved choices.
 
 ## Add a verification skill when the project needs one
 

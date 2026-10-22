@@ -25,6 +25,8 @@ The map is an **index**, not a store. It lists the decisions made and points at 
 
 **Where the map, its child tickets, blocking, and frontier queries physically live is tracker-specific.** The issue tracker should have been provided to you. If not, tell the user to run `/superdev-setup`. Consult the tracker doc's "Wayfinding operations" section for how _this_ repo expresses them. If no tracker has been provided, default to the local-markdown tracker.
 
+Resolve the tracker document through the `### Issue tracker` pointer in the project's active agent instructions. Read its Wayfinding operations, including any label mappings and relationship checks. A configured document that cannot be read is a setup error to report. Use the local fallback only when no tracker was configured.
+
 ### The map body
 
 The whole map at low resolution, loaded once per session. Open tickets are **not** listed: they are open child issues, found by query.
