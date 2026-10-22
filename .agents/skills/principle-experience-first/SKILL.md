@@ -1,9 +1,12 @@
 ---
 name: principle-experience-first
 description: "Apply when product, UX, or feature-scope tradeoffs come up. Choose user delight over implementation convenience; ship fewer polished features over more rough ones."
+user-invocable: false
 ---
 
 # Experience First
+
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
 
 When implementation convenience conflicts with user delight, choose delight.
 

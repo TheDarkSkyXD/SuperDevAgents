@@ -1,9 +1,11 @@
 ---
 name: universal-architecture
-description: 'Automatically activate for architecture and code-placement work even when the user does not name this skill. Trigger on natural requests such as "Where should this code go?", "Review or fix our architecture", "Can this layer import that layer?", "Separate business logic from routes or controllers", "Organize our web, mobile, desktop, server, worker, CLI, offline, or local-first code", and "Enforce boundaries with ESLint"; also use for UI, API, RPC, IPC, transport, domain, capabilities, vendors, adapters, databases, persistence, dependency direction, or layer-violation questions. When creating or reorganizing JavaScript or TypeScript architecture folders, create matching ESLint boundaries as part of the same implementation by default.'
+description: Apply responsibility-based architecture and enforce import boundaries. Use for code placement, architecture reviews, adapters, CLI entry points, platform sharing, and ESLint boundary rules.
 ---
 
 # Universal architecture
+
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
 
 Apply a responsibility-based architecture without forcing unnecessary packages or abstractions. Detect the active platforms and existing repository conventions before proposing changes.
 

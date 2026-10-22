@@ -1,6 +1,6 @@
 # Install and set up SuperDevAgents
 
-SuperDevAgents is a repository-local Agent Skills bundle. Install it by copying the `.agents` files into your project.
+SuperDevAgents provides native plugin integrations and portable Agent Skills. Use the [harness setup guide](../harnesses.md) for native plugins, model configuration, and host limitations.
 
 ## Copy the agent files
 
@@ -10,7 +10,7 @@ Clone or download the repository:
 git clone https://github.com/TheDarkSkyXD/SuperDevAgents.git
 ```
 
-Copy the contents of the cloned `.agents/` directory into the `.agents/` directory at the root of your project. Keep existing project skills and agent definitions. If a same-name file already exists, compare both versions before you replace anything.
+From the clone, run `node tools/install.mjs --target /path/to/project/.agents/skills`. Use the skills directory your harness discovers. The installer preserves unrelated skills and refuses conflicting local edits. Native plugins also include automatic routing and runtime adapters.
 
 Your project should contain paths such as:
 
@@ -40,9 +40,9 @@ $superdev-setup
 - The issue tracker used by `$to-spec`, `$to-tickets`, and `$triage`.
 - The triage-label vocabulary when the triage skill is installed.
 - The location of domain context and architecture decision records.
-- The reasoning budget and model map used by delegated roles and review panels. Choose unlimited to keep default efforts, large for xhigh, medium for high, or small for medium reasoning, subject to model support.
+- The models and supported reasoning options used by delegated roles and review panels.
 
-Setup writes repository guidance under `docs/agents/` and model choices to `.agents/superdev-models.md`. Reruns preserve saved role choices. Older maps may pin Fable 5 or 5.1, Opus 5, or Grok 4.7. To replace an outdated choice, remove that role's line before rerunning setup, then choose from models the active harness reports. Remove the file to rebuild the whole map. Setup checks model identifiers against the active harness instead of assuming names from an older guide still work.
+Setup writes repository guidance under `docs/agents/`. Project model overrides use `.agents/superdev-models.md`; runtime user settings use that harness's `superdev-models.md` sheet. Setup validates models and options against the active catalog. With no valid override, the portable contract uses the session model. Preserve valid saved choices on reruns.
 
 ## Add a verification skill when the project needs one
 

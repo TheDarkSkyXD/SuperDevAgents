@@ -37,12 +37,12 @@ Use `candidate` for one or two examples. Use `recurring` after multiple real dis
 - Do not skip when: The comment points to accessibility, focus visibility, keyboard navigation, color contrast, or a component API contract that the PR did not intentionally change.
 - Example signal: Comments about focus outlines, button sizes, spacing, or shared component visual defaults where the owner replies "intentional" or "intended".
 
-### Upstack or stack-local usage Bugbot cannot see
+### Usuperdev or stack-local usage Bugbot cannot see
 
 - Confidence: candidate
-- Skip when: Bugbot flags an export, component, helper, or file as unused, and `gt ls -s`, upper-stack diffs, or PR context shows it is used by a later PR in the stack.
-- Do not skip when: The current PR is not part of a stack, the symbol is public API, or the supposed upstack use cannot be verified.
-- Example signal: "Exported component is never used" with a human reply like "used upstack".
+- Skip when: Bugbot flags an export, component, helper, or file as unused, and the active forge's PR list and diffs, upper-stack diffs, or PR context show it is used by a later PR in the stack.
+- Do not skip when: The current PR is not part of a stack, the symbol is public API, or the supposed usuperdev use cannot be verified.
+- Example signal: "Exported component is never used" with a human reply like "used usuperdev".
 
 ### Temporary duplication during parallel implementation
 
@@ -95,7 +95,7 @@ Append new candidate learnings here during or after babysitting when they look t
 - Example signal: "masks do not affect hit-testing", "overlay blocks wheel scroll", "ignores deltaMode", "runs in the IntersectionObserver callback before React applies state".
 - Source: one sticky-occlusion PR: six Bugbot passes, roughly eighteen findings, every one fixed rather than dismissed.
 
-### Run the test first for contract-test drift claims
+### Contract-test drift claims are cheaply verifiable — run the test first
 
 - Confidence: candidate
 - Skip when: Never skip the verification itself; it costs one command. When a PR
@@ -104,7 +104,7 @@ Append new candidate learnings here during or after babysitting when they look t
   matches the doc" (or vice versa), run that test on the PR tip before
   classifying. A red run confirms the claim empirically; a green run is a
   concrete disproof for the dismissal reply.
-- Do not skip when: n/a. This is a verification shortcut, not a dismissal.
+- Do not skip when: n/a — this is a verification shortcut, not a dismissal
   pattern. Note that repeat-pass lean-dismiss heuristics would misfire here:
   prose-pinning tests drift precisely BECAUSE earlier fix rounds edit the prose.
 - Example signal: "Contract test omits the pre-fix wait" on a PR whose earlier

@@ -1,0 +1,22 @@
+{
+  "name": "superdev",
+  "displayName": "SuperDev",
+  "version": "1.0.0",
+  "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
+  "author": {
+    "name": "SuperDevAgents contributors",
+    "url": "https://github.com/TheDarkSkyXD"
+  },
+  "homepage": "https://github.com/TheDarkSkyXD/SuperDevAgents",
+  "repository": "https://github.com/TheDarkSkyXD/SuperDevAgents",
+  "license": "MIT",
+  "keywords": [
+    "superdev",
+    "superdev-mode",
+    "workflow",
+    "skills",
+    "subagents",
+    "github-copilot"
+  ],
+  "hooks": "hooks/copilot-hooks.json"
+}

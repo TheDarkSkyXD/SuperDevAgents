@@ -1,10 +1,11 @@
 ---
 name: triage
 description: Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs.
-disable-model-invocation: true
 ---
 
 # Triage
+
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
 
 Move issues on the project issue tracker through a small state machine of triage roles.
 

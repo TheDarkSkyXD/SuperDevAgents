@@ -1,9 +1,12 @@
 ---
 name: principle-outcome-oriented-execution
 description: "Apply during planned rewrites and migrations with explicit phase boundaries. Converge on the target architecture; don't preserve smooth intermediate states with throwaway compatibility code."
+user-invocable: false
 ---
 
 # Outcome-Oriented Execution
+
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
 
 Optimize for the intended, verifiable end state rather than preserving smooth intermediate states.
 

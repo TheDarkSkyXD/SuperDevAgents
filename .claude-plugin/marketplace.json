@@ -1,0 +1,16 @@
+{
+  "name": "superdev-agents",
+  "owner": {
+    "name": "SuperDevAgents contributors",
+    "url": "https://github.com/TheDarkSkyXD"
+  },
+  "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
+  "plugins": [
+    {
+      "name": "superdev",
+      "source": "./plugins/superdev",
+      "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
+      "version": "1.0.0"
+    }
+  ]
+}

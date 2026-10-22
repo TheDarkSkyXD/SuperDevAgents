@@ -1,9 +1,12 @@
 ---
 name: principle-boundary-discipline
 description: "Apply when wiring validation, error handling, or framework adapters. Concentrate guards at system boundaries (CLI, config, network, external APIs); trust internal types and keep business logic in pure functions."
+user-invocable: false
 ---
 
 # Boundary Discipline
+
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
 
 Place validation, type narrowing, and error handling at system boundaries. Trust internal code unconditionally. Business logic lives in pure functions. The shell is thin and mechanical.
 

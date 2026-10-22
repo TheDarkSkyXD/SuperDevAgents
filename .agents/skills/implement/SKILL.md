@@ -1,8 +1,9 @@
 ---
 name: implement
 description: "Implement a piece of work based on a spec or set of tickets."
-disable-model-invocation: true
 ---
+
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
 
 Implement the work described by the user in the spec or tickets.
 

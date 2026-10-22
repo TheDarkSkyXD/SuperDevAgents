@@ -5,6 +5,8 @@ description: "Use only when the user explicitly asks for TDD, a failing test, or
 
 # TDD Bug Fix
 
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
+
 When fixing a bug with a clear, cheap test path, make the broken behavior executable before changing production code. The goal is a focused regression test that fails before the fix and passes after it.
 
 Do not force a test when it would be impractical. If the available test would require broad harness setup, brittle mocks, slow end-to-end infrastructure, production-only state, vague reproduction steps, or large unrelated fixture churn, skip adding a new test and use the closest useful verification instead.
@@ -14,7 +16,7 @@ Do not force a test when it would be impractical. If the available test would re
 1. **Understand the bug.** Identify the intended behavior, current behavior, affected path, and smallest observable reproduction.
 2. **Choose the narrowest executable check.** Prefer the closest unit, component, integration, or regression test already used for that codepath. If no practical test path is obvious, do not create one from scratch just to satisfy the workflow.
 3. **Write the failing test first.** Add the smallest focused test that would have caught the bug. The test should encode intended behavior, not mirror the current implementation.
-4. **Run the new test before fixing.** Confirm it fails for the intended reason. If it passes or fails for an unrelated reason, correct the test or reproduction before editing the implementation.
+4. **Run the new test before fixing.** Confirm it fails for the intended reason. Quote the failure content, not the assertion line: an exception, an empty result against a literal, and the predicted mismatch all print red, and only the last one proves the test measures the bug. If it passes or fails for an unrelated reason, correct the test or reproduction before editing the implementation.
 5. **Fix the bug.** Make the smallest production change that satisfies the intended behavior while preserving nearby contracts.
 6. **Rerun the regression test.** Confirm the test now passes.
 
@@ -36,6 +38,6 @@ Prefer no new test over a bad test. A bad test is one that mostly tests mocks, e
 
 Report the evidence, not just the outcome:
 
-- Name the failing-before test or executable check and the failure it produced.
+- Name the failing-before test or executable check and quote the failure it produced, trimmed to the diff.
 - Name the passing-after test run and any nearby validation performed.
 - If failing-before evidence could not be demonstrated, state why and describe the closest regression check used instead.

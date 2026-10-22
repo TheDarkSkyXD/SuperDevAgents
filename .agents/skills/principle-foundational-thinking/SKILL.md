@@ -1,9 +1,12 @@
 ---
 name: principle-foundational-thinking
 description: "Apply before writing logic: choosing core types and data structures, sequencing scaffold-vs-feature work, asking what concurrent actors share. Get the data structures right so downstream code becomes obvious."
+user-invocable: false
 ---
 
 # Foundational Thinking
+
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
 
 **Structural decisions** protect option value. **Code-level decisions** protect simplicity.
 

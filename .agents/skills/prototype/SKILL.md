@@ -5,6 +5,8 @@ description: Build a throwaway prototype to answer a design question. Use when t
 
 # Prototype
 
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
+
 A prototype is **throwaway code that answers a question**. The question decides the shape.
 
 ## Pick a branch

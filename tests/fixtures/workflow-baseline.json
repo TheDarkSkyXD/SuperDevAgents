@@ -1,0 +1,827 @@
+{
+  "format": 1,
+  "referenceRevision": "903e7385382389806c59d6989b6274e24165082b",
+  "normalization": "SuperDev names and repository links, LF line endings, trailing newlines, and the added portable-contract pointer. Binary assets compare as bytes.",
+  "files": {
+    ".claude-plugin/icon.png": {
+      "reference": "dc8fedbedfe971d87a55e40c74df2d5cdd14160ae8c042082a51b7857dc759f5"
+    },
+    ".claude-plugin/plugin.json": {
+      "reference": "bd07ef8d84d59a9d43ed34f77b7be008b6a11911cab510c725ef6d54c99dd376",
+      "adaptation": "88e486c6946a0359a19ebd149b0cefd20e948346305cd977e4ec5ed4e83a770d",
+      "reason": "SuperDev package identity, version, description, and contributor metadata."
+    },
+    ".codex-plugin/plugin.json": {
+      "reference": "acf9f55ee92199f5bfbd8b2c85e54baf36a80b8e5a67e2d2d299bb5fe2f097fa",
+      "adaptation": "334c5823af0a700c7cf7d3a2ac70d474e3381e621d6c064c4c3a926c2f6a100f",
+      "reason": "SuperDev package identity, version, contributor metadata, and interface branding."
+    },
+    ".codex-plugin/prompts/architect.md": {
+      "reference": "76f6920675838117fc4a92a97aa62a7427a7a3d7b516b6abd4980439f7b9ed0d"
+    },
+    ".codex-plugin/prompts/arena.md": {
+      "reference": "63ea6befa5d54e96d67b035f604b7ecbde12a28e30ea2a59f13515bc3b4801fe"
+    },
+    ".codex-plugin/prompts/automate-me.md": {
+      "reference": "b143eca3da868116ba985d9b747b019d240a72a0d8521a09dd8d7c160a12d728"
+    },
+    ".codex-plugin/prompts/babysit.md": {
+      "reference": "5d0d97b6e6113c0ed4e285c56dc4de29b3a3555f1c2796ad254e9daf7db0dd3b"
+    },
+    ".codex-plugin/prompts/benchmark-checklist.md": {
+      "reference": "60ff78580ac07053a6eab21ca0b3c4d292c0f51253736be4fad28fa1f43c57d4"
+    },
+    ".codex-plugin/prompts/blast-radius.md": {
+      "reference": "c90a1f2496b309c9dad9d320a47b7ad87a92b6f8a0d5c3f458d81e40f9b48c32"
+    },
+    ".codex-plugin/prompts/bro.md": {
+      "reference": "d7919ce145182685bb4b6788f9b28de23187813fbc873a466d5e37287115fd4c"
+    },
+    ".codex-plugin/prompts/correct.md": {
+      "reference": "daf8e61171ebb93564cfae74657d7df5499715c76fc584197781ad35835bef1b"
+    },
+    ".codex-plugin/prompts/create-formal-verification-skill.md": {
+      "reference": "4bd5a23f1ace90e00c7dcd66c745504a0a4aaa875aba6c5cf6d5147ab6581927"
+    },
+    ".codex-plugin/prompts/create-verification-skill.md": {
+      "reference": "beed951a22660e43632b3f1020e28eb2cf04facc41abc1602657108ddcc07afc"
+    },
+    ".codex-plugin/prompts/deslop.md": {
+      "reference": "642e54f6295a7d7306eb22d4a539a8627092d5ddb397b462a91ebfb601760ec5"
+    },
+    ".codex-plugin/prompts/figure-it-out.md": {
+      "reference": "6d05240c6ee40c1d14e3b6cc2a00eb5e52897a4519a9004e2bbf43e006427cb5"
+    },
+    ".codex-plugin/prompts/fix-ci.md": {
+      "reference": "61730be05daf8fcda4e6aaafe0735b58b914b2bdecd5f9140643211ed649976b"
+    },
+    ".codex-plugin/prompts/fix-merge-conflicts.md": {
+      "reference": "1eb8892bca10dbc1d8bf854fb7ef86c5d02c2caa9568da079e9c161e2b137d3d"
+    },
+    ".codex-plugin/prompts/get-pr-comments.md": {
+      "reference": "cbf468f2d5f988f6b6524e6397225f1660ba5958543871eae534a17ae802b286"
+    },
+    ".codex-plugin/prompts/how.md": {
+      "reference": "d043043ec7a663a8a80da8edf1b5141b7d148018a05d8f255fd566762a559a42"
+    },
+    ".codex-plugin/prompts/in-your-own-words.md": {
+      "reference": "be81720934bfd170949cf1b1e72cc988f99f6e0d4decc818ba8547ba8692bb11"
+    },
+    ".codex-plugin/prompts/interrogate.md": {
+      "reference": "4efefedf67cd35b7438d873a9d8d1b9955c2d79d9c058150d32b15be3c98d57f"
+    },
+    ".codex-plugin/prompts/ketchup.md": {
+      "reference": "f0124533918c1bd3bbb6e93c9664d53d7a400ff190a49953262e6ee5f87d7da1"
+    },
+    ".codex-plugin/prompts/maintain-formal-verification-skill.md": {
+      "reference": "85788cddcb0087820744818b974f131daad6e051c587510c72000f3b0b3b1ab9"
+    },
+    ".codex-plugin/prompts/maintain-verification-skill.md": {
+      "reference": "b1fb9a5de1724bf3c4e675e5d583d44ac3df4f0c7bf7d8c8e7b843ae48616953"
+    },
+    ".codex-plugin/prompts/make-pr-easy-to-review.md": {
+      "reference": "65ab566ad9453732b37dcae7467cb23be1cb3b84cb1e7a2873e826618e543ee0"
+    },
+    ".codex-plugin/prompts/no-comments.md": {
+      "reference": "b6bf5b490a46897d6836c8633b9f77f8f95f8a4fcc70660683041b5f4515aabd"
+    },
+    ".codex-plugin/prompts/superdev-help.md": {
+      "reference": "75b20ed4cf648278c315acd5bc40b579c73e5c6d6c3417aaebe8ec2a49d2a3a8"
+    },
+    ".codex-plugin/prompts/superdev-mode.md": {
+      "reference": "acf0c00a2ef0f91e2e330dd8a331a28ce22e074498a89540d9b030a736e2e2a6"
+    },
+    ".codex-plugin/prompts/recall.md": {
+      "reference": "b2a91648770b9f7cc4248648a57ebef55d2973a3977592b2d9bb25b95ca81747"
+    },
+    ".codex-plugin/prompts/reflect.md": {
+      "reference": "708d0c4ca544d430fc128a13706b94aa5b20b6c524e99e95be789dff0c63e27c"
+    },
+    ".codex-plugin/prompts/superdev-setup.md": {
+      "reference": "8cee0667680207c2b014197936ab1cc7b30049dd1a726bcda875c3d15b3c9eb5"
+    },
+    ".codex-plugin/prompts/sharpen.md": {
+      "reference": "e6c9aef60eb6720c2a297345a8b33ab25ff72347bcbd670837247512026d5c64"
+    },
+    ".codex-plugin/prompts/show-me-your-work.md": {
+      "reference": "2b7c76b8595ea04bd358f7ca2ac4116a4de1acdb89dfe1c58b95ab22151a93ae"
+    },
+    ".codex-plugin/prompts/swarm.md": {
+      "reference": "baf6ed615690499208b30c6dfe442ac9ba8c4af34a4167ac28503e23001f8c18"
+    },
+    ".codex-plugin/prompts/tdd.md": {
+      "reference": "8d954110d5d11177d366f82519614960f0c097d90c6a97601c3d91e2f88da30a"
+    },
+    ".codex-plugin/prompts/teach.md": {
+      "reference": "e03658eaeae38c510809608b6df5a397c62b96a83d709bae913e4da44b9db321"
+    },
+    ".codex-plugin/prompts/technical-writing.md": {
+      "reference": "6bc14afed31672d2b1ec0b3a9970980ae31ffc6dd94f1131ff6721d41b3375fa"
+    },
+    ".codex-plugin/prompts/thermo-nuclear-code-quality-review.md": {
+      "reference": "d5dcb8dcc87bf94ca7d3eaad4fb5f9552a005bbf411788dc0c78a1607d26aabc"
+    },
+    ".codex-plugin/prompts/thermo-nuclear-review.md": {
+      "reference": "b9ee362e31692dfde963ce446bb472fece916b397120622dd5f6d72864c8f894"
+    },
+    ".codex-plugin/prompts/thermos.md": {
+      "reference": "d2cc7c13436891d03e683664e802fad9b6644a79383cb4eaa927ecb609b9781a"
+    },
+    ".codex-plugin/prompts/typescript-best-practices.md": {
+      "reference": "70c93b96caefcf1363063d4f216a5d4c07c4c97df04476d05f0cfb6154c88128"
+    },
+    ".codex-plugin/prompts/unslop.md": {
+      "reference": "b1e1e6201621c5f1731f7dd92ba7094ff23910b2258aaaf837d39e2ff97b3e00"
+    },
+    ".codex-plugin/prompts/what-did-i-get-done.md": {
+      "reference": "d931d90789df87800f9fc204b537f9ec6aa9e90d7a47e2ce744d185d944d97c1"
+    },
+    ".codex-plugin/prompts/why.md": {
+      "reference": "bd5dc71dda4777fde9f5ee81b1f70a7250826775529ee568dc4cfa00abfb60f8"
+    },
+    ".github/plugin/plugin.json": {
+      "reference": "9503cfd5dac781839713adf464a450d034d37e3d040c116dedf690ea0a7d82c5",
+      "adaptation": "d0d7e9544916c03dbb6173aae68be25ec252ae1d213c4017f4b76cee2a9bdb80",
+      "reason": "SuperDev package identity, version, metadata, and JSON formatting."
+    },
+    ".muse-plugin/plugin.json": {
+      "reference": "73bcb2e507868ce1f6400dab8b59aca18ba354803066b6aecd697a64a004f62d",
+      "adaptation": "a713c47704a291381068757a9df35281850482473f29fdb899388047c87f141c",
+      "reason": "SuperDev package identity and generated discovery entries for additional skills."
+    },
+    "README.md": {
+      "reference": "61e99cff0c67c310876ea1b660c54693405b4038b8adc353775aadd0f3afd9e7",
+      "adaptation": "d96ad3c337f5676bd489e8f6abc54f6c4bf7b1b6d5cc3a25eea35c7148a64ee6",
+      "reason": "SuperDev installation and canonical-bundle documentation."
+    },
+    "agents/comment-sicko.md": {
+      "reference": "4df2f21c65a761e02fe818c6a2c7dc0552b128f7e1f64eeefb343b61015fbece"
+    },
+    "agents/superdev-agent.md": {
+      "reference": "7aad7d0ff21f7b1c32e888c32d96ab1f283772a1b2da128ab9140cf63662c20b",
+      "adaptation": "be35848b1fc8784afc425cb7bed0b272c99ee54088fe11ce0387e18187d569c0",
+      "reason": "Resolve the same full mode skill through the active host; search Claude caches only on Claude."
+    },
+    "agents/thermo-nuclear-code-quality-review-subagent.md": {
+      "reference": "2611a7fada1dece408229af10601f9eebe25f8da3724e57d844db209a89cc7d4"
+    },
+    "agents/thermo-nuclear-review-subagent.md": {
+      "reference": "1b5f166d8e6197fb8cf9a67bb95ace4cb57117703e55e52e7eb38dcbda322d73"
+    },
+    "assets/superdev-icon.png": {
+      "reference": "dc8fedbedfe971d87a55e40c74df2d5cdd14160ae8c042082a51b7857dc759f5"
+    },
+    "assets/superdev-icon.prompt.txt": {
+      "reference": "45f203af6fba6d0e5a358aa6799cc31a83db20dace824ae4fed851048167205b"
+    },
+    "hooks/codex-hooks.json": {
+      "reference": "204eb4fa2e186e4cf3ed622b809fbb381a4fc02ea3b515d21a9b85d91999071a",
+      "adaptation": "5f97b2901c6490c71a779372c03e6cb0531fca51d345b3dff84bc03202c112b2",
+      "reason": "Invoke the same POSIX script with sh so Windows-created copies need no executable bit."
+    },
+    "hooks/copilot-context.awk": {
+      "reference": "80a1fbf002bdeb751bedd79c09bc75f5c7965860d829c2b84700dfc1d2f1c563"
+    },
+    "hooks/copilot-hooks.json": {
+      "reference": "5223b3836a457f555555f3b932a89eeaa42e2cba26a3e1f4d1952e93d24e68dd",
+      "adaptation": "5bc5e9a03ac9f3896fdbfeb3d304e00ee976f88453a7dbe9fb7db68282509a15",
+      "reason": "Invoke the same POSIX scripts with sh so Windows-created copies need no executable bit."
+    },
+    "hooks/hooks.json": {
+      "reference": "e207b67cae65f5e070377e678858f50ba2c2e67a7abfcad367d20deeb9235e31",
+      "adaptation": "f0d4dbaa3850e51464fd9e0cc5f9e0a947e45754a1ad0eed5402bca08fac92c5",
+      "reason": "Invoke the same POSIX script with sh so Windows-created copies need no executable bit."
+    },
+    "hooks/json.awk": {
+      "reference": "9aea4d7bc3eb238b150d07ab33ca3c1e80da43f7d6e47f6d54790bb4856ab9da"
+    },
+    "hooks/muse-context.awk": {
+      "reference": "189e6d22b63bc87387c19d5676f55c9597e2e627febdea54e6ee33398d4e160a"
+    },
+    "hooks/pre-tool-use.awk": {
+      "reference": "487e669f00739d8f4af923e566f5a9a74401b797231fc85a98550a6b383abb4a"
+    },
+    "hooks/pre-tool-use.sh": {
+      "reference": "6e2a50135738c80a8ac9c5d16cfb7b7e2ca58732a6c191f6b92a165ad8f933bf"
+    },
+    "hooks/script-contracts.awk": {
+      "reference": "2190b792280d329ab371a8d876a61c38f9605b4791ee7a3b95760b1b4765d80a"
+    },
+    "hooks/session-start-context.md": {
+      "reference": "d82dc74e6d5962412977dffa0cd6e9ff50865b48e5f81d98ee76c69dd1b06024"
+    },
+    "hooks/session-start-copilot-setup.md": {
+      "reference": "0582964de5b3fe0a37fb1527fd063fd5faac7bd8937fb2ed4e0624a040d2d0ef"
+    },
+    "hooks/session-start-copilot-sheet.md": {
+      "reference": "b872e7d05bfefda78a3a4432e80c63b1a7c0fae354bc38a23467af8f34458694"
+    },
+    "hooks/session-start-copilot.md": {
+      "reference": "de21b96c22f5765826a990e97550e73bffa9c61a4032fe4b2a0e4092e80d1653",
+      "adaptation": "46c760848f36fe587feb45809a2b99adca1ae77004541595293364e4e907e6df",
+      "reason": "Generated role list uses deterministic alphabetical order; role membership is unchanged."
+    },
+    "hooks/session-start-muse-sheet.md": {
+      "reference": "732b94575513d89ad4264594e0a29c821a257d1b935775fee2a191c0a9857d57"
+    },
+    "hooks/session-start-muse.md": {
+      "reference": "e71f89e1e2e3c99e917d4c14809965eeff13ef43e6a283c95bfc5d490d4d0f2e"
+    },
+    "hooks/session-start.ps1": {
+      "reference": "b3f7e2046fea53c54da9de9183c2538035ab5c7e5414657653e882962c7e73c8"
+    },
+    "hooks/session-start.sh": {
+      "reference": "a6d87c3e960d4acbc08a4074b7a267527c5b6738ff6c10f0f4cb7558394e2f00"
+    },
+    "models.json": {
+      "reference": "436a5b0ebe39c7b8373692a8eaad6eee7ea0f124b918f59ba0de9611c27e17cc"
+    },
+    "pi/agent-text.ts": {
+      "reference": "0d2795d20bac7c170fdc8fd7af3a3c607216e77ee321851238bdbdd291afcb6a"
+    },
+    "pi/agent-tools.ts": {
+      "reference": "501c0278b2a62526733a1ecb6bb03f22195005b9498920faffbb5acd42e84cd4"
+    },
+    "pi/agents.ts": {
+      "reference": "40b0d55b829ec02ac506fd55053bcb17cff73c039a80d985372cc094b0f9ae72"
+    },
+    "pi/ask.ts": {
+      "reference": "438150b536550ef447a2490202b9cc8b3e9c26bb28c5856120c4c9daab686fa7"
+    },
+    "pi/child.ts": {
+      "reference": "991b028c49533179c7348b270f101e8623513606eae49c85cff55cc86d64c961"
+    },
+    "pi/config.ts": {
+      "reference": "5dee2cafabb4d21c115a35b8a68056445b04da05b9dcdbfd8dfb57787bd29bd2",
+      "adaptation": "3b54e1b22962688a72d620b5f82a8c3f02c746fb8d87ae2ea0f8f6e871951ac4",
+      "reason": "An unmapped provider inherits its active model instead of requiring Anthropic credentials; explicit mappings still win."
+    },
+    "pi/index.ts": {
+      "reference": "947fa46ba76dcbcced51a3e21f7a9342d0d6e6be50e411e59d393f61f0600249"
+    },
+    "pi/one-shot.ts": {
+      "reference": "c7984c370e2534bc96c54dc12f2073f8e320408cb55a813089ef5d7d00d74c39"
+    },
+    "pi/path-skills.ts": {
+      "reference": "811f1f6bf4465bb5d78e616f821e6fe9eac65713f3b0fcc24c6922b0ddebdde8"
+    },
+    "pi/prompt.ts": {
+      "reference": "b74fe8179d8405c637e832520b5917ef1c3dfbc1e9ba8034623d6e30dc1efb70"
+    },
+    "pi/schedule.ts": {
+      "reference": "6d734a915db75778b75631ff10e76d4f304a9c48bd39bebb91db0ab742fd4a5e"
+    },
+    "pi/sleep-wait.ts": {
+      "reference": "4cff36b1e5435ea6a4e1ae0346a174097353c1edb97ab77a145e3cf35135cc19"
+    },
+    "pi/worktree.ts": {
+      "reference": "5d216461e9bee5771f73e5a07ca7e47080c07eedd20ba7b33a65cc5c06555329"
+    },
+    "skills/architect/SKILL.md": {
+      "reference": "464726483c0cd5475a76029c682532d4772e336ed5aeb1346137b6516e239050"
+    },
+    "skills/architect/references/design-red-flags.md": {
+      "reference": "eaa0e680dcb0dd263f06457a1b06b284a8088ebe5ea2eac8d988d1cfe9767e82"
+    },
+    "skills/architect/references/rationale-template.md": {
+      "reference": "628c424bdb5ca86ffb0a5429edc8278ad35fee06a57ee6b0c6c0698e5b83d1f2"
+    },
+    "skills/architect/references/runner-prompt.md": {
+      "reference": "a8e4ba4cc8608ae6fca943a6130e9292994df66c76a905c6748502cd4e453eb7"
+    },
+    "skills/arena/SKILL.md": {
+      "reference": "c7da7281a172cc682213ac6c7f42a3f3650e768368353f6b3347d58334063ac7"
+    },
+    "skills/automate-me/SKILL.md": {
+      "reference": "7e1b4a9f8f3ccce7d2feebea8397907e04837e847f85886f282f24987f5fedde"
+    },
+    "skills/babysit/SKILL.md": {
+      "reference": "37ed630a53315c545a8709eb2f57b87ba33ef66e1db2c4c8f8777c2208b7cc6f"
+    },
+    "skills/benchmark-checklist/SKILL.md": {
+      "reference": "d221f1bd00e64a16700cf28f2cf685b97638c76913e7f41cc6a9b0de051f581c"
+    },
+    "skills/blast-radius/SKILL.md": {
+      "reference": "b176382f6bdfc7e80a18649d1100df48ae4df4ce9e303c69a0f0f647b28497ce"
+    },
+    "skills/bro/SKILL.md": {
+      "reference": "ab3f5a85239212fbfdf97dde658abd4b86a6bb4cbdc443997fbdeb72eb0043a2"
+    },
+    "skills/correct/SKILL.md": {
+      "reference": "003f80b8e8e2f7ffe0a0dfeb9efe9dc8f8379c68604a0c0dfaeafb2c61854932"
+    },
+    "skills/create-formal-verification-skill/SKILL.md": {
+      "reference": "24d993a817959238a9824d6baabb79e433b0bdc8ec0257028b446c7d705a5a8e"
+    },
+    "skills/create-verification-skill/SKILL.md": {
+      "reference": "2d70606a91ff8f5feac20fa64b1eb0b96562a8a3b60a33b5799ecd712ba9a5a5"
+    },
+    "skills/create-verification-skill/references/feature-map-example/README.md": {
+      "reference": "e6d025499928c89b39df80108ed976c0be87120eb9bd15d851e5e5d91e7c6e65"
+    },
+    "skills/create-verification-skill/references/feature-map-example/create-note.md": {
+      "reference": "8752c69fe2e1ff8cb0d42b85fae3e89a99e61fe87c200a36d51ee604da8c4535"
+    },
+    "skills/create-verification-skill/references/feature-map-example/search.md": {
+      "reference": "e6b504775ae7bc281ca33da67fc177f2a506691c0bebba6faca9081cafb856bc"
+    },
+    "skills/deslop/SKILL.md": {
+      "reference": "0b889f28ae79b51b8cb8dfa6bd9fa7669b5a21259e949cc117a66c7302a93585"
+    },
+    "skills/figure-it-out/SKILL.md": {
+      "reference": "08fe6ff1007a26bfe9353ed18d0c4251a63f135585a542b4332de75e56c493a1"
+    },
+    "skills/fix-ci/SKILL.md": {
+      "reference": "55d580eff4711dbbc51aa991a9483e306140dfe9d8447a01fd9eb4ba5406d424"
+    },
+    "skills/fix-merge-conflicts/SKILL.md": {
+      "reference": "5dc853a10e4aae2109646c8eb6c825e9c577cd4a30a7508b6e61a44a73e56b54"
+    },
+    "skills/get-pr-comments/SKILL.md": {
+      "reference": "8bf292736cab922276feb4d8377edc2fc4102a7beb62bcd1f3f5cf72a79b16cc"
+    },
+    "skills/how/SKILL.md": {
+      "reference": "8fbd100232333c08453bad4bbe47b5baf572975d0ee8501ca9c5be58b307a8e0"
+    },
+    "skills/how/references/explainer-prompt.md": {
+      "reference": "23c079f1ccd081aeabdd6254cd8d1b356d43371bea6775af7f4c0c695a117755"
+    },
+    "skills/how/references/explorer-prompt.md": {
+      "reference": "676c796e7777716facd3719fb99c435a485b21a5230afb9b6fc0ea2505acf44e"
+    },
+    "skills/in-your-own-words/SKILL.md": {
+      "reference": "8341b15e2f81a99a5bf82b37f666fcecfde7a0ca08035f529496249fbbb9877c"
+    },
+    "skills/interrogate/SKILL.md": {
+      "reference": "1c77cad5433a15bf9a56cc59cd2dea87eb2eff22a0488be43228e0b3d49855da"
+    },
+    "skills/interrogate/references/code-quality-review.md": {
+      "reference": "c5f55e9377ac1869e32cd7bbb9c95744ea219e90dd20bb9ad63a7e3a2bbbd118"
+    },
+    "skills/interrogate/references/lead-judgment.md": {
+      "reference": "569913b3f69413ef41d0703920bbf7f633e76765a4459c282177ee92cf1f60f6"
+    },
+    "skills/interrogate/references/reviewer-prompt.md": {
+      "reference": "28ef7f0d799eeb91e9ae43165624c6a7be21f33a00e68d2c50aad876e26afef1"
+    },
+    "skills/interrogate/references/rubric.md": {
+      "reference": "ca4306b66510e88c30d038829e43d77ff9955adbf1657d18763e33f05364073e"
+    },
+    "skills/ketchup/SKILL.md": {
+      "reference": "478c8f17fa31e6f024db39b49c6394a0dfc445e1789cfebedf6f63eceece9456"
+    },
+    "skills/maintain-formal-verification-skill/SKILL.md": {
+      "reference": "43bdb5546a6016ae1c54cf00e51193d1e45fe6c374062b0dc390865c69908cd9"
+    },
+    "skills/maintain-verification-skill/SKILL.md": {
+      "reference": "862b4f671c41ff7986628a54c22a9f89b4543cb103e76b8533e116f193ee47a7"
+    },
+    "skills/make-pr-easy-to-review/SKILL.md": {
+      "reference": "ebee8403c416d588d1966a8058bc80ac57033c36d97a46b5281ddce86afc0e62"
+    },
+    "skills/no-comments/SKILL.md": {
+      "reference": "0001a19dedd6b570463a2e650f6980179b10eea6c3d067ea2c1c4831305a939e"
+    },
+    "skills/superdev-help/SKILL.md": {
+      "reference": "1e84713d71933894b148115e9d20cb068a74b6ac873f0d4129fb3f145503ffea"
+    },
+    "skills/superdev-help/references/prompting.md": {
+      "reference": "2fedd2efe5333bb4d505e792b1bb92f9e3c1ccd62c7df43d3a2f664b915424a9"
+    },
+    "skills/superdev-help/references/recipes.md": {
+      "reference": "f72c9b9257a45da30492f216211f0a8610092b11a93eb22b669a1053934f0ee4"
+    },
+    "skills/superdev-mode/SKILL.md": {
+      "reference": "9f960e270c3f4e2566c0aadb0a6cf4fe902f644ea7958a8b0d71bf740b7eb43b",
+      "adaptation": "5f57602a55c6247e5aca386b013e57a544dccb7a36c6efc22a2c1f7597ae017b",
+      "reason": "List optional SuperDev additions without replacing the shared playbooks or review gates."
+    },
+    "skills/superdev-mode/playbooks/authoring-a-skill.md": {
+      "reference": "e82d1a0a1684d5a6734a3739f8ee1454b172dcaa60e9fa15f12b9196e21b22a4"
+    },
+    "skills/superdev-mode/playbooks/autonomous-run.md": {
+      "reference": "fd4038878650cce9a9a42c8ddd113b94a72aeb44cb157d5f18e167bb855ead33"
+    },
+    "skills/superdev-mode/playbooks/autopilot-full.md": {
+      "reference": "cd6bbc2814df9e0e8813eba68dd7bc7a99561030524f52124ebaffb5d8cf587a"
+    },
+    "skills/superdev-mode/playbooks/autopilot-stack.md": {
+      "reference": "156fa4573a751bef9da8a07fc90019c159f391e1fa160c107a90d0d69ee0e660"
+    },
+    "skills/superdev-mode/playbooks/babysit.md": {
+      "reference": "9ca78450071821b6c168106d5bacda3834a826e33cd4bef5870ae675e17fccaf"
+    },
+    "skills/superdev-mode/playbooks/bug-fix.md": {
+      "reference": "5642e3baaa33663e7ef3ff2796a83623c78ecd26ddd78502c237b89dcd0f2713"
+    },
+    "skills/superdev-mode/playbooks/eval.md": {
+      "reference": "84c786edb1c9e61ce191eff00b383d968cd89c2d0c5bb2d9ca36081a40802759"
+    },
+    "skills/superdev-mode/playbooks/feature.md": {
+      "reference": "a5dc901540cd94f1749448a2bf817a3bbbf48a7adefd5d2e7f7dc83abf8d6643"
+    },
+    "skills/superdev-mode/playbooks/hillclimb.md": {
+      "reference": "310bc46d5137c3b02dbd95bc679dd8ce6d8a0263211f8f2f0ce2f3c6c16bf84b"
+    },
+    "skills/superdev-mode/playbooks/investigation.md": {
+      "reference": "78f700edaafb438eb40592f46dae82bfeecd5468956fabee2e78cda6cae7b5d9"
+    },
+    "skills/superdev-mode/playbooks/multi-phase-plan.md": {
+      "reference": "101006c5ecd3b01376f2a5d775b0dace8296260c3bcaa6c6fc9f3dc78f773f05"
+    },
+    "skills/superdev-mode/playbooks/opening-a-pr.md": {
+      "reference": "28f799a7f5e64385a8265c043fe9293f05873a90a944cf8105059249a5f8b751"
+    },
+    "skills/superdev-mode/playbooks/orchestrate.md": {
+      "reference": "df42ba5355142ac95681b5bdd90b3f90420da47b69386d7f792d30a9d5c8f238"
+    },
+    "skills/superdev-mode/playbooks/pause-safely.md": {
+      "reference": "5a1f7c2d0e254aad7a0a940cab5493287d9b5c38a62de2081be88e1ce4723b26"
+    },
+    "skills/superdev-mode/playbooks/perf-issue.md": {
+      "reference": "30ba8fc18e9de3caa03210e9492096b6c9005f161921cf0c756cf6d449faf6a1"
+    },
+    "skills/superdev-mode/playbooks/prototype.md": {
+      "reference": "0fb5a2cc02033a29c8e7f2c88a951b2036692b403a96218d2af7f7b5a3618cfb"
+    },
+    "skills/superdev-mode/playbooks/refactoring.md": {
+      "reference": "6932a69f2c6f8ef75af8d27a38ddf40575c55e98a0cc6c3325fb8268d69aa901"
+    },
+    "skills/superdev-mode/playbooks/runtime-forensics.md": {
+      "reference": "4732259283f5c58f58ba60a3a12265ae91823fd22d353452b3b67657df62f11d"
+    },
+    "skills/superdev-mode/playbooks/session-pickup.md": {
+      "reference": "2b88a17341dece6ef4cb6adf204c9f336701671580e568ca40ed4ecdbe36e932"
+    },
+    "skills/superdev-mode/playbooks/shipping.md": {
+      "reference": "40492b66aa58f0194a1345d426cb84db781f035d6218f1b8120b7346fc634589"
+    },
+    "skills/superdev-mode/playbooks/trace-forensics.md": {
+      "reference": "1a1fed10869b2548214e029b5f2a989aee3b6cce1ece9143b2fc8065e7f2fff7"
+    },
+    "skills/superdev-mode/playbooks/visual-parity.md": {
+      "reference": "35e0bed5f47a4584dc1b4a4c0a1b865de8af55dad6a05bae9c610b2346f70f1a"
+    },
+    "skills/superdev-mode/playbooks/worktree-cleanup.md": {
+      "reference": "829c557f4ec1d775cfc65f8aa3d8810061d4c78a0c3c1aab5e779a36e901a614"
+    },
+    "skills/superdev-mode/references/agents/comment-sicko.md": {
+      "reference": "4df2f21c65a761e02fe818c6a2c7dc0552b128f7e1f64eeefb343b61015fbece"
+    },
+    "skills/superdev-mode/references/bugbot-triage.md": {
+      "reference": "60072b3d6e6d33ccefe8b9f2cd93d29dbafdcc3a10b2b177910a38dc2ecf87be"
+    },
+    "skills/superdev-mode/references/codex-tools.md": {
+      "reference": "ca68289b84ae63d6c872898e9ce8342718f6c37e6aef7bb89186aaf56d94e440"
+    },
+    "skills/superdev-mode/references/copilot-tools.md": {
+      "reference": "a7d532027b41873dd4dca192294c775b02aa644f7538d192306346e7df081783",
+      "adaptation": "501eec9c9011a2f4d8e521011a6f35f4c0a8baaa90e0199992ce3a6df5ff0d2f",
+      "reason": "Generated role list uses deterministic alphabetical order; native setup requirements are unchanged."
+    },
+    "skills/superdev-mode/references/licenses/LICENSE": {
+      "reference": "1e84c2a1cf963685aa0cd7b79d994f4a6dd1fb9588557d7e54ac2709bf562813",
+      "adaptation": "eae4e4ddcb2ac7451d7b86291d30aed65a6f243f707c33e427fb2410ab757b9c",
+      "reason": "Preserve MIT terms and contributor notices; add the SuperDev contributor."
+    },
+    "skills/superdev-mode/references/licenses/LICENSE-cursor-team-kit": {
+      "reference": "d50c0a26b8bb1f040d52950a39519b6981803d638be18ead7f16ef95d4e18402"
+    },
+    "skills/superdev-mode/references/licenses/LICENSE-thermos": {
+      "reference": "d50c0a26b8bb1f040d52950a39519b6981803d638be18ead7f16ef95d4e18402"
+    },
+    "skills/superdev-mode/references/licenses/NOTICE.md": {
+      "reference": "bcc558a8b7007511cffdcb45865e996b6b8dfdd7992942d36054c2352577eb37",
+      "adaptation": "0a40bbdd16de2d1562730e572a07560b2eae7c211448a29df56e6346a07bef30",
+      "reason": "SuperDev copyright notices retain author credits and all MIT license files."
+    },
+    "skills/superdev-mode/references/merge-safety.md": {
+      "reference": "7c45a4ec508cb264b1c5d1f538e4ca14b53745d7c5c183846d346de9869e7408"
+    },
+    "skills/superdev-mode/references/muse-tools.md": {
+      "reference": "14b061768733bfa6452010d2dd99a09b51dd2335b6dc3f458128253c520b1781"
+    },
+    "skills/superdev-mode/references/pi-tools.md": {
+      "reference": "ce37b8c24fc624f7f039a53d7828e7c2f5de0d4a25f91407f7a15fd1e4fcdb78",
+      "adaptation": "7d9b913e3c92c8bc827b3151b1e6cca48b59f4980a8a19edac88abef2c00c8b7",
+      "reason": "Describe inheritance for an unmapped active provider."
+    },
+    "skills/superdev-mode/references/resume-storage.md": {
+      "reference": "b835ffc790c7c6c4553130322e6b38f056f4451b3d2674e3fb4a336c0f5f5a25"
+    },
+    "skills/superdev-mode/scripts/.prettierignore": {
+      "reference": "5a02176ac11625882953757ee9534e256c202a19ea4beb6b63fa1bac90b85545"
+    },
+    "skills/superdev-mode/scripts/.prettierrc.json": {
+      "reference": "9eace706ea58ca167cdb96f69f0d0d730ebc536f783bbb1c7391f8d5ed22def3"
+    },
+    "skills/superdev-mode/scripts/bootstrap.ts": {
+      "reference": "9140cfdc0041f57748518b3c713c18f3892788dee4837cb71e3f30674bb380e0"
+    },
+    "skills/superdev-mode/scripts/bun.lock": {
+      "reference": "d22fbde610d96e86ad58c16bb671d8eae8dff3982f07535c7493d4ee59a46f93"
+    },
+    "skills/superdev-mode/scripts/check-plan.mjs": {
+      "reference": "b96d068cfcccaf71ed0c56831f478396f3fe3009384d4cd1b77ffdb470e23433"
+    },
+    "skills/superdev-mode/scripts/check-plan.test.ts": {
+      "reference": "39b75b28c5216a8a405a6cf4533f8cf8130d1df2545aac6df59cd542b2a6c90b"
+    },
+    "skills/superdev-mode/scripts/check-playbooks.mjs": {
+      "reference": "bb0765e534507c6a2b16bea789cde30d681db6b7abd064427361c5302ed0623d"
+    },
+    "skills/superdev-mode/scripts/orch/orch.test.ts": {
+      "reference": "b28c2c3ab6507b7a495b807d70d813762082fae80969dccf9b17deddc26eaf90"
+    },
+    "skills/superdev-mode/scripts/orch/orch.ts": {
+      "reference": "ffa225e4e9c61e9731b819f3e07e6b56ccea7ec3ef9cb9143caeae6d3e7e07f5"
+    },
+    "skills/superdev-mode/scripts/orch/store.ts": {
+      "reference": "f97f9980a8a689039887191fed15d97a1e84da7b804886fd254684f13e0dc04b"
+    },
+    "skills/superdev-mode/scripts/package.json": {
+      "reference": "4fd7e19a10c1e77592479887670c156bd9b6dcefb56b5566ddf03b019f6028a1"
+    },
+    "skills/superdev-mode/scripts/resume.mjs": {
+      "reference": "e9e8a503054abdc41fef2c19f8a5cd52d815715658a12224640634b8941c8070"
+    },
+    "skills/superdev-mode/scripts/tsconfig.json": {
+      "reference": "383b5c119e557b387b7e7c0709652122a8bb20bec7708a3af62206a584af9b68"
+    },
+    "skills/superdev-mode/scripts/watch-pr/cli.test.ts": {
+      "reference": "b6ea3c488e0fe2489ee0cd1ec1bcb48bf2cd1610f6da594cbd4dc0f9d506ca87"
+    },
+    "skills/superdev-mode/scripts/watch-pr/cli.ts": {
+      "reference": "fa380023eb28975d9cc60322fc78985d03a40a9220f4165318db0fa06d9a89a6"
+    },
+    "skills/superdev-mode/scripts/watch-pr/deadline.ts": {
+      "reference": "7bf7555fa7fd936308a7141a8d314506a5bde97aa8bc040907b84eecbcdb3114"
+    },
+    "skills/superdev-mode/scripts/watch-pr/fakes.test-helper.ts": {
+      "reference": "4601d3ca9a1b0ecdd3d0f55de27520e171eb325b2ec553df7eee4d13d7d4c875"
+    },
+    "skills/superdev-mode/scripts/watch-pr/github.test.ts": {
+      "reference": "e405b2db4256c720eb0fd4af0dbacd4fec554fb16ad37879d8d89d7b9623f114"
+    },
+    "skills/superdev-mode/scripts/watch-pr/github.ts": {
+      "reference": "9d076f82a323a1931a78421f05c744bcf699554c5b7bd6aea4eba8f5ec7bdc55"
+    },
+    "skills/superdev-mode/scripts/watch-pr/integrity.test.ts": {
+      "reference": "582ee469994d9b17d2fe2710e7bbdc3ca8090a30b23fed5139d21893bef0405c"
+    },
+    "skills/superdev-mode/scripts/watch-pr/landing.ts": {
+      "reference": "282f32f89367bf7162347021dbeb129b14e47cf780dd2591c5ae401d2868b81f"
+    },
+    "skills/superdev-mode/scripts/watch-pr/live-merge-safety.mjs": {
+      "reference": "fa8684e11dc63908fba33b9361549e7cd1bbc8a32489030799ec28a21b850926"
+    },
+    "skills/superdev-mode/scripts/watch-pr/policy.test.ts": {
+      "reference": "bdacbb9ff4dc93452b47ddf9c3f79c27152a3ffdb2a4d25b2635ed3526327c16"
+    },
+    "skills/superdev-mode/scripts/watch-pr/policy.ts": {
+      "reference": "247dc40af76941de0970387fdaa89353e94048ac2a45e609e64fe7798cbf9f42"
+    },
+    "skills/superdev-mode/scripts/watch-pr/render.ts": {
+      "reference": "766eb9b243c10c2c18bf75f521d79ca35f69d59bebcf21b8f4c29e3a9f8ee92d"
+    },
+    "skills/superdev-mode/scripts/watch-pr/ship-pr": {
+      "reference": "2dfcb807716902abbf0871c7389aecde518194a112fc5fb85c8f655925f23517"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping-cli.test.ts": {
+      "reference": "6e4c6c57d240f788b1595ebf93590fa80eb98a4006699f369d047834a9aa787c"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping-cli.ts": {
+      "reference": "3101c74c5cc5c1c3c5bc2708c56ebab05c7a652c7177d61075aad8862797a2f4"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping.test-helper.ts": {
+      "reference": "44216e40567a4c7fa8a9490b5f774703f18aa60b836d519db9eda3e88310f379"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping.test.ts": {
+      "reference": "94b8a95df641241d20e4e398e01da1ca448130c640cc0b3c29315225debaad4d"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping.ts": {
+      "reference": "56b7027564e8c9c372857a834b355ba533bebe1ec25fd6b7c304fa1bbf90ce8d"
+    },
+    "skills/superdev-mode/scripts/watch-pr/transport.test.ts": {
+      "reference": "5c5435b9d81ac56e52b99edbcd27374a09d079b40a427bf79f4de52154d9cacd"
+    },
+    "skills/superdev-mode/scripts/watch-pr/tsconfig.json": {
+      "reference": "d9d19c3f84d4e1e62c7e94ae26ab9f674386118e54e02afb58423063c8ee04ca"
+    },
+    "skills/superdev-mode/scripts/watch-pr/types.compile.ts": {
+      "reference": "86a13be75e6ef7f02a8311b4f037a15e97bd6af6d151558d732af6330b5265a4"
+    },
+    "skills/superdev-mode/scripts/watch-pr/types.ts": {
+      "reference": "ea41c61c737a0bbf9d9f4e26cf3d450ab330461a0345bfae1fb2d9679f8f6239"
+    },
+    "skills/superdev-mode/scripts/watch-pr/watch-pr": {
+      "reference": "1f76b1e9426c26c902473e2a21430b6345667fc95ab98a56286c0e81285934e0"
+    },
+    "skills/superdev-mode/scripts/watch-pr/wrapper.test.ts": {
+      "reference": "45397fc2c8cbfb1d2ba623e115b3f96c1ec6ca9d8313e135e60e280445b9ab8a"
+    },
+    "skills/superdev-mode/scripts/worktree-audit.mjs": {
+      "reference": "6a2903ccb29c2f4a38a54ff9492abd1d35b2bb47929ecebd14b0717a5d66aadd"
+    },
+    "skills/principle-attack-the-premise/SKILL.md": {
+      "reference": "7b18a5128142892cc4914b1a3f6f0468c0867c6990ffef5d05b773d4c8c6ebb4"
+    },
+    "skills/principle-boundary-discipline/SKILL.md": {
+      "reference": "d084148abd68363e14dbd85c8f44cd1a6df3fa191918799cf5d667ded0cd434e"
+    },
+    "skills/principle-build-the-lever/SKILL.md": {
+      "reference": "40054165e3da36c88296cc3ab22b48dccf8535c1a0a145156919079c8d8d7055"
+    },
+    "skills/principle-encode-lessons-in-structure/SKILL.md": {
+      "reference": "9db4d722bc0f045d56e2eda1a51b3b8ec594ef3b54e9831d91547ed1c1d2fe54"
+    },
+    "skills/principle-exhaust-the-design-space/SKILL.md": {
+      "reference": "679444ed4548ed5b450c40db51f6578d942a629fa61c6e10e946d0358a90ebbb"
+    },
+    "skills/principle-experience-first/SKILL.md": {
+      "reference": "1d74ac1598d70a8f67a64e7cc4f4803955387cdd678fdb9e5d1717a7b27f5c19"
+    },
+    "skills/principle-explain-the-number/SKILL.md": {
+      "reference": "737267766f1a6d4f598a9cf500e21b8899dce28182d445e3b9aa07512700463b"
+    },
+    "skills/principle-fix-root-causes/SKILL.md": {
+      "reference": "d5004b5d41e8cbbfa7b52d3b2a291af8970e1a063d76ac6b65d56d0c0e968f2a"
+    },
+    "skills/principle-foundational-thinking/SKILL.md": {
+      "reference": "b72cf3437b8748ecaf0620c3d664063679840c2af6e5ac96a0f24e7ce724b2f4"
+    },
+    "skills/principle-guard-the-context-window/SKILL.md": {
+      "reference": "7e2fb6963d43ccf85cc0210b1fa9920cd68efbe2829ccfc8a80b78768c8f523d"
+    },
+    "skills/principle-laziness-protocol/SKILL.md": {
+      "reference": "c4359391a1b3c09a5bdb0a79ba27bfbd17dc79c41cab393e24e3106dd5690db3"
+    },
+    "skills/principle-make-operations-idempotent/SKILL.md": {
+      "reference": "965fdcc55f06fea6f50f69cfd79ceb5baf555d45989e71aa0b50b59b967f7ef6"
+    },
+    "skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md": {
+      "reference": "415748a65cdbe78d020d26354971e4696fb7d573d8928a888b59d5acf6d9b999"
+    },
+    "skills/principle-minimize-reader-load/SKILL.md": {
+      "reference": "1df5c366dec57b46d0df8769c51220db252c6894b96b0314b7ff27984bfcf319"
+    },
+    "skills/principle-model-the-domain/SKILL.md": {
+      "reference": "22376701987a2c51981a528cb8bc3a9bc1532a26625587128d02ba07328f655e"
+    },
+    "skills/principle-never-block-on-the-human/SKILL.md": {
+      "reference": "9ccf52f93aeb1595ec4ff8d3a50ee246d7fde513c4a27ebcf544e93609eca8fc"
+    },
+    "skills/principle-outcome-oriented-execution/SKILL.md": {
+      "reference": "e2332895aca89a31a9d6a3bbe4631879343b7d24dca4f236b06e4ba85cb4c033"
+    },
+    "skills/principle-prove-it-works/SKILL.md": {
+      "reference": "aad13fc435423bf85d2269713d6e4270b30501c4c5eb80b3bf32718afb935aad"
+    },
+    "skills/principle-redesign-from-first-principles/SKILL.md": {
+      "reference": "de90a4fc9f665a0e776283a1bba6be6cd7c7e22579c48b90229c8cc91d42c927"
+    },
+    "skills/principle-separate-before-serializing-shared-state/SKILL.md": {
+      "reference": "a68789ce68ff80552e42d9d31ebadffd3b9f1148115d8e5d5b49091564f7dc31"
+    },
+    "skills/principle-sequence-verifiable-units/SKILL.md": {
+      "reference": "0c4ea989abc043576c29e90815f257e8744fad32de06d72d32016be016e1a0dd"
+    },
+    "skills/principle-subtract-before-you-add/SKILL.md": {
+      "reference": "e978eb44bc9536e9ae25eea668de23d03cb7e75c0a66ce495b36c355668d2f11"
+    },
+    "skills/principle-test-behavior-not-implementation/SKILL.md": {
+      "reference": "6b9ea7a8d7d9a3d7c46a38cf889eec01b161a87c5e826ddbd082ac2398326cc9"
+    },
+    "skills/principle-type-system-discipline/SKILL.md": {
+      "reference": "f8da625747f4dee5c41c84a2aec052161ed5e5e3e0df6e0c4dee2660f91302f7"
+    },
+    "skills/recall/SKILL.md": {
+      "reference": "0ec8b55c48fa610f1e7e2c3f23af2f58740d0c36f6bbea1b00e0851788604f6f"
+    },
+    "skills/reflect/SKILL.md": {
+      "reference": "fad1263ed472ab81735b8e3545f3ba77e21697e1427c978900a32783826d4717"
+    },
+    "skills/reflect/references/divergent-reviewer.md": {
+      "reference": "176cb3a500b8e987d38b2035c6bd82fecd04a1a54374fa44f51a4a7fd08e4c7c"
+    },
+    "skills/reflect/references/judgment-reviewer.md": {
+      "reference": "755a3527c1a9acbe0c0c070bb9bd6c22a6540995455e76fba123de8af460175d"
+    },
+    "skills/reflect/references/synthesizer.md": {
+      "reference": "01b78821cf51dc1ff742471eb75ba31dad2ed9a103e578602bed4395da4ae4fe"
+    },
+    "skills/reflect/references/tooling-reviewer.md": {
+      "reference": "606429c7a2be5714cc61c38c4c2352c919de02e6b3f444b41a0c8a069f301859"
+    },
+    "skills/reflect/scripts/claude-project-dir.mjs": {
+      "reference": "bc29891257d3c71cf0f5a024d2a2c191229bc8117ecf5dde5bcd080ebb7b26dd"
+    },
+    "skills/reflect/scripts/find-transcript.mjs": {
+      "reference": "bd2e44cf15c0d4e29417a5a6dcc21fff89ad848f008546d8f487c0985d69adb1"
+    },
+    "skills/superdev-setup/SKILL.md": {
+      "reference": "afe4d3e6285440d886367387d8ba369b391493201440e06cce50cf1bc83d393f",
+      "adaptation": "224740da4e4ac0ea418c4fcc20388937d478525b8f8899567db8d75b26c4c5b9",
+      "reason": "Retain optional repository onboarding only when the user requests it."
+    },
+    "skills/superdev-setup/copilot.md": {
+      "reference": "eb562fd2b1049c3e1104a94bedc74316a66377c0de42f6c26ebb99e6da6bb53b"
+    },
+    "skills/superdev-setup/scripts/check-sheet.awk": {
+      "reference": "971a1648c51b7eb8c5a73bfe13d4fa0e7c2828ab5ee69c7dea047d14f588cde8"
+    },
+    "skills/superdev-setup/scripts/check-sheet.sh": {
+      "reference": "037cbff47049f9d3d8818605b107d42b95bfd33e3a802aebaa174a938c920675"
+    },
+    "skills/superdev-setup/scripts/read-sheet.sh": {
+      "reference": "9a6e712b46fe47ed1c44d421304cef2149b26c688f799319dc3b0a7eb254c7e4"
+    },
+    "skills/superdev-setup/scripts/sheet.awk": {
+      "reference": "d3888fa9238b7afd2d666dcc4ecb887874ab34ee601873ea8393555c3724d7c4"
+    },
+    "skills/sharpen/SKILL.md": {
+      "reference": "77c52c71a4dbf114ee704710f7f594646284370445426689bc67c3825f2a04e8"
+    },
+    "skills/show-me-your-work/SKILL.md": {
+      "reference": "d32ff256f8197d91c94bee6f7ec6ff591568ef6ee636da2f0ac46e0eb07096b4"
+    },
+    "skills/show-me-your-work/references/decision-log-template.tsv": {
+      "reference": "ce5219fde74b7be36fe9ac72af67986135194ec9c97e27db30cb1273c639261e"
+    },
+    "skills/show-me-your-work/scripts/log.sh": {
+      "reference": "fc8fefd01b24127f7d980389ffc010aed3c156268a765b06b31ddabc0fbe2201"
+    },
+    "skills/swarm/SKILL.md": {
+      "reference": "fd7819eb3086666161dd015114616cc643f94e1e8a6abe415555996e6e0e898c"
+    },
+    "skills/tdd/SKILL.md": {
+      "reference": "bce506547f71fd40e337e6742f64da2de31ca223cfba1a99ef8b4ac60cd66c70"
+    },
+    "skills/teach/SKILL.md": {
+      "reference": "a10280fdb452f2ff6eac4439f521c246ae256f8e6b9f35af50331b3adcbd9c49"
+    },
+    "skills/technical-writing/SKILL.md": {
+      "reference": "511a6ebee6e3b0720df1873d7a086896f1f89ef2c3dec08fa775777f8a14971c"
+    },
+    "skills/thermo-nuclear-code-quality-review/SKILL.md": {
+      "reference": "b0555e8bf81f8765b653d4487070bafa7e67109e81f9008ccebc52613fd8ca62"
+    },
+    "skills/thermo-nuclear-review/SKILL.md": {
+      "reference": "e480922b42fa93ea5ae12cba74b5d4bd5a8c348441bc59d2736c12ae8c2c614d"
+    },
+    "skills/thermos/SKILL.md": {
+      "reference": "1173d0e71cd0fc7cd323397ab7ac91ca2c590d42e8acc3e8de1d2923415f804e"
+    },
+    "skills/typescript-best-practices/SKILL.md": {
+      "reference": "41b88e12ca0ad4e0b6784aecb88cd641e2fc1482d7fe28bf1a98a570fe48853b"
+    },
+    "skills/typescript-best-practices/references/patterns.md": {
+      "reference": "b9cac24212494ff0df301bbbb7062fac3939cda5c89cdc29d251d15eb6e77c91"
+    },
+    "skills/unslop/SKILL.md": {
+      "reference": "facc65652267208fac6f28a774359790859101329f73511d5574caedd25b39c8"
+    },
+    "skills/what-did-i-get-done/SKILL.md": {
+      "reference": "2b5628793224cb1848283235bcace96420490847271ae4e87d8134f1a530105d"
+    },
+    "skills/why/SKILL.md": {
+      "reference": "6def817542c3e8f0482e028154b9de42b924d7acfa596898549017178767a84e"
+    },
+    "skills/why/references/epistemics.md": {
+      "reference": "34cebc9d57f7b6d16afc241bcf0fe01d92ff3e5ad1c721f9c75c1a7cc0c5bf0c"
+    },
+    "skills/why/references/investigator-prompt.md": {
+      "reference": "fc37631f2812a6f038c998682421a6cf4fa2a1ab6bd0db8d94d4d95beab7b93a"
+    },
+    "skills/why/references/source-playbook.md": {
+      "reference": "3dcfa7d843993722110800b9d4c794ae21b317934537157def9523d2ec912509"
+    },
+    "skills/why/references/sources/code-archaeology.md": {
+      "reference": "13169fc6f2f879d2ecf65f7e8310f399836f64f6c2b8497b3467520360091032"
+    },
+    "skills/why/references/sources/databricks.md": {
+      "reference": "0791e368573941d310cd9bf907bb1c61b48317c0fb217a2e4bdc86c47aba3418"
+    },
+    "skills/why/references/sources/datadog.md": {
+      "reference": "3147df3faff33addd9bdbe49280f343cfa319e1d5606500d05d9fd620bac0f6a"
+    },
+    "skills/why/references/sources/incident-postmortem.md": {
+      "reference": "1dfab3deb553139407101fa40cdf32eae4ed4b4a1abb2570e6e48b6708a575f2"
+    },
+    "skills/why/references/sources/linear.md": {
+      "reference": "88fb454b1a33b03f9af8713da3ecf3abe101fc8861a876b32cb9f116b5f24a33"
+    },
+    "skills/why/references/sources/notion.md": {
+      "reference": "dc8c3f7f9c527481c4b4e3911de6ca705b3737262a9a3ab8da27287ba85ba6f1"
+    },
+    "skills/why/references/sources/sentry.md": {
+      "reference": "b230e80c71df451a2fb181a523e62c9bf71bde62ad01e7758a43aa25878466ce"
+    },
+    "skills/why/references/sources/slack.md": {
+      "reference": "963ac4fd166664d4d0b2cef873489c6f481b15e86407cad0e6b5107aab4f0a71"
+    },
+    "skills/why/references/synthesizer-prompt.md": {
+      "reference": "8b88a57f3667733091300120fed2cef352f90188d2c2bc93b6a5de30054f9f26"
+    }
+  }
+}

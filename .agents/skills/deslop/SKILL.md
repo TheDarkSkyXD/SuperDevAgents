@@ -5,6 +5,8 @@ description: Remove AI-generated code slop and clean up code style
 
 # Remove AI code slop
 
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
+
 Check the diff against main and remove AI-generated slop introduced in the branch.
 
 ## Focus Areas
@@ -20,4 +22,3 @@ Check the diff against main and remove AI-generated slop introduced in the branc
 - Keep behavior unchanged unless fixing a clear bug.
 - Prefer minimal, focused edits over broad rewrites.
 - Keep the final summary concise (1-3 sentences).
-- Report at the end with only a 1-3 sentence summary of what you changed

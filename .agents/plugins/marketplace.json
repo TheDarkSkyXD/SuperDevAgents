@@ -1,0 +1,24 @@
+{
+  "name": "superdev-agents",
+  "interface": {
+    "displayName": "SuperDev",
+    "developerName": "SuperDevAgents contributors"
+  },
+  "plugins": [
+    {
+      "name": "superdev",
+      "source": {
+        "source": "local",
+        "path": "./plugins/superdev"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL",
+        "products": [
+          "CODEX"
+        ]
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

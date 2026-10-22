@@ -5,6 +5,8 @@ description: Challenge a proposal, architecture, or implementation through evide
 
 # Adversarial review
 
+Read [the portable runtime contract](../superdev-mode/references/portable-runtime.md) before following this workflow.
+
 **You own the verdict. Challenge the work, prove each concern, and discard review theater.**
 
 Use this skill to review a proposal, architecture, plan, diff, or implementation. The skill is self-contained. Do not require another skill, playbook, or reference file to complete the review.

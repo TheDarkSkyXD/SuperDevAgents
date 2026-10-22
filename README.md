@@ -6,7 +6,7 @@ AI can write code fast. It can also produce sprawling, fragile code that no one 
 
 **Parallel work has to earn your trust.** SuperDevAgents separates concurrent agents, gives each one a bounded job, and makes the parent inspect the result. More agents should increase coverage without turning the repository into a merge conflict.
 
-**The skills are harness-neutral.** Install them as repository-local Agent Skills under `.agents/skills`. Any agent harness that discovers that directory can use them.
+**Use SuperDev with your own AI harness and models.** The bundle has native integrations for Claude Code, Codex, GitHub Copilot, Pi, and Muse, plus portable Agent Skills for other hosts. Grok is optional. The [portable runtime contract](./plugins/superdev/skills/superdev-mode/references/portable-runtime.md) explains tool discovery, model selection, T3 delegation, and missing-capability fallbacks.
 
 Fork it. Change it. Make it fit how your team works. Contributions are welcome.
 
@@ -18,7 +18,39 @@ Clone or download this repository:
 git clone https://github.com/TheDarkSkyXD/SuperDevAgents.git
 ```
 
-Copy the contents of its `.agents/` directory into the `.agents/` directory at the root of your project. Preserve any skills or agent definitions your project already has, and review same-name files before replacing them.
+For a skills-only installation, run the included installer from the clone. Pass the skills directory your harness reads:
+
+```bash
+cd SuperDevAgents
+node tools/install.mjs --target /path/to/your/project/.agents/skills
+```
+
+The installer works on Windows, macOS, and Linux with Node 18 or later. Paths with spaces are supported. Use `--global` for `~/.agents/skills`, `--dry-run` to preview, and `--update` to replace unmodified files from a previous SuperDev installation. It preserves unrelated skills and refuses conflicting local edits. For a different discovery directory, pass that directory with `--target`.
+
+Native plugin installs also provide automatic routing and runtime adapters:
+
+```text
+# Claude Code
+/plugin marketplace add TheDarkSkyXD/SuperDevAgents
+/plugin install superdev@superdev-agents
+
+# Codex
+codex plugin marketplace add TheDarkSkyXD/SuperDevAgents
+codex plugin add superdev@superdev-agents
+
+# GitHub Copilot
+copilot plugin marketplace add TheDarkSkyXD/SuperDevAgents
+copilot plugin install superdev@superdev-agents
+
+# Pi
+pi install git:github.com/TheDarkSkyXD/SuperDevAgents
+
+# Muse, from this clone
+muse plugins install ./plugins/superdev
+muse plugins approve superdev
+```
+
+See [harness setup and limits](./docs/harnesses.md) for routing, model configuration, and verification. A skills-only installation does not add tools or hooks to its host.
 
 Start a new agent session after copying the files so your harness discovers the skills.
 
@@ -30,7 +62,7 @@ Run the setup skill once in your project:
 /superdev-setup
 ```
 
-Setup records your issue tracker, domain-document layout, triage labels, reasoning budget, and model choices. The defaults send code work to Grok 4.6, judgment and prose to Opus 5.5, and tooling reflection to GPT 5.6. Review panels use Opus 5.5, GPT 5.6, and Grok 4.6. Setup checks the active harness and preserves saved model choices on reruns. Older maps may pin Fable 5 or 5.1, Opus 5, or Grok 4.7. Remove an outdated role from `.agents/superdev-models.md` before setup, then choose from models the active harness reports. Remove the file to rebuild the full map. Then route a real task through the main mode:
+Setup records your issue tracker, domain-document layout, triage labels, and supported model choices. It discovers the active harness's model catalog and options. Project overrides live in `.agents/superdev-models.md`; runtime-specific user settings use `superdev-models.md` in the harness's configuration directory. Without a valid override, the portable contract inherits the session model. Native adapter examples are configuration hints, not a requirement to use a particular provider. Then route a real task through the main mode:
 
 ```text
 /superdev-mode this command writes duplicate rows after a retry. reproduce it first, then fix and verify.
@@ -91,7 +123,7 @@ For repeated agent mistakes, run:
 /correct
 ```
 
-There are 68 skills in the collection. The rest cover architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, research, code review, and the principles used by the main mode. Count them in PowerShell with `@(rg --files --glob SKILL.md .agents/skills).Count`.
+The collection also covers architecture, domain modeling, issue triage, specifications, tickets, merge conflicts, formal verification, PR maintenance, and the principles used by the main mode. Count the canonical skills in PowerShell with `@(rg --files --glob SKILL.md plugins/superdev/skills).Count`.
 
 ## The principles are executable rules
 
@@ -114,4 +146,4 @@ Run [`/automate-me`](./.agents/skills/automate-me/SKILL.md) to draft a personal 
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](./LICENSE). Copyright and license notices are included in [NOTICE.md](./NOTICE.md).

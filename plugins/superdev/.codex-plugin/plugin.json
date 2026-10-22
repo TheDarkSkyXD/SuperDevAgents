@@ -1,0 +1,52 @@
+{
+  "name": "superdev",
+  "version": "1.0.0",
+  "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
+  "author": {
+    "name": "SuperDevAgents contributors",
+    "url": "https://github.com/TheDarkSkyXD"
+  },
+  "homepage": "https://github.com/TheDarkSkyXD/SuperDevAgents",
+  "repository": "https://github.com/TheDarkSkyXD/SuperDevAgents",
+  "license": "MIT",
+  "keywords": [
+    "superdev",
+    "superdev-mode",
+    "workflow",
+    "principles",
+    "agent-style",
+    "subagents",
+    "unslop",
+    "claude-code",
+    "skills",
+    "tdd",
+    "code-review",
+    "parallel-agents",
+    "codex",
+    "opencode",
+    "gemini-cli",
+    "prime-agent"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/codex-hooks.json",
+  "interface": {
+    "displayName": "SuperDev",
+    "shortDescription": "Rigorous, parallelizable agent workflows: go deep first, write less, verify everything",
+    "longDescription": "superdev guides agent work through superdev-mode's principles, parallel design exploration (architect/arena), adversarial multi-model review (interrogate), root-cause debugging, prose deslopping, and verified delivery. Skills are shared with the Claude Code build; on Codex, tool names resolve via the codex-tools mapping.",
+    "developerName": "SuperDevAgents contributors",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Work on this in superdev-mode.",
+      "Interrogate this diff with multiple models."
+    ],
+    "websiteURL": "https://github.com/TheDarkSkyXD/SuperDevAgents",
+    "brandColor": "#7C3AED",
+    "composerIcon": "./assets/superdev-icon.png",
+    "logo": "./assets/superdev-icon.png"
+  }
+}

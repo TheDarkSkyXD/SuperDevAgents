@@ -1,0 +1,63 @@
+{
+  "name": "superdev",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
+  "author": {
+    "name": "SuperDevAgents contributors",
+    "url": "https://github.com/TheDarkSkyXD"
+  },
+  "homepage": "https://github.com/TheDarkSkyXD/SuperDevAgents",
+  "repository": "https://github.com/TheDarkSkyXD/SuperDevAgents",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "superdev",
+    "superdev-mode",
+    "workflow",
+    "principles",
+    "agent-style",
+    "subagents",
+    "unslop",
+    "claude-code",
+    "skills",
+    "tdd",
+    "code-review",
+    "parallel-agents",
+    "codex",
+    "opencode",
+    "gemini-cli",
+    "prime-agent"
+  ],
+  "pi": {
+    "skills": [
+      "./plugins/superdev/skills"
+    ],
+    "extensions": [
+      "./plugins/superdev/pi/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "packageManager": "bun@1.3.14",
+  "engines": {
+    "bun": ">=1.3.14"
+  },
+  "scripts": {
+    "generate": "bun tools/generate.mjs && node tools/sync-local.mjs",
+    "check": "bun tools/generate.mjs --check && node tools/sync-local.mjs --check && node tools/verify-workflows.mjs",
+    "test": "bun tools/test.mjs",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "8.72.0",
+    "eslint": "9.39.5"
+  }
+}
