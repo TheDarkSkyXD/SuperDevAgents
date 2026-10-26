@@ -57,7 +57,7 @@ function task_rule(    type, model) {
   }
   deny("superdev model check: `" model "` is not one of the user's saved superdev model choices (" sheet "). Set `model` to the model saved for this role: one of " MODEL_LIST "." \
     (MODEL_ALIASES ? " A role saved as inherit-parent or auto omits `model`." : "") \
-    " To change the choices, the user reruns superdev-setup.")
+    " To change the choices, the user reruns setup-superdev.")
 }
 
 # Tokenize a strict shell form, then let the registered script contract select

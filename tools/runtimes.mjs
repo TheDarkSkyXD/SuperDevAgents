@@ -199,7 +199,7 @@ function tierModelNamesSection(models, { label, block, worker, panel, dispatch, 
     panel(codeList(block.panel)) +
     "\n\n" +
     (dispatch ? `${dispatch}\n\n` : "") +
-    `\`/superdev-setup\` writes the configured model list. On ${label}, set it to your ${ids}.`
+    `\`/setup-superdev\` writes the configured model list. On ${label}, set it to your ${ids}.`
   );
 }
 
@@ -253,7 +253,7 @@ export function piModelNamesSection(models) {
     "parent's current model. Diverse-model panels (`arena`, `architect`, `interrogate`, `how` critics, `reflect`) " +
     "stay diverse only while their aliases resolve to distinct models. If one model family is all you can reach, " +
     "vary the reasoning effort and note in the verdict that diversity was reduced.\n\n" +
-    "`/superdev-setup` writes the configured model list. On Pi, keep the aliases and remap them with `pi models:`."
+    "`/setup-superdev` writes the configured model list. On Pi, keep the aliases and remap them with `pi models:`."
   );
 }
 
@@ -310,7 +310,7 @@ export function validatePiPackage(text, { pathExists }) {
 export const roleSkills = (models) => [...new Set(models.roles.map((r) => r.skill))].sort();
 
 // Copilot ships no default slugs: the models a Copilot account can reach vary
-// by plan and policy, so the user picks them in superdev-setup.
+// by plan and policy, so the user picks them in setup-superdev.
 export function copilotModelNamesSection(models) {
   return (
     "Skills name Claude Code model aliases in their Models sections. Those aliases are not Copilot model IDs, " +
@@ -327,7 +327,7 @@ export function copilotModelNamesSection(models) {
     ") and read and write exactly that path; do not append `.copilot` or any other segment to it. A session with its " +
     "own `COPILOT_HOME` then never touches `~/.copilot`.\n" +
     `- No sheet, or the hook reports \`sheet invalid\`: before a skill that needs a role model (${roleSkills(models).map(code).join(", ")}), stop, load ` +
-    "`superdev-setup` with the `skill` tool, and finish it first. In that same session, use the values it just wrote; " +
+    "`setup-superdev` with the `skill` tool, and finish it first. In that same session, use the values it just wrote; " +
     "later sessions get them from the hook. Do not ask again on later runs.\n" +
     "- A role line in the sheet is the user's explicit model instruction, so pass it as the `task` tool's " +
     "`model` parameter. `inherit-parent` or `auto` omits `model`.\n" +
@@ -342,9 +342,9 @@ export function copilotModelNamesSection(models) {
     "signal comes from model diversity, so fill a panel from distinct vendors in the `task` tool's `model` " +
     "list (Claude, GPT, Gemini, Grok, and so on). superdev ships no default Copilot panel. If only one vendor is " +
     "reachable, vary reasoning effort and note in the verdict that diversity was reduced.\n\n" +
-    "`superdev-setup` lists the models from the `model` enum of the `task` tool and writes only IDs it saw there. " +
+    "`setup-superdev` lists the models from the `model` enum of the `task` tool and writes only IDs it saw there. " +
     "After it writes the sheet, it runs its `check-sheet.sh` script, which applies the hook's checks.\n\n" +
-    "Run `superdev-setup`, and the parent session that orchestrates a panel, on a model at least as strong as " +
+    "Run `setup-superdev`, and the parent session that orchestrates a panel, on a model at least as strong as " +
     "gpt-5.4-mini or a Sonnet-class Claude model. On a Haiku-class model, setup picked models the user never " +
     "chose in about half of the smoke runs."
   );

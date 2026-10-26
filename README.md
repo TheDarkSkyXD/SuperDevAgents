@@ -59,7 +59,7 @@ Start a new agent session after copying the files so your harness discovers the 
 Run the setup skill once in your project:
 
 ```text
-/superdev-setup
+/setup-superdev
 ```
 
 General setup configures your issue tracker, triage labels, Wayfinder labels and relationships, and domain-document layout before configuring models and routing. On GitHub, it reuses existing labels and creates missing mapped labels after you approve the draft. Repository conventions default to `docs/agents/`; saved document locations are preserved. Requests to change only labels or models update only that part. The full ten-step model setup remains intact, including reasoning effort, routing, and optional verification-skill setup.

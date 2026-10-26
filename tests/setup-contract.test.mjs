@@ -3,11 +3,11 @@ import { readFileSync } from "node:fs";
 import { workflowDigest } from "../tools/verify-workflows.mjs";
 
 const skill = (name, path = "SKILL.md") => readFileSync(new URL(`../plugins/superdev/skills/${name}/${path}`, import.meta.url), "utf8");
-const reference = (name) => skill("superdev-setup", `references/${name}.md`);
+const reference = (name) => skill("setup-superdev", `references/${name}.md`);
 
 test("repository onboarding preserves the complete reference model setup", () => {
   const baseline = JSON.parse(readFileSync(new URL("./fixtures/setup-model-baseline.json", import.meta.url), "utf8"));
-  const setup = skill("superdev-setup");
+  const setup = skill("setup-superdev");
   const start = setup.indexOf(baseline.start);
   expect(start).toBeGreaterThan(0);
   const modelSetup = setup.slice(start);

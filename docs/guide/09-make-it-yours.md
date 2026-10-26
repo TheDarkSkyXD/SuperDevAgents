@@ -7,7 +7,7 @@ SuperDev mode contains strong defaults. Your team may want different response le
 Run:
 
 ```text
-$superdev-setup
+$setup-superdev
 ```
 
 Setup writes `.agents/superdev-models.md` and repository guidance under `docs/agents/`. Missing model roles fall back to the harness. Rerunning setup updates the map without requiring you to edit every skill.

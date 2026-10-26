@@ -189,7 +189,7 @@ describe("PreToolUse model check for superdev agents", () => {
     expect(reason).toContain("`claude-haiku-4.5` is not one of the user's saved superdev model choices");
     expect(reason).toContain("one of `gpt-5.5`, `claude-opus-5.5`, `claude-sonnet-5`, `gemini-3.8-flash`.");
     expect(reason.match(/`gpt-5.5`/g)).toHaveLength(1);
-    expect(reason).toContain("superdev-setup");
+    expect(reason).toContain("setup-superdev");
   });
 
   test("a role value's effort suffix does not change the model it names", () => {
@@ -243,7 +243,7 @@ describe("PreToolUse model check for superdev agents", () => {
     const invoke = (relative, args = []) => spawnSync("sh", [join(pluginRoot, relative), ...args], {
       env: { PATH: process.env.PATH, ...env }, encoding: "utf8",
     });
-    const checked = invoke("skills/superdev-setup/scripts/check-sheet.sh");
+    const checked = invoke("skills/setup-superdev/scripts/check-sheet.sh");
     expect({ status: checked.status, out: checked.stdout, err: checked.stderr }).toEqual({ status: 0, out: "sheet ok\n", err: "" });
     const started = invoke("hooks/session-start.sh", ["copilot"]);
     expect(started.status).toBe(0);
@@ -425,8 +425,8 @@ describe("PreToolUse vendored script runs", () => {
     expect(run(bash(`bash ${log} session-start-copilot.md review decision why evidence result`, join(root, "hooks")), env)).toEqual(quiet);
   });
 
-  // superdev-setup runs its sheet check in this form after it writes the sheet.
-  test("approves superdev-setup's sheet check", () => {
-    expect(run(bash(`sh ${root}/skills/superdev-setup/scripts/check-sheet.sh`), env)).toEqual({ status: 0, out: allow, err: "" });
+  // setup-superdev runs its sheet check in this form after it writes the sheet.
+  test("approves setup-superdev's sheet check", () => {
+    expect(run(bash(`sh ${root}/skills/setup-superdev/scripts/check-sheet.sh`), env)).toEqual({ status: 0, out: allow, err: "" });
   });
 });

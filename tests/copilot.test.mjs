@@ -57,7 +57,7 @@ describe("copilot-tools.md", () => {
         .map((f) => relative(skillsDir, f).split("/")[0]),
     );
     for (const name of noted) expect(skills.has(name)).toBe(true);
-    for (const name of ["interrogate", "superdev-setup", "no-comments", "reflect", "recall", "babysit"]) {
+    for (const name of ["interrogate", "setup-superdev", "no-comments", "reflect", "recall", "babysit"]) {
       expect(noted).toContain(name);
     }
   });
@@ -98,7 +98,7 @@ describe("Copilot preambles", () => {
 // Copilot's ask_user is single-select with one question per call, and superdev
 // ships no Copilot models, so setup asks tier by tier from choice lists.
 describe("Copilot setup questions", () => {
-  const setupDir = join(skillsDir, "superdev-setup");
+  const setupDir = join(skillsDir, "setup-superdev");
   const skill = readFileSync(join(setupDir, "SKILL.md"), "utf8");
   const questions = readFileSync(join(setupDir, "copilot.md"), "utf8");
   const sequence = questions.slice(questions.indexOf("## Question sequence"));

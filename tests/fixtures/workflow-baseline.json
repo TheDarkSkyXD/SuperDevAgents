@@ -8,12 +8,12 @@
     },
     ".claude-plugin/plugin.json": {
       "reference": "bd07ef8d84d59a9d43ed34f77b7be008b6a11911cab510c725ef6d54c99dd376",
-      "adaptation": "42bebd08aa47e615c46ab13b39bf5c9a2110f100859451ea5ecee51441fd0141",
+      "adaptation": "17ed2f21f6d54d7b8aa89ff31024c1a99d6b0d17ce52992ba3d87628cb6b7a7b",
       "reason": "SuperDev package identity, version, description, and contributor metadata."
     },
     ".codex-plugin/plugin.json": {
       "reference": "acf9f55ee92199f5bfbd8b2c85e54baf36a80b8e5a67e2d2d299bb5fe2f097fa",
-      "adaptation": "dad6c6cf9a0e0269bcae0caa8a6f88c48f871e329d46674f9bc90d0abca6ac6d",
+      "adaptation": "b312a934624c2e3c9eb2e52ec9d0638f45af984cc6f450f12f3577fd39dc2e6c",
       "reason": "SuperDev package identity, version, contributor metadata, and interface branding."
     },
     ".codex-plugin/prompts/architect.md": {
@@ -97,9 +97,9 @@
     ".codex-plugin/prompts/reflect.md": {
       "reference": "708d0c4ca544d430fc128a13706b94aa5b20b6c524e99e95be789dff0c63e27c"
     },
-    ".codex-plugin/prompts/superdev-setup.md": {
-      "reference": "8cee0667680207c2b014197936ab1cc7b30049dd1a726bcda875c3d15b3c9eb5",
-      "adaptation": "99cfb3b77d9e3c3ec8e5d396581faab340a40303b045d6b1cb239803398fbf59",
+    ".codex-plugin/prompts/setup-superdev.md": {
+      "reference": "fd8fd6953349a0b3ea5520d1dd38d47fc8c2d469e702d9791265ac5fb155d2f1",
+      "adaptation": "6699ef85b3eeeafdc0ebe8f7b187a60c1d6ddce7f85aa9c0a9686119132457ed",
       "reason": "Advertise the restored repository, triage-label, domain-document, and model setup in the generated shortcut."
     },
     ".codex-plugin/prompts/sharpen.md": {
@@ -143,12 +143,12 @@
     },
     ".github/plugin/plugin.json": {
       "reference": "9503cfd5dac781839713adf464a450d034d37e3d040c116dedf690ea0a7d82c5",
-      "adaptation": "d4399268b32615e631d23009ac4a3fa7eecc46446d9bcf068951907b4e9a113c",
+      "adaptation": "90dff6f21d1e80208fa58d1865137131bf6acd08209b4f8c5c343e8c34bba3e2",
       "reason": "SuperDev package identity, version, metadata, and JSON formatting."
     },
     ".muse-plugin/plugin.json": {
-      "reference": "73bcb2e507868ce1f6400dab8b59aca18ba354803066b6aecd697a64a004f62d",
-      "adaptation": "071b0ab6bf674c82652897709000c74309951dfadd1ea02c840eb2dfd4fbe02f",
+      "reference": "8d416d5e7a7a661734dbd12dc4aed980a429ab7c04bc115a97460c9352ef2f45",
+      "adaptation": "fbf2f72a8afcb7058f4b501d7045c1e056c003ae9972687809c131aa6b43bf36",
       "reason": "SuperDev package identity and generated discovery entries for additional skills."
     },
     "README.md": {
@@ -182,7 +182,7 @@
       "reason": "Invoke the same POSIX script with sh so Windows-created copies need no executable bit."
     },
     "hooks/copilot-context.awk": {
-      "reference": "80a1fbf002bdeb751bedd79c09bc75f5c7965860d829c2b84700dfc1d2f1c563"
+      "reference": "763e835275b8729e60b58855a96d752c2efbf45c4706791e76a6f79f3ecbb0a8"
     },
     "hooks/copilot-hooks.json": {
       "reference": "5223b3836a457f555555f3b932a89eeaa42e2cba26a3e1f4d1952e93d24e68dd",
@@ -198,29 +198,29 @@
       "reference": "9aea4d7bc3eb238b150d07ab33ca3c1e80da43f7d6e47f6d54790bb4856ab9da"
     },
     "hooks/muse-context.awk": {
-      "reference": "189e6d22b63bc87387c19d5676f55c9597e2e627febdea54e6ee33398d4e160a"
+      "reference": "7a2a9181d3ff3608a17436e1f908ee9c56357dc00bc83ceacc633ae288d9e506"
     },
     "hooks/pre-tool-use.awk": {
-      "reference": "487e669f00739d8f4af923e566f5a9a74401b797231fc85a98550a6b383abb4a"
+      "reference": "5c1f7b96d627dac6bfc1be43d894a6c35fd7f6084b1cadda085cd754a4663a52"
     },
     "hooks/pre-tool-use.sh": {
-      "reference": "6e2a50135738c80a8ac9c5d16cfb7b7e2ca58732a6c191f6b92a165ad8f933bf"
+      "reference": "4a4b5d1069bdda88829390e991de01dd5ca9997c240a5efc6e60c8737c1e9875"
     },
     "hooks/script-contracts.awk": {
-      "reference": "2190b792280d329ab371a8d876a61c38f9605b4791ee7a3b95760b1b4765d80a"
+      "reference": "e24221e8eac4671d6e92d90b9c699a4751588651502d692c5d4323961f09aa46"
     },
     "hooks/session-start-context.md": {
       "reference": "d82dc74e6d5962412977dffa0cd6e9ff50865b48e5f81d98ee76c69dd1b06024"
     },
     "hooks/session-start-copilot-setup.md": {
-      "reference": "0582964de5b3fe0a37fb1527fd063fd5faac7bd8937fb2ed4e0624a040d2d0ef"
+      "reference": "401a505ac1155ecc82131a444f35c6630d0f3dd9c759ad4f9d1a63fac1050ec2"
     },
     "hooks/session-start-copilot-sheet.md": {
       "reference": "b872e7d05bfefda78a3a4432e80c63b1a7c0fae354bc38a23467af8f34458694"
     },
     "hooks/session-start-copilot.md": {
-      "reference": "de21b96c22f5765826a990e97550e73bffa9c61a4032fe4b2a0e4092e80d1653",
-      "adaptation": "46c760848f36fe587feb45809a2b99adca1ae77004541595293364e4e907e6df",
+      "reference": "9417939e1788373511f0f9ff8a1d452313c1c30d98899d43d73612dfb3c89e65",
+      "adaptation": "c97b1894a72032a0214ea71dc77c2589a7eb9c92e8cebbeb3bd7feab5ad74a62",
       "reason": "Generated role list uses deterministic alphabetical order; role membership is unchanged."
     },
     "hooks/session-start-muse-sheet.md": {
@@ -233,7 +233,7 @@
       "reference": "b3f7e2046fea53c54da9de9183c2538035ab5c7e5414657653e882962c7e73c8"
     },
     "hooks/session-start.sh": {
-      "reference": "a6d87c3e960d4acbc08a4074b7a267527c5b6738ff6c10f0f4cb7558394e2f00"
+      "reference": "8e3bb4720ceb90550d12442d46ab43b87caafa05e61c121a65a70305a1797acf"
     },
     "models.json": {
       "reference": "436a5b0ebe39c7b8373692a8eaad6eee7ea0f124b918f59ba0de9611c27e17cc"
@@ -280,7 +280,7 @@
       "reference": "5d216461e9bee5771f73e5a07ca7e47080c07eedd20ba7b33a65cc5c06555329"
     },
     "skills/architect/SKILL.md": {
-      "reference": "464726483c0cd5475a76029c682532d4772e336ed5aeb1346137b6516e239050"
+      "reference": "a58c3eb645c8ee288827a6e0851fee64a73022cbba66cc4a870fb435bc8d3d9b"
     },
     "skills/architect/references/design-red-flags.md": {
       "reference": "eaa0e680dcb0dd263f06457a1b06b284a8088ebe5ea2eac8d988d1cfe9767e82"
@@ -292,7 +292,7 @@
       "reference": "a8e4ba4cc8608ae6fca943a6130e9292994df66c76a905c6748502cd4e453eb7"
     },
     "skills/arena/SKILL.md": {
-      "reference": "c7da7281a172cc682213ac6c7f42a3f3650e768368353f6b3347d58334063ac7"
+      "reference": "3c33db21034dce107f5cda27e71e7baf0099018d221e37056b2c5e1771bf83b8"
     },
     "skills/automate-me/SKILL.md": {
       "reference": "7e1b4a9f8f3ccce7d2feebea8397907e04837e847f85886f282f24987f5fedde"
@@ -343,7 +343,7 @@
       "reference": "8bf292736cab922276feb4d8377edc2fc4102a7beb62bcd1f3f5cf72a79b16cc"
     },
     "skills/how/SKILL.md": {
-      "reference": "8fbd100232333c08453bad4bbe47b5baf572975d0ee8501ca9c5be58b307a8e0"
+      "reference": "13ac6fd3e755d0766bbd963c9fcfdeedbea834aa3c967e1415c318c3b1b5b9e2"
     },
     "skills/how/references/explainer-prompt.md": {
       "reference": "23c079f1ccd081aeabdd6254cd8d1b356d43371bea6775af7f4c0c695a117755"
@@ -385,7 +385,7 @@
       "reference": "0001a19dedd6b570463a2e650f6980179b10eea6c3d067ea2c1c4831305a939e"
     },
     "skills/superdev-help/SKILL.md": {
-      "reference": "1e84713d71933894b148115e9d20cb068a74b6ac873f0d4129fb3f145503ffea"
+      "reference": "3c8a8bf66860178b4aed65c10d1b75ab19872d5f177d3714b5d0c0f6037607d6"
     },
     "skills/superdev-help/references/prompting.md": {
       "reference": "2fedd2efe5333bb4d505e792b1bb92f9e3c1ccd62c7df43d3a2f664b915424a9"
@@ -394,8 +394,8 @@
       "reference": "f72c9b9257a45da30492f216211f0a8610092b11a93eb22b669a1053934f0ee4"
     },
     "skills/superdev-mode/SKILL.md": {
-      "reference": "9f960e270c3f4e2566c0aadb0a6cf4fe902f644ea7958a8b0d71bf740b7eb43b",
-      "adaptation": "d627f4b6d430697e9be055e7e8330715ffe62024b16d833ce122bfe2d79ed6c6",
+      "reference": "ef86adbf484cab56425288456d2bd07a4acca27787270a4efcfc4ca177dccd6b",
+      "adaptation": "8ec8595f7c4066778978dddda31be9c61461015fe8be72310ddce1c33ef4e11e",
       "reason": "List optional SuperDev additions and the restored full setup without replacing shared playbooks or review gates."
     },
     "skills/superdev-mode/playbooks/authoring-a-skill.md": {
@@ -474,11 +474,11 @@
       "reference": "60072b3d6e6d33ccefe8b9f2cd93d29dbafdcc3a10b2b177910a38dc2ecf87be"
     },
     "skills/superdev-mode/references/codex-tools.md": {
-      "reference": "ca68289b84ae63d6c872898e9ce8342718f6c37e6aef7bb89186aaf56d94e440"
+      "reference": "5bb38610a21a23deac2e8b772a1d046d4aa402ff146938056d5e9275565c9eb7"
     },
     "skills/superdev-mode/references/copilot-tools.md": {
-      "reference": "a7d532027b41873dd4dca192294c775b02aa644f7538d192306346e7df081783",
-      "adaptation": "501eec9c9011a2f4d8e521011a6f35f4c0a8baaa90e0199992ce3a6df5ff0d2f",
+      "reference": "f325e8d4063a64535cfdfd3c3397519894d927215f6747cde2df45610185efef",
+      "adaptation": "384339719afab8ef3c407674af62144160a9311040145a8b05e406d8f8f19c65",
       "reason": "Generated role list uses deterministic alphabetical order; native setup requirements are unchanged."
     },
     "skills/superdev-mode/references/licenses/LICENSE": {
@@ -501,11 +501,11 @@
       "reference": "7c45a4ec508cb264b1c5d1f538e4ca14b53745d7c5c183846d346de9869e7408"
     },
     "skills/superdev-mode/references/muse-tools.md": {
-      "reference": "14b061768733bfa6452010d2dd99a09b51dd2335b6dc3f458128253c520b1781"
+      "reference": "9558a9cb0221ea29efeccbed11f8788972a4c894b9f9a0249a4a54a98e7cabcc"
     },
     "skills/superdev-mode/references/pi-tools.md": {
-      "reference": "ce37b8c24fc624f7f039a53d7828e7c2f5de0d4a25f91407f7a15fd1e4fcdb78",
-      "adaptation": "7d9b913e3c92c8bc827b3151b1e6cca48b59f4980a8a19edac88abef2c00c8b7",
+      "reference": "2ae14021849e1430518caa0cb383d8b712651147b20ffd81aaa94340f3feed87",
+      "adaptation": "add72f1ff443b1250cb65ea7c4783d5c6c830e8da882977571c50ed65d813131",
       "reason": "Describe inheritance for an unmapped active provider."
     },
     "skills/superdev-mode/references/resume-storage.md": {
@@ -701,7 +701,7 @@
       "reference": "0ec8b55c48fa610f1e7e2c3f23af2f58740d0c36f6bbea1b00e0851788604f6f"
     },
     "skills/reflect/SKILL.md": {
-      "reference": "fad1263ed472ab81735b8e3545f3ba77e21697e1427c978900a32783826d4717"
+      "reference": "f4765637b4f7fcef476ab8e3885dcfe1a8284110ed9223195529a967912d7b55"
     },
     "skills/reflect/references/divergent-reviewer.md": {
       "reference": "176cb3a500b8e987d38b2035c6bd82fecd04a1a54374fa44f51a4a7fd08e4c7c"
@@ -721,25 +721,25 @@
     "skills/reflect/scripts/find-transcript.mjs": {
       "reference": "bd2e44cf15c0d4e29417a5a6dcc21fff89ad848f008546d8f487c0985d69adb1"
     },
-    "skills/superdev-setup/SKILL.md": {
-      "reference": "afe4d3e6285440d886367387d8ba369b391493201440e06cce50cf1bc83d393f",
-      "adaptation": "61a8695ce5554dd89cacbaab207df53183d022e8f33cf4838f498f26c14635ea",
-      "reason": "Restore the original SuperDev default of repository setup followed by runtime-aware model setup; keep targeted requests limited to their part."
+    "skills/setup-superdev/SKILL.md": {
+      "reference": "cd831450e5ff6c19f2c178735fa7425f70805990f097d8bc5892e733756e3248",
+      "adaptation": "0a991e9601eb9f39db6375d599a9f849afb59cfbd7992a20f3569b715faba941",
+      "reason": "Keep complete repository onboarding before the ten-step model setup, with the setup-superdev command matching the upstream naming pattern."
     },
-    "skills/superdev-setup/copilot.md": {
-      "reference": "eb562fd2b1049c3e1104a94bedc74316a66377c0de42f6c26ebb99e6da6bb53b"
+    "skills/setup-superdev/copilot.md": {
+      "reference": "0841fee4edabd635b7dfca310c2dee9b5ec6d253245c6efcd59f4362fd9f0f9a"
     },
-    "skills/superdev-setup/scripts/check-sheet.awk": {
+    "skills/setup-superdev/scripts/check-sheet.awk": {
       "reference": "971a1648c51b7eb8c5a73bfe13d4fa0e7c2828ab5ee69c7dea047d14f588cde8"
     },
-    "skills/superdev-setup/scripts/check-sheet.sh": {
-      "reference": "037cbff47049f9d3d8818605b107d42b95bfd33e3a802aebaa174a938c920675"
+    "skills/setup-superdev/scripts/check-sheet.sh": {
+      "reference": "f5b898a7354b56751d8ce0c7ba31c8aac5f077460b4e5f51eb405fd7e07154bb"
     },
-    "skills/superdev-setup/scripts/read-sheet.sh": {
+    "skills/setup-superdev/scripts/read-sheet.sh": {
       "reference": "9a6e712b46fe47ed1c44d421304cef2149b26c688f799319dc3b0a7eb254c7e4"
     },
-    "skills/superdev-setup/scripts/sheet.awk": {
-      "reference": "d3888fa9238b7afd2d666dcc4ecb887874ab34ee601873ea8393555c3724d7c4"
+    "skills/setup-superdev/scripts/sheet.awk": {
+      "reference": "02e440e63282f14eea90aa55920e0fba8ac7c0f51880d1795b0984e0932de754"
     },
     "skills/sharpen/SKILL.md": {
       "reference": "77c52c71a4dbf114ee704710f7f594646284370445426689bc67c3825f2a04e8"
@@ -754,7 +754,7 @@
       "reference": "fc8fefd01b24127f7d980389ffc010aed3c156268a765b06b31ddabc0fbe2201"
     },
     "skills/swarm/SKILL.md": {
-      "reference": "fd7819eb3086666161dd015114616cc643f94e1e8a6abe415555996e6e0e898c"
+      "reference": "b50c4151aabcec65e7da5dad30d04c33abae7438b389b4871620738c5cbab4a5"
     },
     "skills/tdd/SKILL.md": {
       "reference": "bce506547f71fd40e337e6742f64da2de31ca223cfba1a99ef8b4ac60cd66c70"
@@ -787,7 +787,7 @@
       "reference": "2b5628793224cb1848283235bcace96420490847271ae4e87d8134f1a530105d"
     },
     "skills/why/SKILL.md": {
-      "reference": "6def817542c3e8f0482e028154b9de42b924d7acfa596898549017178767a84e"
+      "reference": "3e17881e60e2d784a7c47c072b82bda4ca2e27f5265ccd3108b9bbf455bef8e3"
     },
     "skills/why/references/epistemics.md": {
       "reference": "34cebc9d57f7b6d16afc241bcf0fe01d92ff3e5ad1c721f9c75c1a7cc0c5bf0c"

@@ -18,7 +18,7 @@
 //   plugins/superdev/models.json (the model policy: role defaults, diverse panel,
 //   available slugs, and one block per RUNTIMES row: Codex equivalents, Pi IDs)
 //     -> each model-consuming skill's "## Models" and "## Reasoning effort" sections
-//     -> superdev-setup's Models section and override-sheet block, and interrogate's reviewer table
+//     -> setup-superdev's Models section and override-sheet block, and interrogate's reviewer table
 //     -> the "## Model names" section of each runtime's mapping file
 //        (superdev-mode/references/codex-tools.md, pi-tools.md, copilot-tools.md)
 //   the Per-skill notes table in superdev-mode/references/codex-tools.md
@@ -28,7 +28,7 @@
 //     -> the GitHub Copilot preamble under the same heading, after any Codex one
 //   DRIVER_PLAYBOOKS -> the driver-skill line under each playbook's first heading
 //   plugins/superdev/models.json's roles, again
-//     -> the role list in superdev-setup's scripts/sheet.awk, which checks a Copilot sheet
+//     -> the role list in setup-superdev's scripts/sheet.awk, which checks a Copilot sheet
 //     -> the list of skills that dispatch on role models in hooks/session-start-copilot.md
 //   plugins/superdev/agents/comment-sicko.md, LICENSE, LICENSE-cursor-team-kit,
 //   and NOTICE-skills.md
@@ -425,13 +425,13 @@ export function regions(models) {
       render: () => blankPadded(effortSection(models.efforts, models.defaultEffort)),
     })),
     {
-      file: skillFile("superdev-setup"),
+      file: skillFile("setup-superdev"),
       name: "Models section",
       locate: section("Models"),
       render: () => blankPadded(setupModelsSection(models)),
     },
     {
-      file: skillFile("superdev-setup"),
+      file: skillFile("setup-superdev"),
       name: "override sheet",
       locate: fenceUnder("Write the override sheet", "markdown"),
       render: () => [overrideSheetBlock(models)],
@@ -443,13 +443,13 @@ export function regions(models) {
       render: () => blankPadded(runtime.modelNames(models)),
     })),
     {
-      file: skillFile("superdev-setup").replace("SKILL.md", "scripts/sheet.awk"),
+      file: skillFile("setup-superdev").replace("SKILL.md", "scripts/sheet.awk"),
       name: "role list",
       locate: between(SHEET_ROLES_OPEN, "  return n"),
       render: () => sheetRoles(models),
     },
     {
-      file: skillFile("superdev-setup").replace("SKILL.md", "copilot.md"),
+      file: skillFile("setup-superdev").replace("SKILL.md", "copilot.md"),
       name: "roles by tier",
       locate: tableRows("| Tier | Roles |", "| "),
       render: () =>
@@ -675,7 +675,7 @@ export function modelsSection(roles) {
   const bullets = roles.map((r) => `- ${r.role}: ${codeList(r.models)}`).join("\n");
   return (
     "Role defaults, stamped from `plugins/superdev/models.json` (edit there, rerun `tools/generate.mjs`). " +
-    "A matching role line in the `superdev-models.md` override sheet overrides each at runtime; `/superdev-setup` writes it and lists its path per runtime.\n\n" +
+    "A matching role line in the `superdev-models.md` override sheet overrides each at runtime; `/setup-superdev` writes it and lists its path per runtime.\n\n" +
     bullets
   );
 }

@@ -6,19 +6,19 @@ set -eu
 case "${1:-}" in
   claude)
     sheet="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/superdev-models.md"
-    reader="${CLAUDE_PLUGIN_ROOT}/skills/superdev-setup/scripts/read-sheet.sh"
+    reader="${CLAUDE_PLUGIN_ROOT}/skills/setup-superdev/scripts/read-sheet.sh"
     ;;
   codex)
     sheet="${CODEX_HOME:-$HOME/.codex}/superdev-models.md"
-    reader="${CLAUDE_PLUGIN_ROOT}/skills/superdev-setup/scripts/read-sheet.sh"
+    reader="${CLAUDE_PLUGIN_ROOT}/skills/setup-superdev/scripts/read-sheet.sh"
     ;;
   copilot)
     sheet="${COPILOT_HOME:-$HOME/.copilot}/superdev-models.md"
-    reader="${COPILOT_PLUGIN_ROOT}/skills/superdev-setup/scripts/read-sheet.sh"
+    reader="${COPILOT_PLUGIN_ROOT}/skills/setup-superdev/scripts/read-sheet.sh"
     ;;
   muse)
     sheet="${XDG_CONFIG_HOME:-$HOME/.config}/muse/superdev-models.md"
-    reader="${MUSE_PLUGIN_ROOT}/skills/superdev-setup/scripts/read-sheet.sh"
+    reader="${MUSE_PLUGIN_ROOT}/skills/setup-superdev/scripts/read-sheet.sh"
     ;;
   *)
     echo "session-start.sh: unknown runtime '${1:-}' (expected claude, codex, copilot, or muse)" >&2
@@ -44,7 +44,7 @@ fi
 if [ "$1" = copilot ]; then
   printf '%s\n' "$normalized" | SUPERDEV_HOOKS="${COPILOT_PLUGIN_ROOT}/hooks" LC_ALL=C awk -v found="$found" \
     -f "${COPILOT_PLUGIN_ROOT}/hooks/json.awk" \
-    -f "${COPILOT_PLUGIN_ROOT}/skills/superdev-setup/scripts/sheet.awk" \
+    -f "${COPILOT_PLUGIN_ROOT}/skills/setup-superdev/scripts/sheet.awk" \
     -f "${COPILOT_PLUGIN_ROOT}/hooks/copilot-context.awk"
   exit 0
 fi
@@ -54,7 +54,7 @@ fi
 # mandate itself, rebuilt from their checked values.
 if [ "$1" = muse ]; then
   printf '%s\n' "$normalized" | SUPERDEV_HOOKS="${MUSE_PLUGIN_ROOT}/hooks" LC_ALL=C awk -v found="$found" \
-    -f "${MUSE_PLUGIN_ROOT}/skills/superdev-setup/scripts/sheet.awk" \
+    -f "${MUSE_PLUGIN_ROOT}/skills/setup-superdev/scripts/sheet.awk" \
     -f "${MUSE_PLUGIN_ROOT}/hooks/muse-context.awk"
   exit 0
 fi

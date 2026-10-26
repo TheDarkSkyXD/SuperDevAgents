@@ -74,7 +74,7 @@ test("reference verification normalizes names and detects unrecorded reference f
   const renames = referenceRenames(dir);
   const contract = { format: 1, files: {
     ".claude-plugin/plugin.json": { reference: workflowDigest(Buffer.from(JSON.stringify(manifest)), ".claude-plugin/plugin.json", renames) },
-    "skills/superdev-mode/SKILL.md": { reference: workflowDigest(Buffer.from("SuperDev uses SUPERDEV and superdev-setup.\n"), "skills/superdev-mode/SKILL.md") },
+    "skills/superdev-mode/SKILL.md": { reference: workflowDigest(Buffer.from("SuperDev uses SUPERDEV and setup-superdev.\n"), "skills/superdev-mode/SKILL.md") },
   } };
   expect(verifyWorkflows(dir, contract, { reference: true, replacements: renames }).failures).toEqual([]);
   writeFileSync(join(dir, "extra.md"), "new reference behavior");

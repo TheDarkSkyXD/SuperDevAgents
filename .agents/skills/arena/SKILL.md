@@ -56,7 +56,7 @@ One synthesized artifact, with a short synthesis note alongside naming the base 
 
 ## Models
 
-Role defaults, stamped from `plugins/superdev/models.json` (edit there, rerun `tools/generate.mjs`). A matching role line in the `superdev-models.md` override sheet overrides each at runtime; `/superdev-setup` writes it and lists its path per runtime.
+Role defaults, stamped from `plugins/superdev/models.json` (edit there, rerun `tools/generate.mjs`). A matching role line in the `superdev-models.md` override sheet overrides each at runtime; `/setup-superdev` writes it and lists its path per runtime.
 
 - arena runners: `opus`, `fable`, `sonnet`, `haiku`
 - arena cross-judge pool: `opus`, `fable`, `sonnet`, `haiku`

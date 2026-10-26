@@ -207,7 +207,7 @@ describe("Copilot SessionStart context", () => {
     const root = mkdtempSync(join(tmpdir(), "superdev-esc-"));
     try {
       cpSync(join(pluginRoot, "hooks"), join(root, "hooks"), { recursive: true });
-      cpSync(join(pluginRoot, "skills/superdev-setup/scripts"), join(root, "skills/superdev-setup/scripts"), { recursive: true });
+      cpSync(join(pluginRoot, "skills/setup-superdev/scripts"), join(root, "skills/setup-superdev/scripts"), { recursive: true });
       const odd = 'a "quote", a back\\slash, and a\ttab';
       writeFileSync(join(root, "hooks/session-start-copilot-setup.md"), `${odd}\n`);
       const r = spawnSync("sh", ["-c", sessionStart.copilot.hooks[0].command], {
@@ -347,7 +347,7 @@ describe("a plugin root with a backslash", () => {
     const tmp = mkdtempSync(join(tmpdir(), "superdev-hook-"));
     const root = join(tmp, "back\\tslash", "superdev");
     try {
-      for (const dir of ["hooks", "skills/superdev-setup/scripts"]) cpSync(join(pluginRoot, dir), join(root, dir), { recursive: true });
+      for (const dir of ["hooks", "skills/setup-superdev/scripts"]) cpSync(join(pluginRoot, dir), join(root, dir), { recursive: true });
       const run = (runtime, rootVar, from) =>
         spawnSync("sh", [join(from, "hooks/session-start.sh"), runtime], {
           env: { PATH: process.env.PATH, HOME: tmp, [rootVar]: from },

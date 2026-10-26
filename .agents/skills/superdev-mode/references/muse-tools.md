@@ -50,11 +50,11 @@ Skills name Claude defaults (a single-role default for code/prose/judgment, a wo
 
 Pass a role's model where the dispatch takes one: a Workflow child's `model`, or the session model when the dispatch has no model field. `subagent_spawn` takes an agent definition, not a model, so a role dispatched that way runs on the session's model and effort; a Workflow child takes both (see Subagent policy). `inherit-parent` or `auto` omits `model`.
 
-`/superdev-setup` writes the configured model list. On Muse, set it to your Muse model IDs, as `muse model-profile` and the model catalog name them.
+`/setup-superdev` writes the configured model list. On Muse, set it to your Muse model IDs, as `muse model-profile` and the model catalog name them.
 
 ## Session routing hook
 
-The native superdev Muse plugin bundles a `SessionStart` hook that injects the superdev-mode mandate in Muse wording, plus the saved role lines from the Muse sheet when the sheet has any. Muse runs plugin hooks only after the user approves them (`muse plugins approve superdev`), so a fresh install routes nothing until then. The hook reads `session hook` from the Muse sheet, at the path in [superdev-setup's runtime table](../../superdev-setup/SKILL.md#other-runtimes); `session hook: off` disables injection.
+The native superdev Muse plugin bundles a `SessionStart` hook that injects the superdev-mode mandate in Muse wording, plus the saved role lines from the Muse sheet when the sheet has any. Muse runs plugin hooks only after the user approves them (`muse plugins approve superdev`), so a fresh install routes nothing until then. The hook reads `session hook` from the Muse sheet, at the path in [setup-superdev's runtime table](../../setup-superdev/SKILL.md#other-runtimes); `session hook: off` disables injection.
 
 A skills-only installation does not include the hook. Request `superdev-mode` explicitly or add a standing instruction to `AGENTS.md` in that case.
 
@@ -76,7 +76,7 @@ Affected skill entry points point here. Most skills need only the tables above. 
 | Skill | On Muse |
 |-------|---------|
 | `interrogate` | The reviewer dispatch maps to parallel `subagent_spawn` calls or Workflow children; use Workflow children when the panel needs distinct models, and keep the panel model-diverse (see Model names). |
-| `superdev-setup` | The skill's Other runtimes table names the Muse sheet path; the plugin hook injects its role lines, so no include line is needed. The role rows are identical. |
+| `setup-superdev` | The skill's Other runtimes table names the Muse sheet path; the plugin hook injects its role lines, so no include line is needed. The role rows are identical. |
 | `no-comments` | The `comment-sicko` dispatch resolves through `subagent_spawn` as written, with the scoped id (see Subagent policy). Run it without worktree isolation, so it sees the scope's uncommitted changes. |
 | `thermos` | Both review dispatches resolve through `subagent_spawn` with their scoped ids (see Subagent policy). |
 | `teach` | Running `how` and `why` in parallel maps to two `subagent_spawn` calls in one response. Draw with Mermaid or plain text when no image tool is available. |

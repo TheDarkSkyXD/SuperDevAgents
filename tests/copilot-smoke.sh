@@ -14,8 +14,8 @@
 #   4. both plugin agents register, a superdev:superdev-agent dispatch with an
 #      explicit model runs on that model, and a sheet line that is not a role
 #      never reaches the context
-#   5. with no model sheet, a multi-model skill runs superdev-setup first
-#   6. superdev-setup writes no sheet without answers, and exactly the supplied
+#   5. with no model sheet, a multi-model skill runs setup-superdev first
+#   6. setup-superdev writes no sheet without answers, and exactly the supplied
 #      IDs, then runs check-sheet.sh
 #   7. without --allow-all-paths, and with the temp dir outside the sandbox, the
 #      saved model choices reach the session with no read of the sheet, and a
@@ -53,7 +53,7 @@ command -v jq >/dev/null 2>&1 || { echo "FAIL: jq is required" >&2; exit 1; }
 repo="$(cd "$(dirname "$0")/.." && pwd -P)"
 model="${SMOKE_MODEL:-claude-haiku-4.5}"
 # The setup probes (5 and 6) run once per model here. They need a model that
-# follows superdev-setup over a request to "save the sheet"; claude-haiku-4.5
+# follows setup-superdev over a request to "save the sheet"; claude-haiku-4.5
 # wrote guessed models in about half its runs.
 setup_models="${SMOKE_SETUP_MODELS:-${SMOKE_SETUP_MODEL:-gpt-5.4-mini claude-sonnet-5}}"
 root="$(cd "$(mktemp -d "${TMPDIR:-/tmp}/superdev-copilot-smoke.XXXXXX")" && pwd -P)"
@@ -222,17 +222,17 @@ rm "$home/superdev-models.md"
 setup_probes() {
   local setup_model="$1" events order sheet wrong role panel
   rm -f "$home/superdev-models.md"
-  # 5. No model sheet: a multi-model skill must run superdev-setup before any fan-out.
+  # 5. No model sheet: a multi-model skill must run setup-superdev before any fan-out.
   # The task tool is withheld so the probe cannot spend a panel.
   events="$(PROBE_MODEL=$setup_model probe --allow-all-tools --add-dir "$home" --excluded-tools task -p 'Use the arena skill to decide whether a function that adds two integers should be named add or sum. Keep it brief.')"
   order="$(jq -r 'select(.type == "tool.execution_start" and .data.toolName == "skill") | .data.arguments.skill' "$events" | tr '\n' ' ')"
   local loaded
-  loaded="$(jq -r 'select(.type == "tool.execution_start" and .data.toolName == "skill" and (.data.arguments.skill | test("superdev-setup$"))) | .data.toolCallId' "$events" \
+  loaded="$(jq -r 'select(.type == "tool.execution_start" and .data.toolName == "skill" and (.data.arguments.skill | test("setup-superdev$"))) | .data.toolCallId' "$events" \
     | while read -r id; do jq -r --arg id "$id" 'select(.type == "tool.execution_complete" and .data.toolCallId == $id and .data.success == true) | "yes"' "$events"; done | head -1)"
   if [ "$loaded" = yes ]; then
-    pass "$setup_model: missing sheet: superdev-setup ran (skill calls: $order)"
+    pass "$setup_model: missing sheet: setup-superdev ran (skill calls: $order)"
   else
-    fail "$setup_model: missing sheet did not trigger superdev-setup (skill calls: ${order:-none}) ($events)"
+    fail "$setup_model: missing sheet did not trigger setup-superdev (skill calls: ${order:-none}) ($events)"
   fi
   if [ -e "$user/.copilot/superdev-models.md" ]; then
     fail "$setup_model: setup wrote the sheet to ~/.copilot instead of \$COPILOT_HOME"
@@ -245,25 +245,25 @@ setup_probes() {
     pass "$setup_model: missing sheet: setup without ask_user wrote no sheet"
   fi
 
-  # 6. superdev-setup never picks models for the user. A -p session cannot ask, so
+  # 6. setup-superdev never picks models for the user. A -p session cannot ask, so
   # with no answers it writes no sheet; with every answer in the request it writes
   # exactly those IDs. The panel takes the first GPT and Gemini IDs from the CLI's
   # own `model` setting list, next to the probe model.
   rm -f "$home/superdev-models.md"
-  events="$(PROBE_MODEL=$setup_model probe --allow-all-tools --add-dir "$home" -p 'Run the superdev-setup skill now and save the sheet.')"
+  events="$(PROBE_MODEL=$setup_model probe --allow-all-tools --add-dir "$home" -p 'Run the setup-superdev skill now and save the sheet.')"
   if [ -e "$home/superdev-models.md" ]; then
-    fail "$setup_model: superdev-setup wrote a sheet with no answers from the user ($events): $(tr '\n' ' ' <"$home/superdev-models.md")"
+    fail "$setup_model: setup-superdev wrote a sheet with no answers from the user ($events): $(tr '\n' ' ' <"$home/superdev-models.md")"
   else
-    pass "$setup_model: no answers and no ask_user: superdev-setup wrote no sheet"
+    pass "$setup_model: no answers and no ask_user: setup-superdev wrote no sheet"
   fi
   if [ -z "$gpt" ] || [ -z "$gemini" ]; then
     fail "$setup_model: the CLI's model list has no GPT or Gemini ID: $known"
   else
     panel="$model, $gpt, $gemini"
-    events="$(PROBE_MODEL=$setup_model probe --allow-all-tools --add-dir "$home" -p "Run the superdev-setup skill now and save the sheet. My answers: default model $model. Strongest model $model. Panel models $panel, in that order, and no more. No role overrides. Session hook on.")"
+    events="$(PROBE_MODEL=$setup_model probe --allow-all-tools --add-dir "$home" -p "Run the setup-superdev skill now and save the sheet. My answers: default model $model. Strongest model $model. Panel models $panel, in that order, and no more. No role overrides. Session hook on.")"
     sheet="$home/superdev-models.md"
     if [ ! -e "$sheet" ]; then
-      fail "$setup_model: superdev-setup wrote no sheet from supplied answers ($events)"
+      fail "$setup_model: setup-superdev wrote no sheet from supplied answers ($events)"
     else
       wrong=""
       while IFS= read -r role; do grep -qxF "$role: $model" "$sheet" || wrong="$wrong; $role"; done < <(roles_of single)
@@ -349,9 +349,9 @@ script_run() {
   else
     fail "$label: preToolUse ran $runs times for $calls bash calls ($events)"
   fi
-  # superdev-setup's last step: check the sheet it wrote, with no prompt.
+  # setup-superdev's last step: check the sheet it wrote, with no prompt.
   full_sheet
-  events="$(probe -p "Run exactly this one bash command and nothing else, then reply with its output verbatim: sh $2/skills/superdev-setup/scripts/check-sheet.sh")"
+  events="$(probe -p "Run exactly this one bash command and nothing else, then reply with its output verbatim: sh $2/skills/setup-superdev/scripts/check-sheet.sh")"
   if jq -e 'select(.type == "tool.execution_complete" and .data.success == true) | select(.data.result | tostring | contains("sheet ok"))' "$events" >/dev/null \
     && ! jq -e 'select(.type | startswith("permission."))' "$events" >/dev/null; then
     pass "$label: check-sheet.sh ran with no permission request and passed the sheet"

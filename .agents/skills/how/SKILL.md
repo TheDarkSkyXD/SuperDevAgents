@@ -44,7 +44,7 @@ The explanation uses the sections defined in `references/explainer-prompt.md`, d
 
 ## Models
 
-Role defaults, stamped from `plugins/superdev/models.json` (edit there, rerun `tools/generate.mjs`). A matching role line in the `superdev-models.md` override sheet overrides each at runtime; `/superdev-setup` writes it and lists its path per runtime.
+Role defaults, stamped from `plugins/superdev/models.json` (edit there, rerun `tools/generate.mjs`). A matching role line in the `superdev-models.md` override sheet overrides each at runtime; `/setup-superdev` writes it and lists its path per runtime.
 
 - how explorer: `opus`
 - how explainer: `opus`

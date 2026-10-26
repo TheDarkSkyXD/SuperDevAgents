@@ -7,7 +7,7 @@ Read [the portable runtime contract](../superdev-mode/references/portable-runtim
 
 This skill takes the current conversation context and codebase understanding and produces a spec. Do NOT interview the user; just synthesize what you already know.
 
-The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/superdev-setup`.
+The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/setup-superdev`.
 
 Resolve their documents through the `### Issue tracker` and `### Triage labels` pointers in the project's active agent instructions. Use the saved label mappings and tracker operations instead of assuming default document paths or label strings.
 

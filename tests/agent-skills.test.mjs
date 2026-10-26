@@ -37,6 +37,7 @@ describe("shared Agent Skills tree", () => {
   test("public skills include superdev-mode and exclude every principle leaf", () => {
     const names = publicSkills(skillsDir);
     expect(names).toContain("superdev-mode");
+    expect(names).toContain("setup-superdev");
     expect(names.some((n) => n.startsWith("principle-"))).toBe(false);
   });
 
@@ -80,7 +81,7 @@ describe("shared Agent Skills tree", () => {
           "# Reference",
           "",
           "Read `../playbooks/babysit.md` first.",
-          "Write the log to `/tmp/<slug>-resume.md` and run `/superdev-setup`.",
+          "Write the log to `/tmp/<slug>-resume.md` and run `/setup-superdev`.",
           "Edit `plugins/superdev/models.json`, then rerun `tools/generate.mjs`.",
           "Cursor keeps rules in `.cursor/rules/`; Claude Code has no `hooks/nope.md`.",
         ].join("\n"),

@@ -3,7 +3,7 @@
 BEGIN {
   CONTRACT["skills/show-me-your-work/scripts/log.sh"] = "log"
   CONTRACT["skills/reflect/scripts/find-transcript.mjs"] = "transcript"
-  CONTRACT["skills/superdev-setup/scripts/check-sheet.sh"] = "optional-path"
+  CONTRACT["skills/setup-superdev/scripts/check-sheet.sh"] = "optional-path"
   CONTRACT["skills/superdev-mode/scripts/check-playbooks.mjs"] = "optional-path"
   CONTRACT["skills/superdev-mode/scripts/check-plan.mjs"] = "one-path"
   CONTRACT["skills/superdev-mode/scripts/worktree-audit.mjs"] = "paths"

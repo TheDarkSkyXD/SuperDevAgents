@@ -1,5 +1,11 @@
 # SuperDev changes
 
+## 1.0.3 - Align the setup command with SuperDev
+
+- Rename the setup skill to `/setup-superdev`, following the upstream `/setup-pstack` command pattern.
+- Update runtime hooks, generated commands, and setup links to use the new name.
+- Keep repository onboarding followed by the complete model, reasoning-effort, and session-hook setup.
+
 ## 1.0.2 - Complete engineering workflow setup
 
 - Preserve the complete reference model setup and protect its ten steps with an independent content check.

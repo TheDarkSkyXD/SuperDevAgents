@@ -1,9 +1,9 @@
 ---
-name: superdev-setup
-description: Configure a repository for SuperDev with its issue tracker, triage labels, Wayfinder setup, domain docs, per-role models, and routing. Use for /superdev-setup, first-time setup, or changes to repository conventions or model configuration.
+name: setup-superdev
+description: Configure a repository for SuperDev with its issue tracker, triage labels, Wayfinder setup, domain docs, per-role models, and routing. Use for /setup-superdev, first-time setup, or changes to repository conventions or model configuration.
 ---
 
-# SuperDev setup
+# Setup SuperDev
 
 On Codex, read the [platform mapping](../superdev-mode/references/codex-tools.md), including its per-skill notes, before following this skill.
 
@@ -125,7 +125,7 @@ The role lines are the same everywhere. What differs is the sheet path, how the 
 | --- | --- | --- | --- | --- |
 | Claude Code | `<config>/superdev-models.md` | `@<config>/superdev-models.md` in `<config>/CLAUDE.md` | the `Agent` tool's model parameter | verified live |
 | Codex | `<codex-home>/superdev-models.md` | model rows: paste into `<codex-home>/AGENTS.md`; hook setting: read by the plugin | your configured Codex models, see [codex-tools.md](../superdev-mode/references/codex-tools.md#model-names) | hook contract tested; discovery verified |
-| Pi | `superdev-models.md` in the Pi agent directory, `$PI_CODING_AGENT_DIR` or `~/.pi/agent` | read by the superdev Pi extension, model rows and hook setting both; no include line | `pi --list-models`, see [pi-tools.md](../superdev-mode/references/pi-tools.md#model-names) and its `superdev-setup` note | extension contract tested offline; live results in the repository's `docs/pi-equivalence.md` |
+| Pi | `superdev-models.md` in the Pi agent directory, `$PI_CODING_AGENT_DIR` or `~/.pi/agent` | read by the superdev Pi extension, model rows and hook setting both; no include line | `pi --list-models`, see [pi-tools.md](../superdev-mode/references/pi-tools.md#model-names) and its `setup-superdev` note | extension contract tested offline; live results in the repository's `docs/pi-equivalence.md` |
 | GitHub Copilot (CLI and app) | `${COPILOT_HOME:-~/.copilot}/superdev-models.md` | the plugin hook checks it and injects its role lines at session start; skills-only installs read it with `view` | the `task` tool's `model` enum, see [copilot-tools.md](../superdev-mode/references/copilot-tools.md#model-names) | hook contract tested; CLI install smoke-tested |
 | Muse | `${XDG_CONFIG_HOME:-~/.config}/muse/superdev-models.md` | the plugin hook reads it and injects its role lines at session start, once hooks are approved; no include line | the model catalog (`muse model-profile show <model>` names each one), see [muse-tools.md](../superdev-mode/references/muse-tools.md#model-names) | hook contract tested; plugin install verified |
 | opencode | `~/.config/opencode/superdev-models.md` | add the path to the `instructions` array in `opencode.json` | the `models` slash command in the session | from published docs, no live session |

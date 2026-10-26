@@ -42,7 +42,7 @@ export function referenceRenames(pluginRoot) {
   const title = persona[0].toUpperCase() + persona.slice(1);
   return [
     [homepage, "https://github.com/TheDarkSkyXD/SuperDevAgents"],
-    [`setup-${name}`, "superdev-setup"],
+    [`setup-${name}`, "setup-superdev"],
     [persona.toUpperCase(), "SUPERDEV"],
     [title, "SuperDev"],
     [persona, "superdev"],

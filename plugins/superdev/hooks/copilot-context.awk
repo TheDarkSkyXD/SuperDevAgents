@@ -1,6 +1,6 @@
 # Prints the GitHub Copilot SessionStart output: one JSON object whose
 # additionalContext is the superdev-mode mandate with the Copilot notes inside its
-# closing tag. Run after json.awk and superdev-setup's sheet.awk, with the sheet
+# closing tag. Run after json.awk and setup-superdev's sheet.awk, with the sheet
 # as input, -v found=<1 when the sheet exists>, and SUPERDEV_HOOKS=<this
 # directory> in the environment.
 # Only a valid sheet's known role lines reach the context, rebuilt from their

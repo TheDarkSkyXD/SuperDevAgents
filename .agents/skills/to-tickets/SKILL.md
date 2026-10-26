@@ -9,7 +9,7 @@ Read [the portable runtime contract](../superdev-mode/references/portable-runtim
 
 Break a plan, spec, or conversation into a set of **tickets**: tracer-bullet vertical slices, each declaring the tickets that **block** it.
 
-The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/superdev-setup`.
+The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/setup-superdev`.
 
 Resolve their documents through the `### Issue tracker` and `### Triage labels` pointers in the project's active agent instructions. Use the saved label mappings and `Ticket relationships` operations. Verify parent and blocking relationships separately after publishing, without modifying a parent that this skill tells you to leave unchanged.
 
@@ -60,7 +60,7 @@ Iterate until the user approves the breakdown.
 
 ### 5. Publish the tickets to the configured tracker
 
-Publish the approved tickets. **How** depends on the tracker `/superdev-setup` configured; the tickets are the same either way, only the shape of the blocking edges changes:
+Publish the approved tickets. **How** depends on the tracker `/setup-superdev` configured; the tickets are the same either way, only the shape of the blocking edges changes:
 
 - **Local files** → write one file per ticket under `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01` in dependency order (blockers first). Each file's "Blocked by" lists the numbers/titles it depends on. Use the per-ticket file template below: one ticket per file, never a single combined file.
 - **A real issue tracker (GitHub, Linear, …)** → publish one issue per ticket in dependency order (blockers first) so each ticket's blocking edges can reference real identifiers. Use the platform's native blocking / sub-issue relationship where it has one; otherwise set each ticket's "Blocked by" to the blocking issues. Apply the `ready-for-agent` triage label unless instructed otherwise; the tickets are agent-grabbable by construction.

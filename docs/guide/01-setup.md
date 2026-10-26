@@ -21,7 +21,7 @@ Your project should contain paths such as:
   skills/
     superdev-mode/
       SKILL.md
-    superdev-setup/
+    setup-superdev/
       SKILL.md
 ```
 
@@ -32,10 +32,10 @@ Start a new session so your agent harness discovers the copied skills.
 Run:
 
 ```text
-$superdev-setup
+$setup-superdev
 ```
 
-[`$superdev-setup`](../../.agents/skills/superdev-setup/SKILL.md) inspects the repository before it writes anything. It configures:
+[`$setup-superdev`](../../.agents/skills/setup-superdev/SKILL.md) inspects the repository before it writes anything. It configures:
 
 - The issue tracker used by `$to-spec`, `$to-tickets`, and `$triage`.
 - The triage-label vocabulary when the triage skill is installed, reusing existing GitHub labels and creating missing mapped labels after draft approval.

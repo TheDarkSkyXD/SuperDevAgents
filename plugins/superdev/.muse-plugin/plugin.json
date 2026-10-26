@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "superdev",
   "displayName": "SuperDev",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
   "compat": {
     "source": "native",
@@ -316,6 +316,11 @@
         "enabledDefault": true
       },
       {
+        "id": "setup-superdev",
+        "path": "skills/setup-superdev/SKILL.md",
+        "enabledDefault": true
+      },
+      {
         "id": "sharpen",
         "path": "skills/sharpen/SKILL.md",
         "enabledDefault": true
@@ -333,11 +338,6 @@
       {
         "id": "superdev-mode",
         "path": "skills/superdev-mode/SKILL.md",
-        "enabledDefault": true
-      },
-      {
-        "id": "superdev-setup",
-        "path": "skills/superdev-setup/SKILL.md",
         "enabledDefault": true
       },
       {

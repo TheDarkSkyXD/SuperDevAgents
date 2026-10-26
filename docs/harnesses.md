@@ -20,7 +20,7 @@ Use the discovery directory documented by your host. `--target` accepts another 
 
 Preview with `--dry-run`. To update files that SuperDev installed and you have not edited, use `--update`. The installer checks all collisions before writing and refuses to replace edited or unmanaged files. Unrelated skills remain in place. It retains obsolete files during updates so an update never silently deletes local work. Review retired skills manually against the new skill list.
 
-Start a new session. Ask your host to list its available skills and confirm that `superdev-mode` and `superdev-setup` appear. If the host does not discover skills, point it directly at the installed `superdev-mode/SKILL.md`. Ask:
+Start a new session. Ask your host to list its available skills and confirm that `superdev-mode` and `setup-superdev` appear. If the host does not discover skills, point it directly at the installed `superdev-mode/SKILL.md`. Ask:
 
 ```text
 Use superdev-mode to handle this task. Read its portable runtime contract first.
@@ -44,7 +44,7 @@ The [README](../README.md#install) lists native installation commands. The inher
 
 ## Configure models
 
-Run `superdev-setup` in the target harness. Preserve valid existing choices. Only select IDs and options that its current catalog exposes. Grok, Claude, OpenAI, and other providers are optional.
+Run `setup-superdev` in the target harness. Preserve valid existing choices. Only select IDs and options that its current catalog exposes. Grok, Claude, OpenAI, and other providers are optional.
 
 Native integrations keep their documented model sheets, role defaults, and setup requirements. Copilot requires a valid sheet before dispatching role models. Hosts without a native mapping can use `.agents/superdev-models.md` for project choices. For that portable configuration, use the current model:
 

@@ -1,4 +1,4 @@
-// superdev-setup's check-sheet.sh, run for real. It shares sheet.awk with the
+// setup-superdev's check-sheet.sh, run for real. It shares sheet.awk with the
 // GitHub Copilot SessionStart hook, so a sheet it passes is one the hook adds
 // to the session context.
 import { afterAll, describe, expect, test } from "bun:test";
@@ -9,7 +9,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const pluginRoot = fileURLToPath(new URL("../plugins/superdev/", import.meta.url));
-const script = join(pluginRoot, "skills/superdev-setup/scripts/check-sheet.sh");
+const script = join(pluginRoot, "skills/setup-superdev/scripts/check-sheet.sh");
 const models = JSON.parse(readFileSync(join(pluginRoot, "models.json"), "utf8"));
 const roles = models.roles.map((r) => r.role);
 

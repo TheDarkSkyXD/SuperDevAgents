@@ -1,6 +1,6 @@
 # Prints the Muse SessionStart output as plain text: the superdev-mode
 # mandate, then the saved model choices when the sheet has any. Run after
-# superdev-setup's sheet.awk, with the sheet as input, -v found=<1 when the
+# setup-superdev's sheet.awk, with the sheet as input, -v found=<1 when the
 # sheet exists>, and SUPERDEV_HOOKS=<this directory> in the environment.
 # Only known role lines whose entries are model IDs or aliases reach the
 # output, rebuilt from their checked values, so no other text in the sheet
