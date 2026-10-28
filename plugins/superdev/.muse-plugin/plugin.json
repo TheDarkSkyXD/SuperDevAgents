@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "superdev",
   "displayName": "SuperDev",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
   "compat": {
     "source": "native",
@@ -153,6 +153,11 @@
       {
         "id": "ketchup",
         "path": "skills/ketchup/SKILL.md",
+        "enabledDefault": true
+      },
+      {
+        "id": "ketchup-video",
+        "path": "skills/ketchup-video/SKILL.md",
         "enabledDefault": true
       },
       {
@@ -328,6 +333,11 @@
       {
         "id": "show-me-your-work",
         "path": "skills/show-me-your-work/SKILL.md",
+        "enabledDefault": true
+      },
+      {
+        "id": "statechart",
+        "path": "skills/statechart/SKILL.md",
         "enabledDefault": true
       },
       {

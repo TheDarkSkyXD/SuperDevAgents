@@ -1,5 +1,14 @@
 # SuperDev changes
 
+## 1.0.4 - Sync skills through pstack-claude 0.9.107
+
+- Port changes since upstream 0.9.101 through [`e2cbd49`](https://github.com/michael-denyer/pstack-claude/commit/e2cbd491f94ee4ece30e028b9ff69a8b418d1723), preserving SuperDev setup, model policy, and portable runtime guidance.
+- Add `/statechart` with its TLA+ compiler and verification suite, and `/ketchup-video` for subtitled catch-ups.
+- Require run-confirmed interrogate findings, improve arena fallback and cross-judge selection, and keep unresolved dependency or platform comments on hold.
+- Restore sharpen's prompt-rewriting workflow and update autopilot, planning, reflection, and measurement guidance.
+- Fix fenced-example plan validation, angle-bracket skill links, and active-PR selection; allow Pi's ask tool to be disabled when another extension provides it.
+- Pin CI to Bun 1.4.4 and add the statechart test job.
+
 ## 1.0.3 - Align the setup command with SuperDev
 
 - Rename the setup skill to `/setup-superdev`, following the upstream `/setup-pstack` command pattern.

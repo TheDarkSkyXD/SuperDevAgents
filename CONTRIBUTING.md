@@ -4,7 +4,7 @@ Edit the canonical bundle under `plugins/superdev/`. The `.agents/skills` and `.
 
 ## Check a change
 
-Use Bun 1.3.14 or later:
+Use Bun 1.4.4 or later:
 
 ```sh
 bun install --frozen-lockfile
@@ -32,6 +32,8 @@ bun test orch watch-pr check-plan.test.ts
 ```
 
 For Pi adapter changes, install the supported Pi release and run `bun tools/typecheck-pi.mjs` from the repository root. `PI_PACKAGE_DIR` selects an isolated installation. The catalog and child-startup tests can require Pi with `SUPERDEV_PI_REQUIRE_CATALOG=1` and `SUPERDEV_PI_REQUIRE_RUNTIME=1`. Authenticated live harness tests remain separate and may consume provider requests. State which checks you ran.
+
+For statechart changes, install dependencies with `bun install --frozen-lockfile` under `plugins/superdev/skills/statechart/scripts`, then run `bun run test` with a supported Node runtime on PATH. Set `TLA2TOOLS` to the checksum-verified TLC jar and `JAVA` to a full JDK's Java binary. The configuration probes launch Java source files, so a JRE alone is insufficient. The statechart CI job reads the TLC pin from `run.ts`.
 
 ESLint separates repository build tools from installed runtime implementations. Build tools read plugin contracts as data. Installed runtime scripts cannot import repository-only tools or the `.agents` mirror. The boundary test proves allowed imports pass and forbidden imports fail.
 

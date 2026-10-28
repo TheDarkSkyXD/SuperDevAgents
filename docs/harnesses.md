@@ -60,7 +60,7 @@ For a panel, choose available distinct models if the host supports them. Report 
 
 ## Verify a repository change
 
-Development checks require Bun 1.3.14 or later. Installation of skill files requires only Node.
+Development checks require Bun 1.4.4 or later. Installation of skill files requires only Node.
 
 ```sh
 bun install --frozen-lockfile
@@ -73,4 +73,4 @@ The full upstream suite includes POSIX process, shell, symlink, and signal fixtu
 
 Edit canonical files under `plugins/superdev/`. `bun run generate` updates generated manifests, model guidance, command stubs, and the `.agents/` mirror. `bun run check` refuses stale output. Avoid installing both a plugin and a duplicate copy of the same skills into one harness.
 
-The workflow check also protects the shared reference snapshot. It compares 262 files, including all shared workflow instructions, scripts, hooks, model tables, and assets. Unchanged files match after name, repository-link, line-ending, and portable-pointer normalization. Each adaptation has an exact hash and reason in `tests/fixtures/workflow-baseline.json`. This detects content drift. Runtime tests exercise behavior separately. Neither check promises identical model responses or supplies a capability that a host lacks.
+The workflow check also protects the shared reference snapshot. It compares 669 files, including all shared workflow instructions, scripts, hooks, model tables, and assets. Unchanged files match after name, repository-link, line-ending, and portable-pointer normalization. Each adaptation has an exact hash and reason in `tests/fixtures/workflow-baseline.json`. This detects content drift. Runtime tests exercise behavior separately. Neither check promises identical model responses or supplies a capability that a host lacks.

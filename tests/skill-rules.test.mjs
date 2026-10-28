@@ -118,7 +118,7 @@ const rules = [
   {
     source: "autopilot verify loop: only findings the diff causes go back",
     file: "superdev-mode/playbooks/autopilot-full.md",
-    phrase: "A defect trunk shows without the PR is recorded against trunk and does not gate the PR",
+    phrase: "A problem the PR's base already has, whether trunk or the PR below it in a stack, doesn't block unless the PR copies it or newly reaches it.",
   },
   {
     source: "autopilot verify loop: bounded rounds",
@@ -149,6 +149,31 @@ const rules = [
     source: "#231 reflect adds nothing beside the transcript path",
     file: "reflect/SKILL.md",
     phrase: "Add nothing beside a transcript path",
+  },
+  {
+    source: "backnotprop/superdev#14 an outside rule nobody can check is held, not deleted",
+    file: "superdev-mode/references/agents/comment-sicko.md",
+    phrase: "the comment stays put as a `HOLD`, the one case where doubt is not meat",
+  },
+  {
+    source: "backnotprop/superdev#14 a kill of an outside rule cites its evidence",
+    file: "superdev-mode/references/agents/comment-sicko.md",
+    phrase: "dies, and the kill cites the page or file",
+  },
+  {
+    source: "backnotprop/superdev#14 the parent keeps each HOLD",
+    file: "no-comments/SKILL.md",
+    phrase: "and where to check it is not an ambiguous keep. Leave it in place and report it open.",
+  },
+  {
+    source: "backnotprop/superdev#14 a second rejection keeps the accepted findings",
+    file: "no-comments/SKILL.md",
+    phrase: "fail `/no-comments` for that report's rejected findings, not for the run.",
+  },
+  {
+    source: "backnotprop/superdev#14 an outside-rule kill needs a refuting citation",
+    file: "no-comments/SKILL.md",
+    phrase: "unless the report cites a documentation page or source file that refutes the rule",
   },
 ];
 

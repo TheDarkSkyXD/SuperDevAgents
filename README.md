@@ -110,6 +110,8 @@ The mode includes 24 playbooks for investigations, bug fixes, features, refactor
 | [`/interrogate`](./.agents/skills/interrogate/SKILL.md) | You want several reviewers to challenge a design or diff. |
 | [`/blast-radius`](./.agents/skills/blast-radius/SKILL.md) | You want to find what a change could break beyond the diff. |
 | [`/tdd`](./.agents/skills/tdd/SKILL.md) | A bug has a cheap local regression-test path, or you explicitly want TDD. |
+| [`/statechart`](./.agents/skills/statechart/SKILL.md) | You want to check a TLA+ model and draw the shortest paths to broken rules. |
+| [`/ketchup-video`](./.agents/skills/ketchup-video/SKILL.md) | You want a catch-up as a short subtitled video. |
 | [`/benchmark-checklist`](./.agents/skills/benchmark-checklist/SKILL.md) | You ran a benchmark or measured a speedup or regression. Check the limiter, tuning, errors, repeat runs, and relevance before reporting or acting on it. |
 | [`/no-comments`](./.agents/skills/no-comments/SKILL.md) | You want a fresh reviewer to remove narrating comments and expose hidden design problems. |
 | [`/create-verification-skill`](./.agents/skills/create-verification-skill/SKILL.md) | Your project has no repeatable way for an agent to drive the real app. |

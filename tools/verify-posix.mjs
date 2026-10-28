@@ -10,6 +10,7 @@ if (process.platform === "win32") throw new Error("Run this POSIX fixture check 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const fixture = mkdtempSync(join(tmpdir(), "superdev-verify-"));
 cpSync(root, fixture, { recursive: true, filter: (path) => ![".git", "node_modules"].includes(basename(path)) && !basename(path).startsWith(".superdev-") });
+execFileSync("git", ["init", "-q", fixture]);
 for (const file of walk(fixture)) chmodSync(file, 0o644);
 const log = join(root, ".superdev-posix.log");
 const fd = openSync(log, "w");

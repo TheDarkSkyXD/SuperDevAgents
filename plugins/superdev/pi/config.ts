@@ -57,6 +57,9 @@ export function defaultSettings(readDepth: () => number, env: NodeJS.ProcessEnv 
 interface Sheet {
   text: string;
   hookOff: boolean;
+  // Leaves ask_user_question to another extension: Pi refuses to start when two
+  // extensions register the same tool name.
+  askToolOff: boolean;
   piModels: Map<string, string>;
 }
 
@@ -71,7 +74,12 @@ export function parseSheet(text: string): Sheet {
       if (alias && id) piModels.set(alias, id);
     }
   }
-  return { text, hookOff: lines.some((l) => l === "session hook: off"), piModels };
+  return {
+    text,
+    hookOff: lines.some((l) => l === "session hook: off"),
+    askToolOff: lines.some((l) => l === "pi ask tool: off"),
+    piModels,
+  };
 }
 
 export function readSheet(agentDir: string): Sheet | undefined {

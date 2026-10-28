@@ -1,4 +1,5 @@
 import { describe, expect, test } from "bun:test";
+import { spawnSync } from "node:child_process";
 import {
   existsSync,
   mkdirSync,
@@ -163,6 +164,86 @@ describe("shared Agent Skills tree", () => {
     } finally {
       rmSync(root, { recursive: true, force: true });
     }
+  });
+
+  // A throwaway skills tree: each key is a path under the root, each value
+  // that file's text. Removed after `run` returns or throws.
+  function withSkillTree(files, run) {
+    const root = mkdtempSync(join(tmpdir(), "superdev-skills-links-"));
+    try {
+      for (const [path, text] of Object.entries(files)) {
+        mkdirSync(dirname(join(root, path)), { recursive: true });
+        writeFileSync(join(root, path), text);
+      }
+      return run(root);
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  }
+
+  test.each([
+    ["parentheses", "[guide](<references/guide(v1).md>)", "guide(v1).md"],
+    ["spaces and a title", '[guide]( \t<references/guide (v1).md> "Guide (v1)")', "guide (v1).md"],
+    ["an unmatched parenthesis", "[guide](<references/guide).md>)", "guide).md"],
+    ["query and fragment", "[guide](<references/guide(v1).md?download=1#section>)", "guide(v1).md"],
+    ["percent encoding", "[guide](references/guide%28v1%29.md)", "guide(v1).md"],
+    ["reference definition", '[guide][ref]\n[ref]: <references/guide(v1).md> "Guide"', "guide(v1).md"],
+  ])("local link destinations preserve %s", (_name, markdown, filename) => {
+    withSkillTree(
+      { "example/SKILL.md": `${markdown}\n`, [`example/references/${filename}`]: "# Guide\n" },
+      (root) => expect(() => validateSkillsTree(root)).not.toThrow(),
+    );
+  });
+
+  test.each([
+    ["missing(v1).md", "missing"],
+    ["missing (v1).md", "missing"],
+    ["missing%GG(v1).md", "invalid URI encoding"],
+    ["../../outside(v1).md", "escapes skills tree"],
+  ])("an invalid angle-bracket target still fails: %s", (target, reason) => {
+    withSkillTree({ "example/SKILL.md": `[guide](<${target}>)\n` }, (root) => {
+      expect(() => validateSkillsTree(root)).toThrow(`example/SKILL.md -> ${target} (${reason})`);
+    });
+  });
+
+  test("an angle-bracket link does not hide a later missing link on the same line", () => {
+    withSkillTree(
+      {
+        "example/SKILL.md": '[guide](<references/guide(v1).md> "Guide") [missing](missing.md)\n',
+        "example/references/guide(v1).md": "# Guide\n",
+      },
+      (root) => {
+        let message = "did not throw";
+        try {
+          validateSkillsTree(root);
+        } catch (error) {
+          message = error.message;
+        }
+        expect(message).toContain("example/SKILL.md -> missing.md (missing)");
+        expect(message).not.toContain("references/guide");
+      },
+    );
+  });
+
+  test("the link validator CLI exits 0 on an angle-bracket link and 1 on a missing one", () => {
+    const cli = join(repoRoot, "tools/validate-skills.mjs");
+    const markdown = '[guide](<references/guide(v1).md> "Guide") [external](<https://example.com/guide(v1)>)';
+    withSkillTree(
+      { "example/SKILL.md": `${markdown}\n`, "example/references/guide(v1).md": "# Guide\n" },
+      (root) => {
+        const valid = spawnSync("node", [cli, root], { encoding: "utf8" });
+        expect(valid.error).toBeUndefined();
+        expect(valid.status).toBe(0);
+        expect(valid.stderr).toBe("");
+        expect(valid.stdout).toContain("ok: local markdown links stay inside");
+
+        writeFileSync(join(root, "example/SKILL.md"), `${markdown} [missing](missing.md)\n`);
+        const invalid = spawnSync("node", [cli, root], { encoding: "utf8" });
+        expect(invalid.error).toBeUndefined();
+        expect(invalid.status).toBe(1);
+        expect(invalid.stderr).toContain("example/SKILL.md -> missing.md (missing)");
+      },
+    );
   });
 
   test("an escaping markdown target fails the boundary check", () => {
