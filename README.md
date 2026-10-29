@@ -74,6 +74,46 @@ You can also ask in plain language. Skill names make routing explicit, but they 
 
 The [SuperDevAgents guide](./docs/guide/README.md) walks through setup, investigation, design, implementation, verification, and long-running work.
 
+## Create a verification skill for your project
+
+Open an agent session in your project's repository and paste this prompt. No project details or placeholders need editing: the agent discovers them from your codebase.
+
+```text
+/create-verification-skill
+
+Create a project-specific verification skill that another agent can follow to
+run this project and verify its behavior without relying on me to test it manually.
+
+1. Inspect the codebase and project documentation. Identify the project's purpose,
+   supported interfaces, and main user workflows. Adapt verification to what exists:
+   a website, mobile app, desktop app, CLI, API, library, or a combination.
+   Distinguish implemented behavior from planned work. Verify existing behavior now;
+   do not implement missing product features as part of this task.
+
+2. Make the environment repeatable. Document prerequisites, dependencies,
+   configuration, startup or build commands, and checks that confirm readiness.
+   Include isolated test data, seed or reset steps where needed, and cleanup.
+
+3. Reuse existing tools and test harnesses first. Add small scripts or a control CLI
+   only where they materially simplify repeated verification. Keep fixture-based
+   checks separate from checks against live services. Explain which credentials
+   each requires, how to supply them, and which checks work without credentials.
+   Never include secret values in the skill or captured evidence.
+
+4. Map the main workflows to concrete verification steps and expected observable
+   results. Exercise the project's real interfaces and check relevant side effects.
+   Document how to capture evidence and diagnose failures.
+
+5. Run the generated procedure yourself, including setup, readiness checks,
+   workflow verification, and cleanup. Fix problems in the verification setup.
+   Preserve evidence after cleanup. Report product bugs separately, with reproduction
+   steps. Clearly identify anything blocked or unverified and what is needed to run it.
+
+6. Save the skill and any helpers in this repository using the active agent's
+   supported skill format and location. Leave exact commands, workflow coverage,
+   known limitations, and evidence locations so another agent can repeat the process.
+```
+
 ## Use `/superdev-mode` for non-trivial work
 
 [`/superdev-mode`](./.agents/skills/superdev-mode/SKILL.md) is the main entry point. It reads your request, selects a playbook, keeps the required steps visible, and loads focused skills when the task needs them.
