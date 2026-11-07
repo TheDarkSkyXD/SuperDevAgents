@@ -1,11 +1,11 @@
 // What the agent tool registers and the child command a call produces.
 import { describe, expect, test } from "bun:test";
-import { chmodSync, existsSync, mkdirSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { chmodSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { install } from "../../plugins/superdev/pi/index.ts";
 import { chmodDeniesReads } from "../session-hook-sheets.mjs";
-import { agentBody, agentEntry, fakeCtx, fakePi, flag, gitRepo, listAgents, recordWith, restore, useWorld, waitFor } from "./harness.mjs";
+import { agentBody, agentEntry, fakeCtx, fakePi, flag, gitRepo, listAgents, pluginRoot, recordWith, restore, useWorld, waitFor } from "./harness.mjs";
 
 const setup = useWorld();
 
@@ -75,6 +75,60 @@ describe("agent tool", () => {
     expect(w.invocations()).toEqual([]);
   });
 
+  test("the subagent_type description lists every type the session starts with and its file's description, the user's agent files included", async () => {
+    const { w } = setup();
+    mkdirSync(join(w.agentDir, "superdev-agents"));
+    writeFileSync(join(w.agentDir, "superdev-agents", "scout.md"), "---\ndescription: Finds files fast.\n---\nScout.\n");
+    writeFileSync(join(w.agentDir, "superdev-agents", "plain.md"), "Plain.\n");
+    const pi = await restore(w, []);
+    const lines = pi.tools.get("agent").parameters.properties.subagent_type.description.split("\n");
+    const pluginLines = readdirSync(join(pluginRoot, "agents"))
+      .filter((f) => f.endsWith(".md"))
+      .map((f) => `- superdev:${f.slice(0, -3)}: ${/^description: (.*)$/m.exec(readFileSync(join(pluginRoot, "agents", f), "utf8"))[1]}`);
+    expect(pluginLines).toContainEqual(expect.stringMatching(/^- superdev:superdev-agent: \S/));
+    expect(lines).toEqual(expect.arrayContaining([expect.stringMatching(/^- general-purpose \(default\): \S/), ...pluginLines, "- scout: Finds files fast.", "- plain"]));
+  });
+
+  test("a description: written as a YAML block scalar reads as its text, and the keys after it still read", async () => {
+    const { w, ctx } = setup();
+    const dir = join(w.agentDir, "superdev-agents");
+    mkdirSync(dir);
+    writeFileSync(join(dir, "literal.md"), "---\nname: literal\ndescription: |\n  Use when X.\n\n  Then Y.\neffort: low\n---\nL.\n");
+    writeFileSync(join(dir, "folded.md"), "---\ndescription: >-\n  Reviews code\n  for bugs.\n\n  Says why.\nmodel: gw/folded\n---\nF.\n");
+    const pi = await restore(w, []);
+    const { description } = pi.tools.get("agent").parameters.properties.subagent_type;
+    expect(description).toContain("\n- folded: Reviews code for bugs.\nSays why.\n");
+    expect(description).toContain("\n- literal: Use when X.\n\nThen Y.\n");
+    await pi.call("agent", { description: "l", prompt: "x", subagent_type: "literal" }, ctx);
+    await pi.call("agent", { description: "f", prompt: "x", subagent_type: "folded" }, ctx);
+    expect(w.invocations().map((inv) => [flag(inv, "--thinking"), flag(inv, "--model")])).toEqual([["low", "anthropic/parent-model"], ["medium", "gw/folded"]]);
+  });
+
+  test("frontmatter reads as Claude Code 2.1.310 reads it: comments and YAML escapes drop out, a repeated key keeps its last value, the retry reads a value holding YAML syntax as text and turns tabs into spaces, and a file that still does not parse is skipped", async () => {
+    const { w, ctx } = setup();
+    const dir = join(w.agentDir, "superdev-agents");
+    mkdirSync(dir);
+    writeFileSync(join(dir, "commented.md"), "---\ndescription: Commented # a comment\nmodel: inherit # the session model\neffort: low # a comment\n---\nC.\n");
+    writeFileSync(join(dir, "escaped.md"), '---\ndescription: "Use for \\"x\\" words"\n---\nE.\n');
+    writeFileSync(join(dir, "colon.md"), "---\ndescription: Use for a: b # not a comment\nmodel: gw/colon\n---\nK.\n");
+    writeFileSync(join(dir, "quoted-word.md"), '---\ndescription: "Sharpen" a prompt: use when asked\r\n---\r\nQ.\r\n');
+    writeFileSync(join(dir, "tabbed.md"), "---\ndescription: Tabbed\ntools:\n\t- Read\n---\nT.\n");
+    writeFileSync(join(dir, "repeated.md"), "---\ndescription: First value\ndescription: Repeated value # a comment\n---\nR.\n");
+    writeFileSync(join(dir, "repeated-block.md"), "---\ndescription: |\n  First\n  block\nmodel: gw/repeated\ndescription: Repeated block\n---\nRB.\n");
+    writeFileSync(join(dir, "repeated-list.md"), "---\ntools:\n- Read\n- Grep\ndescription: Repeated list\ntools: Bash\n---\nRL.\n");
+    writeFileSync(join(dir, "broken.md"), "---\ndescription: |\n Use for a\n  b: c\neffort: [low\n---\nB.\n");
+    const pi = await restore(w, []);
+    const lines = pi.tools.get("agent").parameters.properties.subagent_type.description.split("\n");
+    expect(lines).toEqual(
+      expect.arrayContaining(["- commented: Commented", '- escaped: Use for "x" words', "- colon: Use for a: b # not a comment", '- quoted-word: "Sharpen" a prompt: use when asked', "- tabbed: Tabbed", "- repeated: Repeated value", "- repeated-block: Repeated block", "- repeated-list: Repeated list"]),
+    );
+    expect(lines.filter((line) => line.startsWith("- broken"))).toEqual([]);
+    await pi.call("agent", { description: "c", prompt: "x", subagent_type: "commented" }, ctx);
+    await pi.call("agent", { description: "k", prompt: "x", subagent_type: "colon" }, ctx);
+    await pi.call("agent", { description: "r", prompt: "x", subagent_type: "repeated-block" }, ctx);
+    expect(w.invocations().map((inv) => [flag(inv, "--thinking"), flag(inv, "--model")])).toEqual([["low", "anthropic/parent-model"], ["medium", "gw/colon"], ["medium", "gw/repeated"]]);
+  });
+
   test("the effort parameter passes --thinking to any agent type, keeps a superdev agent's body as a 0600 system prompt file, and no effort runs at the parent's level", async () => {
     const { w, pi, ctx } = setup();
     await pi.call("agent", { description: "e", prompt: "x", subagent_type: "general-purpose", effort: "xhigh" }, ctx);
@@ -83,12 +137,12 @@ describe("agent tool", () => {
     const [effort, superdev, general] = w.invocations();
 
     expect(flag(effort, "--thinking")).toBe("xhigh");
-    expect(flag(effort, "--append-system-prompt")).toBeNull();
+    expect(effort.systemPrompt).toBeNull();
     expect(flag(superdev, "--thinking")).toBe("high");
     expect(superdev.systemPrompt).toBe(agentBody("agents/superdev-agent.md"));
     expect(statSync(flag(superdev, "--append-system-prompt")).mode & 0o777).toBe(0o600);
     expect(flag(general, "--thinking")).toBe("medium");
-    expect(flag(general, "--append-system-prompt")).toBeNull();
+    expect(general.systemPrompt).toBeNull();
   });
 
   test("an unknown effort is an error naming the valid levels, and no child starts or state is written", async () => {
@@ -111,7 +165,7 @@ describe("agent tool", () => {
     expect(statSync(flag(second, "--append-system-prompt")).mode & 0o777).toBe(0o600);
   });
 
-  test("a resume whose system prompt file is gone and whose type no longer has one fails, and no child starts", async () => {
+  test("a resume whose system prompt file is gone and whose type no longer has one fails, no child starts, and the agent keeps its completed record", async () => {
     const { w, pi, ctx } = setup();
     await pi.call("agent", { description: "p", prompt: "first", subagent_type: "superdev:superdev-agent" }, ctx);
     rmSync(join(w.agentDir, "superdev", "parent-session", "prompts"), { recursive: true });
@@ -122,10 +176,11 @@ describe("agent tool", () => {
     expect(err).toBeInstanceOf(Error);
     expect(err.message).toContain('its type "superdev:removed" no longer provides one');
     expect(w.invocations()).toHaveLength(1);
-    expect((await listAgents(resumed, ctx)).map((a) => a.status)).toEqual(["failed"]);
+    expect((await listAgents(resumed, ctx)).map((a) => a.status)).toEqual(["completed"]);
+    expect(resumed.entries).toEqual([]);
   });
 
-  test("a system prompt file that cannot be written fails the launch before a worktree or its branch is made", async () => {
+  test("a system prompt file that cannot be written fails a fresh launch, recorded as failed, before a worktree or its branch is made", async () => {
     const { w, pi, ctx } = setup();
     const git = gitRepo(w.cwd);
     const state = join(w.agentDir, "superdev", "parent-session");
@@ -134,6 +189,8 @@ describe("agent tool", () => {
 
     const err = await pi.call("agent", { description: "wt", prompt: "x", subagent_type: "superdev:superdev-agent", isolation: "worktree" }, ctx).catch((e) => e);
     expect(err).toBeInstanceOf(Error);
+    expect((await listAgents(pi, ctx)).map((a) => a.status)).toEqual(["failed"]);
+    expect(pi.entries.map((e) => e.data.status)).toEqual(["failed"]);
     expect(git("worktree", "list").split("\n")).toHaveLength(1);
     expect(git("branch", "--list").split("\n")).toHaveLength(1);
     expect(w.invocations()).toEqual([]);

@@ -11,6 +11,21 @@ const skillsDir = fileURLToPath(new URL("../plugins/superdev/skills", import.met
 
 const rules = [
   {
+    source: "#331 Codex session effort with an explicit model",
+    file: "superdev-mode/references/codex-tools.md",
+    phrase: "pass the final level as `reasoning_effort`",
+  },
+  {
+    source: "#331 unknown Codex session effort",
+    file: "superdev-mode/references/codex-tools.md",
+    phrase: "Do not substitute an omitted `reasoning_effort` for the missing starting level.",
+  },
+  {
+    source: "#331 resolve active Codex effort before dispatch",
+    file: "superdev-mode/references/codex-tools.md",
+    phrase: "run `node <superdev-mode-dir>/scripts/codex-session-effort.mjs` before dispatching",
+  },
+  {
     source: "#71 callable driver policy",
     file: "superdev-mode/SKILL.md",
     phrase: "fall back to `run` when the repo has none",
@@ -54,6 +69,16 @@ const rules = [
     source: "#229 parallel sessions keep separate todolists",
     file: "superdev-mode/SKILL.md",
     phrase: "When several sessions share the checkout, name it `.audit/<task-slug>.todo.md`",
+  },
+  {
+    source: "#387 desktop app plan tool is named",
+    file: "superdev-mode/SKILL.md",
+    phrase: "In the Claude desktop app, `mcp__ccd_turn__update_plan` asks for items of about seven words.",
+  },
+  {
+    source: "#387 desktop app keeps the verbatim checklist",
+    file: "superdev-mode/SKILL.md",
+    phrase: "keep this checklist as well, with the playbook steps verbatim and each `skip: <reason>` line",
   },
   {
     source: "#58 stop before you re-delegate",

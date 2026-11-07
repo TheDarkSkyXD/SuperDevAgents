@@ -42,12 +42,12 @@ Skills name Claude Code model aliases in their Models sections. Those aliases ar
 
 - The model sheet is `${COPILOT_HOME:-~/.copilot}/superdev-models.md`. It sits outside the workspace, so reading it asks for path access. The plugin's SessionStart hook reads it, checks it, and adds its role lines to the session context as the user's saved superdev model choices. Take role models from that block and do not `view` the sheet. A role line names the model for that role.
 - Read the sheet only when that block and the hook's `sheet invalid` or no-sheet note are all missing, as in a skills-only install with no hook. `view`, `create`, and `edit` take literal paths and expand neither `~` nor `$COPILOT_HOME`, so print the sheet's absolute path with `bash` first (`echo "${COPILOT_HOME:-$HOME/.copilot}/superdev-models.md"`) and read and write exactly that path; do not append `.copilot` or any other segment to it. A session with its own `COPILOT_HOME` then never touches `~/.copilot`.
-- No sheet, or the hook reports `sheet invalid`: before a skill that needs a role model (`architect`, `arena`, `how`, `interrogate`, `reflect`, `superdev-mode`, `swarm`, `why`), stop, load `setup-superdev` with the `skill` tool, and finish it first. In that same session, use the values it just wrote; later sessions get them from the hook. Do not ask again on later runs.
+- No sheet, or the hook reports `sheet invalid`: before a skill that needs a role model (`architect`, `arena`, `how`, `interrogate`, `no-comments`, `reflect`, `superdev-mode`, `swarm`, `thermos`, `why`), stop, load `setup-superdev` with the `skill` tool, and finish it first. In that same session, use the values it just wrote; later sessions get them from the hook. Do not ask again on later runs.
 - A role line in the sheet is the user's explicit model instruction, so pass it as the `task` tool's `model` parameter. `inherit-parent` or `auto` omits `model`.
 - The plugin's `PreToolUse` hook enforces this for superdev agents. While the sheet is valid, it denies a `task` call whose `agent_type` starts with `superdev:` and whose `model` is not one of the sheet's values, and its reason lists the saved IDs. Retry with the role's saved model; never retry on another unsaved model. It leaves calls with no `model` and other agent types alone.
 - Roles that default to the worker model (`feature, refactoring`): the worker model the user chose.
 - Roles that default to the strongest model (`strongest judgment`): the strongest model the user chose.
-- Diverse-model panels (`arena`, `architect`, `interrogate`, `how` critics, `reflect`): the adversarial signal comes from model diversity, so fill a panel from distinct vendors in the `task` tool's `model` list (Claude, GPT, Gemini, Grok, and so on). superdev ships no default Copilot panel. If only one vendor is reachable, vary reasoning effort and note in the verdict that diversity was reduced.
+- Diverse-model panels (`arena`, `architect`, `interrogate`): the adversarial signal comes from model diversity, so fill a panel from distinct vendors in the `task` tool's `model` list (Claude, GPT, Gemini, Grok, and so on). superdev ships no default Copilot panel. If only one vendor is reachable, vary reasoning effort and note in the verdict that diversity was reduced.
 
 `setup-superdev` lists the models from the `model` enum of the `task` tool and writes only IDs it saw there. After it writes the sheet, it runs its `check-sheet.sh` script, which applies the hook's checks.
 
@@ -91,7 +91,7 @@ Claude Code keeps one directory per project under `${CLAUDE_CONFIG_DIR:-$HOME/.c
 - `workspace.yaml` names the session's `cwd`. Scope every transcript search to the current workspace: keep only session directories whose `cwd` is the workspace path (or a worktree of it), then read their `events.jsonl`. Never read other projects' sessions.
 - When a skill says "this session's transcript", it is the newest matching session directory whose `events.jsonl` contains the opening prompt.
 
-In superdev-mode's playbooks, `eval` reads candidate transcripts from Copilot session state, and `session-pickup` and `worktree-cleanup` search it scoped to the workspace. `orchestrate` and `multi-phase-plan` keep their store under `${COPILOT_HOME:-~/.copilot}/orchestrate/` instead of `~/.claude/orchestrate/`.
+In superdev-mode's playbooks, the Eval playbook reads candidate transcripts from Copilot session state, and `session-pickup` and `worktree-cleanup` search it scoped to the workspace. `orchestrate` and `multi-phase-plan` keep their store under `${COPILOT_HOME:-~/.copilot}/orchestrate/` instead of `~/.claude/orchestrate/`.
 
 ## Driver and bundled skills superdev references
 
@@ -132,7 +132,7 @@ Affected skill entry points point here. Most skills need only the tables above. 
 
 ## Vendored scripts
 
-`skills/superdev-mode/scripts/` ships the `watch-pr` PR watcher, the `orch` store CLI, `resume.mjs`, and `worktree-audit.mjs`. They use bun and Node.js and run the same on Copilot; invoke them through `bash` in the form Plugin file access above describes. They need `bun` and `gh`, or `origin` when the forge is Origin. `worktree-audit.mjs` finds each worktree's last chat in Claude Code transcripts under `${CLAUDE_CONFIG_DIR:-$HOME/.claude}/projects/`, in Codex and Pi sessions, and in Copilot sessions under `${COPILOT_HOME:-~/.copilot}/session-state`. Pass transcript directories after the repo path to scan others instead. It imports the transcript walker from `skills/reflect/scripts/find-transcript.mjs`, so keep the `reflect` skill installed beside `superdev-mode`.
+`skills/superdev-mode/scripts/` ships the `watch-pr` PR watcher, `resume.mjs`, and `worktree-audit.mjs`. They use bun and Node.js and run the same on Copilot; invoke them through `bash` in the form Plugin file access above describes. They need `bun` and `gh`, or `origin` when the forge is Origin. `worktree-audit.mjs` finds each worktree's last chat in Claude Code transcripts under `${CLAUDE_CONFIG_DIR:-$HOME/.claude}/projects/`, in Codex and Pi sessions, and in Copilot sessions under `${COPILOT_HOME:-~/.copilot}/session-state`. Pass transcript directories after the repo path to scan others instead. It imports the transcript walker from `skills/reflect/scripts/find-transcript.mjs`, so keep the `reflect` skill installed beside `superdev-mode`.
 
 ## Instructions file
 

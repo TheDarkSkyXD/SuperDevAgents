@@ -9,6 +9,8 @@ import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { loadModels, parseModels, regions } from "../tools/generate.mjs";
+import { code } from "../tools/plugin.mjs";
+import { RUNTIMES } from "../tools/runtimes.mjs";
 import { markdownFiles } from "../tools/validate-skills.mjs";
 
 const repoRoot = fileURLToPath(new URL("..", import.meta.url));
@@ -185,4 +187,26 @@ describe("role labels reach the prose", () => {
       expect(normalize(skillProse(role.skill))).toContain(needle);
     });
   }
+});
+
+test("each runtime mapping names exactly the skills with a panel role as its diverse-model panels", () => {
+  const panelSkills = [...new Set(models.roles.filter((r) => r.tier === "panel").map((r) => r.skill))].sort();
+  const lists = markdownFiles(join(skillsDir, "superdev-mode/references")).flatMap((file) =>
+    [...readFileSync(file, "utf8").matchAll(/Diverse-model panels \(([^)]*)\)/g)].map((m) => ({
+      file: relative(repoRoot, file),
+      skills: [...m[1].matchAll(/`([^`]+)`/g)].map((s) => s[1]).sort(),
+    })),
+  );
+  expect(lists.length).toBeGreaterThan(0);
+  for (const list of lists) expect(list).toEqual({ ...list, skills: panelSkills });
+});
+
+test("moving a skill's roles off the panel tier drops it from every runtime's panel list", () => {
+  const skill = models.roles.find((r) => r.tier === "panel").skill;
+  const moved = { ...models, roles: models.roles.map((r) => (r.skill === skill ? { ...r, tier: "default" } : r)) };
+  const panelLists = (m) => RUNTIMES.map((runtime) => runtime.modelNames(m).match(/Diverse-model panels \(([^)]*)\)/)?.[1]).filter(Boolean);
+  const before = panelLists(models);
+  expect(before.length).toBeGreaterThan(0);
+  for (const list of before) expect(list).toContain(code(skill));
+  for (const list of panelLists(moved)) expect(list).not.toContain(code(skill));
 });

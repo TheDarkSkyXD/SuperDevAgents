@@ -9,6 +9,7 @@ import { setTimeout as sleep } from "node:timers/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { plainText } from "../backends/plain-text.ts";
 import { readMessages } from "../frontends/messages.ts";
+import { childEnv } from "../run.ts";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const corpus = path.join(here, "corpus");
@@ -48,7 +49,7 @@ function run(
     {
       encoding: "utf8",
       env: {
-        ...process.env,
+        ...childEnv(),
         JAVA: java,
         TLA2TOOLS: "tla2tools.jar",
         STATECHART_REPLAY: dir,
@@ -238,7 +239,7 @@ function startCommand(
     ],
     {
       env: {
-        ...process.env,
+        ...childEnv(),
         JAVA: java,
         TLA2TOOLS: "tla2tools.jar",
         STATECHART_REPLAY: dir,
@@ -454,7 +455,15 @@ for (const signal of ["SIGINT", "SIGTERM"] satisfies NodeJS.Signals[]) {
       signalWhile(signal, () => ({
         dir: gridCase(150),
         reached: (parent) => {
-          for (const f of fs.readdirSync(parent, { recursive: true, encoding: "utf8" }))
+          let entries: string[];
+          try {
+            entries = fs.readdirSync(parent, { recursive: true, encoding: "utf8" });
+          } catch (error) {
+            // The worker renames draft to done when it finishes, which can land mid-walk.
+            if ((error as NodeJS.ErrnoException).code === "ENOENT") return false;
+            throw error;
+          }
+          for (const f of entries)
             if (
               path.basename(f) === "chart.mmd" &&
               fs.statSync(path.join(parent, f), { throwIfNoEntry: false })?.size

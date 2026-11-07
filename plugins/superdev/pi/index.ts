@@ -11,10 +11,11 @@ import { registerSchedule, Scheduler } from "./schedule.ts";
 
 export function install(pi: ExtensionAPI, settings: Settings): void {
   const runner = new AgentRunner(pi, settings);
-  const scheduler = new Scheduler(pi);
+  const scheduler = new Scheduler();
   const oneShot = registerOneShot(pi, settings, runner);
-  registerAgentTools(pi, runner);
-  if (!readSheet(settings.agentDir)?.askToolOff) registerAsk(pi, oneShot);
+  const sheet = readSheet(settings.agentDir);
+  if (!sheet?.agentToolsOff) registerAgentTools(pi, runner, settings);
+  if (!sheet?.askToolOff) registerAsk(pi, oneShot);
   registerSchedule(pi, scheduler, oneShot);
   registerPromptSections(pi, settings);
   registerPathSkills(pi, settings);
@@ -26,7 +27,7 @@ export function install(pi: ExtensionAPI, settings: Settings): void {
   // Every entry, not the active branch: an agent started on a branch the user
   // later left is still a process, and its record is the only handle on it.
   pi.on("session_start", (_event, ctx) => {
-    runner.attachUi(ctx);
+    runner.attachSession(ctx);
     runner.restore(ctx.sessionManager.getEntries());
   });
   pi.on("session_shutdown", async () => {

@@ -4,7 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateHooks } from "../tools/generate.mjs";
-import { validateCodexMarketplace, validateCopilotManifest, validateMuseManifest, validatePiPackage } from "../tools/runtimes.mjs";
+import { MUSE_HOOKS, validateCodexMarketplace, validateCopilotManifest, validateMuseManifest, validatePiPackage } from "../tools/runtimes.mjs";
 
 const repoRoot = fileURLToPath(new URL("..", import.meta.url));
 
@@ -52,11 +52,11 @@ describe("validateMuseManifest", () => {
     capabilities: {
       skills: [{ id: "superdev-mode", path: "skills/superdev-mode/SKILL.md", enabledDefault: true }],
       commands: [],
-      hooks: [{ id: "session-start", event: "SessionStart", command: ["sh", "hooks/session-start.sh", "muse"] }],
     },
   };
-  const pathExists = (rel) => rel === "plugins/superdev/skills/superdev-mode/SKILL.md" || rel === "plugins/superdev/hooks/session-start.sh";
-  test("needs the Claude Code name, native compat, existing paths, and one SessionStart hook", () => {
+  const files = new Set(["skills/superdev-mode/SKILL.md", "models.json", ...MUSE_HOOKS.map(({ script }) => script)].map((rel) => `plugins/superdev/${rel}`));
+  const pathExists = (rel) => files.has(rel);
+  test("needs the Claude Code name, native compat, existing paths, and each hook script", () => {
     expect(() => validateMuseManifest(ok, { claude, pathExists })).not.toThrow();
     expect(() => validateMuseManifest({ ...ok, name: "other" }, { claude, pathExists })).toThrow(
       'name "other" != Claude Code manifest name "superdev"',
@@ -68,21 +68,12 @@ describe("validateMuseManifest", () => {
     const badPath = structuredClone(ok);
     badPath.capabilities.skills[0].path = "skills/nope/SKILL.md";
     expect(() => validateMuseManifest(badPath, { claude, pathExists })).toThrow("is not a file in the plugin");
-    const noHook = structuredClone(ok);
-    noHook.capabilities.hooks = [];
-    expect(() => validateMuseManifest(noHook, { claude, pathExists })).toThrow("expected one SessionStart hook, found 0");
-    const wrongArg = structuredClone(ok);
-    wrongArg.capabilities.hooks[0].command = ["sh", "hooks/session-start.sh", "claude"];
-    expect(() => validateMuseManifest(wrongArg, { claude, pathExists })).toThrow('not ["sh","hooks/session-start.sh","muse"]');
-  });
-
-  test("rejects a hook command that leaves the plugin or is not an argv list", () => {
-    const everywhere = () => true;
-    for (const command of [["sh", "../../tests/copilot-smoke.sh", "muse"], "sh hooks/session-start.sh muse"]) {
-      const bad = structuredClone(ok);
-      bad.capabilities.hooks[0].command = command;
-      expect(() => validateMuseManifest(bad, { claude, pathExists: everywhere })).toThrow("SessionStart hook command is");
-    }
+    const noScript = (rel) => rel !== "plugins/superdev/hooks/session-start.ps1" && pathExists(rel);
+    expect(() => validateMuseManifest(ok, { claude, pathExists: noScript })).toThrow(
+      '"session-start-windows" runs hooks/session-start.ps1, which is not in the plugin',
+    );
+    const noModels = (rel) => rel !== "plugins/superdev/models.json" && pathExists(rel);
+    expect(() => validateMuseManifest(ok, { claude, pathExists: noModels })).toThrow("reads models.json, which is not in the plugin");
   });
 
   test("rejects a command whose id duplicates a skill id", () => {

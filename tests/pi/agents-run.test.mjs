@@ -27,6 +27,7 @@ describe("agent tool", () => {
       "--session-dir", join(w.agentDir, "superdev", "parent-session", "agents"),
       "--model", "anthropic/parent-model",
       "--thinking", "medium",
+      "--append-system-prompt", '<active_agent name="general-purpose" />',
       "--superdev-depth", "1",
     ]);
     expect(inv.prompt).toBe("-do it");
@@ -71,7 +72,7 @@ describe("agent tool", () => {
   test("list_agents and the completion notice name the child's transcript, and a resume lists the same path", async () => {
     const { w, pi, ctx } = setup({ script: { default: [{ sleep: 300 }, { reply: "done" }] } });
     const { details } = await pi.call("agent", { description: "watch me", prompt: "go", run_in_background: true }, ctx);
-    await waitFor(async () => (await listAgents(pi, ctx))[0].sessionFile);
+    await waitFor(async () => (await listAgents(pi, ctx))[0].sessionFile && w.invocations().length === 1);
     const [running] = await listAgents(pi, ctx);
     const [inv] = w.invocations();
     expect(running.status).toBe("running");

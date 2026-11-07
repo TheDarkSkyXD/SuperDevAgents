@@ -1,5 +1,20 @@
 # SuperDev changes
 
+## 1.0.5 - Sync skills through pstack-claude 0.9.132
+
+- Port changes since upstream 0.9.107 through [`df9bc05`](https://github.com/michael-denyer/pstack-claude/commit/df9bc05b818e2457ac23d3343e96e4ff284dd9e9), preserving SuperDev setup, model policy, portable runtime guidance, and the optional Codex slash-command shortcuts.
+- Give `thermos` reviewers and the `no-comments` reviewer their own model roles, and limit diverse-model panels to `arena`, `architect`, and `interrogate`.
+- Use GPT-6.1 Sol for the Codex default, worker, and Pi `sonnet` mappings, and add GPT-6.1 Terra to the Codex panel.
+- Resolve Codex `session` effort from the active turn with `codex-session-effort.mjs`, and teach `recall` and `show-me-your-work` to read Codex rollouts.
+- Make Orchestrate agentic and remove the `orch` store scripts and their TLA+ model.
+- Have `deslop` compare against the branch's real base, include uncommitted changes, and rerun checks after editing.
+- Add the desktop app's `update_plan` guidance beside the verbatim playbook checklist.
+- Pi: register user agents from `superdev-agents`, read agent frontmatter with Pi's parser, use agent-file effort defaults, deliver wakeups as custom messages, name the parent session for forwarded permission asks, and expand `/skill:` prompts in wakeups.
+- Hooks: name the SessionStart hook in Claude Code and Codex, pass the runtime to the PowerShell hook, run Muse on Windows through PowerShell, and read malformed UTF-16 sheets the same way in every hook.
+- Statechart: run on Windows, where a new janitor ends the worker's process tree and removes its folders when the command exits.
+- Leave out upstream's new Antigravity, Grok Build, Kimi Code, MiniMax Code, OMP, and OpenCode 2 runtimes; SuperDev keeps its five supported hosts.
+- Install a pinned copy of Pi for the extension tests from `plugins/package.json`.
+
 ## 1.0.4 - Sync skills through pstack-claude 0.9.107
 
 - Port changes since upstream 0.9.101 through [`e2cbd49`](https://github.com/michael-denyer/pstack-claude/commit/e2cbd491f94ee4ece30e028b9ff69a8b418d1723), preserving SuperDev setup, model policy, and portable runtime guidance.

@@ -18,7 +18,7 @@ afterEach(() => {
 });
 
 test("the shared workflows, scripts, hooks, models, and runtime assets retain their reviewed content", () => {
-  expect(verifyWorkflows(join(root, "plugins/superdev"), baseline)).toEqual({ files: 669, unchanged: 648, adapted: 21, failures: [] });
+  expect(verifyWorkflows(join(root, "plugins/superdev"), baseline)).toEqual({ files: 629, unchanged: 589, adapted: 40, failures: [] });
 });
 
 test("normalization preserves prompt wording and compares binary assets as bytes", () => {

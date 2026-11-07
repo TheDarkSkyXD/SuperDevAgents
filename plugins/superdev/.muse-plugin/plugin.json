@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "superdev",
   "displayName": "SuperDev",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "SuperDev engineering workflows with portable skills and native runtime adapters.",
   "compat": {
     "source": "native",
@@ -439,6 +439,21 @@
         "command": [
           "sh",
           "hooks/session-start.sh",
+          "muse"
+        ],
+        "timeoutMs": 5000,
+        "statusMessage": "Loading superdev routing"
+      },
+      {
+        "id": "session-start-windows",
+        "event": "SessionStart",
+        "command": [
+          "powershell.exe",
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "hooks/session-start.ps1",
           "muse"
         ],
         "timeoutMs": 5000,

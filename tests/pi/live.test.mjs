@@ -90,6 +90,8 @@ suite("superdev on live pi", () => {
   test(
     "panel: three background agents on opus, fable, and sonnet each notify, on their own resolved model",
     async () => {
+      // An agent that ignored its model would run on the parent's, so one alias must resolve elsewhere.
+      expect(["opus", "fable", "sonnet"].some((alias) => MODELS.get(alias) !== PARENT_MODEL)).toBe(true);
       await withParent(async (parent) => {
         const from = await parent.run(
           [
@@ -107,7 +109,8 @@ suite("superdev on live pi", () => {
         const expected = { "panel-opus": ["opus", "alpha"], "panel-fable": ["fable", "beta"], "panel-sonnet": ["sonnet", "gamma"] };
         const notices = parent.notices(from);
         expect(notices).toHaveLength(3);
-        const seen = new Set();
+        // Each agent's own model is checked; a provider's table may map two
+        // aliases to one model, as openai does for opus and sonnet.
         for (const [description, [alias, word]] of Object.entries(expected)) {
           const snaps = agentByDescription(file, description);
           const last = snaps.at(-1);
@@ -121,9 +124,7 @@ suite("superdev on live pi", () => {
           const childSections = sections(child);
           expect(childSections[SHEET_KEY]).toBe(tagged(SHEET_KEY, SHEET));
           expect(childSections[MANDATE_KEY]).toBeUndefined();
-          seen.add(MODELS.get(alias));
         }
-        expect(seen.size).toBe(3);
       });
     },
     8 * MINUTE,
@@ -301,7 +302,7 @@ suite("superdev on live pi", () => {
   );
 
   test(
-    "wake: schedule_wakeup re-invokes the parent with the stored prompt after 60 s",
+    "wake: schedule_wakeup re-invokes the parent with the stored prompt after 60 s, as a custom message, not a user message",
     async () => {
       await withParent(async (parent) => {
         const wakePrompt = "WAKE-PING: reply with exactly one word: pong";
@@ -311,7 +312,7 @@ suite("superdev on live pi", () => {
         const [scheduled] = parent.toolResults("schedule_wakeup", from);
         expect(scheduled.details.delaySeconds).toBe(60);
         const fired = await parent.until(
-          () => parent.messages(from).find((m) => m.role === "user" && textOf(m) === wakePrompt),
+          () => parent.messages(from).find((m) => m.role === "custom" && m.customType === "superdev-wakeup" && textOf(m) === wakePrompt),
           2 * MINUTE,
           "the wakeup prompt",
         );

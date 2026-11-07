@@ -202,8 +202,8 @@ Install dependencies for the workflows you use:
 
 | Dependency | When you need it |
 | --- | --- |
-| GitHub CLI, `gh` | PR monitoring, shipping, and the `orch` stack frontier. Authenticate with `gh auth login`. The playbooks use Origin's CLI, `origin`, instead when it can resolve the repository. |
-| Bun | The bundled `watch-pr` and `orch` scripts. Their bootstrap installs script dependencies on first run. |
+| GitHub CLI, `gh` | PR monitoring and shipping. Authenticate with `gh auth login`. The playbooks use Origin's CLI, `origin`, instead when it can resolve the repository. |
+| Bun | The bundled `watch-pr` scripts. Their bootstrap installs script dependencies on first run. |
 | `plugin-dev` | Claude Code skill-authoring guidance used by `automate-me`, `reflect`, and `superdev-mode`. |
 
 Install the Claude Code skill-authoring companion with:

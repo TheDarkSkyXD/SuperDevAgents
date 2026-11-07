@@ -4,23 +4,31 @@ import { chmodSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:f
 import { homedir, tmpdir } from "node:os";
 import { join } from "node:path";
 
-import { checkEffort, defaultSettings, loadAgentTypes, parseSheet, readSheet } from "../../plugins/superdev/pi/config.ts";
+import { loadAgentTypes } from "../../plugins/superdev/pi/agent-files.ts";
+import { checkEffort, defaultSettings, parseSheet, readSheet } from "../../plugins/superdev/pi/config.ts";
 import { chmodDeniesReads } from "../session-hook-sheets.mjs";
 
 test("depth comes from the reader on each use and PI_CODING_AGENT_DIR moves the sheet", () => {
   let flag = 0;
-  const settings = defaultSettings(() => flag, { PI_CODING_AGENT_DIR: "/tmp/pi-agent-x", HOME: "/nowhere" });
+  const settings = defaultSettings(() => flag, "/tmp/pi-agent-x");
   expect(settings.depth).toBe(0);
   flag = 2;
   expect(settings.depth).toBe(2);
   expect(settings.agentDir).toBe("/tmp/pi-agent-x");
-  expect(defaultSettings(() => 0, {}).agentDir).toBe(join(homedir(), ".pi", "agent"));
+  expect(defaultSettings(() => 0, "").agentDir).toBe(join(homedir(), ".pi", "agent"));
 });
 
 test("only an exact pi ask tool: off line turns the ask tool off", () => {
   expect(parseSheet("bug-fix: opus\r\npi ask tool: off\r\n").askToolOff).toBe(true);
   for (const sheet of ["bug-fix: opus\n", "pi ask tool: on\n", "pi ask tool: off \n", "ask tool: off\n", "session hook: off\n"]) {
     expect({ sheet, off: parseSheet(sheet).askToolOff }).toEqual({ sheet, off: false });
+  }
+});
+
+test("only an exact pi agent tools: off line turns the agent tools off", () => {
+  expect(parseSheet("bug-fix: opus\r\npi agent tools: off\r\n").agentToolsOff).toBe(true);
+  for (const sheet of ["bug-fix: opus\n", "pi agent tools: on\n", "pi agent tools: off \n", "agent tools: off\n", "pi ask tool: off\n"]) {
+    expect({ sheet, off: parseSheet(sheet).agentToolsOff }).toEqual({ sheet, off: false });
   }
 });
 
@@ -31,8 +39,8 @@ test("an agent file loads as superdev:<name> with its body and model, and an eff
     writeFileSync(join(root, "models.json"), JSON.stringify(models));
     mkdirSync(join(root, "agents"));
     writeFileSync(join(root, "agents", "slow.md"), "---\nmodel: opus\n---\nbody\n");
-    const settings = { pluginRoot: root, modelsFile: join(root, "models.json") };
-    expect(loadAgentTypes(settings).get("superdev:slow")).toEqual({ body: "body", model: "opus" });
+    const settings = { pluginRoot: root, modelsFile: join(root, "models.json"), agentDir: root };
+    expect(loadAgentTypes(settings).get("superdev:slow")).toEqual({ file: join(root, "agents", "slow.md"), body: "body", model: "opus" });
     expect(checkEffort("low", settings)).toBe("low");
     expect(() => checkEffort("medium", settings)).toThrow('effort "medium" is not one of low');
   } finally {

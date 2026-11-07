@@ -17,7 +17,7 @@ The Live column records the end-to-end run on real Pi with `SUPERDEV_PI_LIVE=1` 
 
 | ID | Claude Code mechanism | On Pi | Status | Evidence | Live |
 | --- | --- | --- | --- | --- | --- |
-| T01 | `Agent` tool dispatch | `agent` tool runs a child `pi --mode rpc` process and sends the prompt as an RPC command on its stdin | extension | `foreground waits, returns the final text and agentId, and runs the exact child command` | VERIFIED |
+| T01 | `Agent` tool dispatch | `agent` tool runs a child `pi --mode rpc` process and sends the prompt as an RPC command on its stdin. A `pi agent tools: off` sheet line removes it, for a profile that delegates through another extension | extension | `foreground waits, returns the final text and agentId, and runs the exact child command` | VERIFIED |
 | T02 | `subagent_type` | Resolves to the plugin's agent files; unknown types list the valid ones | extension | `unknown subagent_type is an error listing every valid type` | VERIFIED |
 | T03 | Per-call `model` | Family names resolve through `models.json` and the sheet's `pi models:` line | extension | `alias, sheet override, inherit-parent, auto, pass-through, and no parent model` | VERIFIED |
 | T04 | `run_in_background` | Returns the agent id at once; completion joins the running turn at the next tool boundary, or starts a turn when idle, after the process exits | extension | `background returns at once and the completion notice comes only after the process exits` | VERIFIED |
@@ -33,7 +33,7 @@ The Live column records the end-to-end run on real Pi with `SUPERDEV_PI_LIVE=1` 
 | T14 | `TaskCreate`/`TaskUpdate`/`TodoWrite` | superdev-mode's own `todo.md` fallback | mapping | superdev-mode Platform Adaptation; pi-tools.md Tool actions | n/a |
 | T15 | `Read`/`Edit`/`Write`/`Bash`/`Grep`/`Glob` | `read`, `edit`, `write`, `bash`; `grep`, `find`, `ls` when enabled | native | pi-tools.md Tool actions | n/a |
 | T16 | `WebFetch`/`WebSearch` | `curl` through `bash`; web search through an MCP server | difference | No skill names either tool. Fetching works through `bash`. | n/a |
-| T17 | `ScheduleWakeup` (other named tools are never referenced) | `schedule_wakeup` with the same shape | extension | `clamps to 60 s and fires the prompt as a follow-up user message` | VERIFIED |
+| T17 | `ScheduleWakeup` (other named tools are never referenced) | `schedule_wakeup` with the same shape | extension | `clamps to 60 s and fires the prompt as a follow-up custom message that starts a turn` | VERIFIED |
 | T18 | MCP tool discovery | Pi's built-in MCP; list servers from the session's tools or `pi mcp list` | mapping | pi-tools.md `why` note | n/a |
 | T19 | Facts named in the system prompt | Pi's system prompt lists tools and skills; the transcript directory is given in pi-tools.md | mapping | pi-tools.md `reflect` note | n/a |
 | T20 | Image-generation tool | None, as on Claude Code; draw with Mermaid or text | difference | Claude Code has no such tool either, so `teach` already falls back. | n/a |

@@ -22,7 +22,7 @@ const commands = [
   { cwd: fixture, args: ["test", "tests/"] },
   { cwd: scripts, args: ["install", "--frozen-lockfile"] },
   { cwd: scripts, args: ["run", "typecheck"] },
-  { cwd: scripts, args: ["test", "orch", "watch-pr", "check-plan.test.ts"] },
+  { cwd: scripts, args: ["test", "watch-pr", "check-plan.test.ts"] },
 ];
 try {
   for (const { cwd, args } of commands) {

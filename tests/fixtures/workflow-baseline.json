@@ -1,163 +1,35 @@
 {
   "format": 1,
-  "referenceRevision": "e2cbd491f94ee4ece30e028b9ff69a8b418d1723",
+  "referenceRevision": "df9bc05b818e2457ac23d3343e96e4ff284dd9e9",
   "normalization": "SuperDev names and repository links, LF line endings, trailing newlines, and the added portable-contract pointer. Binary assets compare as bytes.",
   "files": {
     ".claude-plugin/icon.png": {
-      "reference": "dc8fedbedfe971d87a55e40c74df2d5cdd14160ae8c042082a51b7857dc759f5"
+      "reference": "aa54f5ef135822a06d876c30c0c1694f5f73d3f9e799c7a7c34985e06e9e4d63"
     },
     ".claude-plugin/plugin.json": {
-      "reference": "42aa971f5bb412537072d59d0e39060ca557aa38a62ab8543ff568966d7c28a6",
-      "adaptation": "5bc07d0fe78a21e9f15b6e94cee1e5944794bee6dc2fdcc82881b2df76e5143a",
+      "reference": "e227584a3ffd3ae4d1a5c59e0e796b9e1855af2ce155d36b907e056f1d87d9d2",
+      "adaptation": "cf6e2fa5ae9d2712108faca6eed6843dbfe21e199d0c5fb3366b155e695234cd",
       "reason": "SuperDev package identity, version, description, and contributor metadata."
     },
     ".codex-plugin/plugin.json": {
-      "reference": "e5cb3485aa62c63f946c7da0efa75b73b2d24b82416bfae41ee37ee3dfc96557",
-      "adaptation": "a5cb80b288b1882114b61746e7b1e93c12683eecbb073d71e3dd3ac076715ca6",
+      "reference": "795eeda0545789124ac677ba177d2f1060cd78ad39e9b135b87c392cc3ca4dec",
+      "adaptation": "a17076639391c3d415be1925c0526f74561d8b3e1873b90152f105b604d95d4f",
       "reason": "SuperDev package identity, version, contributor metadata, and interface branding."
     },
-    ".codex-plugin/prompts/architect.md": {
-      "reference": "76f6920675838117fc4a92a97aa62a7427a7a3d7b516b6abd4980439f7b9ed0d"
-    },
-    ".codex-plugin/prompts/arena.md": {
-      "reference": "63ea6befa5d54e96d67b035f604b7ecbde12a28e30ea2a59f13515bc3b4801fe"
-    },
-    ".codex-plugin/prompts/automate-me.md": {
-      "reference": "b143eca3da868116ba985d9b747b019d240a72a0d8521a09dd8d7c160a12d728"
-    },
-    ".codex-plugin/prompts/babysit.md": {
-      "reference": "5d0d97b6e6113c0ed4e285c56dc4de29b3a3555f1c2796ad254e9daf7db0dd3b"
-    },
-    ".codex-plugin/prompts/benchmark-checklist.md": {
-      "reference": "60ff78580ac07053a6eab21ca0b3c4d292c0f51253736be4fad28fa1f43c57d4"
-    },
-    ".codex-plugin/prompts/blast-radius.md": {
-      "reference": "c90a1f2496b309c9dad9d320a47b7ad87a92b6f8a0d5c3f458d81e40f9b48c32"
-    },
-    ".codex-plugin/prompts/bro.md": {
-      "reference": "d7919ce145182685bb4b6788f9b28de23187813fbc873a466d5e37287115fd4c"
-    },
-    ".codex-plugin/prompts/correct.md": {
-      "reference": "daf8e61171ebb93564cfae74657d7df5499715c76fc584197781ad35835bef1b"
-    },
-    ".codex-plugin/prompts/create-formal-verification-skill.md": {
-      "reference": "4bd5a23f1ace90e00c7dcd66c745504a0a4aaa875aba6c5cf6d5147ab6581927"
-    },
-    ".codex-plugin/prompts/create-verification-skill.md": {
-      "reference": "beed951a22660e43632b3f1020e28eb2cf04facc41abc1602657108ddcc07afc"
-    },
-    ".codex-plugin/prompts/deslop.md": {
-      "reference": "642e54f6295a7d7306eb22d4a539a8627092d5ddb397b462a91ebfb601760ec5"
-    },
-    ".codex-plugin/prompts/figure-it-out.md": {
-      "reference": "6d05240c6ee40c1d14e3b6cc2a00eb5e52897a4519a9004e2bbf43e006427cb5"
-    },
-    ".codex-plugin/prompts/fix-ci.md": {
-      "reference": "61730be05daf8fcda4e6aaafe0735b58b914b2bdecd5f9140643211ed649976b"
-    },
-    ".codex-plugin/prompts/fix-merge-conflicts.md": {
-      "reference": "1eb8892bca10dbc1d8bf854fb7ef86c5d02c2caa9568da079e9c161e2b137d3d"
-    },
-    ".codex-plugin/prompts/get-pr-comments.md": {
-      "reference": "cbf468f2d5f988f6b6524e6397225f1660ba5958543871eae534a17ae802b286"
-    },
-    ".codex-plugin/prompts/how.md": {
-      "reference": "d043043ec7a663a8a80da8edf1b5141b7d148018a05d8f255fd566762a559a42"
-    },
-    ".codex-plugin/prompts/in-your-own-words.md": {
-      "reference": "be81720934bfd170949cf1b1e72cc988f99f6e0d4decc818ba8547ba8692bb11"
-    },
-    ".codex-plugin/prompts/interrogate.md": {
-      "reference": "4efefedf67cd35b7438d873a9d8d1b9955c2d79d9c058150d32b15be3c98d57f",
-      "adaptation": "c516319d0ab386c33567d6ab1c61ad26933267c5a7c32cba03f6057adb9b58b7",
-      "reason": "Describe run-confirmed adversarial findings rather than a fixed reviewer count."
-    },
-    ".codex-plugin/prompts/ketchup-video.md": {
-      "reference": "74d9765ebc6c9d94fefcbb46c1aa6508d7426723d0a06c79c1ae37335f9d3025"
-    },
-    ".codex-plugin/prompts/ketchup.md": {
-      "reference": "f0124533918c1bd3bbb6e93c9664d53d7a400ff190a49953262e6ee5f87d7da1"
-    },
-    ".codex-plugin/prompts/maintain-formal-verification-skill.md": {
-      "reference": "85788cddcb0087820744818b974f131daad6e051c587510c72000f3b0b3b1ab9"
-    },
-    ".codex-plugin/prompts/maintain-verification-skill.md": {
-      "reference": "b1fb9a5de1724bf3c4e675e5d583d44ac3df4f0c7bf7d8c8e7b843ae48616953"
-    },
-    ".codex-plugin/prompts/make-pr-easy-to-review.md": {
-      "reference": "65ab566ad9453732b37dcae7467cb23be1cb3b84cb1e7a2873e826618e543ee0"
-    },
-    ".codex-plugin/prompts/no-comments.md": {
-      "reference": "b6bf5b490a46897d6836c8633b9f77f8f95f8a4fcc70660683041b5f4515aabd"
-    },
-    ".codex-plugin/prompts/superdev-help.md": {
-      "reference": "75b20ed4cf648278c315acd5bc40b579c73e5c6d6c3417aaebe8ec2a49d2a3a8"
-    },
-    ".codex-plugin/prompts/superdev-mode.md": {
-      "reference": "acf0c00a2ef0f91e2e330dd8a331a28ce22e074498a89540d9b030a736e2e2a6"
-    },
-    ".codex-plugin/prompts/recall.md": {
-      "reference": "b2a91648770b9f7cc4248648a57ebef55d2973a3977592b2d9bb25b95ca81747"
-    },
-    ".codex-plugin/prompts/reflect.md": {
-      "reference": "708d0c4ca544d430fc128a13706b94aa5b20b6c524e99e95be789dff0c63e27c"
-    },
-    ".codex-plugin/prompts/setup-superdev.md": {
-      "reference": "fd8fd6953349a0b3ea5520d1dd38d47fc8c2d469e702d9791265ac5fb155d2f1",
-      "adaptation": "6699ef85b3eeeafdc0ebe8f7b187a60c1d6ddce7f85aa9c0a9686119132457ed",
-      "reason": "Advertise the restored repository, triage-label, domain-document, and model setup in the generated shortcut."
-    },
-    ".codex-plugin/prompts/sharpen.md": {
-      "reference": "f5f772eb99b9ba9b623599179044f532223ed63297132f38abcce02c790edf3d"
-    },
-    ".codex-plugin/prompts/show-me-your-work.md": {
-      "reference": "2b7c76b8595ea04bd358f7ca2ac4116a4de1acdb89dfe1c58b95ab22151a93ae"
-    },
-    ".codex-plugin/prompts/statechart.md": {
-      "reference": "48500d558b1b64c46c74db5b4eb50817c9743179a7a095278070f861b9b67244"
-    },
-    ".codex-plugin/prompts/swarm.md": {
-      "reference": "baf6ed615690499208b30c6dfe442ac9ba8c4af34a4167ac28503e23001f8c18"
-    },
-    ".codex-plugin/prompts/tdd.md": {
-      "reference": "8d954110d5d11177d366f82519614960f0c097d90c6a97601c3d91e2f88da30a"
-    },
-    ".codex-plugin/prompts/teach.md": {
-      "reference": "e03658eaeae38c510809608b6df5a397c62b96a83d709bae913e4da44b9db321"
-    },
-    ".codex-plugin/prompts/technical-writing.md": {
-      "reference": "6bc14afed31672d2b1ec0b3a9970980ae31ffc6dd94f1131ff6721d41b3375fa"
-    },
-    ".codex-plugin/prompts/thermo-nuclear-code-quality-review.md": {
-      "reference": "d5dcb8dcc87bf94ca7d3eaad4fb5f9552a005bbf411788dc0c78a1607d26aabc"
-    },
-    ".codex-plugin/prompts/thermo-nuclear-review.md": {
-      "reference": "b9ee362e31692dfde963ce446bb472fece916b397120622dd5f6d72864c8f894"
-    },
-    ".codex-plugin/prompts/thermos.md": {
-      "reference": "d2cc7c13436891d03e683664e802fad9b6644a79383cb4eaa927ecb609b9781a"
-    },
-    ".codex-plugin/prompts/typescript-best-practices.md": {
-      "reference": "70c93b96caefcf1363063d4f216a5d4c07c4c97df04476d05f0cfb6154c88128"
-    },
-    ".codex-plugin/prompts/unslop.md": {
-      "reference": "b1e1e6201621c5f1731f7dd92ba7094ff23910b2258aaaf837d39e2ff97b3e00"
-    },
-    ".codex-plugin/prompts/what-did-i-get-done.md": {
-      "reference": "d931d90789df87800f9fc204b537f9ec6aa9e90d7a47e2ce744d185d944d97c1"
-    },
-    ".codex-plugin/prompts/why.md": {
-      "reference": "bd5dc71dda4777fde9f5ee81b1f70a7250826775529ee568dc4cfa00abfb60f8"
-    },
     ".github/plugin/plugin.json": {
-      "reference": "b072dec3d82c33793e4fd4bc0ed28a21d0e5b6b2f2a762b227c6aeefcfbcf02b",
-      "adaptation": "141b87d608bf3aa48f2691220c03a73b70f6efb8624974c8578f9c8a88be8043",
+      "reference": "b070fe47e15fcd57ec1b9e09325dbdb6a924fbbdf59933ab17f5205c1114a8ab",
+      "adaptation": "d60e045fec6aa3a4f35988b9fdd07867964425ccd8cc72f206db024ca8c3cc12",
       "reason": "SuperDev package identity, version, metadata, and JSON formatting."
     },
     ".muse-plugin/plugin.json": {
-      "reference": "ee0d5a0501fdf7a9647a95470e785aad4ea8159bee90b1630f801c6ed0ad3e8a",
-      "adaptation": "2e4a1963feb71577a82490465340860a2854ee5be212097b2efca7a81eead370",
+      "reference": "3d424005e134bae225f096708d9ab60bb556e40e599a52946ab0644c1ee7fc56",
+      "adaptation": "574cbb67b4f49bed35d582f4825595dfa2b8efed4c0baf82b8ca1b3936b7066a",
       "reason": "SuperDev package identity and generated discovery entries for additional skills."
+    },
+    "README.md": {
+      "reference": "61e99cff0c67c310876ea1b660c54693405b4038b8adc353775aadd0f3afd9e7",
+      "adaptation": "d96ad3c337f5676bd489e8f6abc54f6c4bf7b1b6d5cc3a25eea35c7148a64ee6",
+      "reason": "SuperDev installation and canonical-bundle documentation."
     },
     "agents/comment-sicko.md": {
       "reference": "e7ac4c16170dccf54d44b9f20910a37602e100b178f326a848188b065eaede33"
@@ -174,14 +46,14 @@
       "reference": "1b5f166d8e6197fb8cf9a67bb95ace4cb57117703e55e52e7eb38dcbda322d73"
     },
     "assets/superdev-icon.png": {
-      "reference": "dc8fedbedfe971d87a55e40c74df2d5cdd14160ae8c042082a51b7857dc759f5"
+      "reference": "aa54f5ef135822a06d876c30c0c1694f5f73d3f9e799c7a7c34985e06e9e4d63"
     },
     "assets/superdev-icon.prompt.txt": {
       "reference": "45f203af6fba6d0e5a358aa6799cc31a83db20dace824ae4fed851048167205b"
     },
     "hooks/codex-hooks.json": {
-      "reference": "204eb4fa2e186e4cf3ed622b809fbb381a4fc02ea3b515d21a9b85d91999071a",
-      "adaptation": "5f97b2901c6490c71a779372c03e6cb0531fca51d345b3dff84bc03202c112b2",
+      "reference": "3847f7011f3f36b3e066d2b5bde08ca2600cf43b690c59ad44ecccdeb6954ce7",
+      "adaptation": "d4c6fba3e4375f526e290912b1e8fffe67fd7698a7da2457d4a03493287a2e7c",
       "reason": "Invoke the same POSIX script with sh so Windows-created copies need no executable bit."
     },
     "hooks/copilot-context.awk": {
@@ -193,12 +65,14 @@
       "reason": "Invoke the same POSIX scripts with sh so Windows-created copies need no executable bit."
     },
     "hooks/hooks.json": {
-      "reference": "e207b67cae65f5e070377e678858f50ba2c2e67a7abfcad367d20deeb9235e31",
-      "adaptation": "f0d4dbaa3850e51464fd9e0cc5f9e0a947e45754a1ad0eed5402bca08fac92c5",
+      "reference": "4af27290a526989be735ae0a6fe3bf7427948c4a7141bc09fe86dedc2c03b660",
+      "adaptation": "a79ade8142a8cb8f080fb7ea38b4885f6af8772b053734a664179fa6d58343e4",
       "reason": "Invoke the same POSIX script with sh so Windows-created copies need no executable bit."
     },
     "hooks/json.awk": {
-      "reference": "9aea4d7bc3eb238b150d07ab33ca3c1e80da43f7d6e47f6d54790bb4856ab9da"
+      "reference": "befeb330719fb7ff964419fc9c536662f7b3c1d7d9b2359fa537abea9adc19ce",
+      "adaptation": "638753e359e198d06e4484c9fe8ad13249bcfa8a2914fad2d6685822428136b5",
+      "reason": "SuperDev ships no Antigravity runtime, so the helpers serve only the Copilot hook."
     },
     "hooks/muse-context.awk": {
       "reference": "7a2a9181d3ff3608a17436e1f908ee9c56357dc00bc83ceacc633ae288d9e506"
@@ -222,8 +96,8 @@
       "reference": "b872e7d05bfefda78a3a4432e80c63b1a7c0fae354bc38a23467af8f34458694"
     },
     "hooks/session-start-copilot.md": {
-      "reference": "9417939e1788373511f0f9ff8a1d452313c1c30d98899d43d73612dfb3c89e65",
-      "adaptation": "c97b1894a72032a0214ea71dc77c2589a7eb9c92e8cebbeb3bd7feab5ad74a62",
+      "reference": "e4853830094d41a6a15b3601963ddee2288740ac1e32e699e86709304a4c917a",
+      "adaptation": "65c8319232dcc9e827a40115310ab5f07bfa599e55c53286ca878875b46e25ea",
       "reason": "Generated role list uses deterministic alphabetical order; role membership is unchanged."
     },
     "hooks/session-start-muse-sheet.md": {
@@ -233,48 +107,56 @@
       "reference": "e71f89e1e2e3c99e917d4c14809965eeff13ef43e6a283c95bfc5d490d4d0f2e"
     },
     "hooks/session-start.ps1": {
-      "reference": "b3f7e2046fea53c54da9de9183c2538035ab5c7e5414657653e882962c7e73c8"
+      "reference": "f2239be7f45e409621f9cf0fe978acdb4ea4de4f2f38fca76c0721b1cae67969"
     },
     "hooks/session-start.sh": {
-      "reference": "8e3bb4720ceb90550d12442d46ab43b87caafa05e61c121a65a70305a1797acf"
+      "reference": "de57f161d46b55c92dd5cb89e462288f58e7c76ac53f385ff8433852b5126e7c",
+      "adaptation": "253c286f787fc70158e29f162ac8231e2dd9e994e27cf364f291a25c0ab1f8c6",
+      "reason": "Invoke the same POSIX script with sh, and omit the Antigravity and MiniMax Code runtime branches that SuperDev does not ship."
     },
     "models.json": {
-      "reference": "436a5b0ebe39c7b8373692a8eaad6eee7ea0f124b918f59ba0de9611c27e17cc"
+      "reference": "e67c7ee088a1e8d95f3d182b32a168f188b3ee7dbc9eeb0a609f1a81090826e8"
+    },
+    "pi/agent-files.ts": {
+      "reference": "454f957c0b130382f32cf917391faac15625fa37c4a67aeb3f5503701e1f76f1"
     },
     "pi/agent-text.ts": {
       "reference": "0d2795d20bac7c170fdc8fd7af3a3c607216e77ee321851238bdbdd291afcb6a"
     },
     "pi/agent-tools.ts": {
-      "reference": "501c0278b2a62526733a1ecb6bb03f22195005b9498920faffbb5acd42e84cd4"
+      "reference": "267fe817f92485eae24a0c7834be1c9304e5887015a8beef38398e3cc978cb13"
     },
     "pi/agents.ts": {
-      "reference": "40b0d55b829ec02ac506fd55053bcb17cff73c039a80d985372cc094b0f9ae72"
+      "reference": "be9725710030f28f0ee2d6323cb515b93eb43bf6f6b56beb3d3786b17e4b827b"
     },
     "pi/ask.ts": {
       "reference": "438150b536550ef447a2490202b9cc8b3e9c26bb28c5856120c4c9daab686fa7"
     },
     "pi/child.ts": {
-      "reference": "991b028c49533179c7348b270f101e8623513606eae49c85cff55cc86d64c961"
+      "reference": "a0abdd716472399b06635a4a5eb5d8d5c48aff9e5ae9395e0cd6ab1c0741cd53"
     },
     "pi/config.ts": {
-      "reference": "c41be86c77999fece50d7f4b83ee0144af4b5302b8f731582d1c5b9df60a812f",
-      "adaptation": "452c7f3f3f094fc18cfc13f6234f5ce31935adc4aa27dbd3a2c9057d9e60034d",
+      "reference": "007bc948ee07d8977a95127fd275e1136dc115a4204a97e42aeb887d8632d32c",
+      "adaptation": "aa5c99e23b7462989e4012cc6a202111859301a33b85055b78d3284414eeab47",
       "reason": "An unmapped provider inherits its active model instead of requiring Anthropic credentials; explicit mappings still win."
     },
     "pi/index.ts": {
-      "reference": "5dba86145aeab09f324c97d582dc9e14ba3c4720aa6db1913afcd02beeaecfb4"
+      "reference": "74b1766aa771ad889905d0296b603101e92b80ec560809a3fe6712b9776311ae"
     },
     "pi/one-shot.ts": {
-      "reference": "c7984c370e2534bc96c54dc12f2073f8e320408cb55a813089ef5d7d00d74c39"
+      "reference": "a843d42854b34ad1b2ba3fb6762166a2d1a66a64c0610ffc40edf711656553dc"
     },
     "pi/path-skills.ts": {
-      "reference": "811f1f6bf4465bb5d78e616f821e6fe9eac65713f3b0fcc24c6922b0ddebdde8"
+      "reference": "fc55acf69a207d0c1d8e57170442b0066c68b57e31a8bdedbc30a30b38519a12"
     },
     "pi/prompt.ts": {
       "reference": "b74fe8179d8405c637e832520b5917ef1c3dfbc1e9ba8034623d6e30dc1efb70"
     },
     "pi/schedule.ts": {
-      "reference": "6d734a915db75778b75631ff10e76d4f304a9c48bd39bebb91db0ab742fd4a5e"
+      "reference": "01c7eeaee0f85275b1d33c935787907fba8a5eded37e3395ba33e6796da810b7"
+    },
+    "pi/slash.ts": {
+      "reference": "48eb175d8a7dc008cec1fa951daf78955c97c366e241656dc8badb4db33786d1"
     },
     "pi/sleep-wait.ts": {
       "reference": "4cff36b1e5435ea6a4e1ae0346a174097353c1edb97ab77a145e3cf35135cc19"
@@ -282,10 +164,10 @@
     "pi/worktree.ts": {
       "reference": "5d216461e9bee5771f73e5a07ca7e47080c07eedd20ba7b33a65cc5c06555329"
     },
-    "README.md": {
-      "reference": "61e99cff0c67c310876ea1b660c54693405b4038b8adc353775aadd0f3afd9e7",
-      "adaptation": "d96ad3c337f5676bd489e8f6abc54f6c4bf7b1b6d5cc3a25eea35c7148a64ee6",
-      "reason": "SuperDev installation and canonical-bundle documentation."
+    "skills/architect/SKILL.md": {
+      "reference": "48c2f39f46b2f1f96fb8f22019244f7541c2750172b2c1d0eac5a1d7e387c9d5",
+      "adaptation": "22cb6e69d538794625ad3d4f63b6a28efaf89649e710581e48c9f9889d232c93",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/architect/references/design-red-flags.md": {
       "reference": "eaa0e680dcb0dd263f06457a1b06b284a8088ebe5ea2eac8d988d1cfe9767e82"
@@ -296,17 +178,20 @@
     "skills/architect/references/runner-prompt.md": {
       "reference": "a8e4ba4cc8608ae6fca943a6130e9292994df66c76a905c6748502cd4e453eb7"
     },
-    "skills/architect/SKILL.md": {
-      "reference": "a58c3eb645c8ee288827a6e0851fee64a73022cbba66cc4a870fb435bc8d3d9b"
-    },
     "skills/arena/SKILL.md": {
-      "reference": "ecd56282f84eeccbe6cb8aaa5ada42f0ccac9807c373af86b0e532fb058777e7"
+      "reference": "a55419e59378d1e405a3fed1e19a64c3435279a66b89d33046651949d9cd50e1",
+      "adaptation": "ff66a0b6a0afefb6f090650d892a57a798401403bad9d663f17cd45ef14409a7",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/automate-me/SKILL.md": {
-      "reference": "7e1b4a9f8f3ccce7d2feebea8397907e04837e847f85886f282f24987f5fedde"
+      "reference": "1b3d702b84f9ba40520c618ac6789cdae65d41a8eb5320ce46d4cc4c93fb9164",
+      "adaptation": "7e1b4a9f8f3ccce7d2feebea8397907e04837e847f85886f282f24987f5fedde",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/babysit/SKILL.md": {
-      "reference": "37ed630a53315c545a8709eb2f57b87ba33ef66e1db2c4c8f8777c2208b7cc6f"
+      "reference": "e20051b97851fc62fa4dbfa086350a87de0fbc5e9697e2451cf23b302159f126",
+      "adaptation": "37ed630a53315c545a8709eb2f57b87ba33ef66e1db2c4c8f8777c2208b7cc6f",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/benchmark-checklist/SKILL.md": {
       "reference": "d221f1bd00e64a16700cf28f2cf685b97638c76913e7f41cc6a9b0de051f581c"
@@ -321,22 +206,26 @@
       "reference": "003f80b8e8e2f7ffe0a0dfeb9efe9dc8f8379c68604a0c0dfaeafb2c61854932"
     },
     "skills/create-formal-verification-skill/SKILL.md": {
-      "reference": "f432d09134f7c39158dab5b6b0246c712ec6dddc5d323ede84f05eade67c2514"
+      "reference": "b3e043d30d99189c17a4d6be626358bc50b9d563c9d8eb175cce2f1f6184fb5c",
+      "adaptation": "f432d09134f7c39158dab5b6b0246c712ec6dddc5d323ede84f05eade67c2514",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
-    "skills/create-verification-skill/references/feature-map-example/create-note.md": {
-      "reference": "8752c69fe2e1ff8cb0d42b85fae3e89a99e61fe87c200a36d51ee604da8c4535"
+    "skills/create-verification-skill/SKILL.md": {
+      "reference": "0fa7a544ced18dc67c0a911c9c8c9d1b558f55db0396cca28a4500dd9a2059bc",
+      "adaptation": "2d70606a91ff8f5feac20fa64b1eb0b96562a8a3b60a33b5799ecd712ba9a5a5",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/create-verification-skill/references/feature-map-example/README.md": {
       "reference": "e6d025499928c89b39df80108ed976c0be87120eb9bd15d851e5e5d91e7c6e65"
     },
+    "skills/create-verification-skill/references/feature-map-example/create-note.md": {
+      "reference": "8752c69fe2e1ff8cb0d42b85fae3e89a99e61fe87c200a36d51ee604da8c4535"
+    },
     "skills/create-verification-skill/references/feature-map-example/search.md": {
       "reference": "e6b504775ae7bc281ca33da67fc177f2a506691c0bebba6faca9081cafb856bc"
     },
-    "skills/create-verification-skill/SKILL.md": {
-      "reference": "2d70606a91ff8f5feac20fa64b1eb0b96562a8a3b60a33b5799ecd712ba9a5a5"
-    },
     "skills/deslop/SKILL.md": {
-      "reference": "0b889f28ae79b51b8cb8dfa6bd9fa7669b5a21259e949cc117a66c7302a93585"
+      "reference": "5d0f2a69a8cd739adc7bb854ba83c4f2ca1568e6e7d4e466302b9df04690fc91"
     },
     "skills/figure-it-out/SKILL.md": {
       "reference": "08fe6ff1007a26bfe9353ed18d0c4251a63f135585a542b4332de75e56c493a1"
@@ -350,279 +239,48 @@
     "skills/get-pr-comments/SKILL.md": {
       "reference": "8bf292736cab922276feb4d8377edc2fc4102a7beb62bcd1f3f5cf72a79b16cc"
     },
+    "skills/how/SKILL.md": {
+      "reference": "832596c7ab1be73734837e43c079bc5ca4a7fb133ce2e68e622d598b4c1c18b5",
+      "adaptation": "17ad4d87e8c2ac0fe9d3f903fa1701bfdf9b2df48cdc58fc302c465055f2688a",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
+    },
     "skills/how/references/explainer-prompt.md": {
-      "reference": "23c079f1ccd081aeabdd6254cd8d1b356d43371bea6775af7f4c0c695a117755"
+      "reference": "fbfa97458abe2f84664eb8ee9e8b9be4718f02d717ca56a7aef5e373ebde952e"
     },
     "skills/how/references/explorer-prompt.md": {
       "reference": "676c796e7777716facd3719fb99c435a485b21a5230afb9b6fc0ea2505acf44e"
-    },
-    "skills/how/SKILL.md": {
-      "reference": "13ac6fd3e755d0766bbd963c9fcfdeedbea834aa3c967e1415c318c3b1b5b9e2"
     },
     "skills/in-your-own-words/SKILL.md": {
       "reference": "8341b15e2f81a99a5bf82b37f666fcecfde7a0ca08035f529496249fbbb9877c"
     },
     "skills/interrogate/SKILL.md": {
-      "reference": "544e7005d053eb2c3da27c9efcb8bc96d305eb2992a12a629e00bb378dbe4b8d"
-    },
-    "skills/ketchup/SKILL.md": {
-      "reference": "478c8f17fa31e6f024db39b49c6394a0dfc445e1789cfebedf6f63eceece9456"
+      "reference": "8b0636e5c21072844b971a8249182c04f76a77f5ccc5d9fbea092879fb68b094",
+      "adaptation": "7d6fbbdda29904082e01ababbfd7cc1441faaedf7499e098af14a70648236ddc",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/ketchup-video/SKILL.md": {
       "reference": "b4daa8b1701bb6ee2f119af1bb894f19b0194912b7d33144a7749efea1d37d4b"
     },
+    "skills/ketchup/SKILL.md": {
+      "reference": "478c8f17fa31e6f024db39b49c6394a0dfc445e1789cfebedf6f63eceece9456"
+    },
     "skills/maintain-formal-verification-skill/SKILL.md": {
-      "reference": "43bdb5546a6016ae1c54cf00e51193d1e45fe6c374062b0dc390865c69908cd9"
+      "reference": "6890b50942b4d39cac57cf60d7414b768c54eed556da25a854ce35cd6a756f52",
+      "adaptation": "43bdb5546a6016ae1c54cf00e51193d1e45fe6c374062b0dc390865c69908cd9",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/maintain-verification-skill/SKILL.md": {
-      "reference": "862b4f671c41ff7986628a54c22a9f89b4543cb103e76b8533e116f193ee47a7"
+      "reference": "06abb09e4b439cf656ab5abfd28721f760647c486796cc6a80cc7680f5ace865",
+      "adaptation": "862b4f671c41ff7986628a54c22a9f89b4543cb103e76b8533e116f193ee47a7",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/make-pr-easy-to-review/SKILL.md": {
       "reference": "ebee8403c416d588d1966a8058bc80ac57033c36d97a46b5281ddce86afc0e62"
     },
     "skills/no-comments/SKILL.md": {
-      "reference": "c2c3e3982e2471292564b8e6f51a73e2aac7ec5191fdb0947a6e6e29347adcee"
-    },
-    "skills/superdev-help/references/prompting.md": {
-      "reference": "2fedd2efe5333bb4d505e792b1bb92f9e3c1ccd62c7df43d3a2f664b915424a9"
-    },
-    "skills/superdev-help/references/recipes.md": {
-      "reference": "0c9574b6b6d4b92501b39de7f379368c4cea8c5dde9c1a4084338809971195d3"
-    },
-    "skills/superdev-help/SKILL.md": {
-      "reference": "775aebda85bf428c3a82ae1b72d9588942476ea22d6e65f98030a9e8b87e5776"
-    },
-    "skills/superdev-mode/playbooks/authoring-a-skill.md": {
-      "reference": "e82d1a0a1684d5a6734a3739f8ee1454b172dcaa60e9fa15f12b9196e21b22a4"
-    },
-    "skills/superdev-mode/playbooks/autonomous-run.md": {
-      "reference": "7fcb5009eb34e4c3ae9281467799737902b90bf9e400901bc30b95e46dff69a8"
-    },
-    "skills/superdev-mode/playbooks/autopilot-full.md": {
-      "reference": "47209a6e785609c6f621d900d94eebc6172c24422a4788306ef66ef2a53ba547"
-    },
-    "skills/superdev-mode/playbooks/autopilot-stack.md": {
-      "reference": "0b1222aebe2436fd68df40bc1c70ebc341f9955d05f39ddb508a91a48c27b6d8"
-    },
-    "skills/superdev-mode/playbooks/babysit.md": {
-      "reference": "17425998dd404f7b7fff59aa15142e389923192977b3ed199db3ef01b454aa25"
-    },
-    "skills/superdev-mode/playbooks/bug-fix.md": {
-      "reference": "5642e3baaa33663e7ef3ff2796a83623c78ecd26ddd78502c237b89dcd0f2713"
-    },
-    "skills/superdev-mode/playbooks/eval.md": {
-      "reference": "84c786edb1c9e61ce191eff00b383d968cd89c2d0c5bb2d9ca36081a40802759"
-    },
-    "skills/superdev-mode/playbooks/feature.md": {
-      "reference": "a5dc901540cd94f1749448a2bf817a3bbbf48a7adefd5d2e7f7dc83abf8d6643"
-    },
-    "skills/superdev-mode/playbooks/hillclimb.md": {
-      "reference": "310bc46d5137c3b02dbd95bc679dd8ce6d8a0263211f8f2f0ce2f3c6c16bf84b"
-    },
-    "skills/superdev-mode/playbooks/investigation.md": {
-      "reference": "78f700edaafb438eb40592f46dae82bfeecd5468956fabee2e78cda6cae7b5d9"
-    },
-    "skills/superdev-mode/playbooks/multi-phase-plan.md": {
-      "reference": "3884c60b342c4e5aab099c17faa484ca467ace34cec8b95a26a962534c588e8a"
-    },
-    "skills/superdev-mode/playbooks/opening-a-pr.md": {
-      "reference": "ea34cdb5713e70a8ccc3e692f8eeb07a25dcae1cf6bee0927f010c02022d850a"
-    },
-    "skills/superdev-mode/playbooks/orchestrate.md": {
-      "reference": "df42ba5355142ac95681b5bdd90b3f90420da47b69386d7f792d30a9d5c8f238"
-    },
-    "skills/superdev-mode/playbooks/pause-safely.md": {
-      "reference": "5a1f7c2d0e254aad7a0a940cab5493287d9b5c38a62de2081be88e1ce4723b26"
-    },
-    "skills/superdev-mode/playbooks/perf-issue.md": {
-      "reference": "30ba8fc18e9de3caa03210e9492096b6c9005f161921cf0c756cf6d449faf6a1"
-    },
-    "skills/superdev-mode/playbooks/prototype.md": {
-      "reference": "0fb5a2cc02033a29c8e7f2c88a951b2036692b403a96218d2af7f7b5a3618cfb"
-    },
-    "skills/superdev-mode/playbooks/refactoring.md": {
-      "reference": "6932a69f2c6f8ef75af8d27a38ddf40575c55e98a0cc6c3325fb8268d69aa901"
-    },
-    "skills/superdev-mode/playbooks/runtime-forensics.md": {
-      "reference": "4732259283f5c58f58ba60a3a12265ae91823fd22d353452b3b67657df62f11d"
-    },
-    "skills/superdev-mode/playbooks/session-pickup.md": {
-      "reference": "2b88a17341dece6ef4cb6adf204c9f336701671580e568ca40ed4ecdbe36e932"
-    },
-    "skills/superdev-mode/playbooks/shipping.md": {
-      "reference": "40492b66aa58f0194a1345d426cb84db781f035d6218f1b8120b7346fc634589"
-    },
-    "skills/superdev-mode/playbooks/trace-forensics.md": {
-      "reference": "1a1fed10869b2548214e029b5f2a989aee3b6cce1ece9143b2fc8065e7f2fff7"
-    },
-    "skills/superdev-mode/playbooks/visual-parity.md": {
-      "reference": "35e0bed5f47a4584dc1b4a4c0a1b865de8af55dad6a05bae9c610b2346f70f1a"
-    },
-    "skills/superdev-mode/playbooks/worktree-cleanup.md": {
-      "reference": "829c557f4ec1d775cfc65f8aa3d8810061d4c78a0c3c1aab5e779a36e901a614"
-    },
-    "skills/superdev-mode/references/agents/comment-sicko.md": {
-      "reference": "e7ac4c16170dccf54d44b9f20910a37602e100b178f326a848188b065eaede33"
-    },
-    "skills/superdev-mode/references/bugbot-triage.md": {
-      "reference": "60072b3d6e6d33ccefe8b9f2cd93d29dbafdcc3a10b2b177910a38dc2ecf87be"
-    },
-    "skills/superdev-mode/references/codex-tools.md": {
-      "reference": "976f16d05eaaf2a54865c5ee99d3b7b97758f812a00f90aa5bbad524dc1c015f"
-    },
-    "skills/superdev-mode/references/copilot-tools.md": {
-      "reference": "de1bc2b148058ffe16f1a6d5fd054e86f10dc737b5d14c1b8e8ff5a333bb690c",
-      "adaptation": "c04dd35770eff62aad2aedc1c2e0aa609326143703f58eccb195ab25c0a76ee4",
-      "reason": "Generated role list uses deterministic alphabetical order; native setup requirements are unchanged."
-    },
-    "skills/superdev-mode/references/licenses/LICENSE": {
-      "reference": "1e84c2a1cf963685aa0cd7b79d994f4a6dd1fb9588557d7e54ac2709bf562813",
-      "adaptation": "eae4e4ddcb2ac7451d7b86291d30aed65a6f243f707c33e427fb2410ab757b9c",
-      "reason": "Preserve MIT terms and contributor notices; add the SuperDev contributor."
-    },
-    "skills/superdev-mode/references/licenses/LICENSE-cursor-team-kit": {
-      "reference": "d50c0a26b8bb1f040d52950a39519b6981803d638be18ead7f16ef95d4e18402"
-    },
-    "skills/superdev-mode/references/licenses/LICENSE-thermos": {
-      "reference": "d50c0a26b8bb1f040d52950a39519b6981803d638be18ead7f16ef95d4e18402"
-    },
-    "skills/superdev-mode/references/licenses/NOTICE.md": {
-      "reference": "bcc558a8b7007511cffdcb45865e996b6b8dfdd7992942d36054c2352577eb37",
-      "adaptation": "0a40bbdd16de2d1562730e572a07560b2eae7c211448a29df56e6346a07bef30",
-      "reason": "SuperDev copyright notices retain author credits and all MIT license files."
-    },
-    "skills/superdev-mode/references/merge-safety.md": {
-      "reference": "4b2727eb48ecd0c9e06ca82c17f1500c13af084ff6e0bb19a68c74c538154479"
-    },
-    "skills/superdev-mode/references/muse-tools.md": {
-      "reference": "9558a9cb0221ea29efeccbed11f8788972a4c894b9f9a0249a4a54a98e7cabcc"
-    },
-    "skills/superdev-mode/references/pi-tools.md": {
-      "reference": "20a9ec40087cc90db8abec6e7826cad559df619be0609bb7a837a8b2cb81d452",
-      "adaptation": "8a4e2799dc90b570edc32c4d5b6ccd15014a5a85d54b1f10ff9848079afd362c",
-      "reason": "Describe inheritance for an unmapped active provider."
-    },
-    "skills/superdev-mode/references/resume-storage.md": {
-      "reference": "b835ffc790c7c6c4553130322e6b38f056f4451b3d2674e3fb4a336c0f5f5a25"
-    },
-    "skills/superdev-mode/scripts/.prettierignore": {
-      "reference": "c8ec72620f0ab98a51f95a3fda127009d869b33d9a9eb88c1981651d6ea87150"
-    },
-    "skills/superdev-mode/scripts/.prettierrc.json": {
-      "reference": "9eace706ea58ca167cdb96f69f0d0d730ebc536f783bbb1c7391f8d5ed22def3"
-    },
-    "skills/superdev-mode/scripts/bootstrap.ts": {
-      "reference": "9140cfdc0041f57748518b3c713c18f3892788dee4837cb71e3f30674bb380e0"
-    },
-    "skills/superdev-mode/scripts/bun.lock": {
-      "reference": "d22fbde610d96e86ad58c16bb671d8eae8dff3982f07535c7493d4ee59a46f93"
-    },
-    "skills/superdev-mode/scripts/check-plan.mjs": {
-      "reference": "62aafbbc4a09f0754d8733a9f1cd8b4bae7f6c336fc1fa0492000ba193d5d93a"
-    },
-    "skills/superdev-mode/scripts/check-plan.test.ts": {
-      "reference": "18842ae14753333c032f715b1b5abc08b218f7aff4b4bd94003bb832827cd1f8"
-    },
-    "skills/superdev-mode/scripts/check-playbooks.mjs": {
-      "reference": "bb0765e534507c6a2b16bea789cde30d681db6b7abd064427361c5302ed0623d"
-    },
-    "skills/superdev-mode/scripts/orch/orch.test.ts": {
-      "reference": "c282754e3f2f9115507261444bce8105ab0a46d8d4171e9e7034caf919bc60a6"
-    },
-    "skills/superdev-mode/scripts/orch/orch.ts": {
-      "reference": "ffa225e4e9c61e9731b819f3e07e6b56ccea7ec3ef9cb9143caeae6d3e7e07f5"
-    },
-    "skills/superdev-mode/scripts/orch/store.ts": {
-      "reference": "3cdd411fe80417f30ff194d5684a2aba60e6bf8ee3f85ba90b10d209297e9cfd"
-    },
-    "skills/superdev-mode/scripts/package.json": {
-      "reference": "4fd7e19a10c1e77592479887670c156bd9b6dcefb56b5566ddf03b019f6028a1"
-    },
-    "skills/superdev-mode/scripts/resume.mjs": {
-      "reference": "e9e8a503054abdc41fef2c19f8a5cd52d815715658a12224640634b8941c8070"
-    },
-    "skills/superdev-mode/scripts/tsconfig.json": {
-      "reference": "383b5c119e557b387b7e7c0709652122a8bb20bec7708a3af62206a584af9b68"
-    },
-    "skills/superdev-mode/scripts/watch-pr/cli.test.ts": {
-      "reference": "b6ea3c488e0fe2489ee0cd1ec1bcb48bf2cd1610f6da594cbd4dc0f9d506ca87"
-    },
-    "skills/superdev-mode/scripts/watch-pr/cli.ts": {
-      "reference": "fa380023eb28975d9cc60322fc78985d03a40a9220f4165318db0fa06d9a89a6"
-    },
-    "skills/superdev-mode/scripts/watch-pr/deadline.ts": {
-      "reference": "7bf7555fa7fd936308a7141a8d314506a5bde97aa8bc040907b84eecbcdb3114"
-    },
-    "skills/superdev-mode/scripts/watch-pr/fakes.test-helper.ts": {
-      "reference": "4601d3ca9a1b0ecdd3d0f55de27520e171eb325b2ec553df7eee4d13d7d4c875"
-    },
-    "skills/superdev-mode/scripts/watch-pr/github.test.ts": {
-      "reference": "52543d47686eaa28489cdb8d489e02eb055bde9ff674c854ace943924a301d8d"
-    },
-    "skills/superdev-mode/scripts/watch-pr/github.ts": {
-      "reference": "9d076f82a323a1931a78421f05c744bcf699554c5b7bd6aea4eba8f5ec7bdc55"
-    },
-    "skills/superdev-mode/scripts/watch-pr/integrity.test.ts": {
-      "reference": "582ee469994d9b17d2fe2710e7bbdc3ca8090a30b23fed5139d21893bef0405c"
-    },
-    "skills/superdev-mode/scripts/watch-pr/landing.ts": {
-      "reference": "282f32f89367bf7162347021dbeb129b14e47cf780dd2591c5ae401d2868b81f"
-    },
-    "skills/superdev-mode/scripts/watch-pr/live-merge-safety.mjs": {
-      "reference": "fa8684e11dc63908fba33b9361549e7cd1bbc8a32489030799ec28a21b850926"
-    },
-    "skills/superdev-mode/scripts/watch-pr/policy.test.ts": {
-      "reference": "b9a9cabe5c5dfd5ad12c95110a2610d17c64d8194db2e7a54edf04a73bf6fabb"
-    },
-    "skills/superdev-mode/scripts/watch-pr/policy.ts": {
-      "reference": "247dc40af76941de0970387fdaa89353e94048ac2a45e609e64fe7798cbf9f42"
-    },
-    "skills/superdev-mode/scripts/watch-pr/render.ts": {
-      "reference": "766eb9b243c10c2c18bf75f521d79ca35f69d59bebcf21b8f4c29e3a9f8ee92d"
-    },
-    "skills/superdev-mode/scripts/watch-pr/ship-pr": {
-      "reference": "2dfcb807716902abbf0871c7389aecde518194a112fc5fb85c8f655925f23517"
-    },
-    "skills/superdev-mode/scripts/watch-pr/shipping-cli.test.ts": {
-      "reference": "6e4c6c57d240f788b1595ebf93590fa80eb98a4006699f369d047834a9aa787c"
-    },
-    "skills/superdev-mode/scripts/watch-pr/shipping-cli.ts": {
-      "reference": "3101c74c5cc5c1c3c5bc2708c56ebab05c7a652c7177d61075aad8862797a2f4"
-    },
-    "skills/superdev-mode/scripts/watch-pr/shipping.test-helper.ts": {
-      "reference": "44216e40567a4c7fa8a9490b5f774703f18aa60b836d519db9eda3e88310f379"
-    },
-    "skills/superdev-mode/scripts/watch-pr/shipping.test.ts": {
-      "reference": "94b8a95df641241d20e4e398e01da1ca448130c640cc0b3c29315225debaad4d"
-    },
-    "skills/superdev-mode/scripts/watch-pr/shipping.ts": {
-      "reference": "56b7027564e8c9c372857a834b355ba533bebe1ec25fd6b7c304fa1bbf90ce8d"
-    },
-    "skills/superdev-mode/scripts/watch-pr/transport.test.ts": {
-      "reference": "5c5435b9d81ac56e52b99edbcd27374a09d079b40a427bf79f4de52154d9cacd"
-    },
-    "skills/superdev-mode/scripts/watch-pr/tsconfig.json": {
-      "reference": "d9d19c3f84d4e1e62c7e94ae26ab9f674386118e54e02afb58423063c8ee04ca"
-    },
-    "skills/superdev-mode/scripts/watch-pr/types.compile.ts": {
-      "reference": "86a13be75e6ef7f02a8311b4f037a15e97bd6af6d151558d732af6330b5265a4"
-    },
-    "skills/superdev-mode/scripts/watch-pr/types.ts": {
-      "reference": "ea41c61c737a0bbf9d9f4e26cf3d450ab330461a0345bfae1fb2d9679f8f6239"
-    },
-    "skills/superdev-mode/scripts/watch-pr/watch-pr": {
-      "reference": "1f76b1e9426c26c902473e2a21430b6345667fc95ab98a56286c0e81285934e0"
-    },
-    "skills/superdev-mode/scripts/watch-pr/wrapper.test.ts": {
-      "reference": "45397fc2c8cbfb1d2ba623e115b3f96c1ec6ca9d8313e135e60e280445b9ab8a"
-    },
-    "skills/superdev-mode/scripts/worktree-audit.mjs": {
-      "reference": "6a2903ccb29c2f4a38a54ff9492abd1d35b2bb47929ecebd14b0717a5d66aadd"
-    },
-    "skills/superdev-mode/SKILL.md": {
-      "reference": "db87606d1a04011b275cac914516f1384a3fe66a3ed9d2a29acb84a75b4e12ac",
-      "adaptation": "4d30d0cfd59de7e0d33fed3270f6fe59e78c8b7abfbbfa62f3349d5d11fbdebb",
-      "reason": "List optional SuperDev additions and the restored full setup without replacing shared playbooks or review gates."
+      "reference": "9f6b569c187a64fc5ea420190426aacfc149df8cd8f3d4195cc8d40e537b8b6a",
+      "adaptation": "86e5ffb3e38e414c85b4af53a59a32594beedce5da81a045050c1533857eb92f",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/principle-attack-the-premise/SKILL.md": {
       "reference": "7b18a5128142892cc4914b1a3f6f0468c0867c6990ffef5d05b773d4c8c6ebb4"
@@ -697,7 +355,14 @@
       "reference": "f8da625747f4dee5c41c84a2aec052161ed5e5e3e0df6e0c4dee2660f91302f7"
     },
     "skills/recall/SKILL.md": {
-      "reference": "0ec8b55c48fa610f1e7e2c3f23af2f58740d0c36f6bbea1b00e0851788604f6f"
+      "reference": "a59097f9aacdb63ee5e3e8b8416683061c4f7f00b4701e76890e9a3a1b58cf5e",
+      "adaptation": "30c985eb6d5fea46b6d1c67d0d86ede1b2596e860bf5dd04cb0df667fc8d1d1d",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
+    },
+    "skills/reflect/SKILL.md": {
+      "reference": "10e335c712a2cdfc712f2a0b1079d340b3a88d93f94fef70746c63da10f5d9ee",
+      "adaptation": "fcbaf003afc6bf2457209d88944bacf00a54682acab954928f45afd7c48d3d9e",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/reflect/references/divergent-reviewer.md": {
       "reference": "176cb3a500b8e987d38b2035c6bd82fecd04a1a54374fa44f51a4a7fd08e4c7c"
@@ -712,36 +377,38 @@
       "reference": "606429c7a2be5714cc61c38c4c2352c919de02e6b3f444b41a0c8a069f301859"
     },
     "skills/reflect/scripts/claude-project-dir.mjs": {
-      "reference": "bc29891257d3c71cf0f5a024d2a2c191229bc8117ecf5dde5bcd080ebb7b26dd"
+      "reference": "818b8961dbd367538a8d958235a13d2db87660cf95f2245d38d009864cc69000"
     },
     "skills/reflect/scripts/find-transcript.mjs": {
       "reference": "bd2e44cf15c0d4e29417a5a6dcc21fff89ad848f008546d8f487c0985d69adb1"
     },
-    "skills/reflect/SKILL.md": {
-      "reference": "732a5e909e07000117bf0a6389834e91de979432908f98d794e2a7fd38794a60"
+    "skills/setup-superdev/SKILL.md": {
+      "reference": "5416d60d26a91812820dcb1fcc00faf047a21f0893a92736cf6e6e5362a9e520",
+      "adaptation": "1155c9e85e2a73ba1211638eb9de61f2fd318fa439d23d3e2713cb7a328712a8",
+      "reason": "Keep complete repository onboarding before the ten-step model setup, with the setup-superdev command matching the upstream naming pattern; omit setup notes and sheet rows for the MiniMax Code, Kimi, Antigravity, OMP, Grok, and OpenCode 2 runtimes that SuperDev does not ship."
     },
     "skills/setup-superdev/copilot.md": {
-      "reference": "0841fee4edabd635b7dfca310c2dee9b5ec6d253245c6efcd59f4362fd9f0f9a"
+      "reference": "336c620f4097354ea738481886392814c651b0bfb51cece809ec801320c58d29"
     },
     "skills/setup-superdev/scripts/check-sheet.awk": {
       "reference": "971a1648c51b7eb8c5a73bfe13d4fa0e7c2828ab5ee69c7dea047d14f588cde8"
     },
     "skills/setup-superdev/scripts/check-sheet.sh": {
-      "reference": "f5b898a7354b56751d8ce0c7ba31c8aac5f077460b4e5f51eb405fd7e07154bb"
+      "reference": "11c0fc54c3ac40c8d6e217bdeeb60585f6386543105b9920b612addc41a1236c"
     },
     "skills/setup-superdev/scripts/read-sheet.sh": {
-      "reference": "9a6e712b46fe47ed1c44d421304cef2149b26c688f799319dc3b0a7eb254c7e4"
+      "reference": "d51e283781cbf4baeb99f2d02108f76b6e323710d4b1fc1219a1d1c46a51abc9"
     },
     "skills/setup-superdev/scripts/sheet.awk": {
-      "reference": "02e440e63282f14eea90aa55920e0fba8ac7c0f51880d1795b0984e0932de754"
-    },
-    "skills/setup-superdev/SKILL.md": {
-      "reference": "17e2a834e1f042c810adc4abd1a67dee1101e2c2b365d3c2626009178719385f",
-      "adaptation": "83b8658df9628272f69ea3150ef043e5effe6f7010d43404704558a0274a7ec5",
-      "reason": "Keep complete repository onboarding before the ten-step model setup, with the setup-superdev command matching the upstream naming pattern."
+      "reference": "d5dbd5a4f4f1e419a52aa8a0f3883d1505fe06c7bafaa5466a3b44671e43c058"
     },
     "skills/sharpen/SKILL.md": {
       "reference": "106c6543a6fde59f0b8bb387ea96e51e38d5813a49044469c1f6d90f38f26550"
+    },
+    "skills/show-me-your-work/SKILL.md": {
+      "reference": "ad202c3cc6c6aa5bafc30d6d8cb0eefdc99b4c15f9093a599daa066ba0031196",
+      "adaptation": "4a45ccba6007d1192e141d07d5dea12b91ec1fc6c803f2e83ce80da5dc176260",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/show-me-your-work/references/decision-log-template.tsv": {
       "reference": "ce5219fde74b7be36fe9ac72af67986135194ec9c97e27db30cb1273c639261e"
@@ -749,14 +416,16 @@
     "skills/show-me-your-work/scripts/log.sh": {
       "reference": "fc8fefd01b24127f7d980389ffc010aed3c156268a765b06b31ddabc0fbe2201"
     },
-    "skills/show-me-your-work/SKILL.md": {
-      "reference": "d32ff256f8197d91c94bee6f7ec6ff591568ef6ee636da2f0ac46e0eb07096b4"
+    "skills/statechart/SKILL.md": {
+      "reference": "3ffdb85a35063a80f35563c120c5b822c91ae06f9e27f9163e406826a6a57fc1",
+      "adaptation": "fb03c37e45462bebd712a94eba3d81858e22284e9a99d7deb076e9d98b637d43",
+      "reason": "Invoke the TypeScript entry point directly on Windows and POSIX; use sh for copied launchers without executable permissions."
     },
     "skills/statechart/references/render.md": {
       "reference": "908d13811e225d775e529fb1c95864776ad425c4b7445cf730dd4b524a7bd66d"
     },
     "skills/statechart/scripts/backends/cfg.ts": {
-      "reference": "eb87b2e0983342a760896b3b48a7a64b7747fe79f7368e18fa3aeef70aa3f0d2"
+      "reference": "bd8be7d60338758feb1a399694134b1dbc828816831ff23e7ce58db11d99e438"
     },
     "skills/statechart/scripts/backends/mermaid.ts": {
       "reference": "39b75eeb83aab0a97b9b7c120c8f9dc8aedfe38481384d4dd4bec514daa48839"
@@ -771,7 +440,7 @@
       "reference": "7a207197b7a9d1941b7a0a8d79b5d0a637c3292a905fec5d9b13e0844e429dde"
     },
     "skills/statechart/scripts/frontends/config.ts": {
-      "reference": "b652eded95912f6823646d24d74a024e6e91bde7d2ca39b37ec0d50659802363"
+      "reference": "fe8d59a80ba952c9b6b8416d6d6d4fa89b57b8d83c660956f1f43d8e32463b77"
     },
     "skills/statechart/scripts/frontends/dot.ts": {
       "reference": "a1ef3dd71032cc491507a2b940d3ffd6cb38e26fcaf4c3caa68614090c35a44d"
@@ -780,10 +449,10 @@
       "reference": "6e8b59002d8623e5fa518a6be34a6f74d880bd7ce4cc30828642af50c09a4df0"
     },
     "skills/statechart/scripts/frontends/messages.ts": {
-      "reference": "b96aef78ce16658bcdf0f8fb8a282ebde897fc34ad2a6f50ea01f95168691670"
+      "reference": "17fdaa171d058cbc9233959295fc01a03bb888fbade7ad85e163f7b1a815f055"
     },
     "skills/statechart/scripts/frontends/spec.ts": {
-      "reference": "8380966412c27e148df15e18ac470ae4d97b5010ba509d7829c41de1692eaa95"
+      "reference": "d9e920ed54d5519e6ee845e749c49117fa0c478cb08ab334fd5fe355c8802562"
     },
     "skills/statechart/scripts/frontends/trace.ts": {
       "reference": "db6d8a9378ac58bc368fee13492b9483fbf777c6b67925236316472afa6ee011"
@@ -795,10 +464,13 @@
       "reference": "b2ddc9ce8405b4c13ad2351b1539c431113a0a4292b3713df98a6ec5cbbb8568"
     },
     "skills/statechart/scripts/frontends/view.ts": {
-      "reference": "17287a4eb05831b8809a98902fbe4a7121b5a239847bc63669128bf2c85659de"
+      "reference": "0ed89c6675eda3424c969b8bac2d97fccea710208677c58dec0999d7bb49fb83"
     },
     "skills/statechart/scripts/ir.ts": {
-      "reference": "f0dec17849add6824268266bed5e804e713c7f9f32827dc46a2064590f2b7447"
+      "reference": "91ee4812d16101cf2a7af358940687dcab6f710178d5be9d274b7a41cedf9389"
+    },
+    "skills/statechart/scripts/janitor.ts": {
+      "reference": "56b6aa558b17a49e39e192ddbebd8f44049b7ce1c2254f6ae94fe1cc26f8dd15"
     },
     "skills/statechart/scripts/package.json": {
       "reference": "c442439ef8142816e551ad0693e96ffbe887912690d5673c91949d38f6dacc7c"
@@ -807,7 +479,7 @@
       "reference": "c6a223c0f0a83643f379eb94e56e706c11510733b6037cc7ab6c8b3b3a331155"
     },
     "skills/statechart/scripts/passes/label.ts": {
-      "reference": "4cb86f142914b010f0ab021c90f5ac88ac802e12b0597944734effb909978128"
+      "reference": "fab6a2e517d897fd1efc4a9a2ffcb54e1f3773078268c48d6ed57ee7f91c18d7"
     },
     "skills/statechart/scripts/passes/lift.ts": {
       "reference": "fb3b8021daf90813ee6fc6ef838b1a9c4dba3934658f57b4bab8aeece69a62d5"
@@ -825,22 +497,25 @@
       "reference": "cc55462e4b7857b3302e3d6007440e4583f9469c686b526283e5ff638176eef0"
     },
     "skills/statechart/scripts/passes/regions.ts": {
-      "reference": "fe7c1a7cdc109ccab050780ea94f7fc5cd0f8a18e1d4b4800f83c6b7b5635114"
+      "reference": "67ac070beb1c4620316499e0ce74bd0636c9e6eb324a8f6782785ca9706e8c16"
     },
     "skills/statechart/scripts/pipeline.ts": {
       "reference": "5d385202ba559626e36f7c45c544fd53cb51c5be754f83ba1578c058c545105f"
     },
     "skills/statechart/scripts/run.ts": {
-      "reference": "d0ff3b20ace24cd6c87ac3622ac08091e615905cee91a6a8d8170bd94e0b6a19"
+      "reference": "17eda3c19a3da96cd39e64e5ec13f880ecceb57868d4f9357ed5e159692f879f"
     },
     "skills/statechart/scripts/statechart": {
       "reference": "aa38b70276a4f23512585a65f1acbbb26418790b7648846cab020f58f9f29f3f"
     },
     "skills/statechart/scripts/statechart.ts": {
-      "reference": "86fa43f8ad8d7100609303a27c90087cf0800bbf5a27dfdf7a8a2d9a25931e95"
+      "reference": "3bf160bf53d5807c8bf43cb909bdca17dae4bfeae7cee6e76c1755c60376ecb1"
+    },
+    "skills/statechart/scripts/test/ConfigOracle.java": {
+      "reference": "c72f94f046925003a706b8fdb6888c1f0cbcea02fe49c6652ba99826d34e5f80"
     },
     "skills/statechart/scripts/test/chart.test.ts": {
-      "reference": "14f810a048b336385c22efbcb9caad06ab70c9106bcdf7db7e3eb7ea24b9291b"
+      "reference": "3b903785d8ebd9d214c87d0f49bce142c0d6cf485905c83fb81692be05944305"
     },
     "skills/statechart/scripts/test/charts/Braces.mmd": {
       "reference": "7484725b5657fde47f1517720285d49bf2a4877598948adbc294c83bc5a7c9ee"
@@ -851,19 +526,19 @@
     "skills/statechart/scripts/test/charts/Phases.mmd": {
       "reference": "3f28741509003b2524d7ad94ae08d6050b006f3ef9f20de3d7662db32e9e8725"
     },
+    "skills/statechart/scripts/test/child-env.test.ts": {
+      "reference": "0be7f5ad786964a0030191561067849e7808dec94bcb99e95d5ab59081363104"
+    },
     "skills/statechart/scripts/test/cli.test.ts": {
-      "reference": "09542102a07659de705d4be314cb8c10db455d2a37f89de1a688f732ac5aa00f",
-      "adaptation": "add1abbc0c97913a0e9c936564969b67027444de7aa7e4bac569dfeda8376cfd",
+      "reference": "d3ae71ea4bf6916504df9f421e5a4a423d8a2996d51826511c5e3be695f2ceb9",
+      "adaptation": "7cb47508d2d9d948947366b7132661897964f57f201aa8eb2b1bd4070721b3a5",
       "reason": "Exercise the shell launcher through /bin/sh so copied files need no executable mode, including symlink and runtime-selection cases."
     },
     "skills/statechart/scripts/test/config-fuzz.test.ts": {
-      "reference": "8861aa79be7dc39d3e81a028fbc27c7abfab22849af11330330919d53f0e7cdb"
+      "reference": "21c2249ed608f4b154a10e925af0917d362bcac9a2e6dcd0f08b02db595e16e6"
     },
-    "skills/statechart/scripts/test/ConfigOracle.java": {
-      "reference": "c72f94f046925003a706b8fdb6888c1f0cbcea02fe49c6652ba99826d34e5f80"
-    },
-    "skills/statechart/scripts/test/corpus/Counter/chart.mmd": {
-      "reference": "a3aa30cd77de18a7e5c3142fc393e4af82dc61221fa708f8f4bad96a29f6c029"
+    "skills/statechart/scripts/test/corpus.test.ts": {
+      "reference": "1ed9e809bf43b62f1fba431942351f5265a4192cd58a94b152f1173d6bc9c0c5"
     },
     "skills/statechart/scripts/test/corpus/Counter/ChartRun.out": {
       "reference": "33d6be1315e6bd688aa2b820a4a8d478d67eaf582c99e3ae6550282dca66667c"
@@ -873,6 +548,9 @@
     },
     "skills/statechart/scripts/test/corpus/Counter/Counter.tla": {
       "reference": "d7d8bdf2ce50a212adc1348e3d51f722d31d24b50b90db4664528a38ca7bab2c"
+    },
+    "skills/statechart/scripts/test/corpus/Counter/chart.mmd": {
+      "reference": "a3aa30cd77de18a7e5c3142fc393e4af82dc61221fa708f8f4bad96a29f6c029"
     },
     "skills/statechart/scripts/test/corpus/Counter/graph.dot": {
       "reference": "4c12b6f39274a6227df5837a066430cc2ce5b928d0c8cf63269bd428367c7026"
@@ -886,9 +564,6 @@
     "skills/statechart/scripts/test/corpus/Counter/verdict-1.out": {
       "reference": "7c113789da88cac0662fa2659dd912646bde2734a1b02f3825ef418a91e6faf6"
     },
-    "skills/statechart/scripts/test/corpus/CounterAction/chart.mmd": {
-      "reference": "2bf6dda78f142ab47776998ffc1407571ac3996607433a2f40936334bc16709d"
-    },
     "skills/statechart/scripts/test/corpus/CounterAction/ChartRun.out": {
       "reference": "4310f04e67189dbe75e97176a16da7276f41cc489039f8522f6030ce78b47d15"
     },
@@ -897,6 +572,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterAction/CounterAction.tla": {
       "reference": "d724d5986f053a4dc54c8f4f2ff11c1da701aed5ff5ea195c804016a507f4e98"
+    },
+    "skills/statechart/scripts/test/corpus/CounterAction/chart.mmd": {
+      "reference": "2bf6dda78f142ab47776998ffc1407571ac3996607433a2f40936334bc16709d"
     },
     "skills/statechart/scripts/test/corpus/CounterAction/graph.dot": {
       "reference": "906fdbce95c4d0628441a231d9d9124d506d34f95ba08f653f3db084d13c5c1d"
@@ -922,9 +600,6 @@
     "skills/statechart/scripts/test/corpus/CounterAction/verdict-3.out": {
       "reference": "20a5551466fa15628f0d324e1f728985fe6a31076704f8001b7e438d8f018b15"
     },
-    "skills/statechart/scripts/test/corpus/CounterDeadlock/chart.mmd": {
-      "reference": "5640b03aaa84eebbd541c7f84cdb529944a6a772cff59f9660adf957ae51690e"
-    },
     "skills/statechart/scripts/test/corpus/CounterDeadlock/ChartRun.out": {
       "reference": "53f981971c638a7360339a55b82481b22d1d1803df5234358de3a515635e5dd1"
     },
@@ -933,6 +608,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterDeadlock/CounterDeadlock.tla": {
       "reference": "225bc683d79942bb6a6797ac08d1c0acd064033fd4adb6a7de1d2c874d753ff6"
+    },
+    "skills/statechart/scripts/test/corpus/CounterDeadlock/chart.mmd": {
+      "reference": "5640b03aaa84eebbd541c7f84cdb529944a6a772cff59f9660adf957ae51690e"
     },
     "skills/statechart/scripts/test/corpus/CounterDeadlock/graph.dot": {
       "reference": "4c12b6f39274a6227df5837a066430cc2ce5b928d0c8cf63269bd428367c7026"
@@ -955,9 +633,6 @@
     "skills/statechart/scripts/test/corpus/CounterDeadlock/verdict-2.out": {
       "reference": "641074597b0abd74ecd0dff9e85e1e0e0c5ff3bd5a225550033c16e594db062a"
     },
-    "skills/statechart/scripts/test/corpus/CounterFan/chart.mmd": {
-      "reference": "bfae42d759c8bd3a109db13d572bbe89fd2f017b575036e0892a465f2dc0355d"
-    },
     "skills/statechart/scripts/test/corpus/CounterFan/ChartRun.out": {
       "reference": "4b5fa503a2d6b3c57cdb0786ec5f1d353ae6fcab5e482c3b2bc190f2fadbb0f7"
     },
@@ -966,6 +641,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterFan/CounterFan.tla": {
       "reference": "49201241e74873abadb82f51846d136957fed0a4505210cbea4bcf01c254d29f"
+    },
+    "skills/statechart/scripts/test/corpus/CounterFan/chart.mmd": {
+      "reference": "bfae42d759c8bd3a109db13d572bbe89fd2f017b575036e0892a465f2dc0355d"
     },
     "skills/statechart/scripts/test/corpus/CounterFan/graph.dot": {
       "reference": "ee3e20bd9b56b5dc2cc21b653719a588c9dbe08855e0493c262e3c673cea2805"
@@ -985,9 +663,6 @@
     "skills/statechart/scripts/test/corpus/CounterFan/verdict-2.out": {
       "reference": "a29c88fbe4d4876c314607597b64d0dafcb26c5d416cfcb17f0d359994e81119"
     },
-    "skills/statechart/scripts/test/corpus/CounterGuard/chart.mmd": {
-      "reference": "6a77a5e9d5a3609b13a3540ce315e2b672d7ab0910e1da29391cdcea91b8ebd5"
-    },
     "skills/statechart/scripts/test/corpus/CounterGuard/ChartRun.exit": {
       "reference": "f369cb89fc627e668987007d121ed1eacdc01db9e28f8bb26f358b7d8c4f08ac"
     },
@@ -999,6 +674,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterGuard/CounterGuard.tla": {
       "reference": "8705154d55ea1ea3624503b7798735d7e71b895f80c996047d0ac50c83e38d13"
+    },
+    "skills/statechart/scripts/test/corpus/CounterGuard/chart.mmd": {
+      "reference": "6a77a5e9d5a3609b13a3540ce315e2b672d7ab0910e1da29391cdcea91b8ebd5"
     },
     "skills/statechart/scripts/test/corpus/CounterGuard/graph.dot": {
       "reference": "7b0b58221d3980d6d64cb979c22523fbfe5796e465bae79e6d19fdd9c607e547"
@@ -1021,9 +699,6 @@
     "skills/statechart/scripts/test/corpus/CounterGuard/verdict-2.out": {
       "reference": "f125f825cb0e8df74021c2be50c2564612f3f7124db73b29c4269d41511289b9"
     },
-    "skills/statechart/scripts/test/corpus/CounterInitPast/chart.mmd": {
-      "reference": "b52af62a729ad00706b4d19e2ab5c3537e1431cdcbdcc4445a882050118775c3"
-    },
     "skills/statechart/scripts/test/corpus/CounterInitPast/ChartRun.out": {
       "reference": "6815ae9707ec7f293192dd2cccf624d7aa2515bedea8d951d794776db066bcd1"
     },
@@ -1032,6 +707,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterInitPast/CounterInitPast.tla": {
       "reference": "f3d401262a2e5e4e60ad2c06fafd363c8b51d81c756772be302496177a7e799a"
+    },
+    "skills/statechart/scripts/test/corpus/CounterInitPast/chart.mmd": {
+      "reference": "b52af62a729ad00706b4d19e2ab5c3537e1431cdcbdcc4445a882050118775c3"
     },
     "skills/statechart/scripts/test/corpus/CounterInitPast/graph.dot": {
       "reference": "372ed91b09c1602514668fe24101315737f060e607fb959af0b55dde9efc4ed1"
@@ -1051,9 +729,6 @@
     "skills/statechart/scripts/test/corpus/CounterInitPast/verdict-2.out": {
       "reference": "5722396243388bc471fbb8a7ca0e629cde91a7d99b04900aae654734ba52a410"
     },
-    "skills/statechart/scripts/test/corpus/CounterInitPastHolds/chart.mmd": {
-      "reference": "b4a65dfdd9dede1028b6508b01f1a713bec8364051282b3732d26929b2b76113"
-    },
     "skills/statechart/scripts/test/corpus/CounterInitPastHolds/ChartRun.out": {
       "reference": "6549dc27da25a34babc2f283f2a7dba08882f5e5f281a829dc88432fd477ff69"
     },
@@ -1062,6 +737,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterInitPastHolds/CounterInitPastHolds.tla": {
       "reference": "16ee361fda4ac550e2738b9d396385c909f4104ff3f331e1e58449ef1669cb0c"
+    },
+    "skills/statechart/scripts/test/corpus/CounterInitPastHolds/chart.mmd": {
+      "reference": "b4a65dfdd9dede1028b6508b01f1a713bec8364051282b3732d26929b2b76113"
     },
     "skills/statechart/scripts/test/corpus/CounterInitPastHolds/graph.dot": {
       "reference": "372ed91b09c1602514668fe24101315737f060e607fb959af0b55dde9efc4ed1"
@@ -1075,9 +753,6 @@
     "skills/statechart/scripts/test/corpus/CounterInitPastHolds/verdict-1.out": {
       "reference": "d1808757696269bdbe8396050b26fb5d42e1670f5058a0659e29d76593332413"
     },
-    "skills/statechart/scripts/test/corpus/CounterInstance/chart.mmd": {
-      "reference": "bb26fe13f66b6c37cd5fd2a5513a35eb040f803b43f551e1b3bf46244738845b"
-    },
     "skills/statechart/scripts/test/corpus/CounterInstance/ChartRun.out": {
       "reference": "619492956bb2ba261678ac6c0567caebe6c81b97bc74c4ca006da2010ea9e0e9"
     },
@@ -1089,6 +764,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterInstance/CounterSteps.tla": {
       "reference": "077d63e2c09a13c2747610d63ca4d528f73698499eb92a7a6cf6aaeb2e4f8148"
+    },
+    "skills/statechart/scripts/test/corpus/CounterInstance/chart.mmd": {
+      "reference": "bb26fe13f66b6c37cd5fd2a5513a35eb040f803b43f551e1b3bf46244738845b"
     },
     "skills/statechart/scripts/test/corpus/CounterInstance/graph.dot": {
       "reference": "ca06f91bdafb423be1fac388ab5b90d8f78ff96148c2120a61e085f0dc4c108b"
@@ -1105,9 +783,6 @@
     "skills/statechart/scripts/test/corpus/CounterInstance/verdict-1.out": {
       "reference": "3a826a96f9479f91d06dd16a8f25a0463ddb1d74d15872c575045e8f57b2ff8b"
     },
-    "skills/statechart/scripts/test/corpus/CounterJump/chart.mmd": {
-      "reference": "7ce0ea7d80225110a63efcdd69bdf6de4fdf68966ccf388b6ec4d51be47b5906"
-    },
     "skills/statechart/scripts/test/corpus/CounterJump/ChartRun.out": {
       "reference": "923677547c68d9c9ed84295c961d9c4d994d0ce52a40996d7087008098a97536"
     },
@@ -1116,6 +791,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterJump/CounterJump.tla": {
       "reference": "5e519b2c8bd3666f1182aa12a2b4fbba38ffcf118f34de00af8b2e0275a90763"
+    },
+    "skills/statechart/scripts/test/corpus/CounterJump/chart.mmd": {
+      "reference": "7ce0ea7d80225110a63efcdd69bdf6de4fdf68966ccf388b6ec4d51be47b5906"
     },
     "skills/statechart/scripts/test/corpus/CounterJump/graph.dot": {
       "reference": "f829d5cb1d9027aed499564e5574c8955d91a9b3decb32179000de757c9817a1"
@@ -1135,9 +813,6 @@
     "skills/statechart/scripts/test/corpus/CounterJump/verdict-2.out": {
       "reference": "971c2442970db452a426ad4adde1fb0c57745e964007289b157935f87b4370d2"
     },
-    "skills/statechart/scripts/test/corpus/CounterLoop/chart.mmd": {
-      "reference": "559b63130bce833184f547ec4252553f86f1ea6effaa3f02d95ce8c5dd1121f4"
-    },
     "skills/statechart/scripts/test/corpus/CounterLoop/ChartRun.out": {
       "reference": "52b5abbd52a7b57047170315bf54d118f4d79ec1ee8fb49dd8e9ac2de12c490c"
     },
@@ -1146,6 +821,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterLoop/CounterLoop.tla": {
       "reference": "e41d7034dfb32a4cc35eb3220a1625ef8e3118988ece30c42403ac26fcda8d78"
+    },
+    "skills/statechart/scripts/test/corpus/CounterLoop/chart.mmd": {
+      "reference": "559b63130bce833184f547ec4252553f86f1ea6effaa3f02d95ce8c5dd1121f4"
     },
     "skills/statechart/scripts/test/corpus/CounterLoop/graph.dot": {
       "reference": "6558ade4931cfbe5c28ed713504072976d401072dad6acc4506c84afb3169b99"
@@ -1162,9 +840,6 @@
     "skills/statechart/scripts/test/corpus/CounterLoop/verdict-1.out": {
       "reference": "f8fc2b7df18546ab684aab4e5e185e96bf2aaf7c9c4fdf94694adc495e380efe"
     },
-    "skills/statechart/scripts/test/corpus/CounterOrder/chart.mmd": {
-      "reference": "8e0b5de0fd3e60de9d96c5fe1a5a134f7b31e9cc968f1095a0ae0d6bc0528f58"
-    },
     "skills/statechart/scripts/test/corpus/CounterOrder/ChartRun.out": {
       "reference": "ad2f9f2ef5b70b50fd04a1c06f493caee74d0bdacdc5a5b4ff606ad901123f55"
     },
@@ -1173,6 +848,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterOrder/CounterOrder.tla": {
       "reference": "6b1b8d0bb8d95118ac529367b4069a35b474cdfb621d4d9c8272f99cad527a5f"
+    },
+    "skills/statechart/scripts/test/corpus/CounterOrder/chart.mmd": {
+      "reference": "8e0b5de0fd3e60de9d96c5fe1a5a134f7b31e9cc968f1095a0ae0d6bc0528f58"
     },
     "skills/statechart/scripts/test/corpus/CounterOrder/graph.dot": {
       "reference": "7a5d0a1efcf36b579f640e283c38a2054c8740cf96bb2b332bb42e2aaff8481c"
@@ -1195,9 +873,6 @@
     "skills/statechart/scripts/test/corpus/CounterOrder/verdict-2.out": {
       "reference": "768e90783edfc8e448063ce19bc86b9f2ed31a3fedf73500dc0e0f0b39f2437f"
     },
-    "skills/statechart/scripts/test/corpus/CounterRules/chart.mmd": {
-      "reference": "4798c47f2676bdf1bea94cd2eac5041339cb7f97e2b0c3b0066765862dfad58b"
-    },
     "skills/statechart/scripts/test/corpus/CounterRules/ChartRun.out": {
       "reference": "05deec5fbe6e716cad2f44b7c729e90ea52b071330772819b087891597ae60a5"
     },
@@ -1207,11 +882,14 @@
     "skills/statechart/scripts/test/corpus/CounterRules/CounterRules.tla": {
       "reference": "a66557dd5bd683989aff0c9eca6b1ceefa672370e2917bfa04b6ec9fdcc730d9"
     },
-    "skills/statechart/scripts/test/corpus/CounterRules/graph.dot": {
-      "reference": "80b70738200d8b16e52b598fd6ddffb607f672550168cc8756c8605180210fce"
-    },
     "skills/statechart/scripts/test/corpus/CounterRules/Moves.tla": {
       "reference": "ae3e66c32d6e9281fef4d8a79660d658e2856c8b3c95898612abf1c3cb1f041b"
+    },
+    "skills/statechart/scripts/test/corpus/CounterRules/chart.mmd": {
+      "reference": "4798c47f2676bdf1bea94cd2eac5041339cb7f97e2b0c3b0066765862dfad58b"
+    },
+    "skills/statechart/scripts/test/corpus/CounterRules/graph.dot": {
+      "reference": "80b70738200d8b16e52b598fd6ddffb607f672550168cc8756c8605180210fce"
     },
     "skills/statechart/scripts/test/corpus/CounterRules/report.md": {
       "reference": "379cb7171830f8f0e2692e2349a941d6680acc53759d4afacbc5ec0b9596d2ee"
@@ -1240,9 +918,6 @@
     "skills/statechart/scripts/test/corpus/CounterRules/verdict-4.out": {
       "reference": "892cf8e02869bfb82bd54849ab5ad1b66dcacb67e3072bc54faac1f2be242bb2"
     },
-    "skills/statechart/scripts/test/corpus/CounterStart/chart.mmd": {
-      "reference": "c2a246b4526178a779e160f922a82db16888baa9fd83489b9f5f9e8b30e1b1a8"
-    },
     "skills/statechart/scripts/test/corpus/CounterStart/ChartRun.out": {
       "reference": "21b425bcaf4172db4558d1ecd644c737eb8204a271e2604f993b06bfa1394acf"
     },
@@ -1251,6 +926,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterStart/CounterStart.tla": {
       "reference": "b143a8486f450ff38ef32b30fed60e23b5ff2cfe121ce4372f35d15d24d9b122"
+    },
+    "skills/statechart/scripts/test/corpus/CounterStart/chart.mmd": {
+      "reference": "c2a246b4526178a779e160f922a82db16888baa9fd83489b9f5f9e8b30e1b1a8"
     },
     "skills/statechart/scripts/test/corpus/CounterStart/graph.dot": {
       "reference": "1c259eb08cedb809a62f24d59232f229d2cc0df8f6bd97285946ce2d586daaef"
@@ -1270,9 +948,6 @@
     "skills/statechart/scripts/test/corpus/CounterStart/verdict-2.out": {
       "reference": "a6fdd3137647a9e81e96a45376a66d6b5893ff16fa3b464610da51db82ef4b51"
     },
-    "skills/statechart/scripts/test/corpus/CounterStop/chart.mmd": {
-      "reference": "5b2874d91326401d33f973ad0649f051f5fb8c938d3267189d8e1582f226737d"
-    },
     "skills/statechart/scripts/test/corpus/CounterStop/ChartRun.out": {
       "reference": "6397380b5ac9a28bc1640c9ba5f93cf7e7a9354013e118cadae111b51dba64be"
     },
@@ -1281,6 +956,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterStop/CounterStop.tla": {
       "reference": "cb1df3bb5e2e0bc79e68b1c4e127a9eef493bed62d028c98cc039fde5be28ec7"
+    },
+    "skills/statechart/scripts/test/corpus/CounterStop/chart.mmd": {
+      "reference": "5b2874d91326401d33f973ad0649f051f5fb8c938d3267189d8e1582f226737d"
     },
     "skills/statechart/scripts/test/corpus/CounterStop/graph.dot": {
       "reference": "1c259eb08cedb809a62f24d59232f229d2cc0df8f6bd97285946ce2d586daaef"
@@ -1294,9 +972,6 @@
     "skills/statechart/scripts/test/corpus/CounterStop/verdict-1.out": {
       "reference": "f8594a9b0debaa84ae8e10b4c4749b677d54419d41005ed8edd9fe52fe56590f"
     },
-    "skills/statechart/scripts/test/corpus/CounterTie/chart.mmd": {
-      "reference": "b0ea516a7416120d56eacbaff5f2caa45e77f9d617359db25b3e351474a0493f"
-    },
     "skills/statechart/scripts/test/corpus/CounterTie/ChartRun.out": {
       "reference": "ece679d0b1a64e18be8d5949fe505c386ff0add8589f88ed31b80b45a13e676a"
     },
@@ -1305,6 +980,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterTie/CounterTie.tla": {
       "reference": "f023b541d92385f1d972a318c79723145626f1ed87327a6c7d6969d3f1eb41f8"
+    },
+    "skills/statechart/scripts/test/corpus/CounterTie/chart.mmd": {
+      "reference": "b0ea516a7416120d56eacbaff5f2caa45e77f9d617359db25b3e351474a0493f"
     },
     "skills/statechart/scripts/test/corpus/CounterTie/graph.dot": {
       "reference": "906fdbce95c4d0628441a231d9d9124d506d34f95ba08f653f3db084d13c5c1d"
@@ -1336,9 +1014,6 @@
     "skills/statechart/scripts/test/corpus/CounterTie/verdict-4.out": {
       "reference": "938e838f5d4567bff7d21a7e1b38ee70b6cefa5cda56b319555a7a847e8aa354"
     },
-    "skills/statechart/scripts/test/corpus/CounterTieInGraph/chart.mmd": {
-      "reference": "37ad8c628762b1b3b92968453a4478177bbc765e4b998688d93435fe24f79c7a"
-    },
     "skills/statechart/scripts/test/corpus/CounterTieInGraph/ChartRun.out": {
       "reference": "7c8a26b9fd404806227d7e755815f78ff910d8d9fcd7d1f7ff68342c6140c692"
     },
@@ -1347,6 +1022,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterTieInGraph/CounterTieInGraph.tla": {
       "reference": "cb7e0848fe64bfd00257c69187dae15ee2e61e2dbf5d7d3d299b523269567862"
+    },
+    "skills/statechart/scripts/test/corpus/CounterTieInGraph/chart.mmd": {
+      "reference": "37ad8c628762b1b3b92968453a4478177bbc765e4b998688d93435fe24f79c7a"
     },
     "skills/statechart/scripts/test/corpus/CounterTieInGraph/graph.dot": {
       "reference": "ec76c05526f13d71d561cd67118da823cb0337af4f4d7b011d84f420aa8663ed"
@@ -1366,9 +1044,6 @@
     "skills/statechart/scripts/test/corpus/CounterTieInGraph/verdict-2.out": {
       "reference": "f36313dd355def836c5757e161644f3413301c92ba30e46ee95363bf33ed789b"
     },
-    "skills/statechart/scripts/test/corpus/CounterView/chart.mmd": {
-      "reference": "7a7445a35e34b1e5242110cae22194f3fc74117c65043afc8d682ec29f8bd9c2"
-    },
     "skills/statechart/scripts/test/corpus/CounterView/ChartRun.out": {
       "reference": "94083053777d05a8f99d72836e9b7d40a7975c11a97fac2f8647bca199768490"
     },
@@ -1377,6 +1052,9 @@
     },
     "skills/statechart/scripts/test/corpus/CounterView/CounterView.tla": {
       "reference": "6516eb6c206052b11a42654d641074669431615cef692663afca8aaec2f43e53"
+    },
+    "skills/statechart/scripts/test/corpus/CounterView/chart.mmd": {
+      "reference": "7a7445a35e34b1e5242110cae22194f3fc74117c65043afc8d682ec29f8bd9c2"
     },
     "skills/statechart/scripts/test/corpus/CounterView/graph.dot": {
       "reference": "906fdbce95c4d0628441a231d9d9124d506d34f95ba08f653f3db084d13c5c1d"
@@ -1411,9 +1089,6 @@
     "skills/statechart/scripts/test/corpus/CounterView/view.mjs": {
       "reference": "878dc59774e16464acd2cf84464b6b3367c08ba4340c1f027bbfedc9aee29828"
     },
-    "skills/statechart/scripts/test/corpus/DieHard/chart.mmd": {
-      "reference": "30fa54ef046aa9d19edb127b03130e1b648143b63c8a51ccc2555e232eaa3af9"
-    },
     "skills/statechart/scripts/test/corpus/DieHard/ChartRun.out": {
       "reference": "65586a1246976576c720ae1fa9e19bfe65dbdd04670aa45bb4c9f192a6dcdfb2"
     },
@@ -1422,6 +1097,9 @@
     },
     "skills/statechart/scripts/test/corpus/DieHard/DieHard.tla": {
       "reference": "4b2dbc2ace02e5aa7d518d314f8ed5cda1a0b9dac8aa309fbb4773249486baa7"
+    },
+    "skills/statechart/scripts/test/corpus/DieHard/chart.mmd": {
+      "reference": "30fa54ef046aa9d19edb127b03130e1b648143b63c8a51ccc2555e232eaa3af9"
     },
     "skills/statechart/scripts/test/corpus/DieHard/graph.dot": {
       "reference": "6cf64ad56b08000c6a3f05aecd54331b71192aca1de3d737afe24b157a06ee84"
@@ -1441,9 +1119,6 @@
     "skills/statechart/scripts/test/corpus/DieHard/verdict-2.out": {
       "reference": "39fc2e59bc5577d4c9e1ffcc56de1db68e525432393e7e30ac58cea34b39baab"
     },
-    "skills/statechart/scripts/test/corpus/FirstRule/chart.mmd": {
-      "reference": "307d4cbf2ab717b0983c4ea7c8ea9db2969833bfee58e4623c9ddfd793ab6d6a"
-    },
     "skills/statechart/scripts/test/corpus/FirstRule/ChartRun.out": {
       "reference": "26a726f261e39f33824697e7a145fec71745e7f975b8b2ff78a227ae86db098e"
     },
@@ -1452,6 +1127,9 @@
     },
     "skills/statechart/scripts/test/corpus/FirstRule/FirstRule.tla": {
       "reference": "9b09bd1cd727a991378dba6c3ceba30fec8c458bd2f4e812c989e61b018f9d30"
+    },
+    "skills/statechart/scripts/test/corpus/FirstRule/chart.mmd": {
+      "reference": "307d4cbf2ab717b0983c4ea7c8ea9db2969833bfee58e4623c9ddfd793ab6d6a"
     },
     "skills/statechart/scripts/test/corpus/FirstRule/graph.dot": {
       "reference": "a1b348348bf032ff81cfd796ae19f8cdcf491d5af18eab73ebfca3058a15691b"
@@ -1486,20 +1164,20 @@
     "skills/statechart/scripts/test/corpus/FirstRule/verdict-4.out": {
       "reference": "2c4331214b77fbf21068282073f50e01b71599185fa78352e43706f6ea359aaa"
     },
-    "skills/statechart/scripts/test/corpus/HiddenClock/chart.mmd": {
-      "reference": "03a162efe339c2772298299ab3aa05d2121b445a6d19178acb671464343525f9"
-    },
     "skills/statechart/scripts/test/corpus/HiddenClock/ChartRun.out": {
       "reference": "6aa12b2a1076a2c65b89ddc7f1f217e5617a1b054b8ed1c33a0184abb9df6eb0"
-    },
-    "skills/statechart/scripts/test/corpus/HiddenClock/graph.dot": {
-      "reference": "abfe48a392e3f5217684882942261deb1a117e63e3e3836f037a551019fff710"
     },
     "skills/statechart/scripts/test/corpus/HiddenClock/HiddenClock.cfg": {
       "reference": "17c33501d7d49957cfb14ba8d02a47f5b7fbe3d39b1ed26033e34378583dcfdc"
     },
     "skills/statechart/scripts/test/corpus/HiddenClock/HiddenClock.tla": {
       "reference": "b99058fb1824f1c165de0acd919e71dac4c29f7d4a9adf858d8a0904d2997863"
+    },
+    "skills/statechart/scripts/test/corpus/HiddenClock/chart.mmd": {
+      "reference": "03a162efe339c2772298299ab3aa05d2121b445a6d19178acb671464343525f9"
+    },
+    "skills/statechart/scripts/test/corpus/HiddenClock/graph.dot": {
+      "reference": "abfe48a392e3f5217684882942261deb1a117e63e3e3836f037a551019fff710"
     },
     "skills/statechart/scripts/test/corpus/HiddenClock/report.md": {
       "reference": "9837f386defde8c0aac7557c00d9ed8d3115c60236c35f13305298884114c31f"
@@ -1513,20 +1191,20 @@
     "skills/statechart/scripts/test/corpus/HiddenClock/verdict-1.out": {
       "reference": "7544e5ce9e82bc618f016ebc5ac88f462326111ca6a249e9583315eacbfaca96"
     },
-    "skills/statechart/scripts/test/corpus/Login/chart.mmd": {
-      "reference": "65f7484e1dea91806c3c60996de23822bce4dd75ae3be8f00f92102035d34ee8"
-    },
     "skills/statechart/scripts/test/corpus/Login/ChartRun.out": {
       "reference": "2cba91a53c7c4916f0f5b9b9c76d1d608538d9c090e8f57dbcae44d6f94c3f13"
-    },
-    "skills/statechart/scripts/test/corpus/Login/graph.dot": {
-      "reference": "f120b5583e931755578032d87cedf5bcadc4cb4c4ef497605b4290e1de704673"
     },
     "skills/statechart/scripts/test/corpus/Login/Login.cfg": {
       "reference": "bbd2bcb14e6e1500eea1f060ef38579e8ef5abd118c152859126ebd88fa86a48"
     },
     "skills/statechart/scripts/test/corpus/Login/Login.tla": {
       "reference": "dede54f53672fd19dcaf543d3fe507b09336a72efdd889535a4e1ed7c88fdb4c"
+    },
+    "skills/statechart/scripts/test/corpus/Login/chart.mmd": {
+      "reference": "65f7484e1dea91806c3c60996de23822bce4dd75ae3be8f00f92102035d34ee8"
+    },
+    "skills/statechart/scripts/test/corpus/Login/graph.dot": {
+      "reference": "f120b5583e931755578032d87cedf5bcadc4cb4c4ef497605b4290e1de704673"
     },
     "skills/statechart/scripts/test/corpus/Login/report.md": {
       "reference": "f37165d67b4138b6541a0877bb9db5cee5067c634456d60cd4e30156d5031fa7"
@@ -1540,20 +1218,20 @@
     "skills/statechart/scripts/test/corpus/Login/view.mjs": {
       "reference": "bd8daa8122713c65fbf96c01ede30e2c9b62e761bfed2b7d613ae940e036f991"
     },
-    "skills/statechart/scripts/test/corpus/LoginGuarded/chart.mmd": {
-      "reference": "58913575b646dcc4ed299761654d0a61e8528e8223c17f9e4d73f5f4e22ca2cd"
-    },
     "skills/statechart/scripts/test/corpus/LoginGuarded/ChartRun.out": {
       "reference": "749d30ff95e4ec357d7ea2e5540bc6bdfdee0b3c4066a4370b1c8d667e0f4d82"
-    },
-    "skills/statechart/scripts/test/corpus/LoginGuarded/graph.dot": {
-      "reference": "3e2ffcda3ccb6fa266b13f6f19d18d81d819f9e0e9809e91868edf77d9663237"
     },
     "skills/statechart/scripts/test/corpus/LoginGuarded/LoginGuarded.cfg": {
       "reference": "b4d09f60dcb75cd044a7b8e1dc3af4655af455e91ebf26c7207c23f57001434d"
     },
     "skills/statechart/scripts/test/corpus/LoginGuarded/LoginGuarded.tla": {
       "reference": "4c0a7ecce85451e8b570c35e08c372ed324f3d4eb5cccbf709534023afa9452a"
+    },
+    "skills/statechart/scripts/test/corpus/LoginGuarded/chart.mmd": {
+      "reference": "58913575b646dcc4ed299761654d0a61e8528e8223c17f9e4d73f5f4e22ca2cd"
+    },
+    "skills/statechart/scripts/test/corpus/LoginGuarded/graph.dot": {
+      "reference": "3e2ffcda3ccb6fa266b13f6f19d18d81d819f9e0e9809e91868edf77d9663237"
     },
     "skills/statechart/scripts/test/corpus/LoginGuarded/report.md": {
       "reference": "9b66abe8c67554cad35fe27230c6ea0b7c43ab47958602826539210db94947e2"
@@ -1567,20 +1245,20 @@
     "skills/statechart/scripts/test/corpus/LoginGuarded/view.mjs": {
       "reference": "7021c173dd1d3b7c0b9ec1aa1b1abbd8c05efb967bc75ad0a0cfac50dde20442"
     },
-    "skills/statechart/scripts/test/corpus/LoginParallel/chart.mmd": {
-      "reference": "fbcead2346aec04b93e62b01f005fa6bd7cf4ecba0649bb18432a012232992cc"
-    },
     "skills/statechart/scripts/test/corpus/LoginParallel/ChartRun.out": {
       "reference": "766fab60ff49bedc4a996fd16d43a753f06c0486a08a89b387b55609a52a9703"
-    },
-    "skills/statechart/scripts/test/corpus/LoginParallel/graph.dot": {
-      "reference": "8f4d20009e23824b0bfbeddd2ca9d1c12e764599a7e179018c98d432d091ab86"
     },
     "skills/statechart/scripts/test/corpus/LoginParallel/LoginParallel.cfg": {
       "reference": "9170a5714b8e3303ff67a4713d69711aa51aac29ff4b90bab42c2b39c3a06af4"
     },
     "skills/statechart/scripts/test/corpus/LoginParallel/LoginParallel.tla": {
       "reference": "5f29ac6345f44d016fe7572bc62c4f7614839c85a4c61a7e51d5d49aa4a31b62"
+    },
+    "skills/statechart/scripts/test/corpus/LoginParallel/chart.mmd": {
+      "reference": "fbcead2346aec04b93e62b01f005fa6bd7cf4ecba0649bb18432a012232992cc"
+    },
+    "skills/statechart/scripts/test/corpus/LoginParallel/graph.dot": {
+      "reference": "8f4d20009e23824b0bfbeddd2ca9d1c12e764599a7e179018c98d432d091ab86"
     },
     "skills/statechart/scripts/test/corpus/LoginParallel/report.md": {
       "reference": "03b28c1929e70a674b7534094c2d1bb932678c31cca6ef8ae552f8f92ea94811"
@@ -1600,20 +1278,20 @@
     "skills/statechart/scripts/test/corpus/LoginParallel/view.mjs": {
       "reference": "7021c173dd1d3b7c0b9ec1aa1b1abbd8c05efb967bc75ad0a0cfac50dde20442"
     },
-    "skills/statechart/scripts/test/corpus/MediaPlayer/chart.mmd": {
-      "reference": "fc1ff2192f84d9eef9495b464071a8dd5f2ef8894f5a1522218ddf5523ad4d95"
-    },
     "skills/statechart/scripts/test/corpus/MediaPlayer/ChartRun.out": {
       "reference": "e779f0f7d95a264fb054a63c0c88589c71230b02ffe5b7937a607729238590cd"
-    },
-    "skills/statechart/scripts/test/corpus/MediaPlayer/graph.dot": {
-      "reference": "881d999fa6e60ba7698ea8633f16a315be97a370aa300cdea885d04333028534"
     },
     "skills/statechart/scripts/test/corpus/MediaPlayer/MediaPlayer.cfg": {
       "reference": "304d430e332ca2c829a91db0344ec5b1a25ec05ae58719e8310aa38455151ddf"
     },
     "skills/statechart/scripts/test/corpus/MediaPlayer/MediaPlayer.tla": {
       "reference": "74a15f1aff18b821c802acb13f991866f25b1a79a419d14d3e8348e213f0b207"
+    },
+    "skills/statechart/scripts/test/corpus/MediaPlayer/chart.mmd": {
+      "reference": "fc1ff2192f84d9eef9495b464071a8dd5f2ef8894f5a1522218ddf5523ad4d95"
+    },
+    "skills/statechart/scripts/test/corpus/MediaPlayer/graph.dot": {
+      "reference": "881d999fa6e60ba7698ea8633f16a315be97a370aa300cdea885d04333028534"
     },
     "skills/statechart/scripts/test/corpus/MediaPlayer/report.md": {
       "reference": "719bd7527929822704e55ee5815ca2fd4fb645708405658e14c72086d5e95e8d"
@@ -1633,20 +1311,20 @@
     "skills/statechart/scripts/test/corpus/MediaPlayer/view.mjs": {
       "reference": "97892a6d1e19f071ace6236ad7fe7970d5d1786a4bc95630fcb32eb0019c926a"
     },
-    "skills/statechart/scripts/test/corpus/MediaPlayerFixed/chart.mmd": {
-      "reference": "9f8358064da07564fb00dc87e0af4c7b4e88af1234a78facc38c749955f2ef64"
-    },
     "skills/statechart/scripts/test/corpus/MediaPlayerFixed/ChartRun.out": {
       "reference": "e0d61b0c48b5229e766dada745e3ef1898628a4f33a5cedec1f9d2231ff268f1"
-    },
-    "skills/statechart/scripts/test/corpus/MediaPlayerFixed/graph.dot": {
-      "reference": "cb6b2d85fb70cfa6aefe16e3fdcb686b60f6593ec755e04ed5c4ec15867766f7"
     },
     "skills/statechart/scripts/test/corpus/MediaPlayerFixed/MediaPlayerFixed.cfg": {
       "reference": "db689c5f11ef1df79d64d4cc9e5424091a1eea505dd2b64ea6586c3fccf233da"
     },
     "skills/statechart/scripts/test/corpus/MediaPlayerFixed/MediaPlayerFixed.tla": {
       "reference": "4c3a341c833a48c95c04e5668c5039535b73f0708f31499df1dc2b09a24bb8c1"
+    },
+    "skills/statechart/scripts/test/corpus/MediaPlayerFixed/chart.mmd": {
+      "reference": "9f8358064da07564fb00dc87e0af4c7b4e88af1234a78facc38c749955f2ef64"
+    },
+    "skills/statechart/scripts/test/corpus/MediaPlayerFixed/graph.dot": {
+      "reference": "cb6b2d85fb70cfa6aefe16e3fdcb686b60f6593ec755e04ed5c4ec15867766f7"
     },
     "skills/statechart/scripts/test/corpus/MediaPlayerFixed/report.md": {
       "reference": "7764f086648e9c1fad98d07bc97d36174f4997780a76320ed47958b5e7002c60"
@@ -1660,14 +1338,8 @@
     "skills/statechart/scripts/test/corpus/MediaPlayerFixed/view.mjs": {
       "reference": "97892a6d1e19f071ace6236ad7fe7970d5d1786a4bc95630fcb32eb0019c926a"
     },
-    "skills/statechart/scripts/test/corpus/MediaPlayerProps/chart.mmd": {
-      "reference": "838295776adc4a4a9b8bb76c30f8c37598e00130c7536a3379cd31be7fae9ffb"
-    },
     "skills/statechart/scripts/test/corpus/MediaPlayerProps/ChartRun.out": {
       "reference": "6a50f1bfc0d2d628f800bd8973883c4ae4f0816a004a2eff2f7e21dda513afd4"
-    },
-    "skills/statechart/scripts/test/corpus/MediaPlayerProps/graph.dot": {
-      "reference": "881d999fa6e60ba7698ea8633f16a315be97a370aa300cdea885d04333028534"
     },
     "skills/statechart/scripts/test/corpus/MediaPlayerProps/MediaPlayer.tla": {
       "reference": "74a15f1aff18b821c802acb13f991866f25b1a79a419d14d3e8348e213f0b207"
@@ -1677,6 +1349,12 @@
     },
     "skills/statechart/scripts/test/corpus/MediaPlayerProps/MediaPlayerProps.tla": {
       "reference": "4dd53ceea6e94dc496c081ad85063b295e0a84dbf818b0d9f1e98e54e860df94"
+    },
+    "skills/statechart/scripts/test/corpus/MediaPlayerProps/chart.mmd": {
+      "reference": "838295776adc4a4a9b8bb76c30f8c37598e00130c7536a3379cd31be7fae9ffb"
+    },
+    "skills/statechart/scripts/test/corpus/MediaPlayerProps/graph.dot": {
+      "reference": "881d999fa6e60ba7698ea8633f16a315be97a370aa300cdea885d04333028534"
     },
     "skills/statechart/scripts/test/corpus/MediaPlayerProps/report.md": {
       "reference": "fa6e435a6a812b6ca0c8d994f484017e116296288b5d47aed5af98bee30616db"
@@ -1714,20 +1392,20 @@
     "skills/statechart/scripts/test/corpus/MediaPlayerProps/view.mjs": {
       "reference": "97892a6d1e19f071ace6236ad7fe7970d5d1786a4bc95630fcb32eb0019c926a"
     },
-    "skills/statechart/scripts/test/corpus/PickWorker/chart.mmd": {
-      "reference": "f14bf7ab49b4c0bba5e5db5c6f2cbeedcb0e3e58e581ac077cba7494ba8637c5"
-    },
     "skills/statechart/scripts/test/corpus/PickWorker/ChartRun.out": {
       "reference": "e33e67316571e69aa4be7ddd39c6585b69862d558fac626d032310f1e48d9239"
-    },
-    "skills/statechart/scripts/test/corpus/PickWorker/graph.dot": {
-      "reference": "1d60f0497f939134c6cb91f5e869445aa7da04ba8caad5128f1509a28c31f245"
     },
     "skills/statechart/scripts/test/corpus/PickWorker/PickWorker.cfg": {
       "reference": "8c6d515aeb597746e5a3ef6aca8966c912f314307f0cf015ef137be52ddccf5b"
     },
     "skills/statechart/scripts/test/corpus/PickWorker/PickWorker.tla": {
       "reference": "df6ee9663bd5e3bdb81dc7f189f3ea56fbc7aa10998ad27fc8680ece71db1016"
+    },
+    "skills/statechart/scripts/test/corpus/PickWorker/chart.mmd": {
+      "reference": "f14bf7ab49b4c0bba5e5db5c6f2cbeedcb0e3e58e581ac077cba7494ba8637c5"
+    },
+    "skills/statechart/scripts/test/corpus/PickWorker/graph.dot": {
+      "reference": "1d60f0497f939134c6cb91f5e869445aa7da04ba8caad5128f1509a28c31f245"
     },
     "skills/statechart/scripts/test/corpus/PickWorker/report.md": {
       "reference": "0b013fe67e59740018e0d17ebf09e1a35abe127a8ab662c1d04f8eb0c09dc402"
@@ -1738,20 +1416,8 @@
     "skills/statechart/scripts/test/corpus/PickWorker/verdict-1.out": {
       "reference": "2b3fd362611ca7a93ec026a4dbd32c8715a86ab25a1c20522be634aa52f85b30"
     },
-    "skills/statechart/scripts/test/corpus/Shadow/chart.mmd": {
-      "reference": "c003399e967c82138d6aafceb6190b848330df5ea6f7a6b61235bfa1c1b3113d"
-    },
     "skills/statechart/scripts/test/corpus/Shadow/ChartRun.out": {
       "reference": "619f20ff885b6b721e2774374977d01ef2fc71004f78b24e4633ab190d82d144"
-    },
-    "skills/statechart/scripts/test/corpus/Shadow/graph.dot": {
-      "reference": "a1b348348bf032ff81cfd796ae19f8cdcf491d5af18eab73ebfca3058a15691b"
-    },
-    "skills/statechart/scripts/test/corpus/Shadow/report.md": {
-      "reference": "5abd33d13a32cc0d411dfe19cdb7704fe35524832360e13fc77a7818c6bf204f"
-    },
-    "skills/statechart/scripts/test/corpus/Shadow/sany.out": {
-      "reference": "70ef80ec48084a477096bf585f246a7ec094447ff4dd2e59dddcf5c25a82dbe9"
     },
     "skills/statechart/scripts/test/corpus/Shadow/Shadow.cfg": {
       "reference": "a43c56d2794c386f063ea9fe2c31ff55cafe63182e4dc1bf3aa0430af17d3e44"
@@ -1765,14 +1431,32 @@
     "skills/statechart/scripts/test/corpus/Shadow/ShadowSub.tla": {
       "reference": "c86fffd21ba22bc234b061ee8eff6f723221329fb9875de15282f43e6c802ef3"
     },
+    "skills/statechart/scripts/test/corpus/Shadow/chart.mmd": {
+      "reference": "c003399e967c82138d6aafceb6190b848330df5ea6f7a6b61235bfa1c1b3113d"
+    },
+    "skills/statechart/scripts/test/corpus/Shadow/graph.dot": {
+      "reference": "a1b348348bf032ff81cfd796ae19f8cdcf491d5af18eab73ebfca3058a15691b"
+    },
+    "skills/statechart/scripts/test/corpus/Shadow/report.md": {
+      "reference": "5abd33d13a32cc0d411dfe19cdb7704fe35524832360e13fc77a7818c6bf204f"
+    },
+    "skills/statechart/scripts/test/corpus/Shadow/sany.out": {
+      "reference": "70ef80ec48084a477096bf585f246a7ec094447ff4dd2e59dddcf5c25a82dbe9"
+    },
     "skills/statechart/scripts/test/corpus/Shadow/verdict-1.out": {
       "reference": "4663878a076c78cba5dd3e86e657e1679ce110602855dc36432cc7e6e69514d7"
     },
-    "skills/statechart/scripts/test/corpus/SpacedNames/chart.mmd": {
-      "reference": "61543a8667d3f46663d68f89bc1685944c9e00a74b1cec7c64ef2dcd43dcf604"
-    },
     "skills/statechart/scripts/test/corpus/SpacedNames/ChartRun.out": {
       "reference": "5b68962e431d60ef6d19eae0a581edbb088a9d869539b9bb6ecdf395e6f68ebe"
+    },
+    "skills/statechart/scripts/test/corpus/SpacedNames/SpacedNames.cfg": {
+      "reference": "91dd433c4da5a022f87e9c9e9e43c067d0c5ed74370b5c3c80575243629631af"
+    },
+    "skills/statechart/scripts/test/corpus/SpacedNames/SpacedNames.tla": {
+      "reference": "adec6dfa9efbad798de3bcdef5ae3ca0d185f0ec1d8c35acb97e1c1d48737350"
+    },
+    "skills/statechart/scripts/test/corpus/SpacedNames/chart.mmd": {
+      "reference": "61543a8667d3f46663d68f89bc1685944c9e00a74b1cec7c64ef2dcd43dcf604"
     },
     "skills/statechart/scripts/test/corpus/SpacedNames/graph.dot": {
       "reference": "1f9e6cbdfd8b30ca4ec376261e8fb6114a7efe4ef1a5ec01ebeeaaddcabce211"
@@ -1782,12 +1466,6 @@
     },
     "skills/statechart/scripts/test/corpus/SpacedNames/sany.out": {
       "reference": "c21039e6ef6a452b4c5fde70533f6e466e60dac24463fd9daf0d8048ebb2db86"
-    },
-    "skills/statechart/scripts/test/corpus/SpacedNames/SpacedNames.cfg": {
-      "reference": "91dd433c4da5a022f87e9c9e9e43c067d0c5ed74370b5c3c80575243629631af"
-    },
-    "skills/statechart/scripts/test/corpus/SpacedNames/SpacedNames.tla": {
-      "reference": "adec6dfa9efbad798de3bcdef5ae3ca0d185f0ec1d8c35acb97e1c1d48737350"
     },
     "skills/statechart/scripts/test/corpus/SpacedNames/verdict-1.exit": {
       "reference": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918"
@@ -1801,11 +1479,17 @@
     "skills/statechart/scripts/test/corpus/SpacedNames/verdict-2.out": {
       "reference": "8f4603d2dc4b78f5267ce78f03c14f975eecb48135e8021767b95c6cd44e5f5c"
     },
-    "skills/statechart/scripts/test/corpus/TwoPhase/chart.mmd": {
-      "reference": "b0f1a0dca0eaaa79c4379ee85be20a8f9647a900a2cb378501502c42627136d1"
-    },
     "skills/statechart/scripts/test/corpus/TwoPhase/ChartRun.out": {
       "reference": "d6310c08bad9779557f9153d171563bc69da22eb8f83dcbecc8d8a5ca87ad49d"
+    },
+    "skills/statechart/scripts/test/corpus/TwoPhase/TwoPhase.cfg": {
+      "reference": "f31e5e97d906175f711018e2de7d34280c7d0b941d0e035beed55046c01ea05b"
+    },
+    "skills/statechart/scripts/test/corpus/TwoPhase/TwoPhase.tla": {
+      "reference": "e5cb6b943fba4206833b9d8999f72ea40b3349e32cf0a3af5be48283aafc7fdf"
+    },
+    "skills/statechart/scripts/test/corpus/TwoPhase/chart.mmd": {
+      "reference": "b0f1a0dca0eaaa79c4379ee85be20a8f9647a900a2cb378501502c42627136d1"
     },
     "skills/statechart/scripts/test/corpus/TwoPhase/graph.dot": {
       "reference": "0276d507b1457de02d25cacced67c19b3442764225bc183e90c8c6745ba5f680"
@@ -1815,12 +1499,6 @@
     },
     "skills/statechart/scripts/test/corpus/TwoPhase/sany.out": {
       "reference": "5cd609810ea485ad186164e1343aaf61df62e18d0292635152553993a7738282"
-    },
-    "skills/statechart/scripts/test/corpus/TwoPhase/TwoPhase.cfg": {
-      "reference": "f31e5e97d906175f711018e2de7d34280c7d0b941d0e035beed55046c01ea05b"
-    },
-    "skills/statechart/scripts/test/corpus/TwoPhase/TwoPhase.tla": {
-      "reference": "e5cb6b943fba4206833b9d8999f72ea40b3349e32cf0a3af5be48283aafc7fdf"
     },
     "skills/statechart/scripts/test/corpus/TwoPhase/verdict-1.exit": {
       "reference": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918"
@@ -1834,11 +1512,17 @@
     "skills/statechart/scripts/test/corpus/TwoPhase/view.mjs": {
       "reference": "18c2ddfe8ac971345d63775347896ae8dd7cf2a9a03ef0d32adf0ef6aa35da50"
     },
-    "skills/statechart/scripts/test/corpus/TwoPhaseFixed/chart.mmd": {
-      "reference": "b91b0db2cc076f4bac7eb148877405d18c18612e34a3e731efc1e9df37546f8a"
-    },
     "skills/statechart/scripts/test/corpus/TwoPhaseFixed/ChartRun.out": {
       "reference": "32a89c704bc6ee2b597f175827b67e2d156b368f38d7e11b455ce8166306b25c"
+    },
+    "skills/statechart/scripts/test/corpus/TwoPhaseFixed/TwoPhaseFixed.cfg": {
+      "reference": "f31e5e97d906175f711018e2de7d34280c7d0b941d0e035beed55046c01ea05b"
+    },
+    "skills/statechart/scripts/test/corpus/TwoPhaseFixed/TwoPhaseFixed.tla": {
+      "reference": "745af8fe717e5e832ba8a7996b95971d504c0cde57f5e3e9e36c52d187270996"
+    },
+    "skills/statechart/scripts/test/corpus/TwoPhaseFixed/chart.mmd": {
+      "reference": "b91b0db2cc076f4bac7eb148877405d18c18612e34a3e731efc1e9df37546f8a"
     },
     "skills/statechart/scripts/test/corpus/TwoPhaseFixed/graph.dot": {
       "reference": "2a9a55c417ecf703035dce21c7ba347ad6cb3dc50a0a634a6b60f4bfb727a773"
@@ -1849,26 +1533,26 @@
     "skills/statechart/scripts/test/corpus/TwoPhaseFixed/sany.out": {
       "reference": "3eb376892be58922e721d00841ddc94927492a68f7eb53f541a217bfa64245b2"
     },
-    "skills/statechart/scripts/test/corpus/TwoPhaseFixed/TwoPhaseFixed.cfg": {
-      "reference": "f31e5e97d906175f711018e2de7d34280c7d0b941d0e035beed55046c01ea05b"
-    },
-    "skills/statechart/scripts/test/corpus/TwoPhaseFixed/TwoPhaseFixed.tla": {
-      "reference": "745af8fe717e5e832ba8a7996b95971d504c0cde57f5e3e9e36c52d187270996"
-    },
     "skills/statechart/scripts/test/corpus/TwoPhaseFixed/verdict-1.out": {
       "reference": "4d3e3a2640c2529d6e80e97315ae2a78a3a730ef710039c65f644b79969ce3fe"
     },
     "skills/statechart/scripts/test/corpus/TwoPhaseFixed/view.mjs": {
       "reference": "18c2ddfe8ac971345d63775347896ae8dd7cf2a9a03ef0d32adf0ef6aa35da50"
     },
-    "skills/statechart/scripts/test/corpus/TypeGuard/chart.mmd": {
-      "reference": "c4df63172b92747b1bfe50fb7ce9492205b3f8e5701e4baa393b637291bb5d68"
-    },
     "skills/statechart/scripts/test/corpus/TypeGuard/ChartRun.exit": {
       "reference": "f74efabef12ea619e30b79bddef89cffa9dda494761681ca862cff2871a85980"
     },
     "skills/statechart/scripts/test/corpus/TypeGuard/ChartRun.out": {
       "reference": "413f1c459ab78ae4d030eb8e707ebb96f50c3ed4225ef3a55e9cd799fa482f4e"
+    },
+    "skills/statechart/scripts/test/corpus/TypeGuard/TypeGuard.cfg": {
+      "reference": "24fc9d9599845ef771bcefefd4e377247656887aa9ed76a25168c1f3a1f034e2"
+    },
+    "skills/statechart/scripts/test/corpus/TypeGuard/TypeGuard.tla": {
+      "reference": "906290fca078de1556b593115ec519fd01ef62738cd59cc645eadfef7b156dbe"
+    },
+    "skills/statechart/scripts/test/corpus/TypeGuard/chart.mmd": {
+      "reference": "c4df63172b92747b1bfe50fb7ce9492205b3f8e5701e4baa393b637291bb5d68"
     },
     "skills/statechart/scripts/test/corpus/TypeGuard/graph.dot": {
       "reference": "a35107023f5a7a2e9833c3c0f67b69e163a7331038510b3dafcd4f4092db7251"
@@ -1878,12 +1562,6 @@
     },
     "skills/statechart/scripts/test/corpus/TypeGuard/sany.out": {
       "reference": "1a276d11b8d8644326ae7d705fdcec92df7baa1b43b7800020749ed64fb68274"
-    },
-    "skills/statechart/scripts/test/corpus/TypeGuard/TypeGuard.cfg": {
-      "reference": "24fc9d9599845ef771bcefefd4e377247656887aa9ed76a25168c1f3a1f034e2"
-    },
-    "skills/statechart/scripts/test/corpus/TypeGuard/TypeGuard.tla": {
-      "reference": "906290fca078de1556b593115ec519fd01ef62738cd59cc645eadfef7b156dbe"
     },
     "skills/statechart/scripts/test/corpus/TypeGuard/verdict-1.exit": {
       "reference": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918"
@@ -1897,11 +1575,17 @@
     "skills/statechart/scripts/test/corpus/TypeGuard/verdict-2.out": {
       "reference": "fd365e6a7d8dd5236d8dbe7c11782f186f24d5eb6db405015f1502340ab5ac6c"
     },
-    "skills/statechart/scripts/test/corpus/UserNoDeadlock/chart.mmd": {
-      "reference": "0ad123e2f118f39b2911f8a8e8135bedf40689f92799182e22def778c910eb20"
-    },
     "skills/statechart/scripts/test/corpus/UserNoDeadlock/ChartRun.out": {
       "reference": "2346e1c9ab230f5d299694d02883e71282253a7d304a8ece6510b1df9c7efa56"
+    },
+    "skills/statechart/scripts/test/corpus/UserNoDeadlock/UserNoDeadlock.cfg": {
+      "reference": "3ffc174e0c0312decd8104ca424921048ab0eec9dcf7dadd4c2a690e3b3f13d1"
+    },
+    "skills/statechart/scripts/test/corpus/UserNoDeadlock/UserNoDeadlock.tla": {
+      "reference": "bf8e293f8e0f389b6191832cf06135592511697728ebe6f2c87bd18cd91e0515"
+    },
+    "skills/statechart/scripts/test/corpus/UserNoDeadlock/chart.mmd": {
+      "reference": "0ad123e2f118f39b2911f8a8e8135bedf40689f92799182e22def778c910eb20"
     },
     "skills/statechart/scripts/test/corpus/UserNoDeadlock/graph.dot": {
       "reference": "a1b348348bf032ff81cfd796ae19f8cdcf491d5af18eab73ebfca3058a15691b"
@@ -1911,12 +1595,6 @@
     },
     "skills/statechart/scripts/test/corpus/UserNoDeadlock/sany.out": {
       "reference": "3e0c71a4dede24b402947b504dc00b171f449fa533fb43f8b659710eb09764fa"
-    },
-    "skills/statechart/scripts/test/corpus/UserNoDeadlock/UserNoDeadlock.cfg": {
-      "reference": "3ffc174e0c0312decd8104ca424921048ab0eec9dcf7dadd4c2a690e3b3f13d1"
-    },
-    "skills/statechart/scripts/test/corpus/UserNoDeadlock/UserNoDeadlock.tla": {
-      "reference": "bf8e293f8e0f389b6191832cf06135592511697728ebe6f2c87bd18cd91e0515"
     },
     "skills/statechart/scripts/test/corpus/UserNoDeadlock/verdict-1.exit": {
       "reference": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918"
@@ -1929,9 +1607,6 @@
     },
     "skills/statechart/scripts/test/corpus/UserNoDeadlock/verdict-2.out": {
       "reference": "9693d48613cb87f08124051a89b736cbcf2384a68cd2c5540b04f6bc459dbce0"
-    },
-    "skills/statechart/scripts/test/corpus.test.ts": {
-      "reference": "ed6319f612af7797d3454ee3b1983d724085a5815c64af8536b469626fef8606"
     },
     "skills/statechart/scripts/test/differential.test.ts": {
       "reference": "c768721adb6e7b06c23336be41999071653996ae2609cdcaa45677483aa67f76"
@@ -1952,7 +1627,7 @@
       "reference": "12adfc02a998e43c35eee3c958d5b2bc4fb3613edea12da5c8c9a21f0a989917"
     },
     "skills/statechart/scripts/test/messages.test.ts": {
-      "reference": "453cd0213b461c3834ba3ac3afc695caab029fb82a19da5808a0047ad84cfc0f"
+      "reference": "2bac37b71ae2807aba46ca469058ac8f9f4e6fdca397ca1c3bca1b080ce2efec"
     },
     "skills/statechart/scripts/test/pipeline.test.ts": {
       "reference": "08bf9bb73d0cb57b55e779d1ae17e8e3617e0416e82e78a5a6d52595fb6ea9f7"
@@ -1975,19 +1650,258 @@
     "skills/statechart/scripts/worker.ts": {
       "reference": "7fe855eaa3ee468500dd3f171aa8604368270b6f10107e6e9ce06ebf46ee3f42"
     },
-    "skills/statechart/SKILL.md": {
-      "reference": "3ffdb85a35063a80f35563c120c5b822c91ae06f9e27f9163e406826a6a57fc1",
-      "adaptation": "fb03c37e45462bebd712a94eba3d81858e22284e9a99d7deb076e9d98b637d43",
-      "reason": "Invoke the TypeScript entry point directly on Windows and POSIX; use sh for copied launchers without executable permissions."
+    "skills/superdev-help/SKILL.md": {
+      "reference": "775aebda85bf428c3a82ae1b72d9588942476ea22d6e65f98030a9e8b87e5776"
+    },
+    "skills/superdev-help/references/prompting.md": {
+      "reference": "2fedd2efe5333bb4d505e792b1bb92f9e3c1ccd62c7df43d3a2f664b915424a9"
+    },
+    "skills/superdev-help/references/recipes.md": {
+      "reference": "0c9574b6b6d4b92501b39de7f379368c4cea8c5dde9c1a4084338809971195d3"
+    },
+    "skills/superdev-mode/SKILL.md": {
+      "reference": "0835f6a8fcdc00c55b96e0826662ba5199d6ccadb123f606ed5829335c03984f",
+      "adaptation": "f2b770f868cd3d41105ee28c80b7f426fbc15ccf3501b9e6933924d04fbf2ea4",
+      "reason": "List optional SuperDev additions and the restored full setup without replacing shared playbooks or review gates; name only the runtimes SuperDev ships in Platform Adaptation."
+    },
+    "skills/superdev-mode/playbooks/authoring-a-skill.md": {
+      "reference": "e82d1a0a1684d5a6734a3739f8ee1454b172dcaa60e9fa15f12b9196e21b22a4"
+    },
+    "skills/superdev-mode/playbooks/autonomous-run.md": {
+      "reference": "7fcb5009eb34e4c3ae9281467799737902b90bf9e400901bc30b95e46dff69a8"
+    },
+    "skills/superdev-mode/playbooks/autopilot-full.md": {
+      "reference": "e0105bc5f4011d980cf593f284b3acb6a0852fc315d4aaad67a94396bac849a5"
+    },
+    "skills/superdev-mode/playbooks/autopilot-stack.md": {
+      "reference": "0b1222aebe2436fd68df40bc1c70ebc341f9955d05f39ddb508a91a48c27b6d8"
+    },
+    "skills/superdev-mode/playbooks/babysit.md": {
+      "reference": "17425998dd404f7b7fff59aa15142e389923192977b3ed199db3ef01b454aa25"
+    },
+    "skills/superdev-mode/playbooks/bug-fix.md": {
+      "reference": "5642e3baaa33663e7ef3ff2796a83623c78ecd26ddd78502c237b89dcd0f2713"
+    },
+    "skills/superdev-mode/playbooks/eval.md": {
+      "reference": "84c786edb1c9e61ce191eff00b383d968cd89c2d0c5bb2d9ca36081a40802759"
+    },
+    "skills/superdev-mode/playbooks/feature.md": {
+      "reference": "a5dc901540cd94f1749448a2bf817a3bbbf48a7adefd5d2e7f7dc83abf8d6643"
+    },
+    "skills/superdev-mode/playbooks/hillclimb.md": {
+      "reference": "310bc46d5137c3b02dbd95bc679dd8ce6d8a0263211f8f2f0ce2f3c6c16bf84b"
+    },
+    "skills/superdev-mode/playbooks/investigation.md": {
+      "reference": "78f700edaafb438eb40592f46dae82bfeecd5468956fabee2e78cda6cae7b5d9"
+    },
+    "skills/superdev-mode/playbooks/multi-phase-plan.md": {
+      "reference": "6323860986df8d87c077037a0a718fd79a90786baaf38f63e0fc6f156037650a"
+    },
+    "skills/superdev-mode/playbooks/opening-a-pr.md": {
+      "reference": "ea34cdb5713e70a8ccc3e692f8eeb07a25dcae1cf6bee0927f010c02022d850a"
+    },
+    "skills/superdev-mode/playbooks/orchestrate.md": {
+      "reference": "83a60cae31cfed16d8abad9e5665fa3faeda110f18a8ec109e471f67583a75dd"
+    },
+    "skills/superdev-mode/playbooks/pause-safely.md": {
+      "reference": "5a1f7c2d0e254aad7a0a940cab5493287d9b5c38a62de2081be88e1ce4723b26"
+    },
+    "skills/superdev-mode/playbooks/perf-issue.md": {
+      "reference": "30ba8fc18e9de3caa03210e9492096b6c9005f161921cf0c756cf6d449faf6a1"
+    },
+    "skills/superdev-mode/playbooks/prototype.md": {
+      "reference": "0fb5a2cc02033a29c8e7f2c88a951b2036692b403a96218d2af7f7b5a3618cfb"
+    },
+    "skills/superdev-mode/playbooks/refactoring.md": {
+      "reference": "6932a69f2c6f8ef75af8d27a38ddf40575c55e98a0cc6c3325fb8268d69aa901"
+    },
+    "skills/superdev-mode/playbooks/runtime-forensics.md": {
+      "reference": "4732259283f5c58f58ba60a3a12265ae91823fd22d353452b3b67657df62f11d"
+    },
+    "skills/superdev-mode/playbooks/session-pickup.md": {
+      "reference": "4a91f2d5410e00e83d2c8dfa5160c00615b6c23d094852e3636bfd3ad2e140c0"
+    },
+    "skills/superdev-mode/playbooks/shipping.md": {
+      "reference": "40492b66aa58f0194a1345d426cb84db781f035d6218f1b8120b7346fc634589"
+    },
+    "skills/superdev-mode/playbooks/trace-forensics.md": {
+      "reference": "1a1fed10869b2548214e029b5f2a989aee3b6cce1ece9143b2fc8065e7f2fff7"
+    },
+    "skills/superdev-mode/playbooks/visual-parity.md": {
+      "reference": "35e0bed5f47a4584dc1b4a4c0a1b865de8af55dad6a05bae9c610b2346f70f1a"
+    },
+    "skills/superdev-mode/playbooks/worktree-cleanup.md": {
+      "reference": "829c557f4ec1d775cfc65f8aa3d8810061d4c78a0c3c1aab5e779a36e901a614"
+    },
+    "skills/superdev-mode/references/agents/comment-sicko.md": {
+      "reference": "e7ac4c16170dccf54d44b9f20910a37602e100b178f326a848188b065eaede33"
+    },
+    "skills/superdev-mode/references/bugbot-triage.md": {
+      "reference": "60072b3d6e6d33ccefe8b9f2cd93d29dbafdcc3a10b2b177910a38dc2ecf87be"
+    },
+    "skills/superdev-mode/references/codex-tools.md": {
+      "reference": "6339ea87153a27edb66ae47c479476612a17e28c9d34a355377540afcd34b513",
+      "adaptation": "457c63f61a1351e029580e362c09d8296e8d8a1cf852345ac9d0eecc30491f57",
+      "reason": "SuperDev keeps the optional Codex slash-command shortcuts, so the mapping still names them."
+    },
+    "skills/superdev-mode/references/copilot-tools.md": {
+      "reference": "7ffb5dd131e963b75affa20c8840feaea4ecdba89006012a18dba19cd6311622",
+      "adaptation": "04a9f39ad91395bf44e94a3ec3d4ebecdc9e0e7a9415de65bb2a6875e1272202",
+      "reason": "Generated role list uses deterministic alphabetical order; native setup requirements are unchanged."
+    },
+    "skills/superdev-mode/references/licenses/LICENSE": {
+      "reference": "1e84c2a1cf963685aa0cd7b79d994f4a6dd1fb9588557d7e54ac2709bf562813",
+      "adaptation": "eae4e4ddcb2ac7451d7b86291d30aed65a6f243f707c33e427fb2410ab757b9c",
+      "reason": "Preserve MIT terms and contributor notices; add the SuperDev contributor."
+    },
+    "skills/superdev-mode/references/licenses/LICENSE-cursor-team-kit": {
+      "reference": "d50c0a26b8bb1f040d52950a39519b6981803d638be18ead7f16ef95d4e18402"
+    },
+    "skills/superdev-mode/references/licenses/LICENSE-thermos": {
+      "reference": "d50c0a26b8bb1f040d52950a39519b6981803d638be18ead7f16ef95d4e18402"
+    },
+    "skills/superdev-mode/references/licenses/NOTICE.md": {
+      "reference": "bcc558a8b7007511cffdcb45865e996b6b8dfdd7992942d36054c2352577eb37",
+      "adaptation": "0a40bbdd16de2d1562730e572a07560b2eae7c211448a29df56e6346a07bef30",
+      "reason": "SuperDev copyright notices retain author credits and all MIT license files."
+    },
+    "skills/superdev-mode/references/merge-safety.md": {
+      "reference": "4b2727eb48ecd0c9e06ca82c17f1500c13af084ff6e0bb19a68c74c538154479"
+    },
+    "skills/superdev-mode/references/muse-tools.md": {
+      "reference": "55e5698afe245d76c95a45302a3783c7473c277f23e8a613d58e339b3012a0b7"
+    },
+    "skills/superdev-mode/references/pi-tools.md": {
+      "reference": "3fed2ef8b3061ee97a6d9e69173acba847c74ab7acd49d2f09a647137bfedbf4",
+      "adaptation": "324969602cb51fb6ce602ae20b85a97849a12ffac4d12964d063822acdb93280",
+      "reason": "Describe inheritance for an unmapped active provider."
+    },
+    "skills/superdev-mode/references/resume-storage.md": {
+      "reference": "b835ffc790c7c6c4553130322e6b38f056f4451b3d2674e3fb4a336c0f5f5a25"
+    },
+    "skills/superdev-mode/scripts/.prettierignore": {
+      "reference": "c2c8af625d15e1e18622fdd43c9eb147100fd7e16564e938340f7d2e2c31a57f"
+    },
+    "skills/superdev-mode/scripts/.prettierrc.json": {
+      "reference": "9eace706ea58ca167cdb96f69f0d0d730ebc536f783bbb1c7391f8d5ed22def3"
+    },
+    "skills/superdev-mode/scripts/bootstrap.ts": {
+      "reference": "95b5f7386d87f82529f822a9af298f8cced0ebad74701401579e49a3aeb88a3c"
+    },
+    "skills/superdev-mode/scripts/bun.lock": {
+      "reference": "d22fbde610d96e86ad58c16bb671d8eae8dff3982f07535c7493d4ee59a46f93"
+    },
+    "skills/superdev-mode/scripts/check-plan.mjs": {
+      "reference": "b97177751ce7dbbabde4dd414e70be301ca6b14c00644a627f01e4bba4f26ef0"
+    },
+    "skills/superdev-mode/scripts/check-plan.test.ts": {
+      "reference": "b91e237366e7d7a8811ad4a45a6426613c9e6e09d5879a3290b8b2d39ec5d979"
+    },
+    "skills/superdev-mode/scripts/check-playbooks.mjs": {
+      "reference": "8c7b71c29fa367926185b933c6d1140b0bdcef0c3925dd10b6551adcd885b692"
+    },
+    "skills/superdev-mode/scripts/codex-session-effort.mjs": {
+      "reference": "7f0f5cf1ca944ea549ae5636d4410db9d0ff153b2e2f58fa1b78b9baf0d08e54"
+    },
+    "skills/superdev-mode/scripts/package.json": {
+      "reference": "79934f785883b111f947fe53bdc0a99517400645a40bb68b6cb278d8f42ee6b2"
+    },
+    "skills/superdev-mode/scripts/resume.mjs": {
+      "reference": "fba92f25fbcbc7e4cc7e7b167ed15d6c335cdcc82012059aae42f46521a7e821"
+    },
+    "skills/superdev-mode/scripts/tsconfig.json": {
+      "reference": "383b5c119e557b387b7e7c0709652122a8bb20bec7708a3af62206a584af9b68"
+    },
+    "skills/superdev-mode/scripts/watch-pr/cli.test.ts": {
+      "reference": "b6ea3c488e0fe2489ee0cd1ec1bcb48bf2cd1610f6da594cbd4dc0f9d506ca87"
+    },
+    "skills/superdev-mode/scripts/watch-pr/cli.ts": {
+      "reference": "fa380023eb28975d9cc60322fc78985d03a40a9220f4165318db0fa06d9a89a6"
+    },
+    "skills/superdev-mode/scripts/watch-pr/deadline.ts": {
+      "reference": "7bf7555fa7fd936308a7141a8d314506a5bde97aa8bc040907b84eecbcdb3114"
+    },
+    "skills/superdev-mode/scripts/watch-pr/fakes.test-helper.ts": {
+      "reference": "4601d3ca9a1b0ecdd3d0f55de27520e171eb325b2ec553df7eee4d13d7d4c875"
+    },
+    "skills/superdev-mode/scripts/watch-pr/fresh-install.test.ts": {
+      "reference": "98ceee69b2b553dfa3e78a0aa88d8f1f6cf085575969e23f9c4388b63d8ecafc"
+    },
+    "skills/superdev-mode/scripts/watch-pr/github.test.ts": {
+      "reference": "c755f263fcb3945404097c89f97de6c799ee1ff51da34221bff03aa8c6cc7e71"
+    },
+    "skills/superdev-mode/scripts/watch-pr/github.ts": {
+      "reference": "6cc4153ad295770e1556e6ad4c78225f6c920189ecfba7976d7d6b2ecaa1d792"
+    },
+    "skills/superdev-mode/scripts/watch-pr/integrity.test.ts": {
+      "reference": "be675709d7d36267150e2b452c40c63d005f1ab40e1e55d3fb8b6ade64de3dcc"
+    },
+    "skills/superdev-mode/scripts/watch-pr/landing.ts": {
+      "reference": "f12038ec1f6abda4d3bf773369e17a8e97cd48b23ff2af9c02da588b946baf20"
+    },
+    "skills/superdev-mode/scripts/watch-pr/live-merge-safety.mjs": {
+      "reference": "fa8684e11dc63908fba33b9361549e7cd1bbc8a32489030799ec28a21b850926"
+    },
+    "skills/superdev-mode/scripts/watch-pr/policy.test.ts": {
+      "reference": "b9a9cabe5c5dfd5ad12c95110a2610d17c64d8194db2e7a54edf04a73bf6fabb"
+    },
+    "skills/superdev-mode/scripts/watch-pr/policy.ts": {
+      "reference": "13b2c0cf3401146860ac94d6f919c81f27781a73def6e72e94413c955390353d"
+    },
+    "skills/superdev-mode/scripts/watch-pr/render.ts": {
+      "reference": "766eb9b243c10c2c18bf75f521d79ca35f69d59bebcf21b8f4c29e3a9f8ee92d"
+    },
+    "skills/superdev-mode/scripts/watch-pr/ship-pr": {
+      "reference": "2dfcb807716902abbf0871c7389aecde518194a112fc5fb85c8f655925f23517"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping-cli.test.ts": {
+      "reference": "6e4c6c57d240f788b1595ebf93590fa80eb98a4006699f369d047834a9aa787c"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping-cli.ts": {
+      "reference": "3101c74c5cc5c1c3c5bc2708c56ebab05c7a652c7177d61075aad8862797a2f4"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping.test-helper.ts": {
+      "reference": "44216e40567a4c7fa8a9490b5f774703f18aa60b836d519db9eda3e88310f379"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping.test.ts": {
+      "reference": "a5080046d84765362d7a8aaf56c075408e3ae435b31f66fdcfbf81da08f69cce"
+    },
+    "skills/superdev-mode/scripts/watch-pr/shipping.ts": {
+      "reference": "56b7027564e8c9c372857a834b355ba533bebe1ec25fd6b7c304fa1bbf90ce8d"
+    },
+    "skills/superdev-mode/scripts/watch-pr/transport.test.ts": {
+      "reference": "5c5435b9d81ac56e52b99edbcd27374a09d079b40a427bf79f4de52154d9cacd"
+    },
+    "skills/superdev-mode/scripts/watch-pr/tsconfig.json": {
+      "reference": "d9d19c3f84d4e1e62c7e94ae26ab9f674386118e54e02afb58423063c8ee04ca"
+    },
+    "skills/superdev-mode/scripts/watch-pr/types.compile.ts": {
+      "reference": "86a13be75e6ef7f02a8311b4f037a15e97bd6af6d151558d732af6330b5265a4"
+    },
+    "skills/superdev-mode/scripts/watch-pr/types.ts": {
+      "reference": "56716e49ff7799c9474805cf9ff37fb7563852b4bd4d4964130b8fa162eaa7e9"
+    },
+    "skills/superdev-mode/scripts/watch-pr/watch-pr": {
+      "reference": "1f76b1e9426c26c902473e2a21430b6345667fc95ab98a56286c0e81285934e0"
+    },
+    "skills/superdev-mode/scripts/watch-pr/wrapper.test.ts": {
+      "reference": "45397fc2c8cbfb1d2ba623e115b3f96c1ec6ca9d8313e135e60e280445b9ab8a"
+    },
+    "skills/superdev-mode/scripts/worktree-audit.mjs": {
+      "reference": "4afe5d83972f417bcc60a15d3a65c615123dd3940f91f5ab392d0184c786eb65"
     },
     "skills/swarm/SKILL.md": {
-      "reference": "402590a55027a4e6532baedcbde2ae89f30dc165a742a1c593ff4fff633e5060"
+      "reference": "686154d6e580d2a868888b502b5c1a58751148d9935faf0e27ca8f368f871e65",
+      "adaptation": "64a9e9667f7ac665ee8f60538fdf8404e2512cbb4e8c55e7a8054c44d5ea97aa",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/tdd/SKILL.md": {
       "reference": "bce506547f71fd40e337e6742f64da2de31ca223cfba1a99ef8b4ac60cd66c70"
     },
     "skills/teach/SKILL.md": {
-      "reference": "a10280fdb452f2ff6eac4439f521c246ae256f8e6b9f35af50331b3adcbd9c49"
+      "reference": "9ad06b3a46d821477e62994adcfaf836addcc52413e47234630187c8756a3660",
+      "adaptation": "a10280fdb452f2ff6eac4439f521c246ae256f8e6b9f35af50331b3adcbd9c49",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/technical-writing/SKILL.md": {
       "reference": "511a6ebee6e3b0720df1873d7a086896f1f89ef2c3dec08fa775777f8a14971c"
@@ -1999,19 +1913,26 @@
       "reference": "e480922b42fa93ea5ae12cba74b5d4bd5a8c348441bc59d2736c12ae8c2c614d"
     },
     "skills/thermos/SKILL.md": {
-      "reference": "1173d0e71cd0fc7cd323397ab7ac91ca2c590d42e8acc3e8de1d2923415f804e"
-    },
-    "skills/typescript-best-practices/references/patterns.md": {
-      "reference": "b9cac24212494ff0df301bbbb7062fac3939cda5c89cdc29d251d15eb6e77c91"
+      "reference": "6ae0747f94fc10438d08d1972efb6a8ebb11e2323a505fb7227d74f7665eca96",
+      "adaptation": "fdbe1a4bd6e453f8ce1c91abd59be393859727c0921b3e9be80687f016cea7bc",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/typescript-best-practices/SKILL.md": {
       "reference": "41b88e12ca0ad4e0b6784aecb88cd641e2fc1482d7fe28bf1a98a570fe48853b"
+    },
+    "skills/typescript-best-practices/references/patterns.md": {
+      "reference": "b9cac24212494ff0df301bbbb7062fac3939cda5c89cdc29d251d15eb6e77c91"
     },
     "skills/unslop/SKILL.md": {
       "reference": "facc65652267208fac6f28a774359790859101329f73511d5574caedd25b39c8"
     },
     "skills/what-did-i-get-done/SKILL.md": {
       "reference": "2b5628793224cb1848283235bcace96420490847271ae4e87d8134f1a530105d"
+    },
+    "skills/why/SKILL.md": {
+      "reference": "362c9b68df6ee34998e43173d7c425e7b6a7486834a895e5aa8f143bf711f6c7",
+      "adaptation": "e9a0204b9f5864694372b5cbb27c0c06b6884761a0ad81c7c5fc62e155e20057",
+      "reason": "Omit the Antigravity platform pointer; SuperDev does not ship the Antigravity runtime."
     },
     "skills/why/references/epistemics.md": {
       "reference": "34cebc9d57f7b6d16afc241bcf0fe01d92ff3e5ad1c721f9c75c1a7cc0c5bf0c"
@@ -2048,9 +1969,6 @@
     },
     "skills/why/references/synthesizer-prompt.md": {
       "reference": "8b88a57f3667733091300120fed2cef352f90188d2c2bc93b6a5de30054f9f26"
-    },
-    "skills/why/SKILL.md": {
-      "reference": "3e17881e60e2d784a7c47c072b82bda4ca2e27f5265ccd3108b9bbf455bef8e3"
     }
   }
 }

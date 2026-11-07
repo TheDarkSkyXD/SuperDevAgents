@@ -2,8 +2,10 @@
 set -eu
 
 # Each runtime's hooks file passes its own name.
+runtime="${1:-}"
+
 # Literal plugin paths, so a static reader of the hooks files can follow them.
-case "${1:-}" in
+case "$runtime" in
   claude)
     sheet="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/superdev-models.md"
     reader="${CLAUDE_PLUGIN_ROOT}/skills/setup-superdev/scripts/read-sheet.sh"
@@ -17,6 +19,12 @@ case "${1:-}" in
     reader="${COPILOT_PLUGIN_ROOT}/skills/setup-superdev/scripts/read-sheet.sh"
     ;;
   muse)
+    # On Windows the manifest's PowerShell hook owns Muse. `uname -s` names a
+    # Windows sh, busybox-w32's as Windows_NT, and OS covers one without uname.
+    case "$(uname -s 2>/dev/null || true)" in
+      MINGW*|MSYS*|CYGWIN*|Windows_NT) exit 0 ;;
+    esac
+    [ "${OS:-}" != Windows_NT ] || exit 0
     sheet="${XDG_CONFIG_HOME:-$HOME/.config}/muse/superdev-models.md"
     reader="${MUSE_PLUGIN_ROOT}/skills/setup-superdev/scripts/read-sheet.sh"
     ;;
@@ -41,7 +49,7 @@ fi
 # Copilot's path sandbox, so the hook checks the sheet and adds its role lines
 # to the mandate, and the agent never reads the file. The hooks directory goes
 # through the environment, since awk expands backslash escapes in a -v value.
-if [ "$1" = copilot ]; then
+if [ "$runtime" = copilot ]; then
   printf '%s\n' "$normalized" | SUPERDEV_HOOKS="${COPILOT_PLUGIN_ROOT}/hooks" LC_ALL=C awk -v found="$found" \
     -f "${COPILOT_PLUGIN_ROOT}/hooks/json.awk" \
     -f "${COPILOT_PLUGIN_ROOT}/skills/setup-superdev/scripts/sheet.awk" \
@@ -52,7 +60,7 @@ fi
 # Muse reads stdout as plain additional context. Its sheet has no include
 # mechanism, so the hook adds the sheet's known role lines to the Muse
 # mandate itself, rebuilt from their checked values.
-if [ "$1" = muse ]; then
+if [ "$runtime" = muse ]; then
   printf '%s\n' "$normalized" | SUPERDEV_HOOKS="${MUSE_PLUGIN_ROOT}/hooks" LC_ALL=C awk -v found="$found" \
     -f "${MUSE_PLUGIN_ROOT}/skills/setup-superdev/scripts/sheet.awk" \
     -f "${MUSE_PLUGIN_ROOT}/hooks/muse-context.awk"
